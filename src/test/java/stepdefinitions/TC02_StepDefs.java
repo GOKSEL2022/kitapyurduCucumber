@@ -68,5 +68,15 @@ public class TC02_StepDefs {
         Assert.assertTrue(sign_up_page.usernameSignupRegister.isDisplayed());
 
     }
+
+    @When("kullanici email alanina gecersiz deger girer")
+    public void kullaniciEmailAlaninaGecersizDegerGirer() {
+        sign_up_page.emailSignupRegister.sendKeys(Faker.instance().name().firstName());
+    }
+
+    @When("kullanici Lutfen posta adresine @ isareti ekleyin uyarisini gorur")
+    public void kullaniciLutfenPostaAdresineIsaretiEkleyinUyarisiniGorur() {
+        Assert.assertTrue(sign_up_page.usernameSignupRegister.isDisplayed());
+    }
 }
 
