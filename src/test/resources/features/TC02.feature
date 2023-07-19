@@ -1,5 +1,5 @@
+@TC02
 Feature: Register_alani_deneme
-
   Background: Sayfa_acilisi
     Given kullanici url ye gider
     When kullanici sayfanin acildigini dogrular
@@ -15,7 +15,27 @@ Feature: Register_alani_deneme
     And   kullanici basarili kayit yapildigini goruntuler
     Then  kullanici sayfayi kapatir
 
-      Scenario:
-        Given
-        When
+      @TC02_02
+  Scenario: username_bos_birakilir
+    Given kullanici username alanini bos birakir
+    When  kullanici gecerli e-posta "e-posta" girer
+    And   kullanici gecerli sifre "sifre" girer
+    And   kullanici radio butonu tiklar
+    And   kullanici sign-up butonu tiklar
+    When  kullanici Please enter a valid account username mesajini gorur
+    Then  kullanici sayfayi kapatir
+
+        @TC02_03
+        Scenario: email_bos_birakilir
+          Given kullanici gecerli username "username" girer
+          When  kullanici email alanini bos birakir
+          And   kullanici gecerli sifre "sifre" girer
+          And   kullanici radio butonu tiklar
+          And   kullanici sign-up butonu tiklar
+          And   kullanici email alaninin bos birakilmamasi uyarisini gorur
+          Then  kullanici sayfayi kapatir
+
+
+
+
 
