@@ -35,6 +35,16 @@ Feature: Register_alani_deneme
           And   kullanici email alaninin bos birakilmamasi uyarisini gorur
           Then  kullanici sayfayi kapatir
 
+          @TC02_04
+          Scenario: gecersiz_email_girilir
+            Given kullanici gecerli username "username" girer
+            When  kullanici email alanina gecersiz deger girer
+            And   kullanici gecerli sifre "sifre" girer
+            And   kullanici radio butonu tiklar
+            And   kullanici sign-up butonu tiklar
+            When  kullanici Lutfen posta adresine @ isareti ekleyin uyarisini gorur
+            Then  kullanici sayfayi kapatir
+
 
 
 
