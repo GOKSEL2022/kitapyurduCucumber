@@ -15,12 +15,15 @@ public class Sign_Up_Page {
     @FindBy(xpath = "(//*[@name='email'])[1]")
     public WebElement emailSignupRegister;
 
-    @FindBy(xpath = "//*[@name='password']")
+    @FindBy(xpath = "//*[@id='reg_password']")
     public WebElement passwordSignupRegister;
 
     @FindBy(xpath = "(//*[@type='checkbox'])[2]")
     public WebElement checkboxSignupRegister;
 
-    @FindBy(xpath = "//*[@id='reg_username']")
+    @FindBy(xpath = "//*[@name='register']")
     public WebElement signupButtonSignupRegister;
+
+    @FindBy(xpath = "//*[.='Please enter a valid account username.']")
+    public WebElement textPleaseEnterAValidAccountUsername;
 }
