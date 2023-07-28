@@ -3,9 +3,11 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.IndexPage;
 import pages.KitapPage;
@@ -19,6 +21,13 @@ public class TC01_StepDefs {
     HomePage homePage =new HomePage();
     IndexPage indexPage=new IndexPage();
     Faker faker=new Faker();
+    Actions actions=new Actions(Driver.getDriver());
+    int postaKodu1 = Faker.instance().number().numberBetween(100, 999);
+    int postaKodu2 = Faker.instance().number().numberBetween(10, 99);
+    int sabitPhone1=212;
+    int phoneNo1 = 5+Faker.instance().number().numberBetween(30,60);
+    int phoneNo2 = Faker.instance().number().numberBetween(100, 999);
+    int phoneNo3 = Faker.instance().number().numberBetween(1000, 9999);
     @Given("kullanici kitapyurdu_url ye gider")
     public void kullaniciKitapyurdu_urlYeGider() {
         Driver.getDriver().get(ConfigReader.getProperty("kitapyurdu_url"));
@@ -59,7 +68,7 @@ public class TC01_StepDefs {
     }
     @And("kullanici satin al butonuna tiklar")
     public void kullaniciSatinAlButonunaTiklar() {
-        kitapPage.satinAlButonKitap.click();
+        ReusableMethods.clickByJS(kitapPage.satinAlButonKitap);
     }
     @And("kullanici uye olmadan devam et butonuna tiklar")
     public void kullaniciUyeOlmadanDevamEtButonunaTiklar() {
@@ -76,8 +85,15 @@ public class TC01_StepDefs {
     @And("kullanici adiniz girer")
     public void kullaniciAdinizGirer() {
         indexPage.adinizTextBoxIndex.sendKeys(faker.name().firstName(),
-                Keys.TAB,faker.name().lastName(),Keys.TAB,faker.internet().emailAddress(),
-                Keys.TAB,faker.company().name(),Keys.TAB,faker.internet().domainName());
+                Keys.TAB,faker.name().lastName(),
+                Keys.TAB,faker.internet().emailAddress(),
+                Keys.TAB,faker.company().name(),
+                Keys.TAB,faker.internet().domainName(),
+                Keys.TAB,faker.address().fullAddress(),
+                Keys.TAB,faker.address().zipCode(),
+                Keys.TAB,""+544+phoneNo2+phoneNo3,
+                Keys.TAB,""+0212+phoneNo2+phoneNo3,
+                Keys.TAB,faker.code().imei());
     }
     @And("kullanici soyadiniz girer")
     public void kullaniciSoyadinizGirer() {
@@ -97,27 +113,32 @@ public class TC01_StepDefs {
 
     @And("kullanici ulke olarak Türkiye secer")
     public void kullaniciUlkeOlarakTürkiyeSecer() {
-      ReusableMethods.clickByJS(indexPage.ulkeDropDownIndex);
-      Select ulke=new Select(indexPage.ulkeDropDown2Index);
-      ulke.selectByVisibleText("Türkiye");
+        ReusableMethods.clickByJS(indexPage.ulkeDropDown1Index);
+        indexPage.ulkeDropDown2Index.sendKeys("Türkiye");
+        actions.doubleClick(indexPage.ulkeDropDown3Index).perform();
+
     }
     @And("kullanici sehir olarak Samsun secer")
-    public void kullaniciSehirOlarakSamsunSecer() {
-        ReusableMethods.clickByJS(indexPage.sehirDropDownIndex);
-        Select sehir=new Select(indexPage.sehirDropDown2Index);
-        sehir.selectByVisibleText("Samsun");
+    public void kullaniciSehirOlarakSamsunSecer() throws InterruptedException {
+        ReusableMethods.clickByJS(indexPage.sehirDropDown1Index);
+        indexPage.sehirDropDown2Index.sendKeys("Samsun");
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(indexPage.sehirDropDown3Index);
     }
     @And("kullanici ilce olarak Carsamba secer")
-    public void kullaniciIlceOlarakCarsambaSecer() {
-        ReusableMethods.clickByJS(indexPage.ilceDropDownIndex);
-        Select ilce=new Select(indexPage.ilceDropDown2Index);
-        ilce.selectByVisibleText("ÇARŞAMBA");
+    public void kullaniciIlceOlarakCarsambaSecer() throws InterruptedException {
+        ReusableMethods.clickByJS(indexPage.ilceDropDown1Index);
+        indexPage.ilceDropDown2Index.sendKeys("ÇARŞAMBA");
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(indexPage.ilceDropDown3Index);
+
     }
     @And("kullanici mahalle olarak Sarıcalı Mah secer")
-    public void kullaniciMahalleOlarakSarıcalıMahSecer() {
-        ReusableMethods.clickByJS(indexPage.mahalleDropDownIndex);
-        Select mahalle=new Select(indexPage.mahalleDropDown2Index);
-        mahalle.selectByVisibleText("SARICALI MAH");
+    public void kullaniciMahalleOlarakSarıcalıMahSecer() throws InterruptedException {
+        ReusableMethods.clickByJS(indexPage.mahalleDropDown1Index);
+        indexPage.mahalleDropDown2Index.sendKeys("SARICALI MAH");
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(indexPage.mahalleDropDown3Index);
     }
     @And("kullanici adres girer")
     public void kullaniciAdresGirer() {
@@ -138,9 +159,21 @@ public class TC01_StepDefs {
     @And("kullanici TC Kimlik No girer")
     public void kullaniciTCKimlikNoGirer() {
     }
-
     @And("kullanici devam et butonuna tiklar")
     public void kullaniciDevamEtButonunaTiklar() {
+        ReusableMethods.clickByJS(indexPage.devamEtButonSeciliAdresIndex);
+    }
+    @And("kullanici fatura adresinin olusturuldugunu gorur")
+    public void kullaniciFaturaAdresininOlusturuldugunuGorur() {
+        Assert.assertTrue(indexPage.textAdresBilgilerimIndex.isDisplayed());
+    }
+    @And("kullanici kart ile odeme sayfasini gorur")
+    public void kullaniciKartIleOdemeSayfasiniGorur() {
+        Assert.assertTrue(indexPage.textKartNumarasiIndex.isDisplayed());
+    }
+    @Then("kullanici sayfayi kapatir")
+    public void kullaniciSayfayiKapatir() {
+         Driver.closeDriver();
     }
 }
 

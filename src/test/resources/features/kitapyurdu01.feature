@@ -1,6 +1,17 @@
 @TC01
 Feature: anasayfa_acilisi
-  Scenario: kitapyurdu_sayfasi_acilir
+  Scenario: anasayfa_acilisi
+    Given kullanici kitapyurdu_url ye gider
+    When  kullanici anasayfanin acildigini dogrular
+    Then  kullanici sayfayi kapatir
+
+    Scenario:arama_kutusunda_kitap_aratir
+      Given kullanici kitapyurdu_url ye gider
+      When  kullanici arama cubugunda safahat aratir
+      Then  kullanici arama sonuclarinda safahat oldugunu dogrular
+      Then  kullanici sayfayi kapatir
+
+  Scenario: kitapyurdu_sayfasinda_uye_olmadan_alisveris_yapar
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici arama cubugunda safahat aratir
@@ -29,6 +40,10 @@ Feature: anasayfa_acilisi
     And   kullanici sabit telefon girer
     And   kullanici TC Kimlik No girer
     And   kullanici devam et butonuna tiklar
+    And   kullanici fatura adresinin olusturuldugunu gorur
+    And   kullanici devam et butonuna tiklar
+    And   kullanici kart ile odeme sayfasini gorur
+    Then  kullanici sayfayi kapatir
 
 
 
