@@ -28,6 +28,41 @@ public class TC02_StepDefs {
         Assert.assertTrue(indexPage.hataMesajiHesapOlusturIndex.isDisplayed());
     }
 
+    @Given("kullanici ad alanina {string} girer")
+    public void kullaniciAdAlaninaGirer(String string) {
+        indexPage.textBoxAdHesapOlusturIndex.sendKeys(string);
+    }
+
+    @When("kullanici soyad alanina iki ile otuz karakter araliginda {string} deger girer")
+    public void kullaniciSoyadAlaninaIkiIleOtuzKarakterAraligindaDegerGirer(String string) {
+        indexPage.textBoxSoyadHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici e-posta alanina gecerli bir {string} girer")
+    public void kullaniciEPostaAlaninaGecerliBirGirer(String string) {
+        indexPage.textBoxEmailHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici sifre alanina sekiz ile yirmi araliginda bir {string} girer")
+    public void kullaniciSifreAlaninaSekizIleYirmiAraligindaBirGirer(String string) {
+        indexPage.textBoxSifreHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici yazmis oldugu sifreyi{string} girer")
+    public void kullaniciYazmisOlduguSifreyiGirer(String string) {
+        indexPage.textBoxSifreTekrariHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici kisisel verilerin korunmasi checkboxi isaretler")
+    public void kullaniciKisiselVerilerinKorunmasiCheckboxiIsaretler() {
+        indexPage.checkboxKisiselVerilerinKorunmasiHesapOlusturIndex.click();
+    }
+
+    @When("kullanici ad alani iki ile otuz karakter olmali uyarisini gorur")
+    public void kullaniciAdAlaniIkiIleOtuzKarakterOlmaliUyarisiniGorur() {
+        Assert.assertTrue(indexPage.adAlaniHataMesajHesapOlusturiIndex.isDisplayed());
+    }
+/*
     @Given("kullanici soyad alanina iki ile otuz karakter araliginda deger girer")
     public void kullaniciSoyadAlaninaIkiIleOtuzKarakterAraligindaDegerGirer() {
         indexPage.textBoxSoyadHesapOlusturIndex.sendKeys(Faker.instance().lorem().characters(2,30));
@@ -38,8 +73,8 @@ public class TC02_StepDefs {
         indexPage.textBoxEmailHesapOlusturIndex.sendKeys(faker.name().firstName()+"@gmail.com");
     }
 
-    @And("kullanici sifre sekiz ile yirmi araliginda bir deger girer")
-    public void kullaniciSifreSekizIleYirmiAraligindaBirDegerGirer() {
+    @And("kullanici sifre alanina sekiz ile yirmi araliginda bir deger girer")
+    public void kullaniciSifreAlaninaSekizIleYirmiAraligindaBirDegerGirer() {
         indexPage.textBoxSifreHesapOlusturIndex.sendKeys(""+1234567890);
     }
 
@@ -57,4 +92,8 @@ public class TC02_StepDefs {
     public void kullaniciAdAlaniIkiIleOtuzKarakterOlmaliUyarisiniGorur() {
         Assert.assertTrue(indexPage.adAlaniHataMesajHesapOlusturiIndex.isDisplayed());
     }
+
+ */
+
+
 }
