@@ -75,5 +75,33 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='fs-14 mb-5px']")
     public WebElement textKartNumarasiIndex;
 
+    @FindBy(xpath = "//*[@class='ky-btn ky-btn-orange w-100 ky-register-btn']")
+    public WebElement uyeOlButonIndex;
+
+    @FindBy(xpath = "//div[@class='ky-error']")
+    public WebElement hataMesajiHesapOlusturIndex;
+
+    @FindBy(xpath = "//input[@id='register-name']")
+    public WebElement textBoxAdHesapOlusturIndex;
+
+    @FindBy(xpath = "//input[@id='register-lastname']")
+    public WebElement textBoxSoyadHesapOlusturIndex;
+
+    @FindBy(xpath = "//input[@id='register-email']")
+    public WebElement textBoxEmailHesapOlusturIndex;
+
+    @FindBy(xpath = "//input[@id='register-password']")
+    public WebElement textBoxSifreHesapOlusturIndex;
+
+    @FindBy(xpath = "//input[@id='register-password-confirm']")
+    public WebElement textBoxSifreTekrariHesapOlusturIndex;
+
+    @FindBy(xpath = "(//*[@class='ky-checkbox-input'])[1]")
+    public WebElement checkboxKisiselVerilerinKorunmasiHesapOlusturIndex;
+
+    @FindBy(xpath = "//*[.='Ad alanı 2 ile 30 karakter arasında olmalı!']")
+    public WebElement adAlaniHataMesajHesapOlusturiIndex;
+
+
 
 }

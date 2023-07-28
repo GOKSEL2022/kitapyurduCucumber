@@ -12,4 +12,7 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@id='search-input']")
     public WebElement searchTextBoxHome;
+
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/register']")
+    public WebElement uyeOlLinkHome;
 }
