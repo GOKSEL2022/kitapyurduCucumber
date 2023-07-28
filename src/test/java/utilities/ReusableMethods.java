@@ -202,6 +202,11 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
+
+    public static void scrollIntoViewJS(WebElement element) {
+        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
+        jsexecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
     /*
     public void convertJsonToJavaClass(URL source, File outputJavaClassDirectory, String packageName, String javaClassName)
 

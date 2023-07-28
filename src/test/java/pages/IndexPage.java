@@ -31,28 +31,49 @@ public class IndexPage {
     public WebElement devamEtButonIndex;
 
     @FindBy(xpath = "//*[@id='btn-modal-country']")
-    public WebElement ulkeDropDownIndex;
+    public WebElement ulkeDropDown1Index;
 
-    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[1]")
+    @FindBy(xpath = "//*[@id='js-input-search-country']")
     public WebElement ulkeDropDown2Index;
 
-    @FindBy(xpath = "//*[@id='btn-modal-zone']")
-    public WebElement sehirDropDownIndex;
+    @FindBy(xpath = "//*[@data-name='Türkiye']")
+    public WebElement ulkeDropDown3Index;
 
     @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[2]")
+    public WebElement sehirDropDown1Index;
+
+    @FindBy(xpath = "//*[@id='js-input-search-zone']")
     public WebElement sehirDropDown2Index;
 
-    @FindBy(xpath = "//*[@class='mobile h-100 mobile-min-width bg-gray-250 tr']")
-    public WebElement ilceDropDownIndex;
+    @FindBy(xpath = "//*[@data-name='Samsun']")
+    public WebElement sehirDropDown3Index;
 
-    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[3]")
+    @FindBy(xpath = "(//a[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[3]")
+    public WebElement ilceDropDown1Index;
+
+    @FindBy(xpath = "//*[@id='js-input-search-county']")
     public WebElement ilceDropDown2Index;
 
-    @FindBy(xpath = "//*[@id='btn-modal-district']")
-    public WebElement mahalleDropDownIndex;
+    @FindBy(xpath = "//*[@data-name='ÇARŞAMBA']")
+    public WebElement ilceDropDown3Index;
 
     @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[4]")
+    public WebElement mahalleDropDown1Index;
+
+    @FindBy(xpath = "//*[@id='js-input-search-district']")
     public WebElement mahalleDropDown2Index;
+
+    @FindBy(xpath = "//*[@data-name='SARICALI MAH']")
+    public WebElement mahalleDropDown3Index;
+
+    @FindBy(xpath = "//*[@id='continue-button']")
+    public WebElement devamEtButonSeciliAdresIndex;
+
+    @FindBy(xpath = "//*[.='Adres Bilgilerim:']")
+    public WebElement textAdresBilgilerimIndex;
+
+    @FindBy(xpath = "//*[@class='fs-14 mb-5px']")
+    public WebElement textKartNumarasiIndex;
 
 
 }
