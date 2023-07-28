@@ -1,36 +1,146 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
+import pages.IndexPage;
+import pages.KitapPage;
 import pages.HomePage;
-import pages.MyAccountPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TC01_StepDefs {
-    HomePage homePage=new HomePage();
-    MyAccountPage myAccountPage=new MyAccountPage();
-    @Given("kullanici url ye gider")
-    public void kullaniciUrlYeGider() {
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
+    KitapPage kitapPage=new KitapPage();
+    HomePage homePage =new HomePage();
+    IndexPage indexPage=new IndexPage();
+    Faker faker=new Faker();
+    @Given("kullanici kitapyurdu_url ye gider")
+    public void kullaniciKitapyurdu_urlYeGider() {
+        Driver.getDriver().get(ConfigReader.getProperty("kitapyurdu_url"));
     }
-    @When("kullanici sayfanin acildigini dogrular")
-    public void kullaniciSayfaninAcildiginiDogrular() {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("hubcomfy"));
+    @When("kullanici anasayfanin acildigini dogrular")
+    public void kullaniciAnasayfaninAcildiginiDogrular() {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("kitapyurdu"));
     }
-    @And("kullanici register butonuna tiklar")
-    public void kullaniciRegisterButonunaTiklar() {
-        homePage.signinButtonHome.click();
+
+    @And("kullanici arama cubugunda safahat aratir")
+    public void kullaniciAramaCubugundaSafahatAratir() {
+        homePage.searchTextBoxHome.sendKeys("safahat", Keys.ENTER);
     }
-    @When("kullanici doldurulacak alanlari goruntuler")
-    public void kullaniciDoldurulacakAlanlariGoruntuler() {
-        Assert.assertTrue(myAccountPage.textBoxUsernameSigninMyAccount.isDisplayed());
+
+    @And("kullanici arama sonuclarinda safahat oldugunu dogrular")
+    public void kullaniciAramaSonuclarindaSafahatOldugunuDogrular() {
+        Assert.assertTrue(indexPage.safahatImgIndex.isDisplayed());
     }
-    @Then("kullanici sayfayi kapatir")
-    public void kullaniciSayfayiKapatir() {
-        Driver.closeDriver();
+    @And("kullanici safahat kitabina tiklar")
+    public void kullaniciSafahatKitabinaTiklar() {
+        indexPage.safahatImgIndex.click();
+    }
+    @And("kullanici safahat ile ilgili aciklama yazisini gorur")
+    public void kullaniciSafahatIleIlgiliAciklamaYazisiniGorur() {
+        Assert.assertTrue(indexPage.descriptionSafahatKitap.isDisplayed());
+    }
+    @And("kullanici sepete ekle butonuna tiklar")
+    public void kullaniciSepeteEkleButonunaTiklar() {
+        kitapPage.sepeteEkleButonKitap.click();
+    }
+    @And("kullanici urunun sepete eklendiginin belirten alerti gorur")
+    public void kullaniciUrununSepeteEklendigininBelirtenAlertiGorur() {
+        Assert.assertTrue(kitapPage.sepetinizdeAlertKitap.isDisplayed());
+    }
+    @And("kullanici sepetim butonuna tiklar")
+    public void kullaniciSepetimButonunaTiklar() {
+        kitapPage.sepetimButonKitap.click();
+    }
+    @And("kullanici satin al butonuna tiklar")
+    public void kullaniciSatinAlButonunaTiklar() {
+        kitapPage.satinAlButonKitap.click();
+    }
+    @And("kullanici uye olmadan devam et butonuna tiklar")
+    public void kullaniciUyeOlmadanDevamEtButonunaTiklar() {
+        indexPage.uyeOlmadanDevamEtButonIndex.click();
+    }
+    @And("kullanici adrese teslim et checkboxin secili oldugunu gorur")
+    public void kullaniciAdreseTeslimEtCheckboxinSeciliOldugunuGorur() {
+        Assert.assertTrue(indexPage.adreseTeslimEtRadioButonIndex.isSelected());
+    }
+    @And("kullanici adres ekle butonuna tiklar")
+    public void kullaniciAdresEkleButonunaTiklar() {
+        indexPage.adresEkleTextBoxIndex.click();
+    }
+    @And("kullanici adiniz girer")
+    public void kullaniciAdinizGirer() {
+        indexPage.adinizTextBoxIndex.sendKeys(faker.name().firstName(),
+                Keys.TAB,faker.name().lastName(),Keys.TAB,faker.internet().emailAddress(),
+                Keys.TAB,faker.company().name(),Keys.TAB,faker.internet().domainName());
+    }
+    @And("kullanici soyadiniz girer")
+    public void kullaniciSoyadinizGirer() {
+    }
+
+    @And("kullanici e-posta adresiniz girer")
+    public void kullaniciEPostaAdresinizGirer() {
+    }
+
+    @And("kullanici ad_sirket adi girer")
+    public void kullaniciAd_sirketAdiGirer() {
+    }
+
+    @And("kullanici soyad_unvan bilgilerini girer")
+    public void kullaniciSoyad_unvanBilgileriniGirer() {
+    }
+
+    @And("kullanici ulke olarak Türkiye secer")
+    public void kullaniciUlkeOlarakTürkiyeSecer() {
+       ReusableMethods.clickByJS(indexPage.ulkeDropDownIndex);
+        indexPage.ulkeDropDown2Index.sendKeys("Türkiye");
+        indexPage.ulkeDropDown2Index.submit();
+    }
+    @And("kullanici sehir olarak Samsun secer")
+    public void kullaniciSehirOlarakSamsunSecer() {
+        indexPage.sehirDropDownIndex.click();
+        Select select1=new Select(indexPage.sehirDropDown2Index);
+        select1.selectByVisibleText("Samsun");
+    }
+    @And("kullanici ilce olarak Carsamba secer")
+    public void kullaniciIlceOlarakCarsambaSecer() {
+        indexPage.ilceDropDownIndex.click();
+        Select select2=new Select(indexPage.ilceDropDown2Index);
+        select2.selectByVisibleText("ÇARŞAMBA");
+    }
+    @And("kullanici mahalle olarak Sarıcalı Mah secer")
+    public void kullaniciMahalleOlarakSarıcalıMahSecer() {
+        indexPage.mahalleDropDownIndex.click();
+        Select select3=new Select(indexPage.mahalleDropDown2Index);
+        select3.selectByVisibleText("SARICALI MAH");
+    }
+    @And("kullanici adres girer")
+    public void kullaniciAdresGirer() {
+    }
+
+    @And("kullanici posta kodu girer")
+    public void kullaniciPostaKoduGirer() {
+    }
+
+    @And("kullanici cep telefonu girer")
+    public void kullaniciCepTelefonuGirer() {
+    }
+
+    @And("kullanici sabit telefon girer")
+    public void kullaniciSabitTelefonGirer() {
+    }
+
+    @And("kullanici TC Kimlik No girer")
+    public void kullaniciTCKimlikNoGirer() {
+    }
+
+    @And("kullanici devam et butonuna tiklar")
+    public void kullaniciDevamEtButonunaTiklar() {
     }
 }
+
