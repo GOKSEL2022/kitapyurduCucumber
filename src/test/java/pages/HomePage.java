@@ -9,9 +9,7 @@ public class HomePage {
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "(//*[.='Register'])[2]")
-    public WebElement registerButtonHome;
 
-    @FindBy(xpath = "(//*[.='Sign Out'])[3]")
-    public WebElement signOutButtonHome;
+    @FindBy(xpath = "//*[@id='search-input']")
+    public WebElement searchTextBoxHome;
 }
