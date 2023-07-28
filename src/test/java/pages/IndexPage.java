@@ -33,25 +33,25 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='btn-modal-country']")
     public WebElement ulkeDropDownIndex;
 
-    @FindBy(xpath = "//*[@id='js-input-search-country']")
+    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[1]")
     public WebElement ulkeDropDown2Index;
 
     @FindBy(xpath = "//*[@id='btn-modal-zone']")
     public WebElement sehirDropDownIndex;
 
-    @FindBy(xpath = "//*[@id='js-input-search-zone']")
+    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[2]")
     public WebElement sehirDropDown2Index;
 
     @FindBy(xpath = "//*[@class='mobile h-100 mobile-min-width bg-gray-250 tr']")
     public WebElement ilceDropDownIndex;
 
-    @FindBy(xpath = "//*[@id='js-input-search-county']")
+    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[3]")
     public WebElement ilceDropDown2Index;
 
     @FindBy(xpath = "//*[@id='btn-modal-district']")
     public WebElement mahalleDropDownIndex;
 
-    @FindBy(xpath = "//*[@id='js-input-search-district']")
+    @FindBy(xpath = "(//*[@class='js-btn-open-modal border border-gray-300 rounded-1 bg-white btn d-flex justify-content-between align-items-center'])[4]")
     public WebElement mahalleDropDown2Index;
 
 
