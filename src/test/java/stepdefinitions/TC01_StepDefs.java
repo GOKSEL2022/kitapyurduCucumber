@@ -97,27 +97,27 @@ public class TC01_StepDefs {
 
     @And("kullanici ulke olarak Türkiye secer")
     public void kullaniciUlkeOlarakTürkiyeSecer() {
-       ReusableMethods.clickByJS(indexPage.ulkeDropDownIndex);
-        indexPage.ulkeDropDown2Index.sendKeys("Türkiye");
-        indexPage.ulkeDropDown2Index.submit();
+      ReusableMethods.clickByJS(indexPage.ulkeDropDownIndex);
+      Select ulke=new Select(indexPage.ulkeDropDown2Index);
+      ulke.selectByVisibleText("Türkiye");
     }
     @And("kullanici sehir olarak Samsun secer")
     public void kullaniciSehirOlarakSamsunSecer() {
-        indexPage.sehirDropDownIndex.click();
-        Select select1=new Select(indexPage.sehirDropDown2Index);
-        select1.selectByVisibleText("Samsun");
+        ReusableMethods.clickByJS(indexPage.sehirDropDownIndex);
+        Select sehir=new Select(indexPage.sehirDropDown2Index);
+        sehir.selectByVisibleText("Samsun");
     }
     @And("kullanici ilce olarak Carsamba secer")
     public void kullaniciIlceOlarakCarsambaSecer() {
-        indexPage.ilceDropDownIndex.click();
-        Select select2=new Select(indexPage.ilceDropDown2Index);
-        select2.selectByVisibleText("ÇARŞAMBA");
+        ReusableMethods.clickByJS(indexPage.ilceDropDownIndex);
+        Select ilce=new Select(indexPage.ilceDropDown2Index);
+        ilce.selectByVisibleText("ÇARŞAMBA");
     }
     @And("kullanici mahalle olarak Sarıcalı Mah secer")
     public void kullaniciMahalleOlarakSarıcalıMahSecer() {
-        indexPage.mahalleDropDownIndex.click();
-        Select select3=new Select(indexPage.mahalleDropDown2Index);
-        select3.selectByVisibleText("SARICALI MAH");
+        ReusableMethods.clickByJS(indexPage.mahalleDropDownIndex);
+        Select mahalle=new Select(indexPage.mahalleDropDown2Index);
+        mahalle.selectByVisibleText("SARICALI MAH");
     }
     @And("kullanici adres girer")
     public void kullaniciAdresGirer() {
