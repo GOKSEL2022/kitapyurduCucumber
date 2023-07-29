@@ -102,6 +102,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='Ad alanı 2 ile 30 karakter arasında olmalı!']")
     public WebElement adAlaniHataMesajHesapOlusturiIndex;
 
+    @FindBy(xpath = "//*[@class='fa fa-check-circle']")
+    public WebElement textHesabinizOlusturulduIndex;
+
 
 
 }

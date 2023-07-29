@@ -40,7 +40,7 @@ public class TC02_StepDefs {
 
     @And("kullanici e-posta alanina gecerli bir {string} girer")
     public void kullaniciEPostaAlaninaGecerliBirGirer(String string) {
-        indexPage.textBoxEmailHesapOlusturIndex.sendKeys(string);
+        indexPage.textBoxEmailHesapOlusturIndex.sendKeys(faker.name().firstName()+"@gmail.com");
     }
 
     @And("kullanici sifre alanina sekiz ile yirmi araliginda bir {string} girer")
@@ -61,6 +61,16 @@ public class TC02_StepDefs {
     @When("kullanici ad alani iki ile otuz karakter olmali uyarisini gorur")
     public void kullaniciAdAlaniIkiIleOtuzKarakterOlmaliUyarisiniGorur() {
         Assert.assertTrue(indexPage.adAlaniHataMesajHesapOlusturiIndex.isDisplayed());
+    }
+
+    @Given("kullanici ad alani {string} girer")
+    public void kullaniciAdAlaniGirer(String string) {
+        indexPage.textBoxAdHesapOlusturIndex.sendKeys(string);
+    }
+
+    @When("kullanici hesabiniz olusturuldu mesajini gorur")
+    public void kullaniciHesabinizOlusturulduMesajiniGorur() {
+        Assert.assertTrue(indexPage.textHesabinizOlusturulduIndex.isDisplayed());
     }
 /*
     @Given("kullanici soyad alanina iki ile otuz karakter araliginda deger girer")
