@@ -26,3 +26,25 @@ Feature: uye_olma_senaryolari
       | abccdefgghiijklmnooprsstuuvyzxw | Guclu  | guclu@gmail.com  | 12345678a | 12345678a     |
       | a                               | Olgun  | olgun@gmail.com  | 12345678b | 12345678b     |
 
+    @valid_hesap_girisi
+    Scenario Outline: kullanici_ad_alanina_valid_degerler_girer
+      Given kullanici ad alani "<ad alani>" girer
+      When  kullanici soyad alanina iki ile otuz karakter araliginda "<soyad>" deger girer
+      And   kullanici e-posta alanina gecerli bir "<e-posta>" girer
+      And   kullanici sifre alanina sekiz ile yirmi araliginda bir "<sifre>" girer
+      And   kullanici yazmis oldugu sifreyi"<sifre tekrari>" girer
+      And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+      And   kullanici uye ol butonuna tiklar
+      When  kullanici hesabiniz olusturuldu mesajini gorur
+      Then  kullanici sayfayi kapatir
+      Examples:
+        | ad alani                       | soyad  | e-posta          | sifre | sifre tekrari |
+        | ab                             | Bilgin | bilgin@gmail.com | 123456789 | 123456789 |
+        | abc                            | Guclu  | guclu@gmail.com  | 123456789 | 123456789 |
+        | abccdefgghiijklmnooprsstuuvyz  | Olgun  | olgun@gmail.com  | 123456789 | 123456789 |
+        | abccdefgghiijklmnooprsstuuvyzx | Zengin | zengin@gmail.com | 123456789 | 123456789 |
+
+
+
+
+
