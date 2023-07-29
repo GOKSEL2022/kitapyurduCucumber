@@ -44,6 +44,42 @@ Feature: uye_olma_senaryolari
         | abccdefgghiijklmnooprsstuuvyz  | Olgun  | olgun@gmail.com  | 123456789 | 123456789 |
         | abccdefgghiijklmnooprsstuuvyzx | Zengin | zengin@gmail.com | 123456789 | 123456789 |
 
+      @valid_soyad_alani
+      Scenario Outline:kullanici_soyad_alanina_valid_degerler_girer
+        Given kullanici ad alani "<ad alani>" girer
+        When  kullanici soyad alanina "<soyad>" girer
+        And   kullanici e-posta alanina gecerli bir "<e-posta>" girer
+        And   kullanici sifre alanina "<sifre>" girer
+        And   kullanici sifre tekrari alanina "<sifre tekrari>" girer
+        And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+        And   kullanici uye ol butonuna tiklar
+        And   kullanici hesabiniz olusturuldu mesajini gorur
+        Then  kullanici sayfayi kapatir
+        Examples:
+          | ad alani | soyad                          | e-posta          | sifre     | sifre tekrari |
+          | axby     | xy                             | xyzt@gmail.com   | 123456789 | 123456789     |
+          | acvb     | xyz                            | eposta@gmail.com | 123456789 | 123456789     |
+          | away     | abccdefgghiijklmnooprsstuuvyz  | a1b2c3@gmail.com | 123456789 | 123456789     |
+          | acbnm    | abccdefgghiijklmnooprsstuuvyzx | aeiu@gmaail.com  | 123456789 | 123456789     |
+
+
+  @soyad_invalid_giris
+      Scenario Outline:kullanici_soyad_alanina_invalid_degerler_girer
+        Given kullanici ad alani "<ad alani>" girer
+        When  kullanici soyad alanina "<soyad>" girer
+        And   kullanici e-posta alanina gecerli bir "<e-posta>" girer
+        And   kullanici sifre alanina "<sifre>" girer
+        And   kullanici sifre tekrari alanina "<sifre tekrari>" girer
+        And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+        When  kullanici uye ol butonuna tiklar
+        When  kullanici soyad alanina iki ile otuz karakter araliginda olmali hata mesajini gorur
+        Then  kullanici sayfayi kapatir
+        Examples:
+          | ad alani | soyad                           | e-posta        | sifre     | sifre tekrari |
+          | abcd     |                                 | xyz@gmail.com  | 123456789 | 123456789     |
+          | abcde    | a                               | abcd@gmail.com | 123456789 | 123456789     |
+          | abcdef   | abccdefgghiijklmnooprsstuuvyzxw | 123@gmail.com  | 123456789 | 123456789     |
+
 
 
 

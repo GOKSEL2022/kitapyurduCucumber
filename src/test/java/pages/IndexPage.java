@@ -105,6 +105,15 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='fa fa-check-circle']")
     public WebElement textHesabinizOlusturulduIndex;
 
+    @FindBy(xpath = "(//*[@class='ky-error-input'])[2]")
+    public WebElement soyadAlaniHataMesajHesapOlusturiIndex;
+
+    @FindBy(xpath = "(//*[@class='ky-error-input'])[3]")
+    public WebElement epostaAlaniHataMesajHesapOlusturiIndex;
+
+    @FindBy(xpath = "(//*[@class='ky-error-input'])[4]")
+    public WebElement sifreAlaniHataMesajHesapOlusturiIndex;
+
 
 
 }
