@@ -72,6 +72,26 @@ public class TC02_StepDefs {
     public void kullaniciHesabinizOlusturulduMesajiniGorur() {
         Assert.assertTrue(indexPage.textHesabinizOlusturulduIndex.isDisplayed());
     }
+
+    @When("kullanici soyad alanina {string} girer")
+    public void kullaniciSoyadAlaninaGirer(String string) {
+        indexPage.textBoxSoyadHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici sifre alanina {string} girer")
+    public void kullaniciSifreAlaninaGirer(String string) {
+        indexPage.textBoxSifreHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici sifre tekrari alanina {string} girer")
+    public void kullaniciSifreTekrariAlaninaGirer(String string) {
+        indexPage.textBoxSifreTekrariHesapOlusturIndex.sendKeys(string);
+    }
+
+    @When("kullanici soyad alanina iki ile otuz karakter araliginda olmali hata mesajini gorur")
+    public void kullaniciSoyadAlaninaIkiIleOtuzKarakterAraligindaOlmaliHataMesajiniGorur() {
+        Assert.assertTrue(indexPage.soyadAlaniHataMesajHesapOlusturiIndex.isDisplayed());
+    }
 /*
     @Given("kullanici soyad alanina iki ile otuz karakter araliginda deger girer")
     public void kullaniciSoyadAlaninaIkiIleOtuzKarakterAraligindaDegerGirer() {
