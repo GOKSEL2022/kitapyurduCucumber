@@ -25,6 +25,7 @@ Feature: uye_olma_senaryolari
       |                                 | Bilgin | bilgin@gmail.com | 123456789 | 123456789     |
       | abccdefgghiijklmnooprsstuuvyzxw | Guclu  | guclu@gmail.com  | 12345678a | 12345678a     |
       | a                               | Olgun  | olgun@gmail.com  | 12345678b | 12345678b     |
+      | +-*/?][<>%&$#'!",.              | Olgun  | olgun@gmail.com  | 12345678b | 12345678b     |
 
     @valid_hesap_girisi
     Scenario Outline: kullanici_ad_alanina_valid_degerler_girer
@@ -74,11 +75,12 @@ Feature: uye_olma_senaryolari
         When  kullanici uye ol butonuna tiklar
         When  kullanici soyad alanina iki ile otuz karakter araliginda olmali hata mesajini gorur
         Then  kullanici sayfayi kapatir
-        Examples:
-          | ad alani | soyad                           | e-posta        | sifre     | sifre tekrari |
-          | abcd     |                                 | xyz@gmail.com  | 123456789 | 123456789     |
-          | abcde    | a                               | abcd@gmail.com | 123456789 | 123456789     |
-          | abcdef   | abccdefgghiijklmnooprsstuuvyzxw | 123@gmail.com  | 123456789 | 123456789     |
+    Examples:
+      | ad alani | soyad                           | e-posta        | sifre     | sifre tekrari |
+      | abcd     |                                 | xyz@gmail.com  | 123456789 | 123456789     |
+      | abcde    | a                               | abcd@gmail.com | 123456789 | 123456789     |
+      | abcdef   | +-*/?][<>%&$#'!",.              | 123@gmail.com  | 123456789 | 123456789     |
+      | abcdef   | abccdefgghiijklmnooprsstuuvyzxw | 123@gmail.com  | 123456789 | 123456789     |
 
   @e-posta_valid_giris
       Scenario Outline:e-posta_alanina_valid_deger_girer
