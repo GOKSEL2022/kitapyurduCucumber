@@ -80,7 +80,7 @@ Feature: uye_olma_senaryolari
           | abcde    | a                               | abcd@gmail.com | 123456789 | 123456789     |
           | abcdef   | abccdefgghiijklmnooprsstuuvyzxw | 123@gmail.com  | 123456789 | 123456789     |
 
-  @sifre_valid_giris
+  @e-posta_valid_giris
       Scenario Outline:e-posta_alanina_valid_deger_girer
         Given kullanici ad alani "<ad alani>" girer
         When  kullanici soyad alanina "<soyad>" girer
@@ -95,7 +95,7 @@ Feature: uye_olma_senaryolari
           | ad alani | soyad | e-posta         | sifre     | sifre tekrari |
           | ahmet    | soyad | ahmet@gmail.com | 123456789 | 123456789     |
 
-    @sifre_invalid_giris
+    @e-posta_invalid_giris
       Scenario Outline:e-posta_alanina_invalid_deger_girer
       Given kullanici ad alani "<ad alani>" girer
       When  kullanici soyad alanina "<soyad>" girer
