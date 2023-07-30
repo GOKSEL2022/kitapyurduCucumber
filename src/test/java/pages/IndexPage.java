@@ -117,6 +117,24 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='Şifreniz birbiriyle uyuşmuyor!']")
     public WebElement sifreTekrariHataMesajHesapOlusturiIndex;
 
+    //*********************************************
+    @FindBy(xpath = "//*[@id='login-email']")
+    public WebElement textBoxEpostaHosgeldinizIndex;
+
+    @FindBy(xpath = "//*[@id='login-password']")
+    public WebElement textBoxSifreHosgeldinizIndex;
+
+    @FindBy(xpath = "//*[@class='ky-checkbox-input']")
+    public WebElement checkBoxBeniHatirlaHosgeldinizIndex;
+
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement girisYapButonHosgeldinizIndex;
+
+    @FindBy(xpath = "(//*[@href=\"https://www.kitapyurdu.com/index.php?route=account/account\"])[1]")
+    public WebElement textMerhabaAccountIndex;
+
+
+
 
 
 }
