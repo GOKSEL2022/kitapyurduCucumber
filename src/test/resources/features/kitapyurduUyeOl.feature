@@ -109,9 +109,10 @@ Feature: uye_olma_senaryolari
       Then  kullanici gecerli e-posta girmelisiniz mesajini gorur
       Then  kullanici sayfayi kapatir
       Examples:
-        | ad alani | soyad     | e-posta           | sifre     | sifre tekrari |
-        | isim_a   | soyisim_a |                   | 123456789 | 123456789     |
-        | isim_b   | soyisim_b | gecersizgmail.com | 123456789 | 123456789     |
+        | ad alani | soyad     | e-posta                      | sifre     | sifre tekrari |
+        | isim_a   | soyisim_a |                              | 123456789 | 123456789     |
+        | isim_b   | soyisim_b | gecersizgmail.com            | 123456789 | 123456789     |
+        | isim_b   | soyisim_b | +-*/?][<>%&$#'!",.@gmail.com | 123456789 | 123456789     |
 
 
 
