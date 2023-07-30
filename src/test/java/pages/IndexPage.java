@@ -108,11 +108,14 @@ public class IndexPage {
     @FindBy(xpath = "(//*[@class='ky-error-input'])[2]")
     public WebElement soyadAlaniHataMesajHesapOlusturiIndex;
 
-    @FindBy(xpath = "(//*[@class='ky-error-input'])[3]")
+    @FindBy(xpath = "//*[.='Geçerli bir E-Posta adresi yazınız!']")
     public WebElement epostaAlaniHataMesajHesapOlusturiIndex;
 
-    @FindBy(xpath = "(//*[@class='ky-error-input'])[4]")
+    @FindBy(xpath = "//*[.='Şifreniz 8 ile 20 karakter arasında olmalı!']")
     public WebElement sifreAlaniHataMesajHesapOlusturiIndex;
+
+    @FindBy(xpath = "//*[.='Şifreniz birbiriyle uyuşmuyor!']")
+    public WebElement sifreTekrariHataMesajHesapOlusturiIndex;
 
 
 
