@@ -80,6 +80,37 @@ Feature: uye_olma_senaryolari
           | abcde    | a                               | abcd@gmail.com | 123456789 | 123456789     |
           | abcdef   | abccdefgghiijklmnooprsstuuvyzxw | 123@gmail.com  | 123456789 | 123456789     |
 
+  @sifre_valid_giris
+      Scenario Outline:e-posta_alanina_valid_deger_girer
+        Given kullanici ad alani "<ad alani>" girer
+        When  kullanici soyad alanina "<soyad>" girer
+        And   kullanici e-posta alanina gecerli bir "<e-posta>" girer
+        And   kullanici sifre alanina "<sifre>" girer
+        And   kullanici sifre tekrari alanina "<sifre tekrari>" girer
+        And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+        And   kullanici uye ol butonuna tiklar
+        When  kullanici hesabiniz olusturuldu mesajini gorur
+        Then  kullanici sayfayi kapatir
+        Examples:
+          | ad alani | soyad | e-posta         | sifre     | sifre tekrari |
+          | ahmet    | soyad | ahmet@gmail.com | 123456789 | 123456789     |
+
+    @sifre_invalid_giris
+      Scenario Outline:e-posta_alanina_invalid_deger_girer
+      Given kullanici ad alani "<ad alani>" girer
+      When  kullanici soyad alanina "<soyad>" girer
+      And   kullanici e-posta alanina gecerli bir "<e-posta>" girer
+      And   kullanici sifre alanina "<sifre>" girer
+      And   kullanici sifre tekrari alanina "<sifre tekrari>" girer
+      And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+      When  kullanici uye ol butonuna tiklar
+      Then  kullanici gecerli e-posta girmelisiniz mesajini gorur
+      Then  kullanici sayfayi kapatir
+      Examples:
+        | ad alani | soyad     | e-posta           | sifre     | sifre tekrari |
+        | isim_a   | soyisim_a |                   | 123456789 | 123456789     |
+        | isim_b   | soyisim_b | gecersizgmail.com | 123456789 | 123456789     |
+
 
 
 

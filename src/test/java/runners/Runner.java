@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/features",
         glue= {"stepdefinitions", "hooks"},
-        tags="@valid_soyad_alani"  ,
+        tags="@sifre_invalid_giris"  ,
 
         dryRun= false
 )
