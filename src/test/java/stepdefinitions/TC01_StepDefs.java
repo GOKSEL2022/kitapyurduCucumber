@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import pages.IndexPage;
 import pages.KitapPage;
 import pages.HomePage;
@@ -98,25 +97,20 @@ public class TC01_StepDefs {
     @And("kullanici soyadiniz girer")
     public void kullaniciSoyadinizGirer() {
     }
-
     @And("kullanici e-posta adresiniz girer")
     public void kullaniciEPostaAdresinizGirer() {
     }
-
     @And("kullanici ad_sirket adi girer")
     public void kullaniciAd_sirketAdiGirer() {
     }
-
     @And("kullanici soyad_unvan bilgilerini girer")
     public void kullaniciSoyad_unvanBilgileriniGirer() {
     }
-
     @And("kullanici ulke olarak Türkiye secer")
     public void kullaniciUlkeOlarakTürkiyeSecer() {
         ReusableMethods.clickByJS(indexPage.ulkeDropDown1Index);
         indexPage.ulkeDropDown2Index.sendKeys("Türkiye");
         actions.doubleClick(indexPage.ulkeDropDown3Index).perform();
-
     }
     @And("kullanici sehir olarak Samsun secer")
     public void kullaniciSehirOlarakSamsunSecer() throws InterruptedException {
@@ -131,7 +125,6 @@ public class TC01_StepDefs {
         indexPage.ilceDropDown2Index.sendKeys("ÇARŞAMBA");
         Thread.sleep(1000);
         ReusableMethods.clickByJS(indexPage.ilceDropDown3Index);
-
     }
     @And("kullanici mahalle olarak Sarıcalı Mah secer")
     public void kullaniciMahalleOlarakSarıcalıMahSecer() throws InterruptedException {
@@ -143,19 +136,15 @@ public class TC01_StepDefs {
     @And("kullanici adres girer")
     public void kullaniciAdresGirer() {
     }
-
     @And("kullanici posta kodu girer")
     public void kullaniciPostaKoduGirer() {
     }
-
     @And("kullanici cep telefonu girer")
     public void kullaniciCepTelefonuGirer() {
     }
-
     @And("kullanici sabit telefon girer")
     public void kullaniciSabitTelefonGirer() {
     }
-
     @And("kullanici TC Kimlik No girer")
     public void kullaniciTCKimlikNoGirer() {
     }
