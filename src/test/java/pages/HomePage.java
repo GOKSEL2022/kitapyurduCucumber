@@ -15,4 +15,7 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/register']")
     public WebElement uyeOlLinkHome;
+
+    @FindBy(xpath = "//*[@class='menu-top-button login']")
+    public WebElement girisYapLinkHome;
 }

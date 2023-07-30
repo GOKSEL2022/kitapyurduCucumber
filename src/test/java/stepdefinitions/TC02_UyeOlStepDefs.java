@@ -9,7 +9,7 @@ import org.junit.Assert;
 import pages.HomePage;
 import pages.IndexPage;
 import utilities.ReusableMethods;
-public class TC02_StepDefs {
+public class TC02_UyeOlStepDefs {
     HomePage homePage = new HomePage();
     IndexPage indexPage = new IndexPage();
     Faker faker = new Faker();
