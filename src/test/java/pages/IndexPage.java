@@ -133,6 +133,12 @@ public class IndexPage {
     @FindBy(xpath = "(//*[@href=\"https://www.kitapyurdu.com/index.php?route=account/account\"])[1]")
     public WebElement textMerhabaAccountIndex;
 
+    @FindBy(xpath = "//div[@class='ky-error']")
+    public WebElement epostaAdresiVeSifreYanlisHataMesajiIndex;
+
+    @FindBy(xpath = "(//*[.='Çıkış'])[2]")
+    public WebElement cikisLinkAccountIndex;
+
 
 
 
