@@ -35,7 +35,8 @@ Feature: kayitli_kullanici_girisi
       |                        | 123456789a. |
       | yekparebirangmail.com  | 123456789a. |
 
-  Scenario Outline: giris_yaparken_karakter_ve_kucuk_buyuk_harf_ayrimi yapilmamasi_BUG
+    #_BUG : Giris yap alaninda e-posta girerken ç-c,ş-s,ı-i gibi bir harf ayrımı gözetilmiyor.
+  Scenario Outline: giris_yaparken_karakter_ve_kucuk_buyuk_harf_ayrimi yapilmamasi
   Given kullanici kitapyurdu_url ye gider
   When  kullanici anasayfanin acildigini dogrular
   And   kullanici giris yap linkine tiklar
@@ -51,3 +52,30 @@ Feature: kayitli_kullanici_girisi
       | YekpareBirAn@gmail.com | 123456789a. |
       | YEKPAREBİRAN@GMAİL.COM | 123456789a. |
       | yekparebıran@gmail.com | 123456789a. |
+
+    Scenario Outline: invalid_sifre
+      Given kullanici kitapyurdu_url ye gider
+      When  kullanici anasayfanin acildigini dogrular
+      And   kullanici giris yap linkine tiklar
+      And   kullanici e-posta "<e-posta>" girer
+      And   kullanici sifre alanina invalid bir "<sifre>" girer
+      And   kullanici beni hatirla checkboxi tiklar
+      And   kullanici giris yap butonuna tiklar
+      When  kullanici e-posta adresiniz ya da sifreniz yanlıs uyarisini gorur
+      Then  kullanici sayfayi kapatir
+      Examples:
+        | e-posta                | sifre       |
+        | yekparebiran@gmail.com |             |
+        | yekparebiran@gmail.com | 123456789A. |
+        | yekparebiran@gmail.com | 123456789a, |
+
+      Scenario: checkbox_tiklanmadan_giris
+        Given kullanici kitapyurdu_url ye gider
+        When  kullanici anasayfanin acildigini dogrular
+        And   kullanici giris yap linkine tiklar
+        And   kullanici e-posta "yekparebiran@gmail.com" girer
+        And   kullanici sifre alanina kayitli sifresini "123456789a." girer
+        When  kullanici giris yap butonuna tiklar
+        Then  kullanici sayfaya giris yaptıgını dogrular
+        Then  kullanici sayfayi kapatir
+

@@ -67,4 +67,14 @@ public class TC03_GirisYapStepDefs {
         actions.moveToElement(indexPage.textMerhabaAccountIndex).perform();
         ReusableMethods.clickByJS(indexPage.cikisLinkAccountIndex);
     }
+
+    @And("kullanici e-posta {string} girer")
+    public void kullaniciEPostaGirer(String string) {
+        indexPage.textBoxEpostaHosgeldinizIndex.sendKeys(string);
+    }
+
+
+    @And("kullanici sifre alanina invalid bir {string} girer")
+    public void kullaniciSifreAlaninaInvalidBirGirer(String string) {
+    }
 }
