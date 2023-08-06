@@ -18,4 +18,10 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@class='menu-top-button login']")
     public WebElement girisYapLinkHome;
+
+    @FindBy(xpath = "//*[@id='bottom-button']")
+    public WebElement enAltaInYonButonHome;
+
+    @FindBy(xpath = "//*[@id='top-button']")
+    public WebElement enUsteCikYonButonHome;
 }
