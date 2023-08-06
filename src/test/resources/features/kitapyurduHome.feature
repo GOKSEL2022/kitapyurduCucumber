@@ -1,2 +1,3 @@
-Feature:
-  Scenario:
+Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
+  Scenario:anasayfadaki_fonksiyonlar_kullanilir
+    Given
