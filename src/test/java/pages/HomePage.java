@@ -39,6 +39,35 @@ public class HomePage {
     @FindBy(xpath = "(//*[@alt='Kavanozda'])[1]")
     public WebElement anasayfaIlkUrunHome;
 
+    @FindBy(xpath = "//*[@id='suggest-button']")
+    public WebElement fikriniziPaylasirmisinizSembolButonHome;
+
+    @FindBy(xpath = "(//h2[text()='Önerim Var'])[1]")
+    public WebElement onerimVarTextHome;
+
+    @FindBy(xpath = "//*[@name='name']")
+    public WebElement onerimVarAdSoyadHome;
+
+    @FindBy(xpath = "//*[@name='email']")
+    public WebElement onerimVarEmailHome;
+
+    @FindBy(xpath = "//select[@name='subject']")
+    public WebElement onerimVarSecinizDropDownHome;
+
+    @FindBy(xpath = "//*[@name='enquiry']")
+    public WebElement onerimVarGorusunuzHome;
+
+    @FindBy(xpath = "//*[@id='feedback_captcha']")
+    public WebElement onerimVarDogrulamaKoduHome;
+
+    @FindBy(xpath = "//*[@class='button']")
+    public WebElement onerimVarGonderButonHome;
+
+    @FindBy(xpath = "//*[.='Girmiş olduğunuz doğrulama kodu hatalıdır.']")
+    public WebElement onerimVarHataliKodMesajiHome;
+
+
+
 
 
 

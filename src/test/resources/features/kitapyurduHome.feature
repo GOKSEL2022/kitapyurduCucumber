@@ -53,6 +53,25 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
     When  kullanici secilen Urunun sepetten Cikarildigini dogrular
     Then  kullanici sayfayi kapatir
 
+  Scenario Outline: anasayfa_onerim_var
+    Given kullanici fikrinizi bizimle paylasir misiniz sembolune tiklar
+    When  kullanici onerim var formunun acildigini dogrular
+    And   kullanici ad-soyad alanina "<ad soyad>" girer
+    And   kullanici e-posta alanina "<e-posta>" girer
+    And   kullanici seciniz kismindan oneriyi secer
+    And   kullanici gorusunuz alanina "<gorus>" girer
+    And   kullanici dogrulama kodu kismina alti haneli sayi girer
+    And   kullanici gonder butonuna tiklar
+    When  kullanici girmis oldugunuz dogrulama kodu hatalidir uyarisini gorur
+    Then  kullanici sayfayi kapatir
+    Examples:
+      | ad soyad        | e-posta         | gorus                    |
+      | Adi bende sakli | sakli@gmail.com | Akla gelmeyen basa gelir |
+
+
+
+
+
 
 
 

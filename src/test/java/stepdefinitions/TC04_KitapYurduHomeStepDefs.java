@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -7,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.IndexPage;
@@ -14,9 +16,9 @@ import pages.KitapPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.List;
-
 public class TC04_KitapYurduHomeStepDefs {
+    int sayi1=Faker.instance().number().numberBetween(100,999);
+    int sayi2=Faker.instance().number().numberBetween(100,999);
     HomePage homePage=new HomePage();
     KitapPage kitapPage=new KitapPage();
     IndexPage indexPage=new IndexPage();
@@ -146,5 +148,49 @@ public class TC04_KitapYurduHomeStepDefs {
     @When("kullanici secilen Urunun sepetten Cikarildigini dogrular")
     public void kullaniciSecilenUrununSepettenCikarildiginiDogrular() {
         Assert.assertTrue(indexPage.secilenUrunSepetinizdenCikariliyorAlertIndex.isDisplayed());
+    }
+
+    @Given("kullanici fikrinizi bizimle paylasir misiniz sembolune tiklar")
+    public void kullaniciFikriniziBizimlePaylasirMisinizSemboluneTiklar() {
+        ReusableMethods.clickByJS(homePage.fikriniziPaylasirmisinizSembolButonHome);
+    }
+
+    @When("kullanici onerim var formunun acildigini dogrular")
+    public void kullaniciOnerimVarFormununAcildiginiDogrular() {
+        Assert.assertTrue(homePage.onerimVarTextHome.isDisplayed());
+    }
+
+    @And("kullanici ad-soyad alanina {string} girer")
+    public void kullaniciAdSoyadAlaninaGirer(String string) {
+        homePage.onerimVarAdSoyadHome.sendKeys(Faker.instance().name().fullName());
+    }
+
+    @And("kullanici e-posta alanina {string} girer")
+    public void kullaniciEPostaAlaninaGirer(String string) {
+        homePage.onerimVarEmailHome.sendKeys(Faker.instance().internet().emailAddress());
+    }
+
+    @And("kullanici seciniz kismindan oneriyi secer")
+    public void kullaniciSecinizKismindanOneriyiSecer() {
+        Select select=new Select(homePage.onerimVarSecinizDropDownHome);
+        select.selectByVisibleText("Öneri");
+    }
+
+    @And("kullanici gorusunuz alanina {string} girer")
+    public void kullaniciGorusunuzAlaninaGirer(String string) {
+        homePage.onerimVarGorusunuzHome.sendKeys(Faker.instance().lorem().paragraph());
+    }
+
+    @And("kullanici dogrulama kodu kismina alti haneli sayi girer")
+    public void kullaniciDogrulamaKoduKisminaAltiHaneliSayiGirer() {
+        homePage.onerimVarDogrulamaKoduHome.sendKeys(""+sayi1+sayi2);
+    }
+    @And("kullanici gonder butonuna tiklar")
+    public void kullaniciGonderButonunaTiklar() {
+        ReusableMethods.clickByJS(homePage.onerimVarGonderButonHome);
+    }
+    @When("kullanici girmis oldugunuz dogrulama kodu hatalidir uyarisini gorur")
+    public void kullaniciGirmisOldugunuzDogrulamaKoduHatalidirUyarisiniGorur() {
+        Assert.assertTrue(homePage.onerimVarHataliKodMesajiHome.isDisplayed());
     }
 }
