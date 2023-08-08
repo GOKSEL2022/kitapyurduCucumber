@@ -139,6 +139,41 @@ public class IndexPage {
     @FindBy(xpath = "(//*[.='Çıkış'])[2]")
     public WebElement cikisLinkAccountIndex;
 
+    @FindBy(xpath = "(//*[@title='Kavanozda'])[1]")
+    public WebElement secilenUrunKitap;
+
+    @FindBy(xpath = "//*[@class='muted']")
+    public WebElement secilenUrunKazanacaginizPuanKitap;
+
+    @FindBy(xpath = "(//*[@type='checkbox'])[1]")
+    public WebElement secilenUrunCheckboxUstIndex;
+
+    @FindBy(xpath = "(//*[@type='checkbox'])[1]")
+    public WebElement secilenUrunCheckboxAltIndex;
+
+    @FindBy(xpath = "(//*[@class='quantity'])[1]")
+    public WebElement secilenUrunMiktarIndex;
+
+    @FindBy(xpath = "(//*[@class='preparation'])[1]")
+    public WebElement secilenUrunTedarikSuresiIndex;
+
+    @FindBy(xpath = "(//*[@class='price'])[1]")
+    public WebElement secilenUrunBirimFiyatiIndex;
+
+    @FindBy(xpath = "(//*[@class='total'])[1]")
+    public WebElement secilenUrunToplamIndex;
+
+    @FindBy(xpath = "//*[@class='fa fa-times red-icon']")
+    public WebElement secilenUrunListedenKaldirIndex;
+
+    @FindBy(xpath = "//h2[@class='swal2-title ky-swal-title-single']")
+    public WebElement secilenUrunSepetinizdenCikariliyorAlertIndex;
+
+
+
+
+
+
 
 
 

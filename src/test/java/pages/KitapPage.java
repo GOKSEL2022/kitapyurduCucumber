@@ -20,4 +20,19 @@ public class KitapPage {
     @FindBy(xpath = "//*[@id='js-checkout']")
     public WebElement satinAlButonKitap;
 
+    @FindBy(xpath = "//*[@id='description_text']")
+    public WebElement ilkUrunDescriptionTextKitap;
+
+    @FindBy(xpath = "//*[@class='attributes']")
+    public WebElement ilkUrunKitapBilgileriKitap;
+
+    @FindBy(xpath = "//p[@class='pr_view-review-text']")
+    public WebElement ilkUrunYorumlarKitap;
+
+    @FindBy(xpath = "//*[@class='price__item']")
+    public WebElement urunFiyatiKitap;
+
+    @FindBy(xpath = "//*[@id='js-cart']")
+    public WebElement sepeteGitButonKitap;
+
 }

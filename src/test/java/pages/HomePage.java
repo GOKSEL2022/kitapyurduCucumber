@@ -35,4 +35,11 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@class='swiper-button-prev common-sprite desktop-banner-prev']")
     public WebElement solYonKaydiriciButonHome;
+
+    @FindBy(xpath = "(//*[@alt='Kavanozda'])[1]")
+    public WebElement anasayfaIlkUrunHome;
+
+
+
+
 }
