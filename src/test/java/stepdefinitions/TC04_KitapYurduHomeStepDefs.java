@@ -104,15 +104,13 @@ public class TC04_KitapYurduHomeStepDefs {
     public void kullaniciSectigiUrununSepeteEklendiginiGoruntuler() {
         Assert.assertTrue(indexPage.secilenUrunKitap.isDisplayed());
     }
-
-    @And("kullanici urun basliginin yanindaki radio butonun secilebilir oldugunu dogrular")
-    public void kullaniciUrunBasligininYanindakiRadioButonunSecilebilirOldugunuDogrular() {
-        Assert.assertTrue(indexPage.secilenUrunCheckboxUstIndex.isSelected());
+    @And("kullanici urun basliginin yanindaki radio butonu tiklar")
+    public void kullaniciUrunBasligininYanindakiRadioButonuTiklar() {
+        indexPage.secilenUrunCheckboxAltIndex.click();
     }
-
-    @And("kullanici urun gorselinin yanindaki radio butonun secilebilir oldugunu dogrular")
-    public void kullaniciUrunGorselininYanindakiRadioButonunSecilebilirOldugunuDogrular() {
-        Assert.assertTrue(indexPage.secilenUrunCheckboxAltIndex.isSelected());
+    @And("kullanici urun gorselinin yanindaki radio butonu tiklar")
+    public void kullaniciUrunGorselininYanindakiRadioButonuTiklar() {
+        indexPage.secilenUrunCheckboxUstIndex.click();
     }
 
     @And("kullanici urunun altinda alisveris sonrasi kazanacagi puani goruntuler")

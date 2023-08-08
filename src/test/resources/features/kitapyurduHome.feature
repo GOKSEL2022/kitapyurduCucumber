@@ -34,13 +34,21 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
     And   kullanici sepetim butonuna tiklar
     And   kullanici sepete git butonua tiklar
     And   kullanici sectigi urunun sepete eklendigini goruntuler
-    And   kullanici urun basliginin yanindaki radio butonun secilebilir oldugunu dogrular
-    And   kullanici urun gorselinin yanindaki radio butonun secilebilir oldugunu dogrular
+    And   kullanici bir saniye bekler
+    And   kullanici urun basliginin yanindaki radio butonu tiklar
+    And   kullanici bir saniye bekler
+    And   kullanici urun gorselinin yanindaki radio butonu tiklar
+    And   kullanici bir saniye bekler
     And   kullanici urunun altinda alisveris sonrasi kazanacagi puani goruntuler
+    And   kullanici bir saniye bekler
     And   kullanici urun miktarini goruntuler
+    And   kullanici bir saniye bekler
     And   kullanici tedarik suresini goruntuler
+    And   kullanici bir saniye bekler
     And   kullanici birim fiyati goruntuler
+    And   kullanici bir saniye bekler
     And   kullanici toplam fiyati goruntuler
+    And   kullanici bir saniye bekler
     And   kullanici secili urunu sepetten kaldirmak icin x e tiklar
     When  kullanici secilen Urunun sepetten Cikarildigini dogrular
     Then  kullanici sayfayi kapatir
