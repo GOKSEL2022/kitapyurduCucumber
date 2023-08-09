@@ -68,7 +68,7 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
       | ad soyad        | e-posta         | gorus                    |
       | Adi bende sakli | sakli@gmail.com | Akla gelmeyen basa gelir |
 
-    Scenario:anasayfa_altinda_iletisim_alani_doldurulur
+    Scenario Outline:anasayfa_altinda_iletisim_alani_doldurulur
       Given kullanici anasayfanin en altina gelir
       When  kullanici iletisim linkine tiklar
       And   kullanici seciniz dropdownından Öneri secer
@@ -78,6 +78,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
       And   kullanici dogrulama kodu alanina "<dogrulama kodu>" girer
       When  kullanici gonder butona tiklar
       Then  kullanici dogrulama kodu yanlis uyarisini gorur
+      Examples:
+        | adiniz | e-posta adresiniz | mesajiniz | dogrulama kodu |
+        | adiniz | e-posta adresiniz | mesajiniz | dogrulama kodu |
 
 
 
