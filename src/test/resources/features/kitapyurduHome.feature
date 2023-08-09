@@ -22,7 +22,7 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
     And   kullanici anasayfada birden fazla resim oldugunu dogrular
     Then  kullanici sayfayi kapatir
 
-  Scenario: anasayfadaki_urunleri_sepete_ekleme
+  Scenario: anasayfadaki_urunleri_sepete_ekleme_ve_sepetten_silme
     Given kullanici anasayfadaki ilk urune tiklar
     When  kullanici secilen urunun sayfada goruntulendigini dogrular
     And   kullanici urunun yaninda aciklama yazisini goruntuler
@@ -67,6 +67,19 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
     Examples:
       | ad soyad        | e-posta         | gorus                    |
       | Adi bende sakli | sakli@gmail.com | Akla gelmeyen basa gelir |
+
+    Scenario:anasayfa_altinda_iletisim_alani_doldurulur
+      Given kullanici anasayfanin en altina gelir
+      When  kullanici iletisim linkine tiklar
+      And   kullanici seciniz dropdownından Öneri secer
+      And   kullanici adiniz alanina "<adiniz>" girer
+      And   kullanici e-posta adresiniz "<e-posta adresiniz>" girer
+      And   kullanici mesajiniz alanina "<mesajiniz>" girer
+      And   kullanici dogrulama kodu alanina "<dogrulama kodu>" girer
+      When  kullanici gonder butona tiklar
+      Then  kullanici dogrulama kodu yanlis uyarisini gorur
+
+
 
 
 
