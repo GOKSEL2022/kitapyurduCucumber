@@ -83,6 +83,8 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
         | adiniz | e-posta adresiniz | mesajiniz                            | dogrulama kodu |
         | adsiz  | adisz@gmail.com   | adini ben verdim yasini Allah versin | dogrulama kodu |
 
+     Scenario:
+       Given
 
 
 
