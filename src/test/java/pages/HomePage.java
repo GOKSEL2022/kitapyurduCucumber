@@ -66,6 +66,12 @@ public class HomePage {
     @FindBy(xpath = "//*[.='Girmiş olduğunuz doğrulama kodu hatalıdır.']")
     public WebElement onerimVarHataliKodMesajiHome;
 
+    @FindBy(xpath = "(//*[@class='bottom-item'])[2]")
+    public WebElement iletisimLinkHome;
+
+
+
+
 
 
 
