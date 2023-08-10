@@ -71,16 +71,17 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
     Scenario Outline:anasayfa_altinda_iletisim_alani_doldurulur
       Given kullanici anasayfanin en altina gelir
       When  kullanici iletisim linkine tiklar
-      And   kullanici seciniz dropdownından Öneri secer
+      And   kullanici seciniz dropdownindan oneri secer
       And   kullanici adiniz alanina "<adiniz>" girer
       And   kullanici e-posta adresiniz "<e-posta adresiniz>" girer
       And   kullanici mesajiniz alanina "<mesajiniz>" girer
       And   kullanici dogrulama kodu alanina "<dogrulama kodu>" girer
       When  kullanici gonder butona tiklar
       Then  kullanici dogrulama kodu yanlis uyarisini gorur
+      Then  kullanici sayfayi kapatir
       Examples:
-        | adiniz | e-posta adresiniz | mesajiniz | dogrulama kodu |
-        | adiniz | e-posta adresiniz | mesajiniz | dogrulama kodu |
+        | adiniz | e-posta adresiniz | mesajiniz                            | dogrulama kodu |
+        | adsiz  | adisz@gmail.com   | adini ben verdim yasini Allah versin | dogrulama kodu |
 
 
 
