@@ -35,4 +35,6 @@ public class KitapPage {
     @FindBy(xpath = "//*[@id='js-cart']")
     public WebElement sepeteGitButonKitap;
 
+
+
 }

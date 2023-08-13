@@ -69,11 +69,11 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='bottom-item'])[2]")
     public WebElement iletisimLinkHome;
 
+    @FindBy(xpath = "//*[@class='logo-text']")
+    public WebElement kitapYurduComTextHome;
+
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[1]")
     public WebElement cokSatanKitaplarTextHome;
-
-    @FindBy(xpath = "(//*[@class='mn-icon icon-angleRight'])[1]")
-    public WebElement haftalikCokSatanKitaplarTextHome;
 
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[2]")
     public WebElement yeniCikanKitaplarTextHome;
@@ -86,6 +86,21 @@ public class HomePage {
 
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[5]")
     public WebElement yazarlarTextHome;
+
+    @FindBy(xpath = "(//*[.='Çocuk Kitapları'])[6]")
+    public WebElement cocukKitaplariTextHome;
+
+    @FindBy(xpath = "(//*[@href='sinav-kitaplari'])[1]")
+    public WebElement sinavKitaplariTextHome;
+
+    @FindBy(xpath = "(//*[.='Ne Okusam?'])[4]")
+    public WebElement neOkusamTextHome;
+
+    @FindBy(xpath = "(//*[.='Edebiyat'])[2]")
+    public WebElement edebiyatTextHome;
+
+
+
 
 
 
