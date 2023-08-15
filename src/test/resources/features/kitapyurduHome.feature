@@ -112,6 +112,8 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici ne okusam sayfasinin acildigini dogrular
        Then  kullanici sayfayi kapatir
 
+     Scenario:
+       Given
 
 
 
