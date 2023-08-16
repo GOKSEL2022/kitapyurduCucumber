@@ -81,6 +81,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[3]")
     public WebElement tumKitaplarTextHome;
 
+    @FindBy(xpath = "//*[@href='kategori/kitap-edebiyat/128.html']")
+    public WebElement tumKitaplarEdebiyatTextHome;
+
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[4]")
     public WebElement yayincilarTextHome;
 
@@ -98,6 +101,9 @@ public class HomePage {
 
     @FindBy(xpath = "(//*[.='Edebiyat'])[2]")
     public WebElement edebiyatTextHome;
+
+    @FindBy(xpath = "(//*[@href='yeni-cikan-kitaplar/haftalik/2.html'])[1]")
+    public  WebElement haftalikYeniCikanKitaplarTextHome;
 
 
 
