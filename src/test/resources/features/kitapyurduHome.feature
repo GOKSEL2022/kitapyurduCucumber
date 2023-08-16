@@ -88,37 +88,51 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici haftalik cok satan kitaplar basligina tiklar
        And   kullanici haftalik cok satan kitaplar sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici yeni cikan kitaplar basligini uzerine gelir
        And   kullanici bir saniye bekler
        And   Kullanici haftalik yeni cikan kitaplar basligina tiklar
        And   kullanici haftalik yeni cikan kitaplar sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici tum kitaplar basliginin uzerine gelir
        And   kullanici tum kitaplar basliginin altinda edebiyat secenegine tiklar
        And   kullanici edebiyat sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici yayincilar basligina tiklar
        And   kullanici yayincilar sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici yazarlar basligina tiklar
        And   kullanici yazarlar sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici cocuk kitaplari basligina tiklar
        And   kullanici cocuk kitaplari sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici sinav kitaplari basligina tiklar
        And   kullanici sinav kitaplari sayfasinin acildigini dogrular
        And   kullanici bir saniye bekler
-       And   kullanici kitapYurduCom textine tiklar
        And   kullanici ne okusam basligina tiklar
        When  kullanici ne okusam sayfasinin acildigini dogrular
        Then  kullanici sayfayi kapatir
+
+     Scenario: anasayfadaki_gri_arac_cubugundaki_alanlarin_testi
+       Given kullanici dergi linkine tiklar
+       When  kullanici dergi ile ilgili alanlarin acildigini dogrular
+       And   kullanici hobi_oyuncak linkine tiklar
+       And   kullanici hobi_oyuncak ile ilgili alanlarin acildigini dogrular
+       And   kullanici kirtasiye linkine tiklar
+       And   kullanici kirtasiye ile ilgili alanlarin acildigini dogrular
+       And   kullanici kirkambar linkine tiklar
+       And   kullanici temali ve lisansli urunler alaninin acildigini dogrular
+       And   kullanici tum kategoriler linkine tiklar
+       And   kullanici tum kategori seceneklerinin gorunur oldugunu dogrular
+       And   kullanici kampanyalar linkine tiklar
+       And   kullanici one cikan kampanyalari goruntuler
+       And   kullanici puan katalogu linkine tiklar
+       When  kullanici puan katalogu sayfasinin acildigini dogrular
+       Then  kullanici sayfayi kapatir
+
+
+
+
 
 
 

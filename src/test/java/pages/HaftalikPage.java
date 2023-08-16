@@ -12,8 +12,8 @@ public class HaftalikPage {
     @FindBy(xpath = "(//*[@class='mn-icon icon-angleRight'])[1]")
     public WebElement haftalikCokSatanKitaplarTextHome;
 
-    @FindBy(xpath = "(//*[@class='mn-icon icon-angleRight'])[2]")
-    public WebElement haftalikYeniCikanKitaplarTextHaftalik;
+    //@FindBy(xpath = "(//*[@class='mn-icon icon-angleRight'])[2]")
+    //public WebElement haftalikYeniCikanKitaplarTextHaftalik;
 
     @FindBy(xpath = "(//*[.='Çok Satanlar (Haftalık)'])[2]")
     public WebElement cokSatanlarHaftalikTextHaftalik;
