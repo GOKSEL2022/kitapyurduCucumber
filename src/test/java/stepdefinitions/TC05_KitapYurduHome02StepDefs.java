@@ -43,7 +43,7 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @And("Kullanici haftalik yeni cikan kitaplar basligina tiklar")
     public void kullaniciHaftalikYeniCikanKitaplarBasliginaTiklar() {
-        ReusableMethods.clickByJS(haftalikPage.haftalikYeniCikanKitaplarTextHaftalik);
+        ReusableMethods.clickByJS(homePage.haftalikYeniCikanKitaplarTextHome);
     }
 
     @And("kullanici haftalik yeni cikan kitaplar sayfasinin acildigini dogrular")
@@ -58,7 +58,7 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @And("kullanici tum kitaplar basliginin altinda edebiyat secenegine tiklar")
     public void kullaniciTumKitaplarBasligininAltindaEdebiyatSecenegineTiklar() {
-        ReusableMethods.clickByJS(homePage.edebiyatTextHome);
+        ReusableMethods.clickByJS(homePage.tumKitaplarEdebiyatTextHome);
     }
 
     @And("kullanici edebiyat sayfasinin acildigini dogrular")
