@@ -120,4 +120,60 @@ public class TC05_KitapYurduHome02StepDefs {
     public void kullaniciKitapYurduComTextineTiklar() {
         ReusableMethods.clickByJS(homePage.kitapYurduComTextHome);
     }
+
+    @Given("kullanici dergi linkine tiklar")
+    public void kullaniciDergiLinkineTiklar() {
+    }
+
+    @When("kullanici dergi ile ilgili alanlarin acildigini dogrular")
+    public void kullaniciDergiIleIlgiliAlanlarinAcildiginiDogrular() {
+    }
+
+    @And("kullanici hobi_oyuncak linkine tiklar")
+    public void kullaniciHobi_oyuncakLinkineTiklar() {
+    }
+
+    @And("kullanici hobi_oyuncak ile ilgili alanlarin acildigini dogrular")
+    public void kullaniciHobi_oyuncakIleIlgiliAlanlarinAcildiginiDogrular() {
+    }
+
+    @And("kullanici kirtasiye linkine tiklar")
+    public void kullaniciKirtasiyeLinkineTiklar() {
+    }
+
+    @And("kullanici kirtasiye ile ilgili alanlarin acildigini dogrular")
+    public void kullaniciKirtasiyeIleIlgiliAlanlarinAcildiginiDogrular() {
+    }
+
+    @And("kullanici kirkambar linkine tiklar")
+    public void kullaniciKirkambarLinkineTiklar() {
+    }
+
+    @And("kullanici temali ve lisansli urunler alaninin acildigini dogrular")
+    public void kullaniciTemaliVeLisansliUrunlerAlanininAcildiginiDogrular() {
+    }
+
+    @And("kullanici tum kategoriler linkine tiklar")
+    public void kullaniciTumKategorilerLinkineTiklar() {
+    }
+
+    @And("kullanici tum kategori seceneklerinin gorunur oldugunu dogrular")
+    public void kullaniciTumKategoriSeceneklerininGorunurOldugunuDogrular() {
+    }
+
+    @And("kullanici kampanyalar linkine tiklar")
+    public void kullaniciKampanyalarLinkineTiklar() {
+    }
+
+    @And("kullanici one cikan kampanyalari goruntuler")
+    public void kullaniciOneCikanKampanyalariGoruntuler() {
+    }
+
+    @And("kullanici puan katalogu linkine tiklar")
+    public void kullaniciPuanKataloguLinkineTiklar() {
+    }
+
+    @When("kullanici puan katalogu sayfasinin acildigini dogrular")
+    public void kullaniciPuanKataloguSayfasininAcildiginiDogrular() {
+    }
 }
