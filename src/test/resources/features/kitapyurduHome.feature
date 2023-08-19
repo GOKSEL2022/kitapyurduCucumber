@@ -130,6 +130,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici puan katalogu sayfasinin acildigini dogrular
        Then  kullanici sayfayi kapatir
 
+     Scenario:
+       Given
+
 
 
 
