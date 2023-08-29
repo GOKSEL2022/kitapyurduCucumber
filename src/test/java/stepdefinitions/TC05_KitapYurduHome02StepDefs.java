@@ -184,4 +184,48 @@ public class TC05_KitapYurduHome02StepDefs {
     @When("kullanici puan katalogu sayfasinin acildigini dogrular")
     public void kullaniciPuanKataloguSayfasininAcildiginiDogrular() {
     }
+
+    @Given("kullanici listelerim linkine tiklar")
+    public void kullaniciListelerimLinkineTiklar() {
+    }
+
+    @When("kullanici acilan listelerim alt secenekleri goruntuler")
+    public void kullaniciAcilanListelerimAltSecenekleriGoruntuler() {
+    }
+
+    @And("kullanici siparis takibi linkine tiklar")
+    public void kullaniciSiparisTakibiLinkineTiklar() {
+    }
+
+    @And("kullanici acilan siparis takibi alt seceneklerini goruntuler")
+    public void kullaniciAcilanSiparisTakibiAltSecenekleriniGoruntuler() {
+    }
+
+    @And("kullanici Turkce linkine tiklar")
+    public void kullaniciTurkceLinkineTiklar() {
+    }
+
+    @And("kullanici acilan Turkce alt seceneklerini goruntuler")
+    public void kullaniciAcilanTurkceAltSecenekleriniGoruntuler() {
+    }
+
+    @And("kullanici TL secenegini tiklar")
+    public void kullaniciTLSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan TL alt seceneklerini goruntuler")
+    public void kullaniciAcilanTLAltSecenekleriniGoruntuler() {
+    }
+
+    @And("kullanici yardim linkine tiklar")
+    public void kullaniciYardimLinkineTiklar() {
+    }
+
+    @And("kullanici yardim sikca sorulan sorular secenegini secer")
+    public void kullaniciYardimSikcaSorulanSorularSeceneginiSecer() {
+    }
+
+    @When("kullanici sorulan sorularla cevaplarin uyumlu oldugunu dogrular")
+    public void kullaniciSorulanSorularlaCevaplarinUyumluOldugunuDogrular() {
+    }
 }
