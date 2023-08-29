@@ -123,34 +123,42 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @Given("kullanici dergi linkine tiklar")
     public void kullaniciDergiLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.dergiLinkHome);
     }
 
     @When("kullanici dergi ile ilgili alanlarin acildigini dogrular")
     public void kullaniciDergiIleIlgiliAlanlarinAcildiginiDogrular() {
+        Assert.assertTrue(homePage.edebiyatDergileriDropdownHome.isDisplayed());
     }
 
     @And("kullanici hobi_oyuncak linkine tiklar")
     public void kullaniciHobi_oyuncakLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.hobiOyuncakLinkHome);
     }
 
     @And("kullanici hobi_oyuncak ile ilgili alanlarin acildigini dogrular")
     public void kullaniciHobi_oyuncakIleIlgiliAlanlarinAcildiginiDogrular() {
+        Assert.assertTrue(homePage.oyunVeOyuncakDropdownHome.isDisplayed());
     }
 
     @And("kullanici kirtasiye linkine tiklar")
     public void kullaniciKirtasiyeLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.kirtasiyeLinkHome);
     }
 
     @And("kullanici kirtasiye ile ilgili alanlarin acildigini dogrular")
     public void kullaniciKirtasiyeIleIlgiliAlanlarinAcildiginiDogrular() {
+        Assert.assertTrue(homePage.kitapAksesuarlariDropdownHome.isDisplayed());
     }
 
     @And("kullanici kirkambar linkine tiklar")
     public void kullaniciKirkambarLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.kirkambarLinkHome);
     }
 
     @And("kullanici temali ve lisansli urunler alaninin acildigini dogrular")
     public void kullaniciTemaliVeLisansliUrunlerAlanininAcildiginiDogrular() {
+        assert homePage.temaliVeLisansliUrunlerDropdownHome.isDisplayed();
     }
 
     @And("kullanici tum kategoriler linkine tiklar")
