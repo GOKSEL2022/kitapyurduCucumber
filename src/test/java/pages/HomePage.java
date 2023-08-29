@@ -105,6 +105,41 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='yeni-cikan-kitaplar/haftalik/2.html'])[1]")
     public  WebElement haftalikYeniCikanKitaplarTextHome;
 
+    @FindBy(xpath = "(//*[@class='lvl1-item'])[2]")
+    public WebElement dergiLinkHome;
+
+    @FindBy(xpath = "//*[.='Edebiyat Dergileri']")
+    public WebElement edebiyatDergileriDropdownHome;
+
+    @FindBy(xpath = "(//*[@class='lvl1-item'])[3]")
+    public WebElement hobiOyuncakLinkHome;
+
+    @FindBy(xpath = "//*[.='Oyun ve Oyuncak']")
+    public WebElement oyunVeOyuncakDropdownHome;
+
+    @FindBy(xpath = "(//*[@class='lvl1-item'])[4]")
+    public WebElement kirtasiyeLinkHome;
+
+    @FindBy(xpath = "//*[.='Kitap Aksesuarları']")
+    public WebElement kitapAksesuarlariDropdownHome;
+
+    @FindBy(xpath = "(//*[@class='lvl1-item'])[5]")
+    public WebElement kirkambarLinkHome;
+
+    @FindBy(xpath = "(//*[.='Temalı ve Lisanslı Ürünler'])[1]")
+    public WebElement temaliVeLisansliUrunlerDropdownHome;
+
+    @FindBy(xpath = "(//*[@href='index.php?route=product/category'])[1]")
+    public WebElement tumKategorilerLinkHome;
+
+    @FindBy(xpath = "(//a[@href='kampanyalar'])[1]")
+    public WebElement kampanyalarLinkHome;
+
+
+
+
+
+
 
 
 

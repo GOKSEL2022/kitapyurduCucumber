@@ -16,4 +16,7 @@ public class KategoriPage {
 
     @FindBy(xpath = "(//*[.='Edebiyat'])[8]")
     public WebElement edebiyatTextKitap;
+
+    @FindBy(xpath = "//a[@href='https://www.kitapyurdu.com/index.php?route=product/category']")
+    public WebElement tumKategorilerTextKategoriler;
 }
