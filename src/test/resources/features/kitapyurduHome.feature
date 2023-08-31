@@ -145,6 +145,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici sorulan sorularla cevaplarin uyumlu oldugunu dogrular
        Then  kullanici sayfayi kapatir
 
+       Scenario:
+         Given
+
 
 
 
