@@ -135,6 +135,9 @@ public class HomePage {
     @FindBy(xpath = "(//a[@href='kampanyalar'])[1]")
     public WebElement kampanyalarLinkHome;
 
+    @FindBy(xpath = "(//a[@href='puan-katalogu'])[1]")
+    public WebElement puanKataloguLinkHome;
+
 
 
 

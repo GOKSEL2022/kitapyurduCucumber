@@ -1,5 +1,6 @@
 @TC01
 Feature: anasayfa_acilisi
+  @anasayfa
   Scenario: anasayfa_acilisi
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular

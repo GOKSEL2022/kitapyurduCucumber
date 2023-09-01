@@ -19,6 +19,8 @@ public class TC05_KitapYurduHome02StepDefs {
     SinavKitaplariPage sinavKitaplariPage=new SinavKitaplariPage();
     YayincilarPage yayincilarPage=new YayincilarPage();
     YazarlarPage yazarlarPage=new YazarlarPage();
+    KampanyalarPage kampanyalarPage=new KampanyalarPage();
+    PuanKataloguPage puanKataloguPage=new PuanKataloguPage();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici cok satan kitaplar basliginin uzerine gelir")
     public void kullaniciCokSatanKitaplarBasligininUzerineGelir() {
@@ -163,26 +165,32 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @And("kullanici tum kategoriler linkine tiklar")
     public void kullaniciTumKategorilerLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.tumKategorilerLinkHome);
     }
 
     @And("kullanici tum kategori seceneklerinin gorunur oldugunu dogrular")
     public void kullaniciTumKategoriSeceneklerininGorunurOldugunuDogrular() {
+        Assert.assertTrue(kategoriPage.tumKategorilerTextKategoriler.isDisplayed());
     }
 
     @And("kullanici kampanyalar linkine tiklar")
     public void kullaniciKampanyalarLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.kampanyalarLinkHome);
     }
 
     @And("kullanici one cikan kampanyalari goruntuler")
     public void kullaniciOneCikanKampanyalariGoruntuler() {
+        Assert.assertTrue(kampanyalarPage.tumKampanyalarTextKampanyalar.isDisplayed());
     }
 
     @And("kullanici puan katalogu linkine tiklar")
     public void kullaniciPuanKataloguLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.puanKataloguLinkHome);
     }
 
     @When("kullanici puan katalogu sayfasinin acildigini dogrular")
     public void kullaniciPuanKataloguSayfasininAcildiginiDogrular() {
+        Assert.assertTrue(puanKataloguPage.puanKataloguTextPuanKatalogu.isDisplayed());
     }
 
     @Given("kullanici listelerim linkine tiklar")
