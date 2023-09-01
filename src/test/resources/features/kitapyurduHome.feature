@@ -117,16 +117,22 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
      Scenario: anasayfadaki_gri_arac_cubugundaki_alanlarin_testi
        Given kullanici dergi linkine tiklar
        When  kullanici dergi ile ilgili alanlarin acildigini dogrular
+       And   kullanici bir saniye bekler
        And   kullanici hobi_oyuncak linkine tiklar
        And   kullanici hobi_oyuncak ile ilgili alanlarin acildigini dogrular
+       And   kullanici bir saniye bekler
        And   kullanici kirtasiye linkine tiklar
        And   kullanici kirtasiye ile ilgili alanlarin acildigini dogrular
+       And   kullanici bir saniye bekler
        And   kullanici kirkambar linkine tiklar
        And   kullanici temali ve lisansli urunler alaninin acildigini dogrular
+       And   kullanici bir saniye bekler
        And   kullanici tum kategoriler linkine tiklar
        And   kullanici tum kategori seceneklerinin gorunur oldugunu dogrular
+       And   kullanici bir saniye bekler
        And   kullanici kampanyalar linkine tiklar
        And   kullanici one cikan kampanyalari goruntuler
+       And   kullanici bir saniye bekler
        And   kullanici puan katalogu linkine tiklar
        When  kullanici puan katalogu sayfasinin acildigini dogrular
        Then  kullanici sayfayi kapatir
