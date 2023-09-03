@@ -195,6 +195,7 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @Given("kullanici listelerim linkine tiklar")
     public void kullaniciListelerimLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.listelerimLinkHome);
     }
 
     @When("kullanici acilan listelerim alt secenekleri goruntuler")
