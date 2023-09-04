@@ -147,6 +147,34 @@ public class HomePage {
     @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/index.php?route=account/order'])[1]")
     public WebElement siparisTakibiLinkHome;
 
+    @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/index.php?route=account/order'])[1]")
+    public WebElement siparislerimSecenegiSiparisTakibiHome;
+
+    @FindBy(xpath = "//*[.='Türkçe']")
+    public WebElement turkceDilSecenegiHome;
+
+    @FindBy(xpath = "(//*[.='English'])[2]")
+    public WebElement englishDilSecenegiHome;
+
+    @FindBy(xpath = "//*[.='TL']")
+    public WebElement tlSecenegiHome;
+
+    @FindBy(xpath = "(//*[.='EUR'])[2]")
+    public WebElement eurSecenegiHome;
+
+    @FindBy(xpath = "(//*[@href='yardim'])[1]")
+    public WebElement yardimLinkHome;
+
+    @FindBy(xpath = "(//a[@href='yardim'])[2]")
+    public WebElement yardimVeIslemRehberiSecenegiYardimHome;
+
+
+
+
+
+
+
+
 
 
 
