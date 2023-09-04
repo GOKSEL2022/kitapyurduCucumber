@@ -193,51 +193,62 @@ public class TC05_KitapYurduHome02StepDefs {
         Assert.assertTrue(puanKataloguPage.puanKataloguTextPuanKatalogu.isDisplayed());
     }
 
-    @Given("kullanici listelerim linkine tiklar")
-    public void kullaniciListelerimLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.listelerimLinkHome);
+    @Given("kullanici listelerim linkine gelir")
+    public void kullaniciListelerimLinkineGelir() {
+        actions.moveToElement(homePage.listelerimLinkHome).perform();
+
+        //ReusableMethods.clickByJS(homePage.listelerimLinkHome);
     }
 
     @When("kullanici acilan listelerim alt secenekleri goruntuler")
-    public void kullaniciAcilanListelerimAltSecenekleriGoruntuler() {
+    public void kullaniciAcilanListelerimAltSecenekleriGoruntuler() throws InterruptedException {
+        Thread.sleep(1000);
         Assert.assertTrue(homePage.favorilerimSecenegiListelerimLinkHome.isDisplayed());
     }
 
-    @And("kullanici siparis takibi linkine tiklar")
-    public void kullaniciSiparisTakibiLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.siparisTakibiLinkHome);
+    @And("kullanici siparis takibi linkine gelir")
+    public void kullaniciSiparisTakibiLinkineGelir() {
+        actions.moveToElement(homePage.siparisTakibiLinkHome).perform();
+        //ReusableMethods.clickByJS(homePage.siparisTakibiLinkHome);
     }
 
     @And("kullanici acilan siparis takibi alt seceneklerini goruntuler")
-    public void kullaniciAcilanSiparisTakibiAltSecenekleriniGoruntuler() {
+    public void kullaniciAcilanSiparisTakibiAltSecenekleriniGoruntuler() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertTrue(homePage.siparislerimSecenegiSiparisTakibiHome.isDisplayed());
 
     }
 
-    @And("kullanici Turkce linkine tiklar")
-    public void kullaniciTurkceLinkineTiklar() {
+    @And("kullanici Turkce linkine gelir")
+    public void kullaniciTurkceLinkineGelir() {
+        actions.moveToElement(homePage.turkceDilSecenegiHome).perform();
+
     }
 
     @And("kullanici acilan Turkce alt seceneklerini goruntuler")
-    public void kullaniciAcilanTurkceAltSecenekleriniGoruntuler() {
+    public void kullaniciAcilanTurkceAltSecenekleriniGoruntuler() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertTrue(homePage.englishDilSecenegiHome.isDisplayed());
     }
 
-    @And("kullanici TL secenegini tiklar")
-    public void kullaniciTLSeceneginiTiklar() {
+    @And("kullanici TL secenegini gelir")
+    public void kullaniciTLSeceneginiGelir() {
+        actions.moveToElement(homePage.tlSecenegiHome).perform();
     }
 
     @And("kullanici acilan TL alt seceneklerini goruntuler")
-    public void kullaniciAcilanTLAltSecenekleriniGoruntuler() {
+    public void kullaniciAcilanTLAltSecenekleriniGoruntuler() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertTrue(homePage.eurSecenegiHome.isDisplayed());
     }
 
-    @And("kullanici yardim linkine tiklar")
-    public void kullaniciYardimLinkineTiklar() {
+    @And("kullanici yardim linkine gelir")
+    public void kullaniciYardimLinkineGelir() {
+        actions.moveToElement(homePage.yardimLinkHome).perform();
     }
-
-    @And("kullanici yardim sikca sorulan sorular secenegini secer")
-    public void kullaniciYardimSikcaSorulanSorularSeceneginiSecer() {
-    }
-
-    @When("kullanici sorulan sorularla cevaplarin uyumlu oldugunu dogrular")
-    public void kullaniciSorulanSorularlaCevaplarinUyumluOldugunuDogrular() {
+    @And("kullanici yardim ve islem rehberi secenegini goruntuler")
+    public void kullaniciYardimVeIslemRehberiSeceneginiGoruntuler() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertTrue(homePage.yardimVeIslemRehberiSecenegiYardimHome.isDisplayed());
     }
 }

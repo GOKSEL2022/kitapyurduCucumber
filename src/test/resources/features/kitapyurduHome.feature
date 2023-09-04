@@ -137,18 +137,18 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici puan katalogu sayfasinin acildigini dogrular
        Then  kullanici sayfayi kapatir
 
+         @siyah_alan_testi
      Scenario:anasayfadaki_siyah_arac_cubugu_seceneklerinin_testi
-       Given kullanici listelerim linkine tiklar
+       Given kullanici listelerim linkine gelir
        When  kullanici acilan listelerim alt secenekleri goruntuler
-       And   kullanici siparis takibi linkine tiklar
+       And   kullanici siparis takibi linkine gelir
        And   kullanici acilan siparis takibi alt seceneklerini goruntuler
-       And   kullanici Turkce linkine tiklar
+       And   kullanici Turkce linkine gelir
        And   kullanici acilan Turkce alt seceneklerini goruntuler
-       And   kullanici TL secenegini tiklar
+       And   kullanici TL secenegini gelir
        And   kullanici acilan TL alt seceneklerini goruntuler
-       And   kullanici yardim linkine tiklar
-       And   kullanici yardim sikca sorulan sorular secenegini secer
-       When  kullanici sorulan sorularla cevaplarin uyumlu oldugunu dogrular
+       And   kullanici yardim linkine gelir
+       And   kullanici yardim ve islem rehberi secenegini goruntuler
        Then  kullanici sayfayi kapatir
 
        Scenario:
