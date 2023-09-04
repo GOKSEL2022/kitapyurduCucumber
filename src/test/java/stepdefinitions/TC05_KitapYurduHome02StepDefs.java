@@ -200,14 +200,17 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @When("kullanici acilan listelerim alt secenekleri goruntuler")
     public void kullaniciAcilanListelerimAltSecenekleriGoruntuler() {
+        Assert.assertTrue(homePage.favorilerimSecenegiListelerimLinkHome.isDisplayed());
     }
 
     @And("kullanici siparis takibi linkine tiklar")
     public void kullaniciSiparisTakibiLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.siparisTakibiLinkHome);
     }
 
     @And("kullanici acilan siparis takibi alt seceneklerini goruntuler")
     public void kullaniciAcilanSiparisTakibiAltSecenekleriniGoruntuler() {
+
     }
 
     @And("kullanici Turkce linkine tiklar")
