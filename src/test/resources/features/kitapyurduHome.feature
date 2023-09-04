@@ -151,8 +151,16 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        And   kullanici yardim ve islem rehberi secenegini goruntuler
        Then  kullanici sayfayi kapatir
 
-       Scenario:
-         Given
+       Scenario:kayitli_kullanici_girisi_ile_anasayfada_islem_yapar
+         Given kullanici kitapyurdu_url ye gider
+         When  kullanici anasayfanin acildigini dogrular
+         And   kullanici giris yap linkine tiklar
+         And   kullanici e-posta alanina gecerli bir "yekparebiran@gmail.com" girer
+         And   kullanici sifre alanina kayitli sifresini "123456789a." girer
+         And   kullanici beni hatirla checkboxi tiklar
+         And   kullanici giris yap butonuna tiklar
+         And   kullanici sayfaya kayitli hesap ile girdigini dogrular
+
 
 
 
