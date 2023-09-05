@@ -169,6 +169,14 @@ public class IndexPage {
     @FindBy(xpath = "//h2[@class='swal2-title ky-swal-title-single']")
     public WebElement secilenUrunSepetinizdenCikariliyorAlertIndex;
 
+    @FindBy(xpath = "//*[@id='faceted-search-list-total']")
+    public WebElement urunListelendiTextIndex;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11762859/wi:100/wh:true']")
+    public WebElement dilVeEdebiyatDergileriIlkUrunIndex;
+
+
+
 
 
 
