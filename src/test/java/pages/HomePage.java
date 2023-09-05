@@ -168,6 +168,12 @@ public class HomePage {
     @FindBy(xpath = "(//a[@href='yardim'])[2]")
     public WebElement yardimVeIslemRehberiSecenegiYardimHome;
 
+    @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/index.php?route=account/account'])[1]")
+    public WebElement merhabaYekpareBirAnKayitliKullaniciHome;
+
+    @FindBy(xpath = "(//*[.='Dil ve Edebiyat'])[1]")
+    public WebElement dilVeEdebiyatSecenegiEdebiyatDergiHome;
+
 
 
 
