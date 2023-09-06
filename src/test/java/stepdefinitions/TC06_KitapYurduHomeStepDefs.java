@@ -57,4 +57,9 @@ public class TC06_KitapYurduHomeStepDefs {
     public void kullaniciAnasayfadakiSayfadakiIlkUruneTiklar() {
         ReusableMethods.clickByJS(indexPage.dilVeEdebiyatDergileriIlkUrunIndex);
     }
+
+    @And("kullanici sayfadaki ilk urune tiklar")
+    public void kullaniciSayfadakiIlkUruneTiklar() {
+        ReusableMethods.clickByJS(indexPage.dilVeEdebiyatDergileriIlkUrunIndex);
+    }
 }
