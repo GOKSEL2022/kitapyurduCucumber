@@ -20,13 +20,19 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici urunun yaninda fiyat bilgisini goruntuler
       And   kullanici urunun yaninda aciklama yazisini goruntuler
       And   kullanici sepete ekle butonuna tiklar
-      And   kullanici urunun sepete eklendiginin belirten alerti gorur
-      And   kullanici sepetim butonuna tiklar
-      And   kullanici sepete git butonua tiklar
-      And   kullanici urun miktarini goruntuler
-      And   kullanici tedarik suresini goruntuler
-      And   kullanici birim fiyati goruntuler
-      And   kullanici toplam fiyati goruntuler
-      And   kullanici satin al butonuna tiklar
-      And   kullanici adres ekle butonuna tiklar
-      And   kullanici adres
+      And   kullanici favorilerime ekle secenegini tiklar
+      And   kullanici urun basarili sekilde favorilerinize eklenedi mesajini gorur
+      And   kullanici listelerim linkine gelir
+      And   kullanici listelerim linkinde favorilerim secenegini tiklar
+      And   kullanici favorilere ekledigi urunun favori listesinde oldugunu goruntuler
+      And   kullanici sayfayi kapatir
+ #     And   kullanici urunun sepete eklendiginin belirten alerti gorur
+  #     And   kullanici sepetim butonuna tiklar
+   #    And   kullanici sepete git butonua tiklar
+    #   And   kullanici urun miktarini goruntuler
+    #   And   kullanici tedarik suresini goruntuler
+    #   And   kullanici birim fiyati goruntuler
+     #  And   kullanici toplam fiyati goruntuler
+     #  And   kullanici satin al butonuna tiklar
+     #  And   kullanici adres ekle butonuna tiklar
+     #  And   kullanici adres
