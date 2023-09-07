@@ -175,6 +175,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11762859/wi:100/wh:true']")
     public WebElement dilVeEdebiyatDergileriIlkUrunIndex;
 
+    @FindBy(xpath = "//*[@class='pr-img-link']")
+    public WebElement favorilerimEklenenUrunIndex;
+
 
 
 

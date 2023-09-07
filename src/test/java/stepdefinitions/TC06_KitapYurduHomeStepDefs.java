@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import pages.DergiPage;
 import pages.HomePage;
 import pages.IndexPage;
 import utilities.Driver;
@@ -11,6 +12,7 @@ import utilities.ReusableMethods;
 public class TC06_KitapYurduHomeStepDefs {
     HomePage homePage=new HomePage();
     IndexPage indexPage=new IndexPage();
+    DergiPage dergiPage=new DergiPage();
     Actions actions=new Actions(Driver.getDriver());
 
     @And("kullanici e-posta alanina gecerli bir {string} girer.")
@@ -61,5 +63,27 @@ public class TC06_KitapYurduHomeStepDefs {
     @And("kullanici sayfadaki ilk urune tiklar")
     public void kullaniciSayfadakiIlkUruneTiklar() {
         ReusableMethods.clickByJS(indexPage.dilVeEdebiyatDergileriIlkUrunIndex);
+    }
+
+    @And("kullanici favorilerime ekle secenegini tiklar")
+    public void kullaniciFavorilerimeEkleSeceneginiTiklar() throws InterruptedException {
+        ReusableMethods.scrollIntoViewJS(dergiPage.favorilerimeEkleLinkDergi);
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(dergiPage.favorilerimeEkleLinkDergi);
+    }
+
+    @And("kullanici urun basarili sekilde favorilerinize eklenedi mesajini gorur")
+    public void kullaniciUrunBasariliSekildeFavorilerinizeEklenediMesajiniGorur() {
+        Assert.assertTrue(dergiPage.urunBasariliSekildeFavorilerinizeEklendiAlertDergi.isDisplayed());
+    }
+
+    @And("kullanici listelerim linkinde favorilerim secenegini tiklar")
+    public void kullaniciListelerimLinkindeFavorilerimSeceneginiTiklar() {
+        ReusableMethods.clickByJS(homePage.favorilerimSecenegiListelerimLinkHome);
+    }
+
+    @And("kullanici favorilere ekledigi urunun favori listesinde oldugunu goruntuler")
+    public void kullaniciFavorilereEkledigiUrununFavoriListesindeOldugunuGoruntuler() {
+        Assert.assertTrue(indexPage.favorilerimEklenenUrunIndex.isDisplayed());
     }
 }
