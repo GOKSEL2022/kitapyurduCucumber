@@ -26,6 +26,13 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici listelerim linkinde favorilerim secenegini tiklar
       And   kullanici favorilere ekledigi urunun favori listesinde oldugunu goruntuler
       And   kullanici sayfayi kapatir
+
+    Scenario: kayitli_kullanici_girisi_ile_urun_filtreleme_yapar
+      Given kullanici dergi linkine tiklar
+      When  kullanici dergi ile ilgili alanlarin acildigini dogrular
+      And   kullanici edebiyat dergileri seceneginin uzerine gelir
+      And   kullanici dil ve edebiyat secenegini tiklar
+      And   kullanici urunlerin listelendigi sayfada oldugunu dogrular
  #     And   kullanici urunun sepete eklendiginin belirten alerti gorur
   #     And   kullanici sepetim butonuna tiklar
    #    And   kullanici sepete git butonua tiklar
