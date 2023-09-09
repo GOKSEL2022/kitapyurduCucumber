@@ -129,4 +129,27 @@ public class TC02_UyeOlStepDefs {
     public void kullaniciSifrenizBirbiriyleUyusmuyorMesajiniGorur() {
         Assert.assertTrue(indexPage.sifreTekrariHataMesajHesapOlusturiIndex.isDisplayed());
     }
+
+    @And("kullanici hesap olustur e-posta alanina gecerli bir {string} girer.")
+    public void kullaniciHesapOlusturEPostaAlaninaGecerliBirGirer(String string) {
+        indexPage.textBoxEmailHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici hesap olustur sifre alanina {string} girer")
+    public void kullaniciHesapOlusturSifreAlaninaGirer(String string) {
+        indexPage.textBoxSifreHesapOlusturIndex.sendKeys(string);
+    }
+
+    @And("kullanici hesap olustur sifre tekrari alanina {string} girer")
+    public void kullaniciHesapOlusturSifreTekrariAlaninaGirer(String string) {
+        indexPage.textBoxSifreTekrariHesapOlusturIndex.sendKeys(string);
+    }
+
+    @When("kullanici e_posta adresi ile daha once kayit yapilmis mesajini gorur")
+    public void kullaniciE_postaAdresiIleDahaOnceKayitYapilmisMesajiniGorur() {
+        Assert.assertTrue(indexPage.ePostaAdresiIleDahaOnceKayitOlunmusturAlertIndex.isDisplayed());
+    }
 }
+/*
+
+ */

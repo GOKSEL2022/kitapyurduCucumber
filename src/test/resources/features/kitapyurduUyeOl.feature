@@ -167,6 +167,22 @@ Feature: uye_olma_senaryolari
               | ad1      | soyad1 | e-posta1@gmail.com | 12345678 |               |
 
 
+          @kayitli_eposta_ile_tekrar
+          Scenario: kullanici_kayitli_eposta_ile_tekrar_kaydolmayi_dener
+              Given kullanici ad alani "Göksel" girer
+              When  kullanici soyad alanina "Çelik" girer
+              And   kullanici hesap olustur e-posta alanina gecerli bir "yekparebiran@gmail.com" girer.
+              And   kullanici hesap olustur sifre alanina "123456789" girer
+              And   kullanici hesap olustur sifre tekrari alanina "123456789" girer
+              And   kullanici kisisel verilerin korunmasi checkboxi isaretler
+              And   kullanici uye ol butonuna tiklar
+              When  kullanici e_posta adresi ile daha once kayit yapilmis mesajini gorur
+              Then  kullanici sayfayi kapatir
+
+
+
+
+
 
 
 
