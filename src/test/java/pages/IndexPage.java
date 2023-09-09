@@ -178,6 +178,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='pr-img-link']")
     public WebElement favorilerimEklenenUrunIndex;
 
+    @FindBy(xpath = "//div[normalize-space()='E-Posta adresi ile daha önce kayıt olunmuştur!']")
+    public WebElement ePostaAdresiIleDahaOnceKayitOlunmusturAlertIndex;
+
 
 
 
