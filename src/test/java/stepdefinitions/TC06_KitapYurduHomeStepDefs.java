@@ -86,4 +86,30 @@ public class TC06_KitapYurduHomeStepDefs {
     public void kullaniciFavorilereEkledigiUrununFavoriListesindeOldugunuGoruntuler() {
         Assert.assertTrue(indexPage.favorilerimEklenenUrunIndex.isDisplayed());
     }
+
+
+    @And("kullanici ayni sayfadaki ilk urune tiklar")
+    public void kullaniciAyniSayfadakiIlkUruneTiklar() {
+        ReusableMethods.clickByJS(indexPage.dergiSayfasiIlkUrunIndex);
+    }
+
+    @And("kullanici fatura turu olarak sahis olarak sahis secer")
+    public void kullaniciFaturaTuruOlarakSahisOlarakSahisSecer() {
+        ReusableMethods.clickByJS(indexPage.sahisCheckBoxIndex);
+    }
+
+    @And("kullanici satin al_index butonuna tiklar")
+    public void kullaniciSatinAl_indexButonunaTiklar() {
+        ReusableMethods.clickByJS(indexPage.satinAlButonIndex);
+    }
+
+    @And("kullanici Adres Ekle sayfasinin acildigini dogrular")
+    public void kullaniciAdresEkleSayfasininAcildiginiDogrular() {
+        Assert.assertTrue(indexPage.adresEkleTextBoxIndex.isDisplayed());
+    }
+
+    @And("kullanici kaydet butonuna tiklar")
+    public void kullaniciKaydetButonunaTiklar() {
+        ReusableMethods.clickByJS(indexPage.kaydetButonIndex);
+    }
 }

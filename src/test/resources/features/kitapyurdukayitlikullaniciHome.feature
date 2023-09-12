@@ -27,12 +27,14 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici favorilere ekledigi urunun favori listesinde oldugunu goruntuler
       And   kullanici sayfayi kapatir
 
+      @adres_ekle
     Scenario: kayitli_kullanici_girisi_ile_urun_filtreleme_yapar
       Given kullanici dergi linkine tiklar
       When  kullanici dergi ile ilgili alanlarin acildigini dogrular
       And   kullanici edebiyat dergileri seceneginin uzerine gelir
       And   kullanici dil ve edebiyat secenegini tiklar
-      And   kullanici urunlerin listelendigi sayfada oldugunu dogrular
+      And   kullanici ayni sayfadaki ilk urune tiklar
+      And   kullanici sepete ekle butonuna tiklar
       And   kullanici urunun sepete eklendiginin belirten alerti gorur
       And   kullanici sepetim butonuna tiklar
       And   kullanici sepete git butonua tiklar
@@ -40,6 +42,20 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici tedarik suresini goruntuler
       And   kullanici birim fiyati goruntuler
       And   kullanici toplam fiyati goruntuler
-      And   kullanici satin al butonuna tiklar
+      And   kullanici satin al_index butonuna tiklar
       And   kullanici adres ekle butonuna tiklar
-     #  And   kullanici adres
+      And   kullanici Adres Ekle sayfasinin acildigini dogrular
+      And   kullanici ad_sirket adi girer
+      And   kullanici soyad_unvan bilgilerini girer
+      And   kullanici ulke olarak Türkiye secer
+      And   kullanici sehir olarak Samsun secer
+      And   kullanici ilce olarak Carsamba secer
+      And   kullanici mahalle olarak Sarıcalı Mah secer
+      And   kullanici adres girer
+      And   kullanici posta kodu girer
+      And   kullanici cep telefonu girer
+      And   kullanici sabit telefon girer
+      And   kullanici fatura turu olarak sahis olarak sahis secer
+      And   kullanici TC Kimlik No girer
+      And   kullanici kaydet butonuna tiklar
+
