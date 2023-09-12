@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/features",
         glue= {"stepdefinitions", "hooks"},
-        tags="@kayitli_eposta_ile_tekrar"  ,
+        tags="@adres_ekle"  ,
 
         dryRun= false
 )

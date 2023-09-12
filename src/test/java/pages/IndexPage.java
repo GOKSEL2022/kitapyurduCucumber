@@ -183,6 +183,19 @@ public class IndexPage {
 
 
 
+    @FindBy(xpath = "//*[@id='address_type_1']")
+    public WebElement sahisCheckBoxIndex;
+
+    @FindBy(xpath = "//*[@value='Kaydet']")
+    public WebElement kaydetButonIndex;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11750889/wi:100/wh:true']")
+    public WebElement dergiSayfasiIlkUrunIndex;
+
+    @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/index.php?route=checkout/delivery'])[1]")
+    public WebElement satinAlButonIndex;
+
+
 
 
 
