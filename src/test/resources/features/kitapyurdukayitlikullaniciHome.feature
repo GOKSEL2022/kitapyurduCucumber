@@ -45,17 +45,18 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici satin al_index butonuna tiklar
       And   kullanici adres ekle butonuna tiklar
       And   kullanici Adres Ekle sayfasinin acildigini dogrular
-      And   kullanici ad_sirket adi girer
-      And   kullanici soyad_unvan bilgilerini girer
+      And   kullanici adres ekle sayfasina adres basligi girer
+      And   kullanici ad_sirketAdi girer
+      And   kullanici soyad_unvan girer
       And   kullanici ulke olarak Türkiye secer
       And   kullanici sehir olarak Samsun secer
       And   kullanici ilce olarak Carsamba secer
-      And   kullanici mahalle olarak Sarıcalı Mah secer
+      And   kullanici mahalle girer
       And   kullanici adres girer
-      And   kullanici posta kodu girer
-      And   kullanici cep telefonu girer
-      And   kullanici sabit telefon girer
-      And   kullanici fatura turu olarak sahis olarak sahis secer
-      And   kullanici TC Kimlik No girer
+      And   kullanici posta_kodu girer
+      And   kullanici cep_telefonu girer
+      And   kullanici sabit_telefon girer
+      And   kullanici fatura_turu secer
+      And   kullanici TC kimlik no girer
       And   kullanici kaydet butonuna tiklar
 

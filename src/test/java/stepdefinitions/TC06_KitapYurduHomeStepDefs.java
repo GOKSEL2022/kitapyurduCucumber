@@ -108,8 +108,45 @@ public class TC06_KitapYurduHomeStepDefs {
         Assert.assertTrue(indexPage.adresEkleTextBoxIndex.isDisplayed());
     }
 
+    @And("kullanici adres ekle sayfasina adres basligi girer")
+    public void kullaniciAdresEkleSayfasinaAdresBasligiGirer() {
+    }
+
+    @And("kullanici ad_sirketAdi girer")
+    public void kullaniciAd_sirketAdiGirer() {
+    }
+
+    @And("kullanici soyad_unvan girer")
+    public void kullaniciSoyad_unvanGirer() {
+    }
+
+    @And("kullanici mahalle girer")
+    public void kullaniciMahalleGirer() {
+    }
+
+    @And("kullanici posta_kodu girer")
+    public void kullaniciPosta_koduGirer() {
+    }
+
+    @And("kullanici cep_telefonu girer")
+    public void kullaniciCep_telefonuGirer() {
+    }
+
+    @And("kullanici sabit_telefon girer")
+    public void kullaniciSabit_telefonGirer() {
+    }
+
+    @And("kullanici fatura_turu secer")
+    public void kullaniciFatura_turuSecer() {
+    }
+
+    @And("kullanici TC kimlik no girer")
+    public void kullaniciTCKimlikNoGirer() {
+    }
+
     @And("kullanici kaydet butonuna tiklar")
     public void kullaniciKaydetButonunaTiklar() {
         ReusableMethods.clickByJS(indexPage.kaydetButonIndex);
     }
+
 }

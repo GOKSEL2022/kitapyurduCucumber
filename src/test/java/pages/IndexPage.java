@@ -195,6 +195,21 @@ public class IndexPage {
     @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/index.php?route=checkout/delivery'])[1]")
     public WebElement satinAlButonIndex;
 
+    @FindBy(xpath = "//input[@id='address-title']")
+    public WebElement adresBasligiTextBoxIndex;
+
+    @FindBy(xpath = "//*[@id='address-country-id']")
+    public WebElement ulkeDropDownIndex;
+
+    @FindBy(xpath = "//*[@id='address-zone-id']")
+    public WebElement sehirDropDownIndex;
+
+    @FindBy(xpath = "//*[@id='address-county-id']")
+    public WebElement ilceDropDownIndex;
+
+    @FindBy(xpath = "//*[@id='district']")
+    public WebElement mahalleTextBoxIndex;
+
 
 
 
