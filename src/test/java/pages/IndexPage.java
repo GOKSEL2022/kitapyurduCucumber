@@ -195,6 +195,9 @@ public class IndexPage {
     @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/index.php?route=checkout/delivery'])[1]")
     public WebElement satinAlButonIndex;
 
+    @FindBy(xpath = "//*[.='Adres Ekle']")
+    public WebElement adresEkleTextIndex;
+
     @FindBy(xpath = "//input[@id='address-title']")
     public WebElement adresBasligiTextBoxIndex;
 

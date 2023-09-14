@@ -1,7 +1,11 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
+import groovyjarjarantlr4.v4.codegen.model.chunk.TokenPropertyRef_index;
 import io.cucumber.java.en.And;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pages.DergiPage;
 import pages.HomePage;
@@ -105,11 +109,13 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @And("kullanici Adres Ekle sayfasinin acildigini dogrular")
     public void kullaniciAdresEkleSayfasininAcildiginiDogrular() {
-        Assert.assertTrue(indexPage.adresEkleTextBoxIndex.isDisplayed());
+        Assert.assertTrue(indexPage.adresEkleTextIndex.isDisplayed());
     }
 
     @And("kullanici adres ekle sayfasina adres basligi girer")
     public void kullaniciAdresEkleSayfasinaAdresBasligiGirer() {
+        indexPage.adresBasligiTextBoxIndex.sendKeys("İşyeri adresi",
+                Keys.TAB,"Celik Holding",Keys.TAB,"Patron");
     }
 
     @And("kullanici ad_sirketAdi girer")
@@ -120,8 +126,27 @@ public class TC06_KitapYurduHomeStepDefs {
     public void kullaniciSoyad_unvanGirer() {
     }
 
+    @And("kullanici ulke girer")
+    public void kullaniciUlkeGirer() {
+        new Select(indexPage.ulkeDropDownIndex).selectByVisibleText("Türkiye");
+    }
+
+    @And("kullanici sehir girer")
+    public void kullaniciSehirGirer() {
+        new Select(indexPage.sehirDropDownIndex).selectByVisibleText("Samsun");
+    }
+
+    @And("kullanici ilce girer")
+    public void kullaniciIlceGirer() {
+        new Select(indexPage.ilceDropDownIndex).selectByVisibleText("ÇARŞAMBA");
+    }
+
     @And("kullanici mahalle girer")
     public void kullaniciMahalleGirer() {
+        indexPage.mahalleTextBoxIndex.sendKeys("Kirazlikçay Mahallesi",
+                Keys.TAB, Faker.instance().address().fullAddress(),
+                Keys.TAB,"55500",Keys.TAB,"5445499495",Keys.TAB,"3628333333",
+                Keys.TAB,Keys.SPACE,Keys.TAB,"12398855742",Keys.TAB,Keys.ENTER);
     }
 
     @And("kullanici posta_kodu girer")
@@ -148,5 +173,6 @@ public class TC06_KitapYurduHomeStepDefs {
     public void kullaniciKaydetButonunaTiklar() {
         ReusableMethods.clickByJS(indexPage.kaydetButonIndex);
     }
+
 
 }

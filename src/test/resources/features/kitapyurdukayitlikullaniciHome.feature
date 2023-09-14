@@ -48,9 +48,9 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici adres ekle sayfasina adres basligi girer
       And   kullanici ad_sirketAdi girer
       And   kullanici soyad_unvan girer
-      And   kullanici ulke olarak Türkiye secer
-      And   kullanici sehir olarak Samsun secer
-      And   kullanici ilce olarak Carsamba secer
+      And   kullanici ulke girer
+      And   kullanici sehir girer
+      And   kullanici ilce girer
       And   kullanici mahalle girer
       And   kullanici adres girer
       And   kullanici posta_kodu girer
