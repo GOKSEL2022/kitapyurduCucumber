@@ -213,6 +213,19 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='district']")
     public WebElement mahalleTextBoxIndex;
 
+    @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/index.php?route=account/address/insert&is_checkout=1'])[2]")
+    public WebElement yeniAdresEkleIndex;
+
+    @FindBy(xpath = "//button[@class='base-accordion-button accordion-button fw-bold p-16px fs-18 text-black border-0 pe-10px bg-white ']")
+    public WebElement kartIleOdeCheckboxIndex;
+
+    @FindBy(xpath = "//*[@id='credit_card_number']")
+    public WebElement kartNumarasiTextBoxIndex;
+
+    @FindBy(xpath = "//div[normalize-space(text())='Toplam Tutar:']")
+    public WebElement toplamTutarTextIndex;
+
+
 
 
 

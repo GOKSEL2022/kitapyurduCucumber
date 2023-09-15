@@ -43,7 +43,7 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici birim fiyati goruntuler
       And   kullanici toplam fiyati goruntuler
       And   kullanici satin al_index butonuna tiklar
-      And   kullanici adres ekle butonuna tiklar
+      And   kullanici adres ekle butonuna tiklar.
       And   kullanici Adres Ekle sayfasinin acildigini dogrular
       And   kullanici adres ekle sayfasina adres basligi girer
       And   kullanici ad_sirketAdi girer
@@ -59,4 +59,13 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       And   kullanici fatura_turu secer
       And   kullanici TC kimlik no girer
       And   kullanici kaydet butonuna tiklar
+      And   kullanici kart ile ode basligini goruntuler
+      And   kullanici rastgele kart numarasi girer
+      And   kullanici kart uzerindeki isim girer
+      And   kullanici son kullanma tarihi girer
+      And   kullanici CVC girer
+      And   kullanici toplam tutari goruntuler
+      When  kullanici kart numarasi gecersiz kontrol ediniz alertini gorur
+      Then kullanici sayfayi kapatir
+
 
