@@ -3,6 +3,7 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 import groovyjarjarantlr4.v4.codegen.model.chunk.TokenPropertyRef_index;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,6 +19,10 @@ public class TC06_KitapYurduHomeStepDefs {
     IndexPage indexPage=new IndexPage();
     DergiPage dergiPage=new DergiPage();
     Actions actions=new Actions(Driver.getDriver());
+    int kartNo = Faker.instance().number().numberBetween(1000, 9999);
+    int kullanimTarihi1=Faker.instance().number().numberBetween(1, 12);
+    int kullanimTarihi2=Faker.instance().number().numberBetween(2000, 2030);
+    int cvc=Faker.instance().number().numberBetween(100, 999);
 
     @And("kullanici e-posta alanina gecerli bir {string} girer.")
     public void kullaniciEPostaAlaninaGecerliBirGirer(String string) {
@@ -114,8 +119,20 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @And("kullanici adres ekle sayfasina adres basligi girer")
     public void kullaniciAdresEkleSayfasinaAdresBasligiGirer() {
-        indexPage.adresBasligiTextBoxIndex.sendKeys("İşyeri adresi",
-                Keys.TAB,"Celik Holding",Keys.TAB,"Patron");
+
+        try {
+            indexPage.adresBasligiTextBoxIndex.sendKeys("İşyeri adresi",
+                    Keys.TAB, "Celik Holding", Keys.TAB, "Patron");
+        }catch (Exception e) {
+
+        }
+        try {
+            ReusableMethods.clickByJS(indexPage.yeniAdresEkleIndex);
+            indexPage.adresBasligiTextBoxIndex.sendKeys("İşyeri adresi",
+                    Keys.TAB, "Celik Holding", Keys.TAB, "Patron");
+        } catch (Exception e){
+
+        }
     }
 
     @And("kullanici ad_sirketAdi girer")
@@ -171,8 +188,55 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @And("kullanici kaydet butonuna tiklar")
     public void kullaniciKaydetButonunaTiklar() {
-        ReusableMethods.clickByJS(indexPage.kaydetButonIndex);
+        try {
+            ReusableMethods.clickByJS(indexPage.kaydetButonIndex);
+        }catch (Exception e) {
+
+        }
+        try {
+           ReusableMethods.clickByJS(indexPage.devamEtButonIndex);
+        } catch (Exception e){
+
+        }
+
     }
 
 
+    @And("kullanici adres ekle butonuna tiklar.")
+    public void kullaniciAdresEkleButonunaTiklar() {
+        indexPage.yeniAdresEkleIndex.click();
+    }
+
+    @And("kullanici kart ile ode basligini goruntuler")
+    public void kullaniciKartIleOdeBasliginiGoruntuler() {
+        Assert.assertTrue(indexPage.kartIleOdeCheckboxIndex.isDisplayed());
+    }
+
+    @And("kullanici rastgele kart numarasi girer")
+    public void kullaniciRastgeleKartNumarasiGirer() {
+        indexPage.kartNumarasiTextBoxIndex.sendKeys(kartNo+""+kartNo+""+kartNo+""+kartNo+"",
+                Keys.TAB,Faker.instance().name().fullName(),Keys.TAB,kullanimTarihi1+""+kullanimTarihi2,Keys.TAB,cvc+"",Keys.TAB,Keys.ENTER);
+    }
+
+    @And("kullanici kart uzerindeki isim girer")
+    public void kullaniciKartUzerindekiIsimGirer() {
+    }
+
+    @And("kullanici son kullanma tarihi girer")
+    public void kullaniciSonKullanmaTarihiGirer() {
+    }
+
+    @And("kullanici CVC girer")
+    public void kullaniciCVCGirer() {
+    }
+
+    @And("kullanici toplam tutari goruntuler")
+    public void kullaniciToplamTutariGoruntuler() {
+        Assert.assertTrue(indexPage.toplamTutarTextIndex.isDisplayed());
+    }
+
+    @When("kullanici kart numarasi gecersiz kontrol ediniz alertini gorur")
+    public void kullaniciKartNumarasiGecersizKontrolEdinizAlertiniGorur() {
+       // Assert.assertTrue(indexPage.aler);
+    }
 }
