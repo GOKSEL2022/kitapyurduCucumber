@@ -68,4 +68,24 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
       When  kullanici kart numarasi gecersiz kontrol ediniz alertini gorur
       Then kullanici sayfayi kapatir
 
+        Scenario:kayitli_kullanici_olarak_anasayfada_kelepir_arama_yapma
+          Given kullanici anasayfanin en altina gelir
+          When  kullanici kelepir ara textBoxini gorur
+          And   kullanici konu dropdownindan ders kitaplarini secer
+          And   kullanici fiyat ust sinir textboxina ucret olarak yuz elli girer
+          And   kullanici indirim alt sinir dropdownindan yuzde yetmisi secer
+          And   kullanici kelepir ara butonuna tiklar
+          And   kullanici listelenen urun sayisini gorur
+          And   kullanici sayfada bulunan urunlerin hepsini sepete ekler
+          And   kullanici urunun sepete eklendiginin belirten alerti gorur
+          And   kullanici sepetim butonuna tiklar
+          And   kullanici secili urunleri sepetten kaldirmak icin x e tiklar
+          When  kullanici alisveris sepetiniz bos yazisini gorur
+          Then  kullanici sayfayi kapatir
+
+
+
+
+
+
 
