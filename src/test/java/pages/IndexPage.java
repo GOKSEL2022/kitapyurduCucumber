@@ -225,6 +225,10 @@ public class IndexPage {
     @FindBy(xpath = "//div[normalize-space(text())='Toplam Tutar:']")
     public WebElement toplamTutarTextIndex;
 
+    @FindBy(xpath = "//*[@class='swal2-title pe-10px ms-5 ps-5px fw-normal']")
+    public WebElement kartNoGecersizKontrolEdinizAlertIndex;
+
+
 
 
 

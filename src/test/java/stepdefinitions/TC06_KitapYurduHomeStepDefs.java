@@ -215,7 +215,7 @@ public class TC06_KitapYurduHomeStepDefs {
     @And("kullanici rastgele kart numarasi girer")
     public void kullaniciRastgeleKartNumarasiGirer() {
         indexPage.kartNumarasiTextBoxIndex.sendKeys(kartNo+""+kartNo+""+kartNo+""+kartNo+"",
-                Keys.TAB,Faker.instance().name().fullName(),Keys.TAB,kullanimTarihi1+""+kullanimTarihi2,Keys.TAB,cvc+"",Keys.TAB,Keys.ENTER);
+                Keys.TAB,Faker.instance().name().fullName(),Keys.TAB,kullanimTarihi1+""+kullanimTarihi2,Keys.TAB,cvc+"",Keys.TAB,Keys.SPACE);
     }
 
     @And("kullanici kart uzerindeki isim girer")
@@ -237,6 +237,7 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @When("kullanici kart numarasi gecersiz kontrol ediniz alertini gorur")
     public void kullaniciKartNumarasiGecersizKontrolEdinizAlertiniGorur() {
-       // Assert.assertTrue(indexPage.aler);
+        ReusableMethods.clickByJS(indexPage.devamEtButonIndex);
+        ReusableMethods.waitForVisibility(indexPage.kartNoGecersizKontrolEdinizAlertIndex,5);
     }
 }
