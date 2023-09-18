@@ -69,7 +69,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='bottom-item'])[2]")
     public WebElement iletisimLinkHome;
 
-    @FindBy(xpath = "//*[@class='logo-text']")
+    @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/'])[3]")
     public WebElement kitapYurduComTextHome;
 
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[1]")
@@ -173,6 +173,23 @@ public class HomePage {
 
     @FindBy(xpath = "(//*[.='Dil ve Edebiyat'])[1]")
     public WebElement dilVeEdebiyatSecenegiEdebiyatDergiHome;
+
+    @FindBy(xpath = "(//*[@class='ribbon-text'])[14]")
+    public WebElement kelepirAraTextHome;
+
+    @FindBy(xpath = "//select[@id='js-bg-cat']")
+    public WebElement konuButunKonularDropDownHome;
+
+    @FindBy(xpath = "//*[@id='js-bg-price']")
+    public WebElement fiyatUstSinirTextBoxHome;
+
+    @FindBy(xpath = "//select[@id='js-bg-disc']")
+    public WebElement indirimAltSinirDropDownHome;
+
+    @FindBy(xpath = "//*[@id='button-bargain']")
+    public WebElement kelepirAraButtonHome;
+
+
 
 
 
