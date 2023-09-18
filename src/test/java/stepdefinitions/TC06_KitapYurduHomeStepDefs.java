@@ -3,6 +3,7 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 import groovyjarjarantlr4.v4.codegen.model.chunk.TokenPropertyRef_index;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -240,4 +241,51 @@ public class TC06_KitapYurduHomeStepDefs {
         ReusableMethods.clickByJS(indexPage.devamEtButonIndex);
         ReusableMethods.waitForVisibility(indexPage.kartNoGecersizKontrolEdinizAlertIndex,5);
     }
+    @Given("kullanici kitapYurdu_com textine tiklar")
+    public void kullaniciKitapYurdu_comTextineTiklar() {
+        ReusableMethods.clickByJS(homePage.kitapYurduComTextHome);
+    }
+
+    @Given("kullanici kelepir ara textBoxina gelir")
+    public void kullaniciKelepirAraTextBoxinaGelir() {
+        ReusableMethods.scrollIntoViewJS(homePage.konuButunKonularDropDownHome);
+    }
+
+    @And("kullanici konu dropdownindan ders kitaplarini secer")
+    public void kullaniciKonuDropdownindanDersKitaplariniSecer() {
+        new Select(homePage.konuButunKonularDropDownHome).selectByVisibleText("Ders Kitapları");
+    }
+
+    @And("kullanici fiyat ust sinir textboxina ucret olarak yuz elli girer")
+    public void kullaniciFiyatUstSinirTextboxinaUcretOlarakYuzElliGirer() {
+        homePage.fiyatUstSinirTextBoxHome.sendKeys("150");
+    }
+
+    @And("kullanici indirim alt sinir dropdownindan yuzde yetmisi secer")
+    public void kullaniciIndirimAltSinirDropdownindanYuzdeYetmisiSecer() {
+        new Select(homePage.indirimAltSinirDropDownHome).selectByVisibleText("% 70");
+    }
+
+    @And("kullanici kelepir ara butonuna tiklar")
+    public void kullaniciKelepirAraButonunaTiklar() {
+        ReusableMethods.clickByJS(homePage.kelepirAraButtonHome);
+    }
+
+    @And("kullanici listelenen urun sayisini gorur")
+    public void kullaniciListelenenUrunSayisiniGorur() {
+    }
+
+    @And("kullanici sayfada bulunan urunlerin hepsini sepete ekler")
+    public void kullaniciSayfadaBulunanUrunlerinHepsiniSepeteEkler() {
+    }
+
+    @And("kullanici secili urunleri sepetten kaldirmak icin x e tiklar")
+    public void kullaniciSeciliUrunleriSepettenKaldirmakIcinXETiklar() {
+    }
+
+    @When("kullanici alisveris sepetiniz bos yazisini gorur")
+    public void kullaniciAlisverisSepetinizBosYazisiniGorur() {
+    }
+
+
 }
