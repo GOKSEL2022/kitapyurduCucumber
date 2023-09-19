@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -248,12 +249,12 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @Given("kullanici kelepir ara textBoxina gelir")
     public void kullaniciKelepirAraTextBoxinaGelir() {
-        ReusableMethods.scrollIntoViewJS(homePage.konuButunKonularDropDownHome);
+        //ReusableMethods.scrollIntoViewJS(homePage.konuButunKonularDropDownHome);
     }
 
-    @And("kullanici konu dropdownindan ders kitaplarini secer")
-    public void kullaniciKonuDropdownindanDersKitaplariniSecer() {
-        new Select(homePage.konuButunKonularDropDownHome).selectByVisibleText("Ders Kitapları");
+    @And("kullanici konu dropdownindan cocuk kitaplarini secer")
+    public void kullaniciKonuDropdownindanCocukKitaplariniSecer() {
+        new Select(homePage.konuButunKonularDropDownHome).selectByVisibleText("Çocuk Kitapları");
     }
 
     @And("kullanici fiyat ust sinir textboxina ucret olarak yuz elli girer")
@@ -273,10 +274,14 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @And("kullanici listelenen urun sayisini gorur")
     public void kullaniciListelenenUrunSayisiniGorur() {
+        assert indexPage.altiUrunListelendiUrunSayisiTextIndex.isDisplayed();
     }
 
     @And("kullanici sayfada bulunan urunlerin hepsini sepete ekler")
     public void kullaniciSayfadaBulunanUrunlerinHepsiniSepeteEkler() {
+        for (int i = 0; i < indexPage.sayfadakiTumUrunlerIndex.size(); i++) {
+            indexPage.sayfadakiTumUrunlerIndex.get(i).click();
+        }
     }
 
     @And("kullanici secili urunleri sepetten kaldirmak icin x e tiklar")

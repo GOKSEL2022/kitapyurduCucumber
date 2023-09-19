@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class IndexPage {
     public IndexPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -227,6 +229,12 @@ public class IndexPage {
 
     @FindBy(xpath = "//*[@class='swal2-title pe-10px ms-5 ps-5px fw-normal']")
     public WebElement kartNoGecersizKontrolEdinizAlertIndex;
+
+    @FindBy(xpath = "//*[.='6 ürün listelendi']")
+    public WebElement altiUrunListelendiUrunSayisiTextIndex;
+
+    @FindBy(xpath = "//div[@class='product-cr']")
+    public List<WebElement> sayfadakiTumUrunlerIndex;
 
 
 

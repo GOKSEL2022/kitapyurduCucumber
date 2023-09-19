@@ -186,7 +186,7 @@ public class HomePage {
     @FindBy(xpath = "//select[@id='js-bg-disc']")
     public WebElement indirimAltSinirDropDownHome;
 
-    @FindBy(xpath = "//*[@id='button-bargain']")
+    @FindBy(xpath = "//input[@type='button']")
     public WebElement kelepirAraButtonHome;
 
 
