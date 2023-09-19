@@ -70,8 +70,9 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
 
         Scenario:kayitli_kullanici_olarak_anasayfada_kelepir_arama_yapma
           Given kullanici kitapYurdu_com textine tiklar
-          Given kullanici kelepir ara textBoxina gelir
-          And   kullanici konu dropdownindan ders kitaplarini secer
+          When kullanici anasayfanin en altina gelir
+          #Given kullanici kelepir ara textBoxina gelir
+          And   kullanici konu dropdownindan cocuk kitaplarini secer
           And   kullanici fiyat ust sinir textboxina ucret olarak yuz elli girer
           And   kullanici indirim alt sinir dropdownindan yuzde yetmisi secer
           And   kullanici kelepir ara butonuna tiklar
