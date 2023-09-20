@@ -274,23 +274,46 @@ public class TC06_KitapYurduHomeStepDefs {
 
     @And("kullanici listelenen urun sayisini gorur")
     public void kullaniciListelenenUrunSayisiniGorur() {
-        assert indexPage.altiUrunListelendiUrunSayisiTextIndex.isDisplayed();
+        Assert.assertTrue(indexPage.altiUrunListelendiUrunSayisiTextIndex.getText().contains("6 ürün listelendi"));
+        //assert indexPage.altiUrunListelendiUrunSayisiTextIndex.isDisplayed();
     }
 
     @And("kullanici sayfada bulunan urunlerin hepsini sepete ekler")
     public void kullaniciSayfadaBulunanUrunlerinHepsiniSepeteEkler() {
-        for (int i = 0; i < indexPage.sayfadakiTumUrunlerIndex.size(); i++) {
-            indexPage.sayfadakiTumUrunlerIndex.get(i).click();
-        }
+
+        actions.moveToElement(indexPage.cocukKitaplariIlkUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.ilkUrunSepeteEkleIndex);
+        actions.moveToElement(indexPage.cocukKitaplariIkinciUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.ikinciUrunSepeteEkleIndex);
+        actions.moveToElement(indexPage.cocukKitaplariUcuncuUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.ucuncuUrunSepeteEkleIndex);
+        actions.moveToElement(indexPage.cocukKitaplariDorduncuUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.dorduncuUrunSepeteEkleIndex);
+        actions.moveToElement(indexPage.cocukKitaplariBesinciUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.besinciUrunSepeteEkleIndex);
+        actions.moveToElement(indexPage.cocukKitaplariAltinciUrunIndex).perform();
+        ReusableMethods.clickByJS(indexPage.altinciUrunSepeteEkleIndex);
+
     }
 
     @And("kullanici secili urunleri sepetten kaldirmak icin x e tiklar")
-    public void kullaniciSeciliUrunleriSepettenKaldirmakIcinXETiklar() {
-    }
+    public void kullaniciSeciliUrunleriSepettenKaldirmakIcinXETiklar() throws InterruptedException {
 
+        for (int i=1;i<indexPage.tumKaldirIsaretleriIndex.size();i++){
+            indexPage.tumKaldirIsaretleriIndex.get(i).click();
+            Thread.sleep(1000);
+        }
+    }
+    //*[@class='fa fa-times red-icon']
     @When("kullanici alisveris sepetiniz bos yazisini gorur")
-    public void kullaniciAlisverisSepetinizBosYazisiniGorur() {
+    public void kullaniciAlisverisSepetinizBosYazisiniGorur() throws InterruptedException {
+        for (int i=1;i<indexPage.tumKaldirIsaretleriIndex.size();i++){
+            indexPage.tumKaldirIsaretleriIndex.get(i).click();
+            Thread.sleep(1000);
+        }
+
+    }
     }
 
 
-}
+
