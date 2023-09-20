@@ -233,8 +233,50 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='6 ürün listelendi']")
     public WebElement altiUrunListelendiUrunSayisiTextIndex;
 
-    @FindBy(xpath = "//div[@class='product-cr']")
-    public List<WebElement> sayfadakiTumUrunlerIndex;
+    @FindBy(xpath = "(//*[@title='Peggy Sue ve Hayaletler -1 / Mavi Köpeğin Günü'])[1]")
+    public WebElement cocukKitaplariIlkUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(270406);'])[1]")
+    public WebElement ilkUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "(//*[@title='Peggy Sue ve Hayaletler -2 / Beyaz Taşın Labirenti'])[1]")
+    public WebElement cocukKitaplariIkinciUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(282067);'])[1]")
+    public WebElement ikinciUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "(//*[@title='Peggy Sue ve Hayaletler -3 / Uçurumdaki Kelebek'])[1]")
+    public WebElement cocukKitaplariUcuncuUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(333717);'])[1]")
+    public WebElement ucuncuUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "(//*[@title='Peggy Sue ve Hayaletler -3 / Uçurumdaki Kelebek'])[1]")
+    public WebElement cocukKitaplariDorduncuUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(333718);'])[1]")
+    public WebElement dorduncuUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "(//*[@title='Miyav! Yarın Yeni Bir Hayata Başlıyorum + Miyav! Kafayı mı Yediniz Siz? (2 Kitap Takım Set)'])[1]")
+    public WebElement cocukKitaplariBesinciUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(530525);'])[1]")
+    public WebElement besinciUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "//*[@alt='Kanalıma Hoş Geldin!']")
+    public WebElement cocukKitaplariAltinciUrunIndex;
+
+    @FindBy(xpath = "(//*[@onclick='addToCart(511379);'])[1]")
+    public WebElement altinciUrunSepeteEkleIndex;
+
+    @FindBy(xpath = "//*[@class='fa fa-times red-icon']")
+    public List<WebElement> tumKaldirIsaretleriIndex;
+
+
+
+
+
+
 
 
 
