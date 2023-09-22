@@ -3,8 +3,12 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import pages.HomePage;
+import pages.IndexPage;
 
 public class TC07_YayinevleriYayinlariYazarlarStepDefs {
+    HomePage homePage=new HomePage();
+    IndexPage indexPage=new IndexPage();
     @Given("kullanici haftanin yayinevi basligina gelir")
     public void kullaniciHaftaninYayineviBasliginaGelir() {
     }
