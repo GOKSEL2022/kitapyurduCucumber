@@ -5,10 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.IndexPage;
+import pages.YazarlarPage;
 
 public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     HomePage homePage=new HomePage();
     IndexPage indexPage=new IndexPage();
+    YazarlarPage yazarlarPage=new YazarlarPage();
+
     @Given("kullanici haftanin yayinevi basligina gelir")
     public void kullaniciHaftaninYayineviBasliginaGelir() {
     }
