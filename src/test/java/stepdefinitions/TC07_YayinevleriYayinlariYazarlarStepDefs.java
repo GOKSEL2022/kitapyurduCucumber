@@ -3,17 +3,21 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.IndexPage;
 import pages.YazarlarPage;
+import utilities.Driver;
 
 public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     HomePage homePage=new HomePage();
     IndexPage indexPage=new IndexPage();
     YazarlarPage yazarlarPage=new YazarlarPage();
+    Actions actions=new Actions(Driver.getDriver());
 
     @Given("kullanici haftanin yayinevi basligina gelir")
     public void kullaniciHaftaninYayineviBasliginaGelir() {
+
     }
 
     @When("kullanici secilen yayinevini goruntuler")
