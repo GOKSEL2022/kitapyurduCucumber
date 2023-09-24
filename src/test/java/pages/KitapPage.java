@@ -35,6 +35,9 @@ public class KitapPage {
     @FindBy(xpath = "//*[@id='js-cart']")
     public WebElement sepeteGitButonKitap;
 
+    @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/yayinevi/nefes-yayinlari/2197.html'])[2]")
+    public WebElement secilenIlkUrunYayineviNefesYayinlariTextKitap;
+
 
 
 }

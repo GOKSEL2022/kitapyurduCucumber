@@ -189,6 +189,19 @@ public class HomePage {
     @FindBy(xpath = "//input[@type='button']")
     public WebElement kelepirAraButtonHome;
 
+    @FindBy(xpath = "//*[.='Haftanın Yayınevi']")
+    public WebElement haftaninYayineviTextHome;
+
+    @FindBy(xpath = "//*[text()='NEFES YAYINLARI']")
+    public WebElement nefesYayinlariHaftaninYayineviTextHome;
+
+    @FindBy(xpath = "(//*[@class='featured-publisher-discount'])[1]")
+    public WebElement indirimMiktariNefesYayinlariTextHome;
+
+    @FindBy(xpath = "//a[@class='show-all']")
+    public WebElement tumunuGosterLinkHome;
+
+
 
 
 

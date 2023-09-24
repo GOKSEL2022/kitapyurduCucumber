@@ -10,6 +10,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
     And   kullanici sayfaya kayitli hesap ile girdigini dogrular
     And   kullanici kitapYurdu_com textine tiklar
 
+    @haftanin_yayinevi
     Scenario:haftanin_yayinevi
       Given kullanici haftanin yayinevi basligina gelir
       When  kullanici secilen yayinevini goruntuler
@@ -18,7 +19,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       And   kullanici acilan sayfada haftanin yayinevinin adini goruntuler
       And   kullanici cok satanlar icindeki ilk urune tiklar
       When  kullanici acilan urunun ayni yayinevine ait oldugunu dogrular
-      Then  kullanici sayfayi kapatir
+      #Then  kullanici sayfayi kapatir
 
 
 
