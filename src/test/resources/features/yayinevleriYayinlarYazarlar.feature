@@ -19,7 +19,23 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       And   kullanici acilan sayfada haftanin yayinevinin adini goruntuler
       And   kullanici cok satanlar icindeki ilk urune tiklar
       When  kullanici acilan urunun ayni yayinevine ait oldugunu dogrular
-      #Then  kullanici sayfayi kapatir
+      Then  kullanici sayfayi kapatir
+
+    Scenario: ayin_yayinevleri
+      Given kullanici ayin yayinevleri basligina gelir
+      When  kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur
+      And   kullanici ayin_yayinevleri tumunu goster linkine tiklar
+      And   kullanici ayin_yayinevleri_tumunu_goster acilan sayfada ayin yayinevleri textini goruntuler
+      And   kullanici ilk yayinevine tiklar
+      And   kullanici tikladigi yayinevinin adini acilan sayfada goruntuler
+      And   kullanici secilen yayinevi sayfasindaki ilk urune tiklar
+      When  kullanici urun adinin yaninda secilen yayinevinin adini gorur
+      Then  kullanici sayfayi kapatir
+
+
+
+
+
 
 
 
