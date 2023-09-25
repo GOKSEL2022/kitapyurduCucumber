@@ -49,4 +49,36 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     public void kullaniciAcilanUrununAyniYayinevineAitOldugunuDogrular() {
         Assert.assertTrue(kitapPage.secilenIlkUrunYayineviNefesYayinlariTextKitap.getText().contains("NEFES"));
     }
+
+    @Given("kullanici ayin yayinevleri basligina gelir")
+    public void kullaniciAyinYayinevleriBasliginaGelir() {
+    }
+
+    @When("kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur")
+    public void kullaniciAyinYayineviBasligiAltindaYayinevlerininAdlariniGorur() {
+    }
+
+    @And("kullanici ayin_yayinevleri tumunu goster linkine tiklar")
+    public void kullaniciAyin_yayinevleriTumunuGosterLinkineTiklar() {
+    }
+
+    @And("kullanici ayin_yayinevleri_tumunu_goster acilan sayfada ayin yayinevleri textini goruntuler")
+    public void kullaniciAyin_yayinevleri_tumunu_gosterAcilanSayfadaAyinYayinevleriTextiniGoruntuler() {
+    }
+
+    @And("kullanici ilk yayinevine tiklar")
+    public void kullaniciIlkYayinevineTiklar() {
+    }
+
+    @And("kullanici tikladigi yayinevinin adini acilan sayfada goruntuler")
+    public void kullaniciTikladigiYayinevininAdiniAcilanSayfadaGoruntuler() {
+    }
+
+    @And("kullanici secilen yayinevi sayfasindaki ilk urune tiklar")
+    public void kullaniciSecilenYayineviSayfasindakiIlkUruneTiklar() {
+    }
+
+    @When("kullanici urun adinin yaninda secilen yayinevinin adini gorur")
+    public void kullaniciUrunAdininYanindaSecilenYayinevininAdiniGorur() {
+    }
 }
