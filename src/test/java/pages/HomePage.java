@@ -201,6 +201,12 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='show-all']")
     public WebElement tumunuGosterLinkHome;
 
+    @FindBy(xpath = "(//*[.='Ayın Yayınevleri'])[1]")
+    public WebElement ayinYayinevleriTextHome;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:7159676/wi:200/wh:7334aa002']")
+    public WebElement ayinYayinlariYayineviAdlariTextHome;
+
 
 
 
