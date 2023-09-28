@@ -52,14 +52,17 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @Given("kullanici ayin yayinevleri basligina gelir")
     public void kullaniciAyinYayinevleriBasliginaGelir() {
+        ReusableMethods.scrollIntoViewJS(homePage.ayinYayinevleriTextHome);
     }
 
     @When("kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur")
     public void kullaniciAyinYayineviBasligiAltindaYayinevlerininAdlariniGorur() {
+        Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
     }
 
     @And("kullanici ayin_yayinevleri tumunu goster linkine tiklar")
     public void kullaniciAyin_yayinevleriTumunuGosterLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.tumunuGosterAyinYayinevleriLinkHome);
     }
 
     @And("kullanici ayin_yayinevleri_tumunu_goster acilan sayfada ayin yayinevleri textini goruntuler")

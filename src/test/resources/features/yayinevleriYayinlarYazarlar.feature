@@ -30,7 +30,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       And   kullanici tikladigi yayinevinin adini acilan sayfada goruntuler
       And   kullanici secilen yayinevi sayfasindaki ilk urune tiklar
       When  kullanici urun adinin yaninda secilen yayinevinin adini gorur
-      Then  kullanici sayfayi kapatir
+     # Then  kullanici sayfayi kapatir
 
 
 
