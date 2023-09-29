@@ -12,5 +12,8 @@ public class AyinYayinevleriPage {
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11761148/wh:4e091ceab']")
     public WebElement ayinYayinevleriEylulAyinYayinevleri;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:7959956/wi:200/wh:6081657ff']")
+    public WebElement tutiKitapTextAyinYayinevleri;
+
 
 }

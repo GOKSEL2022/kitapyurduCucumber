@@ -272,6 +272,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='fa fa-times red-icon']")
     public List<WebElement> tumKaldirIsaretleriIndex;
 
+    @FindBy(xpath = "//h1[.='TUTİ KİTAP']")
+    public WebElement tutiKitapTextIndex;
+
+    @FindBy(xpath = "(//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11611452/wi:100/wh:true'])[1]")
+    public WebElement ayinYayinevleriIlkKitapInsaninFabrikaAyarlariIndex;
+
 
 
 

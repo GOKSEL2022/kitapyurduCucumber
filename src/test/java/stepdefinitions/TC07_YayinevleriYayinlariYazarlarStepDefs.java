@@ -13,6 +13,8 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     HomePage homePage=new HomePage();
     YayineviPage yayineviPage=new YayineviPage();
     KitapPage kitapPage=new KitapPage();
+    AyinYayinevleriPage ayinYayinevleriPage=new AyinYayinevleriPage();
+    IndexPage indexPage=new IndexPage();
     Actions actions=new Actions(Driver.getDriver());
 
     @Given("kullanici haftanin yayinevi basligina gelir")
@@ -67,18 +69,22 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @And("kullanici ayin_yayinevleri_tumunu_goster acilan sayfada ayin yayinevleri textini goruntuler")
     public void kullaniciAyin_yayinevleri_tumunu_gosterAcilanSayfadaAyinYayinevleriTextiniGoruntuler() {
+        assert ayinYayinevleriPage.ayinYayinevleriEylulAyinYayinevleri.isDisplayed();
     }
 
-    @And("kullanici ilk yayinevine tiklar")
-    public void kullaniciIlkYayinevineTiklar() {
+    @And("kullanici bir yayinevine tiklar")
+    public void kullaniciBirYayinevineTiklar() {
+        ReusableMethods.clickByJS(ayinYayinevleriPage.tutiKitapTextAyinYayinevleri);
     }
 
     @And("kullanici tikladigi yayinevinin adini acilan sayfada goruntuler")
     public void kullaniciTikladigiYayinevininAdiniAcilanSayfadaGoruntuler() {
+        assert indexPage.tutiKitapTextIndex.isDisplayed();
     }
 
     @And("kullanici secilen yayinevi sayfasindaki ilk urune tiklar")
     public void kullaniciSecilenYayineviSayfasindakiIlkUruneTiklar() {
+        ReusableMethods.clickByJS(indexPage.ayinYayinevleriIlkKitapInsaninFabrikaAyarlariIndex);
     }
 
     @When("kullanici urun adinin yaninda secilen yayinevinin adini gorur")
