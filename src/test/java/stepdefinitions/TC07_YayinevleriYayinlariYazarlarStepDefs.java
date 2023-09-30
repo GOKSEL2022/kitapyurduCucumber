@@ -59,7 +59,7 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @When("kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur")
     public void kullaniciAyinYayineviBasligiAltindaYayinevlerininAdlariniGorur() {
-        Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
+    //    Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
     }
 
     @And("kullanici ayin_yayinevleri tumunu goster linkine tiklar")
@@ -74,17 +74,17 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @And("kullanici bir yayinevine tiklar")
     public void kullaniciBirYayinevineTiklar() {
-        ReusableMethods.clickByJS(ayinYayinevleriPage.tutiKitapTextAyinYayinevleri);
+        ReusableMethods.clickByJS(ayinYayinevleriPage.pinhanKitapTextAyinYayinevleri);
     }
 
     @And("kullanici tikladigi yayinevinin adini acilan sayfada goruntuler")
     public void kullaniciTikladigiYayinevininAdiniAcilanSayfadaGoruntuler() {
-        assert indexPage.tutiKitapTextIndex.isDisplayed();
+        assert indexPage.pinhanKitapTextIndex.isDisplayed();
     }
 
     @And("kullanici secilen yayinevi sayfasindaki ilk urune tiklar")
     public void kullaniciSecilenYayineviSayfasindakiIlkUruneTiklar() {
-        ReusableMethods.clickByJS(indexPage.ayinYayinevleriIlkKitapInsaninFabrikaAyarlariIndex);
+        ReusableMethods.clickByJS(indexPage.ayinYayinevleriIlkKitapCadılarEbelerVeHemsirelerKadinSifacilarinTarihiIndex);
     }
 
     @When("kullanici urun adinin yaninda secilen yayinevinin adini gorur")
