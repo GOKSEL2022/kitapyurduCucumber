@@ -204,7 +204,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[.='Ayın Yayınevleri'])[1]")
     public WebElement ayinYayinevleriTextHome;
 
-    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:7159676/wi:200/wh:7334aa002']")
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:9103118/wi:200/wh:bdd19f781']")
     public WebElement ayinYayinlariYayineviAdlariTextHome;
 
     @FindBy(xpath = "(//*[@href='ayin-yayinevleri'])[1]")

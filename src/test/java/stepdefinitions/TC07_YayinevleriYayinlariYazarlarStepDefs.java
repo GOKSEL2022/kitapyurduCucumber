@@ -59,7 +59,7 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @When("kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur")
     public void kullaniciAyinYayineviBasligiAltindaYayinevlerininAdlariniGorur() {
-    //    Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
+        Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
     }
 
     @And("kullanici ayin_yayinevleri tumunu goster linkine tiklar")
@@ -89,5 +89,6 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @When("kullanici urun adinin yaninda secilen yayinevinin adini gorur")
     public void kullaniciUrunAdininYanindaSecilenYayinevininAdiniGorur() {
+        Assert.assertTrue(kitapPage.pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap.isDisplayed());
     }
 }
