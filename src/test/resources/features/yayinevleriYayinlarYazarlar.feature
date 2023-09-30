@@ -21,6 +21,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       When  kullanici acilan urunun ayni yayinevine ait oldugunu dogrular
       Then  kullanici sayfayi kapatir
 
+    @ayin_yayinevleri
     Scenario: ayin_yayinevleri
       Given kullanici ayin yayinevleri basligina gelir
       When  kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur
@@ -30,7 +31,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       And   kullanici tikladigi yayinevinin adini acilan sayfada goruntuler
       And   kullanici secilen yayinevi sayfasindaki ilk urune tiklar
       When  kullanici urun adinin yaninda secilen yayinevinin adini gorur
-     # Then  kullanici sayfayi kapatir
+      Then  kullanici sayfayi kapatir
 
 
 

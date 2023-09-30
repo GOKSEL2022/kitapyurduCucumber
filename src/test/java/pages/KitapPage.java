@@ -38,6 +38,9 @@ public class KitapPage {
     @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/yayinevi/nefes-yayinlari/2197.html'])[2]")
     public WebElement secilenIlkUrunYayineviNefesYayinlariTextKitap;
 
+    @FindBy(xpath = "(//*[normalize-space()='PİNHAN YAYINCILIK'])[4]")
+    public WebElement pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap;
+
 
 
 }

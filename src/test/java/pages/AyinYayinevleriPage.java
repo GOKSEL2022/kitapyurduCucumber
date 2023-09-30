@@ -9,7 +9,7 @@ public class AyinYayinevleriPage {
     public AyinYayinevleriPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11761148/wh:4e091ceab']")
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11776673/wh:543b5c094']")
     public WebElement ayinYayinevleriEylulAyinYayinevleri;
 
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:9103118/wi:200/wh:bdd19f781']")
