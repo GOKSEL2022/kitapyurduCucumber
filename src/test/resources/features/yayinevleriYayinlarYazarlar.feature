@@ -33,6 +33,9 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       When  kullanici urun adinin yaninda secilen yayinevinin adini gorur
       Then  kullanici sayfayi kapatir
 
+      Scenario: ayin_yazarlari
+        Given kullanici ayin yazarlari basligina gelir
+
 
 
 
