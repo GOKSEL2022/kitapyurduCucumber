@@ -35,7 +35,26 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
 
       Scenario: ayin_yazarlari
         Given kullanici ayin yazarlari basligina gelir
-
+        When  kullanici ilk yazarin uzerine gelir
+        And   kullanici yazarin kitaplari icin uygulanan indirim miktarini goruntuler
+        And   kullanici ilk yazara tiklar
+        And   kullanici acilan sayfada ayni yazarin adini gorur
+        And   kullanici yazarin ozgecmisini goruntuler
+        And   kullanici ozgecmis altinda bulunan takip et linkine tiklar
+        And   kullanici yazarin takip listesine alindigini gosteren alerti goruntuler
+        And   kullanici yazarin ilk kitabina tiklar
+        And   kullanici secilen kitabin yaninda yazarin adini goruntuler
+        And   kullanici kitapla ilgili aciklama yazisini gorur
+        And   kullanici ic sayfalara goz at linkine tiklar
+        And   kullanici acilan sayfada ileri tusuna tiklar
+        And   kullanici acilan kitabin icerigini goruntuler
+        And   kullanici kitap icerigini kapatir
+        And   kullanici yorumlar linkine tiklar
+        And   kullanici yapilan yorumlari goruntuler
+        And   kullanici urun hakkinda yorum yazar
+        And   kullanici yorumlar_gonder butonuna tiklar
+        When  kullanici en az bir siparisi buluna epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler
+        Then  kullanici sayfayi kapatir
 
 
 
