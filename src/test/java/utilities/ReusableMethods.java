@@ -231,6 +231,14 @@ public class ReusableMethods {
         jcodeModel.build(outputJavaClassDirectory);
 
      */
+
+    //windowNumber sıfır (0)'dan başlıyor.
+    //index numarasini parametre olarak alir
+    //ve o index'li pencereye gecis yapar.
+    public static void switchToWindow(int windowNumber) {
+        List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
+        Driver.getDriver().switchTo().window(list.get(windowNumber));
+    }
     }
 
 

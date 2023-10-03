@@ -35,8 +35,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
 
       Scenario: ayin_yazarlari
         Given kullanici ayin yazarlari basligina gelir
-        When  kullanici ilk yazarin uzerine gelir
-        And   kullanici yazarin kitaplari icin uygulanan indirim miktarini goruntuler
+        When  kullanici ilk yazarin uzerine gelir ve uygulanan indirim miktarini goruntuler
         And   kullanici ilk yazara tiklar
         And   kullanici acilan sayfada ayni yazarin adini gorur
         And   kullanici yazarin ozgecmisini goruntuler
