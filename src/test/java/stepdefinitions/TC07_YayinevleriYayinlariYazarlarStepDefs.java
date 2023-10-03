@@ -91,4 +91,80 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     public void kullaniciUrunAdininYanindaSecilenYayinevininAdiniGorur() {
         Assert.assertTrue(kitapPage.pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap.isDisplayed());
     }
+
+    @Given("kullanici ayin yazarlari basligina gelir")
+    public void kullaniciAyinYazarlariBasliginaGelir() {
+    }
+
+    @When("kullanici ilk yazarin uzerine gelir ve uygulanan indirim miktarini goruntuler")
+    public void kullaniciIlkYazarinUzerineGelirVeUygulananIndirimMiktariniGoruntuler() {
+    }
+
+    @And("kullanici ilk yazara tiklar")
+    public void kullaniciIlkYazaraTiklar() {
+    }
+
+    @And("kullanici acilan sayfada ayni yazarin adini gorur")
+    public void kullaniciAcilanSayfadaAyniYazarinAdiniGorur() {
+    }
+
+    @And("kullanici yazarin ozgecmisini goruntuler")
+    public void kullaniciYazarinOzgecmisiniGoruntuler() {
+    }
+
+    @And("kullanici ozgecmis altinda bulunan takip et linkine tiklar")
+    public void kullaniciOzgecmisAltindaBulunanTakipEtLinkineTiklar() {
+    }
+
+    @And("kullanici yazarin takip listesine alindigini gosteren alerti goruntuler")
+    public void kullaniciYazarinTakipListesineAlindiginiGosterenAlertiGoruntuler() {
+    }
+
+    @And("kullanici yazarin ilk kitabina tiklar")
+    public void kullaniciYazarinIlkKitabinaTiklar() {
+    }
+
+    @And("kullanici secilen kitabin yaninda yazarin adini goruntuler")
+    public void kullaniciSecilenKitabinYanindaYazarinAdiniGoruntuler() {
+    }
+
+    @And("kullanici kitapla ilgili aciklama yazisini gorur")
+    public void kullaniciKitaplaIlgiliAciklamaYazisiniGorur() {
+    }
+
+    @And("kullanici ic sayfalara goz at linkine tiklar")
+    public void kullaniciIcSayfalaraGozAtLinkineTiklar() {
+    }
+
+    @And("kullanici acilan sayfada ileri tusuna tiklar")
+    public void kullaniciAcilanSayfadaIleriTusunaTiklar() {
+    }
+
+    @And("kullanici acilan kitabin icerigini goruntuler")
+    public void kullaniciAcilanKitabinIceriginiGoruntuler() {
+    }
+
+    @And("kullanici kitap icerigini kapatir")
+    public void kullaniciKitapIceriginiKapatir() {
+    }
+
+    @And("kullanici yorumlar linkine tiklar")
+    public void kullaniciYorumlarLinkineTiklar() {
+    }
+
+    @And("kullanici yapilan yorumlari goruntuler")
+    public void kullaniciYapilanYorumlariGoruntuler() {
+    }
+
+    @And("kullanici urun hakkinda yorum yazar")
+    public void kullaniciUrunHakkindaYorumYazar() {
+    }
+
+    @And("kullanici yorumlar_gonder butonuna tiklar")
+    public void kullaniciYorumlar_gonderButonunaTiklar() {
+    }
+
+    @When("kullanici en az bir siparisi buluna epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler")
+    public void kullaniciEnAzBirSiparisiBulunaEpostasiDogrulanmisUyelerYorumYapabilirAlertiniGoruntuler() {
+    }
 }
