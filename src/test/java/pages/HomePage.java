@@ -210,6 +210,15 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='ayin-yayinevleri'])[1]")
     public WebElement tumunuGosterAyinYayinevleriLinkHome;
 
+    @FindBy(xpath = "(//*[.='Ayın Yazarları'])[1]")
+    public WebElement ayinYazarlariTitleTextHome;
+
+    @FindBy(xpath = "//a[@href='index.php?route=product/manufacturer_products&manufacturer_id=5367&filter_publisher=4650&sort=purchased_365&order=DESC&filter_in_stock=1']")
+    public WebElement ayinYazarlariTitleTextIlkYazarHome;
+
+    @FindBy(xpath = "(//span[@class='discount'])[1]")
+    public WebElement ayinYazarlariIlkYazarIndirimMiktariHome;
+
 
 
 
