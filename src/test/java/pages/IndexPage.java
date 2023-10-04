@@ -278,6 +278,22 @@ public class IndexPage {
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11681813/wi:100/wh:true']")
     public WebElement ayinYayinevleriIlkKitapCadılarEbelerVeHemsirelerKadinSifacilarinTarihiIndex;
 
+    @FindBy(xpath = "//div[@class='border-bottom']")
+    public WebElement carlGustavJungTextIndex;
+
+    @FindBy(xpath = "//div[@id='manufacturer-description']")
+    public WebElement carlGustavJungOzgecmisTextIndex;
+
+    @FindBy(xpath = "//a[@id='button-notice-me']")
+    public WebElement carlGustavJungTakipEtLinkIndex;
+
+    @FindBy(xpath = "//div[@class='success']")
+    public WebElement carlGustavJungTakipListenizeEklendiAlertIndex;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11636874/wi:100/wh:true']")
+    public WebElement carlGustavJungIlkUrunIndex;
+
+
 
 
 

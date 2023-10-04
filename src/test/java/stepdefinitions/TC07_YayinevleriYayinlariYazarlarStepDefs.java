@@ -97,35 +97,35 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
         ReusableMethods.hover(homePage.ayinYazarlariTitleTextHome);
     }
 
-    @When("kullanici ilk yazarin uzerine gelir ve uygulanan indirim miktarini goruntuler")
-    public void kullaniciIlkYazarinUzerineGelirVeUygulananIndirimMiktariniGoruntuler() {
-        ReusableMethods.hover(homePage.ayinYazarlariTitleTextIlkYazarHome);
-        ReusableMethods.hover(homePage.ayinYazarlariIlkYazarIndirimMiktariHome);
-        Assert.assertTrue(homePage.ayinYazarlariIlkYazarIndirimMiktariHome.isDisplayed());
-    }
-
     @And("kullanici ilk yazara tiklar")
     public void kullaniciIlkYazaraTiklar() {
+        ReusableMethods.clickByJS(homePage.ayinYazarlariTitleTextIlkYazarHome);
     }
 
     @And("kullanici acilan sayfada ayni yazarin adini gorur")
     public void kullaniciAcilanSayfadaAyniYazarinAdiniGorur() {
+        Assert.assertTrue(indexPage.carlGustavJungTextIndex.isDisplayed());
     }
 
     @And("kullanici yazarin ozgecmisini goruntuler")
     public void kullaniciYazarinOzgecmisiniGoruntuler() {
+        Assert.assertTrue(indexPage.carlGustavJungOzgecmisTextIndex .isDisplayed());
     }
+
 
     @And("kullanici ozgecmis altinda bulunan takip et linkine tiklar")
     public void kullaniciOzgecmisAltindaBulunanTakipEtLinkineTiklar() {
+        ReusableMethods.clickByJS(indexPage.carlGustavJungTakipEtLinkIndex);
     }
 
     @And("kullanici yazarin takip listesine alindigini gosteren alerti goruntuler")
     public void kullaniciYazarinTakipListesineAlindiginiGosterenAlertiGoruntuler() {
+        Assert.assertTrue(indexPage.carlGustavJungTakipListenizeEklendiAlertIndex.isDisplayed());
     }
 
     @And("kullanici yazarin ilk kitabina tiklar")
     public void kullaniciYazarinIlkKitabinaTiklar() {
+        ReusableMethods.clickByJS(indexPage.carlGustavJungIlkUrunIndex);
     }
 
     @And("kullanici secilen kitabin yaninda yazarin adini goruntuler")
