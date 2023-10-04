@@ -35,7 +35,9 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
 
       Scenario: ayin_yazarlari
         Given kullanici ayin yazarlari basligina gelir
+        And   kullanici bir saniye bekler
         When  kullanici ilk yazarin uzerine gelir ve uygulanan indirim miktarini goruntuler
+        And   kullanici bir saniye bekler
         And   kullanici ilk yazara tiklar
         And   kullanici acilan sayfada ayni yazarin adini gorur
         And   kullanici yazarin ozgecmisini goruntuler

@@ -94,10 +94,14 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @Given("kullanici ayin yazarlari basligina gelir")
     public void kullaniciAyinYazarlariBasliginaGelir() {
+        ReusableMethods.hover(homePage.ayinYazarlariTitleTextHome);
     }
 
     @When("kullanici ilk yazarin uzerine gelir ve uygulanan indirim miktarini goruntuler")
     public void kullaniciIlkYazarinUzerineGelirVeUygulananIndirimMiktariniGoruntuler() {
+        ReusableMethods.hover(homePage.ayinYazarlariTitleTextIlkYazarHome);
+        ReusableMethods.hover(homePage.ayinYazarlariIlkYazarIndirimMiktariHome);
+        Assert.assertTrue(homePage.ayinYazarlariIlkYazarIndirimMiktariHome.isDisplayed());
     }
 
     @And("kullanici ilk yazara tiklar")
