@@ -41,6 +41,18 @@ public class KitapPage {
     @FindBy(xpath = "(//*[normalize-space()='PİNHAN YAYINCILIK'])[4]")
     public WebElement pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap;
 
+    @FindBy(xpath = "(//*[.=' Carl Gustav Jung'])[2]")
+    public WebElement yazarAdiTextIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@id='description_text']")
+    public WebElement ayinYazarlariIlkUrunDescriptionKitap;
+
+    @FindBy(xpath = "(//a[@class='pr_views__link'])[1]")
+    public WebElement icSayfalaraGozAtLinkKitap;
+
+    @FindBy(xpath = "//*[@class='nav-next']")
+    public WebElement ileriYonTusuAyinYazarlariIlkUrunKitap;
+
 
 
 }
