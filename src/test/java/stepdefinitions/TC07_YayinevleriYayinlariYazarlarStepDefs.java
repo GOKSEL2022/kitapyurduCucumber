@@ -130,18 +130,22 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @And("kullanici secilen kitabin yaninda yazarin adini goruntuler")
     public void kullaniciSecilenKitabinYanindaYazarinAdiniGoruntuler() {
+        assert kitapPage.yazarAdiTextIlkUrunKitap.isDisplayed();
     }
 
     @And("kullanici kitapla ilgili aciklama yazisini gorur")
     public void kullaniciKitaplaIlgiliAciklamaYazisiniGorur() {
+        assert kitapPage.ayinYazarlariIlkUrunDescriptionKitap.isDisplayed();
     }
 
     @And("kullanici ic sayfalara goz at linkine tiklar")
     public void kullaniciIcSayfalaraGozAtLinkineTiklar() {
+        ReusableMethods.clickByJS(kitapPage.icSayfalaraGozAtLinkKitap);
     }
 
     @And("kullanici acilan sayfada ileri tusuna tiklar")
     public void kullaniciAcilanSayfadaIleriTusunaTiklar() {
+        ReusableMethods.clickByJS(kitapPage.ileriYonTusuAyinYazarlariIlkUrunKitap);
     }
 
     @And("kullanici acilan kitabin icerigini goruntuler")
