@@ -52,7 +52,10 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
         And   kullanici urun hakkinda yorum yazar
         And   kullanici yorumlar_gonder butonuna tiklar
         When  kullanici en az bir siparisi buluna epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler
-       # Then  kullanici sayfayi kapatir
+        Then  kullanici sayfayi kapatir
+
+        Scenario:
+          Given
 
 
 
