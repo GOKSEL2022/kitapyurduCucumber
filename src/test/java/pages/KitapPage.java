@@ -53,6 +53,27 @@ public class KitapPage {
     @FindBy(xpath = "//*[@class='nav-next']")
     public WebElement ileriYonTusuAyinYazarlariIlkUrunKitap;
 
+    @FindBy(xpath = "//*[@class='page p3 odd']")
+    public WebElement sayfaIcerigiAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@class='jBox-closeButton jBox-noDrag']")
+    public WebElement sayfaIceriginiKapatAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@class='pr_view-review-text']")
+    public WebElement yorumlarLinkAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@id='tabs']")
+    public WebElement yapilanYorumlarTextAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@name='text']")
+    public WebElement yorumYazTextBoxAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//a[@id='review-reply-button']")
+    public WebElement gonderButonYorumYazTextBoxAyinYazarlariIlkUrunKitap;
+
+    @FindBy(xpath = "//*[@class='warning']")
+    public WebElement enAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertKitap;
+
 
 
 }

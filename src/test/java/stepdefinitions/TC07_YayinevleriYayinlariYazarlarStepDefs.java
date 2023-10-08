@@ -172,7 +172,8 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
     public void kullaniciYorumlar_gonderButonunaTiklar() {
     }
 
-    @When("kullanici en az bir siparisi buluna epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler")
-    public void kullaniciEnAzBirSiparisiBulunaEpostasiDogrulanmisUyelerYorumYapabilirAlertiniGoruntuler() {
+    @When("kullanici en az bir siparisi bulunan epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler")
+    public void kullaniciEnAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertiniGoruntuler() {
+    //Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir.
     }
 }
