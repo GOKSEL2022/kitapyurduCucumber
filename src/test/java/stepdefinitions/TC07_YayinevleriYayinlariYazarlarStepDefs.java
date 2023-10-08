@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -150,30 +151,37 @@ public class TC07_YayinevleriYayinlariYazarlarStepDefs {
 
     @And("kullanici acilan kitabin icerigini goruntuler")
     public void kullaniciAcilanKitabinIceriginiGoruntuler() {
+        Assert.assertTrue(kitapPage.sayfaIcerigiAyinYazarlariIlkUrunKitap.isDisplayed());
     }
 
     @And("kullanici kitap icerigini kapatir")
     public void kullaniciKitapIceriginiKapatir() {
+        ReusableMethods.clickByJS(kitapPage.sayfaIceriginiKapatAyinYazarlariIlkUrunKitap);
     }
 
     @And("kullanici yorumlar linkine tiklar")
     public void kullaniciYorumlarLinkineTiklar() {
+        ReusableMethods.clickByJS(kitapPage.yorumlarLinkAyinYazarlariIlkUrunKitap);
     }
 
     @And("kullanici yapilan yorumlari goruntuler")
     public void kullaniciYapilanYorumlariGoruntuler() {
+        Assert.assertTrue(kitapPage.yapilanYorumlarTextAyinYazarlariIlkUrunKitap.isDisplayed());
     }
 
     @And("kullanici urun hakkinda yorum yazar")
     public void kullaniciUrunHakkindaYorumYazar() {
+        kitapPage.yorumYazTextBoxAyinYazarlariIlkUrunKitap.sendKeys(Faker.instance().lorem().paragraph());
     }
 
     @And("kullanici yorumlar_gonder butonuna tiklar")
     public void kullaniciYorumlar_gonderButonunaTiklar() {
+        ReusableMethods.clickByJS(kitapPage.gonderButonYorumYazTextBoxAyinYazarlariIlkUrunKitap);
     }
 
     @When("kullanici en az bir siparisi bulunan epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler")
     public void kullaniciEnAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertiniGoruntuler() {
+        Assert.assertTrue(kitapPage.enAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertKitap.getText().contains("Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir"));
     //Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir.
     }
 }
