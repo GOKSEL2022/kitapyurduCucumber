@@ -33,6 +33,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
       When  kullanici urun adinin yaninda secilen yayinevinin adini gorur
       Then  kullanici sayfayi kapatir
 
+      @ayin_yazarlari
       Scenario: ayin_yazarlari
         Given kullanici ayin yazarlari basligina gelir
         And   kullanici ilk yazara tiklar
@@ -52,7 +53,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
         And   kullanici urun hakkinda yorum yazar
         And   kullanici yorumlar_gonder butonuna tiklar
         When  kullanici en az bir siparisi bulunan epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler
-       # Then  kullanici sayfayi kapatir
+        Then  kullanici sayfayi kapatir
 
         Scenario:
           Given
