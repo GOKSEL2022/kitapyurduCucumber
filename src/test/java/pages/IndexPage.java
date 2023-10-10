@@ -293,6 +293,16 @@ public class IndexPage {
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11636874/wi:100/wh:true']")
     public WebElement carlGustavJungIlkUrunIndex;
 
+    @FindBy(xpath = "//h1[.='İlgi Görenler']")
+    public WebElement ilgiGorenlerTextIndex;
+
+    @FindBy(xpath = "(//*[.='Edebiyat'])[2]")
+    public WebElement edebiyatLinkKategoriListeyiDaraltIndex;
+
+    @FindBy(xpath = "(//*[.='Anlatı (1)'])[2]")
+    public WebElement anlatiLinkEdebiyatKategoriListeyiDaraltIndex;
+
+
 
 
 

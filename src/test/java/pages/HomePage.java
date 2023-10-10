@@ -216,6 +216,13 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='index.php?route=product/manufacturer_products&manufacturer_id=5367&filter_publisher=4650&sort=purchased_365&order=DESC&filter_in_stock=1']")
     public WebElement ayinYazarlariTitleTextIlkYazarHome;
 
+    @FindBy(xpath = "(//*[.='İlgi Görenler'])[1]")
+    public WebElement ilgiGorenlerTextHome;
+
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=product/best_sellers&list_id=637']")
+    public WebElement ilgiGorenlerTumunuGosterLinkHome;
+
+
 
 
 

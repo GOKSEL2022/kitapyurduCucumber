@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         features="src/test/resources/features",
         glue= {"stepdefinitions", "hooks"},
-        tags="@ayin_yazarlari"  ,
+        tags="@ilgi_gorenler"  ,
 
         dryRun= false
 )
