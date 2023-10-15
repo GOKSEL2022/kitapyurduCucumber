@@ -18,4 +18,7 @@ Feature: ilgi_gorenler
     And   kullanici ilgi gorenler kategorilerden edebiyati secer
     And   kullanici edebiyat alanindan anlati secenegine tiklar
     When  kullanici acilan sayfada ilgi gorenler basligini goruntuler
+    And   kullanici listeyiDaralt tum kategoriler linke tiklar
+    And   kullanici kategorilerTarih kisisel gelisim linke tiklar
+    And   kullanici listelenen urun sayisi ile sayfadaki urun sayisinin esit oldugunu dogrular
     Then  kullanici sayfayi kapatir

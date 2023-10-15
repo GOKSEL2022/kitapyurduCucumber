@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.IndexPage;
@@ -39,4 +40,26 @@ public class TC08_IlgiGorenlerStepDefs {
     public void kullaniciEdebiyatAlanindanAnlatiSecenegineTiklar() {
         ReusableMethods.clickByJS(indexPage.anlatiLinkEdebiyatKategoriListeyiDaraltIndex);
     }
+
+    @And("kullanici listeyiDaralt tum kategoriler linke tiklar")
+    public void kullaniciListeyiDaraltTumKategorilerLinkeTiklar() {
+        ReusableMethods.clickByJS(indexPage.tumKategorilerLinkListeyiDaraltIndex);
+    }
+
+    @And("kullanici kategorilerTarih kisisel gelisim linke tiklar")
+    public void kullaniciKategorilerTarihKisiselGelisimLinkeTiklar() {
+        ReusableMethods.clickByJS(indexPage.kisiselGelisimLinkTarihKategoriListeyiDaraltIndex);
+    }
+
+    @And("kullanici listelenen urun sayisi ile sayfadaki urun sayisinin esit oldugunu dogrular")
+    public void kullaniciListelenenUrunSayisiIleSayfadakiUrunSayisininEsitOldugunuDogrular() {
+        String dortUrunListelendi=indexPage.dortUrunListelendiTextIndex.getText();
+        dortUrunListelendi=dortUrunListelendi.replaceAll("\\D","");
+        int listelenenUrunSayisiDort=Integer.parseInt(dortUrunListelendi);
+        //System.out.println("indexPage.sayfadakiUrunListesiIndex.size() = " + indexPage.sayfadakiUrunListesiIndex.size());
+        //System.out.println("listelenenUrunSayisiDort = " + listelenenUrunSayisiDort);
+        Assert.assertTrue(indexPage.sayfadakiUrunListesiIndex.size()==Integer.parseInt(dortUrunListelendi));
+    }
+
+
 }
