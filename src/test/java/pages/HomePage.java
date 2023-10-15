@@ -222,6 +222,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=product/best_sellers&list_id=637']")
     public WebElement ilgiGorenlerTumunuGosterLinkHome;
 
+    @FindBy(xpath = "//*[text()='Kategoriler']")
+    public WebElement kategorilerTextHome;
+
+    @FindBy(xpath = "(//a[@aria-label='Sonraki slayt'])[4]")
+    public WebElement tumunuGosterIleriYonTusuKategorilerHome;
+
+    @FindBy(xpath = "(//a[@href='index.php?route=product/category'])[2]")
+    public WebElement tumunuGosterLinkKategorilerHome;
+
 
 
 
