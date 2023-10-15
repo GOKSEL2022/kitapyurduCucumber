@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import pages.IndexPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TC09_KategorilerStepDefs {
     HomePage homePage=new HomePage();
@@ -14,14 +15,11 @@ public class TC09_KategorilerStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici kategoriler basligina gelir")
     public void kullaniciKategorilerBasliginaGelir() {
+        ReusableMethods.scrollIntoViewJS(homePage.kategorilerTextHome);
     }
-
-    @When("kullanici yedi kez tumunu goster ileri tusuna tiklar")
-    public void kullaniciYediKezTumunuGosterIleriTusunaTiklar() {
-    }
-
     @And("kullanici kategoriler tumunu goster linkine tiklar")
     public void kullaniciKategorilerTumunuGosterLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.tumunuGosterLinkKategorilerHome);
     }
 
     @And("kullanici acilan sayfada tum kategorileri goruntuler")
