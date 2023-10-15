@@ -302,6 +302,18 @@ public class IndexPage {
     @FindBy(xpath = "(//*[.='Anlatı (1)'])[2]")
     public WebElement anlatiLinkEdebiyatKategoriListeyiDaraltIndex;
 
+    @FindBy(xpath = "//*[@class='filter-clear-title']")
+    public WebElement tumKategorilerLinkListeyiDaraltIndex;
+
+    @FindBy(xpath = "(//*[.='Kişisel Gelişim (4)'])[2]")
+    public WebElement kisiselGelisimLinkTarihKategoriListeyiDaraltIndex;
+
+    @FindBy(xpath = "//*[@class='pr-img-link']")
+    public List<WebElement> sayfadakiUrunListesiIndex;
+
+    @FindBy(xpath = "//*[@id='faceted-search-list-total']")
+    public WebElement dortUrunListelendiTextIndex;
+
 
 
 
