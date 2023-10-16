@@ -1,3 +1,4 @@
+@kategoriler
 Feature: kategoriler_test
   Background: kayitli_olarak_sayfaya_girer
     Given kullanici kitapyurdu_url ye gider
@@ -9,6 +10,7 @@ Feature: kategoriler_test
     And   kullanici giris yap butonuna tiklar.
     And   kullanici sayfaya kayitli hesap ile girdigini dogrular
     And   kullanici kitapYurdu_com textine tiklar
+
 
   Scenario: kategoriler
     Given kullanici kategoriler basligina gelir

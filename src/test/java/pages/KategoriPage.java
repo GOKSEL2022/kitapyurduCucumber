@@ -19,4 +19,13 @@ public class KategoriPage {
 
     @FindBy(xpath = "//a[@href='https://www.kitapyurdu.com/index.php?route=product/category']")
     public WebElement tumKategorilerTextKategoriler;
+
+    @FindBy(xpath = "//a[@href='https://www.kitapyurdu.com/kategori/edebiyat-belgesel-roman/128_150.html']")
+    public WebElement belgeselRomanLinkEdebiyatAltKategorilerKategoriler;
+
+    @FindBy(xpath = "//h1[.='Belgesel Roman']")
+    public WebElement belgeselRomanTextKategori;
+
+    @FindBy(xpath = "(//*[.=' Ayşe Kulin'])[1]")
+    public WebElement ayseKulinLinkKategori;
 }
