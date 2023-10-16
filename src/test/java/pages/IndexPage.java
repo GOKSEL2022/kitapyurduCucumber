@@ -314,6 +314,21 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='faceted-search-list-total']")
     public WebElement dortUrunListelendiTextIndex;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11672037/wi:180/wh:688053f7f']")
+    public WebElement edebiyatSembolKitapKategorileriIndex;
+
+    @FindBy(xpath = "//h1[.='Edebiyat']")
+    public WebElement edebiyatTextAltKategorilerIndex;
+
+    @FindBy(xpath = "//a[@href='https://www.kitapyurdu.com/index.php?route=product/category']")
+    public WebElement tumKategorilerLinkKitapKategorileriIndex;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11632305/wi:100/wh:true']")
+    public WebElement turkanRomaniAyseKulinIndex;
+
+    @FindBy(xpath = "//*[@class='add-to-cart']")
+    public WebElement sepeteEkleTurkanRomaniAyseKulinIndex;
+
 
 
 
