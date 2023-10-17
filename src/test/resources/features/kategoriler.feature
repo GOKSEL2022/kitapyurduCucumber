@@ -25,3 +25,20 @@ Feature: kategoriler_test
     And   kullanici sayfadaki urunleri sepete ekler
     And   kullanici urunun sepete eklendiginin belirten alerti gorur
     Then  kullanici sayfayi kapatir
+
+    Scenario: onayli_yorumlar
+      Given kullanici anasayfanin en altina gelir
+      When  kullanici onayli yorumlar linkine tiklar
+      And   kullanici onayli yorumlarla ilgili secenekleri goruntuler
+      And   kullanici onayli yorumlari inceleyin secenegine tiklar
+      And   kullanici onayli yorumlar sayfasinin acildigini dogrular
+      And   kullanici sirala dropdownindan en begenilenleri secer
+      And   kullanici en begenilen yorum ile en yeni yorumun ayni olmadigini dogrular
+      And   kullanici yorumun yaninda ilgili kitabi gorur
+      And   kullanici yorumlarin altinda bulunan evet sembolunun aktif oldugunu dogrular
+      And   kullanici evet sembolunden sonra hayir sembolune tikladiginda bu yorumu daha once oyladiniz uyarisini gorur
+      And   kullanici bu yorumu yanitla linke tiklar
+      When  kullanici yanitlama iznine sahip degilsiniz uyarisini gorur
+      Then kullanici sayfayi kapatir
+
+
