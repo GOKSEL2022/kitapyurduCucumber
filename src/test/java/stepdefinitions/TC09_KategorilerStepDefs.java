@@ -63,7 +63,7 @@ public class TC09_KategorilerStepDefs {
     @And("kullanici sayfadaki urunleri sepete ekler")
     public void kullaniciSayfadakiUrunleriSepeteEkler() {
         actions.moveToElement(indexPage.turkanRomaniAyseKulinIndex).perform();
-        indexPage.sepeteEkleTurkanRomaniAyseKulinIndex.click();
+        ReusableMethods.clickByJS(indexPage.sepeteEkleTurkanRomaniAyseKulinIndex);
     }
 
 
