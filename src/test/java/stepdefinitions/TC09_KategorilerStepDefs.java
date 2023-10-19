@@ -67,5 +67,48 @@ public class TC09_KategorilerStepDefs {
     }
 
 
+    @When("kullanici onayli yorumlar linkine tiklar")
+    public void kullaniciOnayliYorumlarLinkineTiklar() {
+    }
+
+    @And("kullanici onayli yorumlarla ilgili secenekleri goruntuler")
+    public void kullaniciOnayliYorumlarlaIlgiliSecenekleriGoruntuler() {
+    }
+
+    @And("kullanici onayli yorumlari inceleyin secenegine tiklar")
+    public void kullaniciOnayliYorumlariInceleyinSecenegineTiklar() {
+    }
+
+    @And("kullanici onayli yorumlar sayfasinin acildigini dogrular")
+    public void kullaniciOnayliYorumlarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici sirala dropdownindan en begenilenleri secer")
+    public void kullaniciSiralaDropdownindanEnBegenilenleriSecer() {
+    }
+
+    @And("kullanici en begenilen yorum ile en yeni yorumun ayni olmadigini dogrular")
+    public void kullaniciEnBegenilenYorumIleEnYeniYorumunAyniOlmadiginiDogrular() {
+    }
+
+    @And("kullanici yorumun yaninda ilgili kitabi gorur")
+    public void kullaniciYorumunYanindaIlgiliKitabiGorur() {
+    }
+
+    @And("kullanici yorumlarin altinda bulunan evet sembolunun aktif oldugunu dogrular")
+    public void kullaniciYorumlarinAltindaBulunanEvetSembolununAktifOldugunuDogrular() {
+    }
+
+    @And("kullanici evet sembolunden sonra hayir sembolune tikladiginda bu yorumu daha once oyladiniz uyarisini gorur")
+    public void kullaniciEvetSembolundenSonraHayirSemboluneTikladigindaBuYorumuDahaOnceOyladinizUyarisiniGorur() {
+    }
+
+    @And("kullanici bu yorumu yanitla linke tiklar")
+    public void kullaniciBuYorumuYanitlaLinkeTiklar() {
+    }
+
+    @When("kullanici yanitlama iznine sahip degilsiniz uyarisini gorur")
+    public void kullaniciYanitlamaIznineSahipDegilsinizUyarisiniGorur() {
+    }
 }
 
