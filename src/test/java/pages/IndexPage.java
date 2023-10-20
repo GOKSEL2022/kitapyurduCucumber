@@ -329,6 +329,18 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='add-to-cart']")
     public WebElement sepeteEkleTurkanRomaniAyseKulinIndex;
 
+    @FindBy(xpath = "//h1[.='Onaylı Yorumlar']")
+    public WebElement onayliYorumlarTextIndex;
+
+    @FindBy(xpath = "//select[@id='sort']")
+    public WebElement onayliYorumlarDropDownIndex;
+
+    @FindBy(xpath = "//*[.='Alışkanlıkların Esiri Olmamak...']")
+    public WebElement enBegenilenOnayliYorumTextIndex;
+
+    @FindBy(xpath = "//*[.='Milletinin Adı Sanı Yok Olmasın Diye Yazan Mirza Haydar']")
+    public WebElement enYenilerOnayliYorumTextIndex;
+
 
 
 

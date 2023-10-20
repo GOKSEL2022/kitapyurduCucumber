@@ -3,7 +3,9 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.IndexPage;
@@ -86,20 +88,24 @@ public class TC09_KategorilerStepDefs {
 
     @And("kullanici onayli yorumlari inceleyin secenegine tiklar")
     public void kullaniciOnayliYorumlariInceleyinSecenegineTiklar() {
+        ReusableMethods.clickByJS(onayliYorumPage.onayliYorumlariInceleyinLinkOnayliYorumlar);
     }
 
     @And("kullanici onayli yorumlar sayfasinin acildigini dogrular")
     public void kullaniciOnayliYorumlarSayfasininAcildiginiDogrular() {
+        assert indexPage.onayliYorumlarTextIndex.isDisplayed();
     }
 
     @And("kullanici sirala dropdownindan en begenilenleri secer")
     public void kullaniciSiralaDropdownindanEnBegenilenleriSecer() {
+        new Select(indexPage.onayliYorumlarDropDownIndex).selectByVisibleText("En Beğenilenler");
     }
 
     @And("kullanici en begenilen yorum ile en yeni yorumun ayni olmadigini dogrular")
     public void kullaniciEnBegenilenYorumIleEnYeniYorumunAyniOlmadiginiDogrular() {
-    }
+        Assert.assertFalse(indexPage.enBegenilenOnayliYorumTextIndex.getText().contains("Milletinin Adı Sanı Yok Olmasın Diye Yazan Mirza Haydar"));
 
+    }
     @And("kullanici yorumun yaninda ilgili kitabi gorur")
     public void kullaniciYorumunYanindaIlgiliKitabiGorur() {
     }
