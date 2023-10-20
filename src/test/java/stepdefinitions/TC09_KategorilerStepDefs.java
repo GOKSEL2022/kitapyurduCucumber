@@ -4,9 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.IndexPage;
 import pages.KategoriPage;
+import pages.OnayliYorumPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -14,7 +16,9 @@ public class TC09_KategorilerStepDefs {
     HomePage homePage=new HomePage();
     IndexPage indexPage=new IndexPage();
     KategoriPage kategoriPage=new KategoriPage();
+    OnayliYorumPage onayliYorumPage=new OnayliYorumPage();
     Actions actions=new Actions(Driver.getDriver());
+    SoftAssert softAssert=new SoftAssert();
     @Given("kullanici kategoriler basligina gelir")
     public void kullaniciKategorilerBasliginaGelir() {
         ReusableMethods.scrollIntoViewJS(homePage.kategorilerTextHome);
@@ -69,10 +73,15 @@ public class TC09_KategorilerStepDefs {
 
     @When("kullanici onayli yorumlar linkine tiklar")
     public void kullaniciOnayliYorumlarLinkineTiklar() {
+        ReusableMethods.clickByJS(homePage.onayliYorumlarLinkHome);
     }
 
     @And("kullanici onayli yorumlarla ilgili secenekleri goruntuler")
     public void kullaniciOnayliYorumlarlaIlgiliSecenekleriGoruntuler() {
+        softAssert.assertTrue(onayliYorumPage.onayliYorumBulunanKitaplarLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertTrue(onayliYorumPage.onayliYorumlariInceleyinLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertTrue(onayliYorumPage.onayliYorumlarIleYenidenKesfedinLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertAll();
     }
 
     @And("kullanici onayli yorumlari inceleyin secenegine tiklar")
