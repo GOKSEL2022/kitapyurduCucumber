@@ -26,6 +26,7 @@ Feature: kategoriler_test
     And   kullanici urunun sepete eklendiginin belirten alerti gorur
     Then  kullanici sayfayi kapatir
 
+    @onayli_yorumlar
     Scenario: onayli_yorumlar
       Given kullanici anasayfanin en altina gelir
       When  kullanici onayli yorumlar linkine tiklar
@@ -39,6 +40,6 @@ Feature: kategoriler_test
       And   kullanici evet sembolunden sonra hayir sembolune tikladiginda bu yorumu daha once oyladiniz uyarisini gorur
       And   kullanici bu yorumu yanitla linke tiklar
       When  kullanici yanitlama iznine sahip degilsiniz uyarisini gorur
-      Then  kullanici sayfayi kapatir
+    #  Then  kullanici sayfayi kapatir
 
 

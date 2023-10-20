@@ -231,6 +231,9 @@ public class HomePage {
     @FindBy(xpath = "(//a[@href='index.php?route=product/category'])[2]")
     public WebElement tumunuGosterLinkKategorilerHome;
 
+    @FindBy(xpath = "//a[@href='onayli-yorum']")
+    public WebElement onayliYorumlarLinkHome;
+
 
 
 
