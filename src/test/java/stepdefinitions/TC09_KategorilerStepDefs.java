@@ -108,22 +108,29 @@ public class TC09_KategorilerStepDefs {
     }
     @And("kullanici yorumun yaninda ilgili kitabi gorur")
     public void kullaniciYorumunYanindaIlgiliKitabiGorur() {
+        assert indexPage.atomikAliskanliklarKitabiOnayliYorumlarIndex.isDisplayed();
     }
 
     @And("kullanici yorumlarin altinda bulunan evet sembolunun aktif oldugunu dogrular")
     public void kullaniciYorumlarinAltindaBulunanEvetSembolununAktifOldugunuDogrular() {
+        assert indexPage.evetLinkiBuYorumaKatiliyorMusunuzIndex.isDisplayed();
+        ReusableMethods.clickByJS(indexPage.evetLinkiBuYorumaKatiliyorMusunuzIndex);
     }
 
     @And("kullanici evet sembolunden sonra hayir sembolune tikladiginda bu yorumu daha once oyladiniz uyarisini gorur")
     public void kullaniciEvetSembolundenSonraHayirSemboluneTikladigindaBuYorumuDahaOnceOyladinizUyarisiniGorur() {
+        ReusableMethods.clickByJS(indexPage.hayirLinkiBuYorumaKatiliyorMusunuzIndex);
+        assert indexPage.buYorumuDahaOnceOyladinizAlertIndex.isDisplayed();
     }
 
     @And("kullanici bu yorumu yanitla linke tiklar")
     public void kullaniciBuYorumuYanitlaLinkeTiklar() {
+        ReusableMethods.clickByJS(indexPage.buYorumuYanitlaLinkiOnayliYorumlarIndex);
     }
 
     @When("kullanici yanitlama iznine sahip degilsiniz uyarisini gorur")
     public void kullaniciYanitlamaIznineSahipDegilsinizUyarisiniGorur() {
+        assert indexPage.yanitlamaIznineSahipDegilsinizAlertIndex.isDisplayed();
     }
 }
 
