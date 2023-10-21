@@ -341,6 +341,24 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='Milletinin Adı Sanı Yok Olmasın Diye Yazan Mirza Haydar']")
     public WebElement enYenilerOnayliYorumTextIndex;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11221036/wi:112/wh:d428ec94a']")
+    public WebElement atomikAliskanliklarKitabiOnayliYorumlarIndex;
+
+    @FindBy(xpath = "(//*[text()='Evet'])[1]")
+    public WebElement evetLinkiBuYorumaKatiliyorMusunuzIndex;
+
+    @FindBy(xpath = "(//*[text()='Hayır'])[1]")
+    public WebElement hayirLinkiBuYorumaKatiliyorMusunuzIndex;
+
+    @FindBy(xpath = "//*[text()='Bu yorumu daha önce oyladınız!']")
+    public WebElement buYorumuDahaOnceOyladinizAlertIndex;
+
+    @FindBy(xpath = "(//i[@class='sprite__product sprite__product--reply'])[1]")
+    public WebElement buYorumuYanitlaLinkiOnayliYorumlarIndex;
+
+    @FindBy(xpath = "//*[text()='Yanıtlama iznine sahip değilsiniz!']")
+    public WebElement yanitlamaIznineSahipDegilsinizAlertIndex;
+
 
 
 
