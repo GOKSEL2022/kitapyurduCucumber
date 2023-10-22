@@ -83,7 +83,7 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
         | adiniz | e-posta adresiniz | mesajiniz                            | dogrulama kodu |
         | adsiz  | adisz@gmail.com   | adini ben verdim yasini Allah versin | dogrulama kodu |
 
-     Scenario:anasayfadaki_tutuncu_arac_cubugu_alanlarin_dogrulama_testi
+     Scenario:anasayfadaki_turuncu_arac_cubugu_alanlarin_dogrulama_testi
        Given kullanici cok satan kitaplar basliginin uzerine gelir
        When  kullanici haftalik cok satan kitaplar basligina tiklar
        And   kullanici haftalik cok satan kitaplar sayfasinin acildigini dogrular
@@ -150,6 +150,17 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        And   kullanici yardim linkine gelir
        And   kullanici yardim ve islem rehberi secenegini goruntuler
        Then  kullanici sayfayi kapatir
+
+     Scenario: alisveris_listesine_ekleme_testi
+       Given kullanici anasayfadaki ilk urune gelir
+       When  kullanici sayfadaki ilk urunu sepete ekler
+       And   kullanici urun alisveris listenize eklendi alertini gorur
+       And   kullanici goruntulenen alerte tiklar
+       And   kullanici sectigi urunu alisveris listesinde goruntuler
+       And   kullanici bir onceki sayfaya doner
+       When  kullanici eklemis oldugu urunun tekrar listeye eklenebilecegini dogrular
+       Then  kullanici sayfayi kapatir
+
 
 
 
