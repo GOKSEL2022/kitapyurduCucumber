@@ -251,4 +251,32 @@ public class TC05_KitapYurduHome02StepDefs {
         Thread.sleep(1000);
         Assert.assertTrue(homePage.yardimVeIslemRehberiSecenegiYardimHome.isDisplayed());
     }
+
+    @Given("kullanici anasayfadaki ilk urune gelir")
+    public void kullaniciAnasayfadakiIlkUruneGelir() {
+    }
+
+    @When("kullanici sayfadaki ilk urunu sepete ekler")
+    public void kullaniciSayfadakiIlkUrunuSepeteEkler() {
+    }
+
+    @And("kullanici urun alisveris listenize eklendi alertini gorur")
+    public void kullaniciUrunAlisverisListenizeEklendiAlertiniGorur() {
+    }
+
+    @And("kullanici goruntulenen alerte tiklar")
+    public void kullaniciGoruntulenenAlerteTiklar() {
+    }
+
+    @And("kullanici sectigi urunu alisveris listesinde goruntuler")
+    public void kullaniciSectigiUrunuAlisverisListesindeGoruntuler() {
+    }
+
+    @And("kullanici bir onceki sayfaya doner")
+    public void kullaniciBirOncekiSayfayaDoner() {
+    }
+
+    @When("kullanici eklemis oldugu urunun tekrar listeye eklenebilecegini dogrular")
+    public void kullaniciEklemisOlduguUrununTekrarListeyeEklenebileceginiDogrular() {
+    }
 }
