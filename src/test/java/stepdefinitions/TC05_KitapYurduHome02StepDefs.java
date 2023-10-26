@@ -265,13 +265,14 @@ public class TC05_KitapYurduHome02StepDefs {
     }
 
     @And("kullanici urun alisveris listenize eklendi alertini gorur")
-    public void kullaniciUrunAlisverisListenizeEklendiAlertiniGorur() {
-       // assert homePage.urunAlisverisListenizeEklendiAlertHome.isDisplayed();
+    public void kullaniciUrunAlisverisListenizeEklendiAlertiniGorur() throws InterruptedException {
+        Thread.sleep(1000);
+        assert homePage.urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
 
     @And("kullanici goruntulenen alerte tiklar")
     public void kullaniciGoruntulenenAlerteTiklar() {
-      //  ReusableMethods.clickByJS(homePage.urunAlisverisListenizeEklendiAlertHome);
+        ReusableMethods.clickByJS(homePage.urunAlisverisListenizeEklendiAlertHome);
     }
 
     @And("kullanici sectigi urunu alisveris listesinde goruntuler")
