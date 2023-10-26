@@ -254,18 +254,24 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @Given("kullanici anasayfadaki ilk urune gelir")
     public void kullaniciAnasayfadakiIlkUruneGelir() {
+        ReusableMethods.scrollIntoViewJS(homePage.haftaninYayineviTextHome);
     }
 
     @When("kullanici sayfadaki ilk urunu sepete ekler")
-    public void kullaniciSayfadakiIlkUrunuSepeteEkler() {
+    public void kullaniciSayfadakiIlkUrunuSepeteEkler() throws InterruptedException {
+        actions.moveToElement(homePage.zeytindagiKitabiHome).perform();
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(homePage.alisverisListemeEkleLinkAnasayfaIlkUrunHome);
     }
 
     @And("kullanici urun alisveris listenize eklendi alertini gorur")
     public void kullaniciUrunAlisverisListenizeEklendiAlertiniGorur() {
+       // assert homePage.urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
 
     @And("kullanici goruntulenen alerte tiklar")
     public void kullaniciGoruntulenenAlerteTiklar() {
+      //  ReusableMethods.clickByJS(homePage.urunAlisverisListenizeEklendiAlertHome);
     }
 
     @And("kullanici sectigi urunu alisveris listesinde goruntuler")
