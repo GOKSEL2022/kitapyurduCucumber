@@ -21,6 +21,7 @@ public class TC05_KitapYurduHome02StepDefs {
     YazarlarPage yazarlarPage=new YazarlarPage();
     KampanyalarPage kampanyalarPage=new KampanyalarPage();
     PuanKataloguPage puanKataloguPage=new PuanKataloguPage();
+    IndexPage indexPage=new IndexPage();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici cok satan kitaplar basliginin uzerine gelir")
     public void kullaniciCokSatanKitaplarBasligininUzerineGelir() {
@@ -266,7 +267,6 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @And("kullanici urun alisveris listenize eklendi alertini gorur")
     public void kullaniciUrunAlisverisListenizeEklendiAlertiniGorur() throws InterruptedException {
-        Thread.sleep(1000);
         assert homePage.urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
 
@@ -277,13 +277,19 @@ public class TC05_KitapYurduHome02StepDefs {
 
     @And("kullanici sectigi urunu alisveris listesinde goruntuler")
     public void kullaniciSectigiUrunuAlisverisListesindeGoruntuler() {
+        assert indexPage.zeytindagiKitabiFalihRifkiAtayIndex.isDisplayed();
+
     }
 
     @And("kullanici bir onceki sayfaya doner")
     public void kullaniciBirOncekiSayfayaDoner() {
+        Driver.getDriver().navigate().back();
     }
 
     @When("kullanici eklemis oldugu urunun tekrar listeye eklenebilecegini dogrular")
     public void kullaniciEklemisOlduguUrununTekrarListeyeEklenebileceginiDogrular() {
+        actions.moveToElement(homePage.zeytindagiKitabiHome).perform();
+        ReusableMethods.clickByJS(homePage.alisverisListemeEkleLinkAnasayfaIlkUrunHome);
+        assert homePage.urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
 }
