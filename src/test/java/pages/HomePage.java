@@ -234,6 +234,16 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='onayli-yorum']")
     public WebElement onayliYorumlarLinkHome;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11764839/wi:120/wh:true']")
+    public WebElement zeytindagiKitabiHome;
+
+    @FindBy(xpath = "(//i[@class='fa fa-tag'])[1]")
+    public WebElement alisverisListemeEkleLinkAnasayfaIlkUrunHome;
+
+    @FindBy(xpath = "(//a[@href='https://www.kitapyurdu.com/index.php?route=account/wishlist'])")
+    public WebElement urunAlisverisListenizeEklendiAlertHome;
+
+
 
 
 
