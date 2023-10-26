@@ -240,7 +240,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='product-wish-list-add-62886']")
     public WebElement alisverisListemeEkleLinkAnasayfaIlkUrunHome;
 
-    @FindBy(xpath = "//*[@id='swal2-title']")
+    @FindBy(xpath = "//*[text()='alışveriş']")
     public WebElement urunAlisverisListenizeEklendiAlertHome;
 
     @FindBy(xpath = "//*[@style='display: flex;']")

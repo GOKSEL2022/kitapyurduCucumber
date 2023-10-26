@@ -359,6 +359,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[text()='Yanıtlama iznine sahip değilsiniz!']")
     public WebElement yanitlamaIznineSahipDegilsinizAlertIndex;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11764839/wi:80/wh:true']")
+    public WebElement zeytindagiKitabiFalihRifkiAtayIndex;
+
 
 
 
