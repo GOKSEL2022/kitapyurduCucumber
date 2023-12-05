@@ -24,3 +24,17 @@ import org.junit.runner.RunWith;
 
 public class Runner {
 }
+/*
+ @When("kullanici kategori basligini goruntuler")
+    public void kullaniciKategoriBasliginiGoruntuler() {
+        assert araPage.kategoriTextAra.isDisplayed();
+    }
+    @And("kullanici arama alanina gecerli sembol {string} girer")
+    public void kullaniciAramaAlaninaGecerliSembolGirer(String string) {
+        actions.sendKeys(homePage.searchBoxHome).sendKeys(string,Keys.ENTER).perform();
+    }
+    @When("kullanici arama ile ilgili sonuc bulunamamistir yazisini goruntuler")
+    public void kullaniciAramaIleIlgiliSonucBulunamamistirYazisiniGoruntuler() {
+        assert araPage.sembolIleIlgiliSonucBulunamamistirTextAra.isDisplayed();
+    }
+ */
