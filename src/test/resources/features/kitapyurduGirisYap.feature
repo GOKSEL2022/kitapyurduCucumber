@@ -1,3 +1,4 @@
+@smoke
 Feature: kayitli_kullanici_girisi
 
   Scenario:giris_yap_alani_bos_birakarak_deneme
