@@ -1,16 +1,11 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
-import pages.HomePage;
-import pages.IndexPage;
-import pages.KategoriPage;
-import pages.OnayliYorumPage;
+import pages.*;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
