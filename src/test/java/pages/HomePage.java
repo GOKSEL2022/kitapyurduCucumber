@@ -246,6 +246,36 @@ public class HomePage {
     @FindBy(xpath = "//*[@style='display: flex;']")
     public WebElement alisverisListenizdenCikarildiAlertHome;
 
+    @FindBy(xpath = "(//a[@href='yardim'])[3]")
+    public WebElement yardimVeIslemRehberiLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//a[@href='yardim/video'])[2]")
+    public WebElement videoYardimLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[.='Havale/EFT Bilgileri'])[2]")
+    public WebElement havaleEFTBilgileriLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[.='Müşteri Hizmetleri'])[4]")
+    public WebElement musteriHizmetleriLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='platin-uyelik'])[2]")
+    public WebElement platinUyelikLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='gumus-uyelik']")
+    public WebElement gumusUyelikLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='teslim-noktalari']")
+    public WebElement teslimNoktalariLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='hemen-al']")
+    public WebElement hemenAlLinkSayfaAltiHome;
+
+
+
+
+
+
+
 
 
 
