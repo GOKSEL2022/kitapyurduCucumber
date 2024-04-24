@@ -1,9 +1,13 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
+import pages.HomePage;
+import utilities.ReusableMethods;
 
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
+    HomePage homePage=new HomePage();
     @And("kullanici yardim ve islem rehberi linke tiklar")
     public void kullaniciYardimVeIslemRehberiLinkeTiklar() {
+        ReusableMethods.clickByJS(homePage.yardimVeIslemRehberiLinkSayfaAltiHome);
     }
 
     @And("kullanici yardim sayfasina yönlendirildigini dogrular")
