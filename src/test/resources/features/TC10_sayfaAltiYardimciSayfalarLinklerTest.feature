@@ -14,7 +14,11 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
       And kullanici anasayfanin en altina gelir
       And kullanici havale_EFTBilgileri linke tiklar
       And kullanici havale_EFTBilgilerinin goruntulendigini dogrular
+      And kullanici sayfayi yeniler
+      And kullanici bir saniye bekler
       And kullanici anasayfanin en altina gelir
+      And kullanici sayfayi yeniler
+      And kullanici bir saniye bekler
       And kullanici musteri hizmetleri linke tiklar
       And kullanici musteri hizmetleri sayfasinin acildigini dogrular
       And kullanici anasayfanin en altina gelir
