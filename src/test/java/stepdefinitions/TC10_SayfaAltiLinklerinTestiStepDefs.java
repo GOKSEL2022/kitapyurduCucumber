@@ -85,4 +85,9 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciSayfayiYeniler() {
         Driver.getDriver().navigate().refresh();
     }
+
+    @And("kullanici kabul et ve devam et butona tiklar")
+    public void kullaniciKabulEtVeDevamEtButonaTiklar() {
+        clickByJS(yardim_videoPage.kabulEtVeKapatButonYardimVideo);
+    }
 }

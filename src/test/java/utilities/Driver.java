@@ -29,7 +29,7 @@ public class Driver {
                 // browser secimi yapilmadiysa default olarak chrome devreye girecek
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
-                    //WebDriverManager.chromedriver().clearDriverCache().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
                     driver = new ChromeDriver();
                     break;
                 case "firefox":

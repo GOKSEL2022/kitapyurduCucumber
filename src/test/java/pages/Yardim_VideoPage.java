@@ -11,4 +11,7 @@ public class Yardim_VideoPage {
     }
     @FindBy(xpath ="//*[.='BANKA HESAP BİLGİLERİMİZ:']")
     public WebElement bankaHesapBilgilerimizTextTitleYardimVideo;
+
+    @FindBy(xpath ="//*[@id='cookiescript_accept']")
+    public WebElement kabulEtVeKapatButonYardimVideo;
 }
