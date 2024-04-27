@@ -51,34 +51,42 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici platin uyelik linke tiklar")
     public void kullaniciPlatinUyelikLinkeTiklar() {
+        clickByJS(homePage.platinUyelikLinkSayfaAltiHome);
     }
 
     @And("kullanici platin uyelik sayfasinin acildigini dogrular")
     public void kullaniciPlatinUyelikSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("platin-uyelik");
     }
 
     @And("kullanici gumus uyelik linke tiklar")
     public void kullaniciGumusUyelikLinkeTiklar() {
+        clickByJS(homePage.gumusUyelikLinkSayfaAltiHome);
     }
 
     @And("kullanici gumus uyelik sayfasinin acildigini dogrular")
     public void kullaniciGumusUyelikSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("gumus-uyelik");
     }
 
     @And("kullanici teslim noktalari linke tiklar")
     public void kullaniciTeslimNoktalariLinkeTiklar() {
+        clickByJS(homePage.teslimNoktalariLinkSayfaAltiHome);
     }
 
     @And("kullanici teslim noktalari sayfasinin acildigini dogrular")
     public void kullaniciTeslimNoktalariSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("teslim-noktalari");
     }
 
     @And("kullanici hemen al linke tiklar")
     public void kullaniciHemenAlLinkeTiklar() {
+        clickByJS(homePage.hemenAlLinkSayfaAltiHome);
     }
 
     @And("kullanici hemen al sayfasinin acildigini dogrular")
     public void kullaniciHemenAlSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("hemen-al");
     }
 
     @And("kullanici sayfayi yeniler")
