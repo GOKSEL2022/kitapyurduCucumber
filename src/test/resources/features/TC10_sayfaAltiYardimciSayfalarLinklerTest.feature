@@ -53,6 +53,31 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici anasayfanin en altina gelir
         And kullanici ayin yazarlari linke tiklar
         And kullanici ayin yazarlari sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici ayin yayinevleri linke tiklar
+        And kullanici ayin yayinevleri sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici puan katalogu linke tiklar
+        And kullanici puan katalogu sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici eDergi linke tiklar
+        And kullanici eDergi sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici ne okusam linke tiklar
+        And kullanici ne okusam sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici kelepir kitaplar linke tiklar
+        And kullanici kelepir kitaplar sayfasinin acildigini dogrular
+        And kullanici bir saniye bekler
+        And kullanici anasayfanin en altina gelir
+        And kullanici Kitap Hediye Kartlari linke tiklar
+        And kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular
+        Then kullanici sayfayi kapatir
 
 
 
