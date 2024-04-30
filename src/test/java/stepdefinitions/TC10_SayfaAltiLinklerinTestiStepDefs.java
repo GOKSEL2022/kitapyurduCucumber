@@ -1,5 +1,6 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.Yardim_VideoPage;
 import utilities.Driver;
@@ -98,4 +99,85 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciKabulEtVeDevamEtButonaTiklar() {
         clickByJS(yardim_videoPage.kabulEtVeKapatButonYardimVideo);
     }
+    @When("kullanici cok satan kitaplar linke tiklar")
+    public void kullanici_cok_satan_kitaplar_linke_tiklar() {
+
+    }
+    @When("kullanici cok satan kitaplar sayfasina yönlendirildigini dogrular")
+    public void kullanici_cok_satan_kitaplar_sayfasina_yönlendirildigini_dogrular() {
+
+    }
+    @When("kullanici yeni cikan kitaplar linke tiklar")
+    public void kullanici_yeni_cikan_kitaplar_linke_tiklar() {
+
+    }
+    @When("kullanici yeni cikan kitaplar sayfasinin acildigini dogrular")
+    public void kullanici_yeni_cikan_kitaplar_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici kargo odeyen avantajli urunler linke tiklar")
+    public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar() {
+
+    }
+    @When("kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular")
+    public void kullanici_kargo_odeyen_avantajli_urunler_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici kampanyalar linke tiklar")
+    public void kullanici_kampanyalar_linke_tiklar() {
+
+    }
+    @When("kullanici kampanyalar sayfasinin acildigini dogrular")
+    public void kullanici_kampanyalar_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici ayin yazarlari linke tiklar")
+    public void kullanici_ayin_yazarlari_linke_tiklar() {
+
+    }
+    @When("kullanici ayin yazarlari sayfasinin acildigini dogrular")
+    public void kullanici_ayin_yazarlari_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici ayin yayinevleri linke tiklar")
+    public void kullanici_ayin_yayinevleri_linke_tiklar() {
+
+    }
+    @When("kullanici ayin yayinevleri sayfasinin acildigini dogrular")
+    public void kullanici_ayin_yayinevleri_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici puan katalogu linke tiklar")
+    public void kullanici_puan_katalogu_linke_tiklar() {
+
+    }
+    @When("kullanici eDergi linke tiklar")
+    public void kullanici_e_dergi_linke_tiklar() {
+
+    }
+    @When("kullanici eDergi sayfasinin acildigini dogrular")
+    public void kullanici_e_dergi_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici ne okusam linke tiklar")
+    public void kullanici_ne_okusam_linke_tiklar() {
+
+    }
+    @When("kullanici kelepir kitaplar linke tiklar")
+    public void kullanici_kelepir_kitaplar_linke_tiklar() {
+
+    }
+    @When("kullanici kelepir kitaplar sayfasinin acildigini dogrular")
+    public void kullanici_kelepir_kitaplar_sayfasinin_acildigini_dogrular() {
+
+    }
+    @When("kullanici Kitap Hediye Kartlari linke tiklar")
+    public void kullanici_kitap_hediye_kartlari_linke_tiklar() {
+
+    }
+    @When("kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular")
+    public void kullanici_kitap_hediye_kartlarir_sayfasinin_acildigini_dogrular() {
+
+    }
+
 }
