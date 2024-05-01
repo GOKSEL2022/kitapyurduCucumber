@@ -270,6 +270,18 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='hemen-al']")
     public WebElement hemenAlLinkSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='cok-satan-kitaplar/haftalik/1.html'])[2]")
+    public WebElement cokSatanKitaplarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//a[@href='yeni-cikan-kitaplar/haftalik/2.html'])[2]")
+    public WebElement yeniSatanKitaplarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[.='Kargo Ödeyen Avantajlı Ürünler'])[1]")
+    public WebElement kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11577570/wi:700/wh:64442eeba']")
+    public WebElement kargoOdeyenAvantajliUrunlerTextTitleSayfaAltiHome;
+
 
 
 

@@ -36,7 +36,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
     @popularSayfalar
     Scenario:   popular_sayfalar_linklerinin_calistigi_dogrulanir
         And kullanici cok satan kitaplar linke tiklar
-        And kullanici cok satan kitaplar sayfasina yönlendirildigini dogrular
+        And kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular
         And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
         And kullanici yeni cikan kitaplar linke tiklar
