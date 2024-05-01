@@ -101,26 +101,33 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici cok satan kitaplar linke tiklar")
     public void kullanici_cok_satan_kitaplar_linke_tiklar() {
-
+        clickByJS(homePage.cokSatanKitaplarLinkSayfaAltiHome);
     }
-    @When("kullanici cok satan kitaplar sayfasina yönlendirildigini dogrular")
-    public void kullanici_cok_satan_kitaplar_sayfasina_yönlendirildigini_dogrular() {
+    @When("kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular")
+    public void kullanici_cok_satan_kitaplar_sayfasina_yonlendirildigini_dogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("cok-satan-kitaplar");
 
     }
     @When("kullanici yeni cikan kitaplar linke tiklar")
     public void kullanici_yeni_cikan_kitaplar_linke_tiklar() {
+        clickByJS(homePage.yeniSatanKitaplarLinkSayfaAltiHome);
 
     }
     @When("kullanici yeni cikan kitaplar sayfasinin acildigini dogrular")
     public void kullanici_yeni_cikan_kitaplar_sayfasinin_acildigini_dogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("yeni-cikan-kitaplar");
 
     }
     @When("kullanici kargo odeyen avantajli urunler linke tiklar")
-    public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar() {
+    public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar() throws InterruptedException {
+        wait(1);
+
+        clickByJS(homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
 
     }
     @When("kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular")
     public void kullanici_kargo_odeyen_avantajli_urunler_sayfasinin_acildigini_dogrular() {
+        assert homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
 
     }
     @When("kullanici kampanyalar linke tiklar")
