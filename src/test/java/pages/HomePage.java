@@ -21,7 +21,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='menu-top-button login']")
     public WebElement girisYapLinkHome;
 
-    @FindBy(xpath = "//*[@id='bottom-button']")
+    @FindBy(xpath = "//*[@data-title='En Alta İn']")
     public WebElement enAltaInYonButonHome;
 
     @FindBy(xpath = "//*[@id='top-button']")

@@ -38,11 +38,11 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici cok satan kitaplar linke tiklar
         And kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular
         And kullanici bir saniye bekler
-        And kullanici anasayfanin en altina gelir
+        #And kullanici anasayfanin en altina gelir
         And kullanici yeni cikan kitaplar linke tiklar
         And kullanici yeni cikan kitaplar sayfasinin acildigini dogrular
         And kullanici bir saniye bekler
-        And kullanici anasayfanin en altina gelir
+        #And kullanici anasayfanin en altina gelir
         And kullanici kargo odeyen avantajli urunler linke tiklar
         And kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular
         And kullanici bir saniye bekler
