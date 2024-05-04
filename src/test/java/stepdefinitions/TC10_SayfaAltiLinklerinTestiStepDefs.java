@@ -117,30 +117,28 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     }
     @When("kullanici kargo odeyen avantajli urunler linke tiklar")
-    public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar() throws InterruptedException {
-        //clickByJS(yeniCikanKitaplarPage.kabuLEtVeKapatAlertButtonYeniCikanKitaplar);
+    public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar(){
         clickByJS(homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
-
     }
     @When("kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular")
     public void kullanici_kargo_odeyen_avantajli_urunler_sayfasinin_acildigini_dogrular() {
         assert homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
-
     }
     @When("kullanici kampanyalar linke tiklar")
     public void kullanici_kampanyalar_linke_tiklar() {
-
+        clickByJS(homePage.kampanyalarLinkSayfaAltiHome);
     }
     @When("kullanici kampanyalar sayfasinin acildigini dogrular")
     public void kullanici_kampanyalar_sayfasinin_acildigini_dogrular() {
-
+        assert Driver.getDriver().getCurrentUrl().contains("kampanyalar");
     }
     @When("kullanici ayin yazarlari linke tiklar")
     public void kullanici_ayin_yazarlari_linke_tiklar() {
-
+        clickByJS(homePage.ayinYazarlariLinkSayfaAltiHome);
     }
     @When("kullanici ayin yazarlari sayfasinin acildigini dogrular")
     public void kullanici_ayin_yazarlari_sayfasinin_acildigini_dogrular() {
+        assert Driver.getDriver().getPageSource().contains("ayin-yazarlari");
 
     }
     @When("kullanici ayin yayinevleri linke tiklar")
