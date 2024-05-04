@@ -50,11 +50,11 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici kampanyalar linke tiklar
         And kullanici kampanyalar sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler
-        #And kullanici anasayfanin en altina gelir
-        #And kullanici ayin yazarlari linke tiklar
-        #And kullanici ayin yazarlari sayfasinin acildigini dogrular
+        And kullanici anasayfanin en altina gelir
+        And kullanici ayin yazarlari linke tiklar
+        And kullanici ayin yazarlari sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler
-        #And kullanici anasayfanin en altina gelir
+        And kullanici anasayfanin en altina gelir
         #And kullanici ayin yayinevleri linke tiklar
         #And kullanici ayin yayinevleri sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler

@@ -282,6 +282,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11577570/wi:700/wh:64442eeba']")
     public WebElement kargoOdeyenAvantajliUrunlerTextTitleSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='kampanyalar'])[2]")
+    public WebElement kampanyalarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='ayin-yazarlari']")
+    public WebElement ayinYazarlariLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='ayin-yayinevleri'])[2]")
+    public WebElement ayinYayinevleriLinkSayfaAltiHome;
+
 
 
 
