@@ -276,7 +276,7 @@ public class HomePage {
     @FindBy(xpath = "(//a[@href='yeni-cikan-kitaplar/haftalik/2.html'])[2]")
     public WebElement yeniSatanKitaplarLinkSayfaAltiHome;
 
-    @FindBy(xpath = "(//*[.='Kargo Ödeyen Avantajlı Ürünler'])[1]")
+    @FindBy(xpath = "//*[@href='index.php?route=product/best_sellers&sort=purchased&order=DESC&list_id=744']")
     public WebElement kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome;
 
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11577570/wi:700/wh:64442eeba']")

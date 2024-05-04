@@ -118,13 +118,13 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici kargo odeyen avantajli urunler linke tiklar")
     public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar() throws InterruptedException {
-        clickByJS(yeniCikanKitaplarPage.kabuLEtVeKapatAlertButtonYeniCikanKitaplar);
-        //clickByJS(homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
+        //clickByJS(yeniCikanKitaplarPage.kabuLEtVeKapatAlertButtonYeniCikanKitaplar);
+        clickByJS(homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
 
     }
     @When("kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular")
     public void kullanici_kargo_odeyen_avantajli_urunler_sayfasinin_acildigini_dogrular() {
-        //assert homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
+        assert homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
 
     }
     @When("kullanici kampanyalar linke tiklar")

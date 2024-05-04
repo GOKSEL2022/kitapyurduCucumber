@@ -46,6 +46,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici anasayfanin en altina gelir
         And kullanici kargo odeyen avantajli urunler linke tiklar
         And kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular
+        #And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
         And kullanici kampanyalar linke tiklar
         And kullanici kampanyalar sayfasinin acildigini dogrular
