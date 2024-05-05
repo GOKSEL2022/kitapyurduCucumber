@@ -143,10 +143,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici ayin yayinevleri linke tiklar")
     public void kullanici_ayin_yayinevleri_linke_tiklar() {
-
+        clickByJS(homePage.ayinYayinevleriLinkSayfaAltiHome);
     }
     @When("kullanici ayin yayinevleri sayfasinin acildigini dogrular")
     public void kullanici_ayin_yayinevleri_sayfasinin_acildigini_dogrular() {
+        assert Driver.getDriver().getPageSource().contains("ayin-yayinevleri");
 
     }
     @When("kullanici puan katalogu linke tiklar")

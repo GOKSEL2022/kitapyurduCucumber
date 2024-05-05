@@ -37,28 +37,23 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
     Scenario:   popular_sayfalar_linklerinin_calistigi_dogrulanir
         And kullanici cok satan kitaplar linke tiklar
         And kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular
-        And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
         And kullanici yeni cikan kitaplar linke tiklar
         And kullanici yeni cikan kitaplar sayfasinin acildigini dogrular
         And kullanici kabul et ve devam et butona tiklar
-        And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
         And kullanici kargo odeyen avantajli urunler linke tiklar
         And kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular
         And kullanici anasayfanin en altina gelir
         And kullanici kampanyalar linke tiklar
         And kullanici kampanyalar sayfasinin acildigini dogrular
-        #And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
         And kullanici ayin yazarlari linke tiklar
         And kullanici ayin yazarlari sayfasinin acildigini dogrular
-        #And kullanici bir saniye bekler
         And kullanici anasayfanin en altina gelir
-        #And kullanici ayin yayinevleri linke tiklar
-        #And kullanici ayin yayinevleri sayfasinin acildigini dogrular
-        #And kullanici bir saniye bekler
-        #And kullanici anasayfanin en altina gelir
+        And kullanici ayin yayinevleri linke tiklar
+        And kullanici ayin yayinevleri sayfasinin acildigini dogrular
+        And kullanici anasayfanin en altina gelir
         #And kullanici puan katalogu linke tiklar
         #And kullanici puan katalogu sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler
