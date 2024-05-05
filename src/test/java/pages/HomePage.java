@@ -288,7 +288,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='ayin-yazarlari']")
     public WebElement ayinYazarlariLinkSayfaAltiHome;
 
-    @FindBy(xpath = "(//*[@href='ayin-yayinevleri'])[2]")
+    @FindBy(xpath = "//*[@href='ayin-yayinevleri']")
     public WebElement ayinYayinevleriLinkSayfaAltiHome;
 
 
