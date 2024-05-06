@@ -291,6 +291,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='ayin-yayinevleri']")
     public WebElement ayinYayinevleriLinkSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='puan-katalogu'])[2]")
+    public WebElement puanKataloguLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='index.php?route=magazine/book_magazine']")
+    public WebElement eDergiLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='ne-okusam'])[6]")
+    public WebElement neOkusamLinkSayfaAltiHome;
+
 
 
 
