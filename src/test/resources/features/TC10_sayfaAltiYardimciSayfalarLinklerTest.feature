@@ -54,12 +54,12 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici ayin yayinevleri linke tiklar
         And kullanici ayin yayinevleri sayfasinin acildigini dogrular
         And kullanici anasayfanin en altina gelir
-        #And kullanici puan katalogu linke tiklar
-        #And kullanici puan katalogu sayfasinin acildigini dogrular
+        And kullanici puan katalogu linke tiklar
+        And kullanici puan katalogu sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler
-        #And kullanici anasayfanin en altina gelir
-        #And kullanici eDergi linke tiklar
-        #And kullanici eDergi sayfasinin acildigini dogrular
+        And kullanici anasayfanin en altina gelir
+        And kullanici eDergi linke tiklar
+        And kullanici eDergi sayfasinin acildigini dogrular
         #And kullanici bir saniye bekler
         #And kullanici anasayfanin en altina gelir
         #And kullanici ne okusam linke tiklar

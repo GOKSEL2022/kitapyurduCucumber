@@ -152,10 +152,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici puan katalogu linke tiklar")
     public void kullanici_puan_katalogu_linke_tiklar() {
+        clickByJS(homePage.puanKataloguLinkSayfaAltiHome);
 
     }
     @When("kullanici eDergi linke tiklar")
     public void kullanici_e_dergi_linke_tiklar() {
+        clickByJS(homePage.eDergiLinkSayfaAltiHome);
 
     }
     @When("kullanici eDergi sayfasinin acildigini dogrular")
