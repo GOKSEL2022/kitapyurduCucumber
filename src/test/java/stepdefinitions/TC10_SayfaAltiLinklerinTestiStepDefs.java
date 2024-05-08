@@ -162,10 +162,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici eDergi sayfasinin acildigini dogrular")
     public void kullanici_e_dergi_sayfasinin_acildigini_dogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("magazine/book_magazine");
 
     }
     @When("kullanici ne okusam linke tiklar")
     public void kullanici_ne_okusam_linke_tiklar() {
+        clickByJS(homePage.neOkusamLinkSayfaAltiHome);
 
     }
     @When("kullanici kelepir kitaplar linke tiklar")
