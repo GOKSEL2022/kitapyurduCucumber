@@ -297,8 +297,16 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='index.php?route=magazine/book_magazine']")
     public WebElement eDergiLinkSayfaAltiHome;
 
-    @FindBy(xpath = "(//*[@href='ne-okusam'])[6]")
+    @FindBy(xpath = "(//*[@href='ne-okusam'])[5]")
     public WebElement neOkusamLinkSayfaAltiHome;
+
+    @FindBy(css = "a[href='index.php?route=product/bargain&sort=purchased&order=DESC&discount=60'")
+    public WebElement kelepirKitaplarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='kategori/cesitli-kitap-hediye-karti/1727.html'])[3]")
+    public WebElement kitapHediyeKartlariLinkSayfaAltiHome;
+
+
 
 
 

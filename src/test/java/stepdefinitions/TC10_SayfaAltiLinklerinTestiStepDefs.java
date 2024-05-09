@@ -2,12 +2,14 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pages.HomePage;
+import pages.IndexPage;
 import pages.Yardim_VideoPage;
 import pages.YeniCikanKitaplarPage;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     HomePage homePage=new HomePage();
+    IndexPage indexPage=new IndexPage();
     Yardim_VideoPage yardim_videoPage=new Yardim_VideoPage();
     YeniCikanKitaplarPage yeniCikanKitaplarPage=new YeniCikanKitaplarPage();
     @And("kullanici yardim ve islem rehberi linke tiklar")
@@ -139,7 +141,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @When("kullanici ayin yazarlari sayfasinin acildigini dogrular")
     public void kullanici_ayin_yazarlari_sayfasinin_acildigini_dogrular() {
         assert Driver.getDriver().getPageSource().contains("ayin-yazarlari");
-
     }
     @When("kullanici ayin yayinevleri linke tiklar")
     public void kullanici_ayin_yayinevleri_linke_tiklar() {
@@ -148,42 +149,38 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @When("kullanici ayin yayinevleri sayfasinin acildigini dogrular")
     public void kullanici_ayin_yayinevleri_sayfasinin_acildigini_dogrular() {
         assert Driver.getDriver().getPageSource().contains("ayin-yayinevleri");
-
     }
     @When("kullanici puan katalogu linke tiklar")
     public void kullanici_puan_katalogu_linke_tiklar() {
         clickByJS(homePage.puanKataloguLinkSayfaAltiHome);
-
     }
     @When("kullanici eDergi linke tiklar")
     public void kullanici_e_dergi_linke_tiklar() {
         clickByJS(homePage.eDergiLinkSayfaAltiHome);
-
     }
     @When("kullanici eDergi sayfasinin acildigini dogrular")
     public void kullanici_e_dergi_sayfasinin_acildigini_dogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("magazine/book_magazine");
-
     }
     @When("kullanici ne okusam linke tiklar")
     public void kullanici_ne_okusam_linke_tiklar() {
         clickByJS(homePage.neOkusamLinkSayfaAltiHome);
-
     }
     @When("kullanici kelepir kitaplar linke tiklar")
     public void kullanici_kelepir_kitaplar_linke_tiklar() {
-
+        clickByJS(homePage.kelepirKitaplarLinkSayfaAltiHome);
     }
     @When("kullanici kelepir kitaplar sayfasinin acildigini dogrular")
     public void kullanici_kelepir_kitaplar_sayfasinin_acildigini_dogrular() {
-
+        assert indexPage.kelepirTextTitleIndex.isDisplayed();
     }
     @When("kullanici Kitap Hediye Kartlari linke tiklar")
     public void kullanici_kitap_hediye_kartlari_linke_tiklar() {
-
+        clickByJS(homePage.kitapHediyeKartlariLinkSayfaAltiHome);
     }
     @When("kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular")
     public void kullanici_kitap_hediye_kartlarir_sayfasinin_acildigini_dogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kategori/cesitli-kitap-hediye-karti");
 
     }
 
