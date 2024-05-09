@@ -36,7 +36,7 @@ Feature: kayitli_kullanici_girisi
       |                        | 123456789a. |
       | yekparebirangmail.com  | 123456789a. |
 
-    #_BUG : Giris yap alaninda e-posta girerken ç-c,ş-s,ı-i gibi bir harf ayrımı gözetilmiyor.
+    #_BUG : Giris yap alaninda e-posta girerken büyük-kücük karakter veya ç-c,ş-s,ı-i gibi bir harf ayrımı gözetilmiyor.
   Scenario Outline: giris_yaparken_karakter_ve_kucuk_buyuk_harf_ayrimi yapilmamasi
   Given kullanici kitapyurdu_url ye gider
   When  kullanici anasayfanin acildigini dogrular
