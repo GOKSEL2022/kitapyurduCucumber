@@ -183,8 +183,6 @@ public class IndexPage {
     @FindBy(xpath = "//div[normalize-space()='E-Posta adresi ile daha önce kayıt olunmuştur!']")
     public WebElement ePostaAdresiIleDahaOnceKayitOlunmusturAlertIndex;
 
-
-
     @FindBy(xpath = "//*[@id='address_type_1']")
     public WebElement sahisCheckBoxIndex;
 
@@ -361,6 +359,9 @@ public class IndexPage {
 
     @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11764839/wi:80/wh:true']")
     public WebElement zeytindagiKitabiFalihRifkiAtayIndex;
+
+    @FindBy(xpath = "(//*[.='Kelepir'])[3]")
+    public WebElement kelepirTextTitleIndex;
 
 
 
