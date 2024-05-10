@@ -33,8 +33,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
       And kullanici hemen al sayfasinin acildigini dogrular
       Then kullanici sayfayi kapatir
 
-    @popularSayfalar
-    Scenario:   popular_sayfalar_linklerinin_calistigi_dogrulanir
+    @populerSayfalar
+    Scenario:   populer_sayfalar_linklerinin_calistigi_dogrulanir
         And kullanici cok satan kitaplar linke tiklar
         And kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular
         And kullanici anasayfanin en altina gelir
@@ -73,6 +73,20 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And kullanici Kitap Hediye Kartlari linke tiklar
         And kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular
         Then kullanici sayfayi kapatir
+
+     @ozelSayfalar
+    Scenario: ozelSayfalar_linkleri_test_edilir
+         And kullanici sinav kitaplari linke tiklar
+         And kullanici sinav kitaplari sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici cocuk kitaplari linke tiklar
+         And kullanici cocuk kitaplari sayfasinin acildigini dogrular
+         And kullanici cep boy kitaplar linke tiklar
+         And kullanici cep boy kitaplar sayfasinin acildigini dogrular
+
+
+
+
 
 
 
