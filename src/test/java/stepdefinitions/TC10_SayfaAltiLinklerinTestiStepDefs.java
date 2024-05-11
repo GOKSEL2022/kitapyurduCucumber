@@ -184,4 +184,19 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     }
 
+    @And("kullanici sinav kitaplari linke tiklar")
+    public void kullaniciSinavKitaplariLinkeTiklar() {
+    }
+
+    @And("kullanici cocuk kitaplari linke tiklar")
+    public void kullaniciCocukKitaplariLinkeTiklar() {
+    }
+
+    @And("kullanici cep boy kitaplar linke tiklar")
+    public void kullaniciCepBoyKitaplarLinkeTiklar() {
+    }
+
+    @And("kullanici cep boy kitaplar sayfasinin acildigini dogrular")
+    public void kullaniciCepBoyKitaplarSayfasininAcildiginiDogrular() {
+    }
 }
