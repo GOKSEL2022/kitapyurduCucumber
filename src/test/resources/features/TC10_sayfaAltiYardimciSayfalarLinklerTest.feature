@@ -1,3 +1,4 @@
+@smoke  @regression
 Feature: sayfa_altinda_yer_alan_linklerin_testi
   Background:
     Given kullanici kitapyurdu_url ye gider
@@ -81,8 +82,19 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici anasayfanin en altina gelir
          And kullanici cocuk kitaplari linke tiklar
          And kullanici cocuk kitaplari sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
          And kullanici cep boy kitaplar linke tiklar
          And kullanici cep boy kitaplar sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici ingilizce kitaplar linke tiklar
+         And kullanici ingilizce kitaplar sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici bookinzi kultur_sanat urunleri linke tiklar
+         And kullanici bookinzi kultur_sanat urunleri sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici oyundan daha fazlasi linke tiklar
+         And kullanici oyundan daha fazlasi sayfasinin acildigini dogrular
+
 
 
 
