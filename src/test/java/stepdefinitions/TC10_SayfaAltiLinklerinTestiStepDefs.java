@@ -199,4 +199,28 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici cep boy kitaplar sayfasinin acildigini dogrular")
     public void kullaniciCepBoyKitaplarSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici ingilizce kitaplar linke tiklar")
+    public void kullaniciIngilizceKitaplarLinkeTiklar() {
+    }
+
+    @And("kullanici ingilizce kitaplar sayfasinin acildigini dogrular")
+    public void kullaniciIngilizceKitaplarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici bookinzi kultur_sanat urunleri linke tiklar")
+    public void kullaniciBookinziKultur_sanatUrunleriLinkeTiklar() {
+    }
+
+    @And("kullanici bookinzi kultur_sanat urunleri sayfasinin acildigini dogrular")
+    public void kullaniciBookinziKultur_sanatUrunleriSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici oyundan daha fazlasi linke tiklar")
+    public void kullaniciOyundanDahaFazlasiLinkeTiklar() {
+    }
+
+    @And("kullanici oyundan daha fazlasi sayfasinin acildigini dogrular")
+    public void kullaniciOyundanDahaFazlasiSayfasininAcildiginiDogrular() {
+    }
 }
