@@ -94,6 +94,16 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici anasayfanin en altina gelir
          And kullanici oyundan daha fazlasi linke tiklar
          And kullanici oyundan daha fazlasi sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici montessori oyuncaklari linke tiklar
+         And kullanici montessori oyuncaklari sayfasinin acildigini dogrular
+         And kullanici king of puzzle urunleri linke tiklar
+         And kullanici king of puzzle urunleri sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici akil defteri linke tiklar
+         And kullanici akil defteri sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici sayfayi kapatir
 
 
 
