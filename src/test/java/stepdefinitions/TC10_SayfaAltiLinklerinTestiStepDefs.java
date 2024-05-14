@@ -223,4 +223,8 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici oyundan daha fazlasi sayfasinin acildigini dogrular")
     public void kullaniciOyundanDahaFazlasiSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici montessori oyuncaklari linke tiklar")
+    public void kullaniciMontessoriOyuncaklariLinkeTiklar() {
+    }
 }
