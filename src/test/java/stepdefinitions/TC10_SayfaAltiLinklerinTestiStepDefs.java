@@ -227,4 +227,24 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici montessori oyuncaklari linke tiklar")
     public void kullaniciMontessoriOyuncaklariLinkeTiklar() {
     }
+
+    @And("kullanici montessori oyuncaklari sayfasinin acildigini dogrular")
+    public void kullaniciMontessoriOyuncaklariSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici king of puzzle urunleri linke tiklar")
+    public void kullaniciKingOfPuzzleUrunleriLinkeTiklar() {
+    }
+
+    @And("kullanici king of puzzle urunleri sayfasinin acildigini dogrular")
+    public void kullaniciKingOfPuzzleUrunleriSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici akil defteri linke tiklar")
+    public void kullaniciAkilDefteriLinkeTiklar() {
+    }
+
+    @And("kullanici akil defteri sayfasinin acildigini dogrular")
+    public void kullaniciAkilDefteriSayfasininAcildiginiDogrular() {
+    }
 }
