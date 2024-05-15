@@ -104,6 +104,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici akil defteri sayfasinin acildigini dogrular
          And kullanici anasayfanin en altina gelir
          And kullanici sayfayi yeniler
+         And kullanici anasayfanin en altina gelir
          And kullanici sayfayi kapatir
 
 
