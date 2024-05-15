@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hubcom.comCucumber" />
+        <module name="hepsiBuradaCucumber" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
