@@ -104,6 +104,18 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici akil defteri sayfasinin acildigini dogrular
          And kullanici sayfayi kapatir
 
+       @kitapyurdu_platformlari
+    Scenario:   kitapyurdu_platformlari_linkleri_test_edilir
+         And kullanici kitapyurdu sesli kitaplar linke tiklar
+         And kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici kitapyurdu eKitap linke tiklar
+         And kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici kutuphanem uygulamasi linke tiklar
+         And kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+
 
 
 
