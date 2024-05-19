@@ -247,4 +247,28 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici akil defteri sayfasinin acildigini dogrular")
     public void kullaniciAkilDefteriSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici kitapyurdu sesli kitaplar linke tiklar")
+    public void kullaniciKitapyurduSesliKitaplarLinkeTiklar() {
+    }
+
+    @And("kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular")
+    public void kullaniciKitapyurduSesliKitaplarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici kitapyurdu eKitap linke tiklar")
+    public void kullaniciKitapyurduEKitapLinkeTiklar() {
+    }
+
+    @And("kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular")
+    public void kullaniciKitapyurduEKitapSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici kutuphanem uygulamasi linke tiklar")
+    public void kullaniciKutuphanemUygulamasiLinkeTiklar() {
+    }
+
+    @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
+    public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
+    }
 }
