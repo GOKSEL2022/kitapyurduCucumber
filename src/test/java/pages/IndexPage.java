@@ -363,6 +363,9 @@ public class IndexPage {
     @FindBy(xpath = "(//*[.='Kelepir'])[3]")
     public WebElement kelepirTextTitleIndex;
 
+    @FindBy(xpath = "//*[@class='mg-b-20 header-image']")
+    public WebElement cepBoyLitaplardaTekFiyatTextTitleIndex;
+
 
 
 
