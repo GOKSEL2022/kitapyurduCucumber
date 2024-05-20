@@ -306,6 +306,20 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='kategori/cesitli-kitap-hediye-karti/1727.html'])[3]")
     public WebElement kitapHediyeKartlariLinkSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='sinav-kitaplari'])[2]")
+    public WebElement sinavKitaplariLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//a[@href='cocuk-kitaplari'])[2]")
+    public WebElement cocukKitaplariLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='index.php?route=product/best_sellers&list_id=1358&sort=purchased&order=DESC']")
+    public WebElement cepBoyKitaplariLinkSayfaAltiHome;
+
+
+
+
+
+
 
 
 
