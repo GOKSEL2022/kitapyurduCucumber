@@ -366,6 +366,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='mg-b-20 header-image']")
     public WebElement cepBoyLitaplardaTekFiyatTextTitleIndex;
 
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=product/best_sellers&sort=purchased&order=DESC&list_id=1460']")
+    public WebElement ingilizceKitaplarArtikCepYakmiyorTextIndex;
+
 
 
 

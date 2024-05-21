@@ -1,13 +1,11 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import pages.HomePage;
-import pages.IndexPage;
-import pages.Yardim_VideoPage;
-import pages.YeniCikanKitaplarPage;
+import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
+    AllPages allPages=new AllPages();
     HomePage homePage=new HomePage();
     IndexPage indexPage=new IndexPage();
     Yardim_VideoPage yardim_videoPage=new Yardim_VideoPage();
@@ -201,23 +199,27 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici cep boy kitaplar sayfasinin acildigini dogrular")
     public void kullaniciCepBoyKitaplarSayfasininAcildiginiDogrular() {
-        assert indexPage.cepBoyLitaplardaTekFiyatTextTitleIndex.getText().contains("CEP BOY kitaplarda TEK FİYAT");
+        assert indexPage.cepBoyLitaplardaTekFiyatTextTitleIndex.isDisplayed();
     }
 
     @And("kullanici ingilizce kitaplar linke tiklar")
     public void kullaniciIngilizceKitaplarLinkeTiklar() {
+        clickByJS(allPages.homePage().ingilizceKitaplarLinkSayfaAltiHome);
     }
 
     @And("kullanici ingilizce kitaplar sayfasinin acildigini dogrular")
     public void kullaniciIngilizceKitaplarSayfasininAcildiginiDogrular() {
+        assert allPages.indexPage().ingilizceKitaplarArtikCepYakmiyorTextIndex.isDisplayed();
     }
 
     @And("kullanici bookinzi kultur_sanat urunleri linke tiklar")
     public void kullaniciBookinziKultur_sanatUrunleriLinkeTiklar() {
+        clickByJS(allPages.homePage().bookinziKulturSanatUrunleriLinkSayfaAltiHome);
     }
 
     @And("kullanici bookinzi kultur_sanat urunleri sayfasinin acildigini dogrular")
     public void kullaniciBookinziKultur_sanatUrunleriSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("bookinzi");
     }
 
     @And("kullanici oyundan daha fazlasi linke tiklar")

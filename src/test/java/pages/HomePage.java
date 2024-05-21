@@ -315,6 +315,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='index.php?route=product/best_sellers&list_id=1358&sort=purchased&order=DESC']")
     public WebElement cepBoyKitaplariLinkSayfaAltiHome;
 
+    @FindBy(linkText = "İngilizce Kitaplar")
+    public WebElement ingilizceKitaplarLinkSayfaAltiHome;
+
+    @FindBy(partialLinkText = "okinzi Kültür-Sanat Ürünleri")
+    public WebElement bookinziKulturSanatUrunleriLinkSayfaAltiHome;
+
 
 
 
