@@ -1,4 +1,4 @@
-@TC01
+@TC01  @smoke @regression
 Feature: anasayfa_acilisi
   @anasayfa
   Scenario: anasayfa_acilisi

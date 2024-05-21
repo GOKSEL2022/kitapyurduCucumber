@@ -1,3 +1,4 @@
+@regression
 @kayitli_kullanici_home
 Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
   Background:kayitli_kullanici_girisi_ile_anasayfaya_erisir
@@ -82,7 +83,7 @@ Feature: kayitli_kullanici_hesabi_ile_sayfa_testi
           And   kullanici sepetim butonuna tiklar
           And   kullanici secili urunleri sepetten kaldirmak icin x e tiklar
           When  kullanici alisveris sepetiniz bos yazisini gorur
-          #Then  kullanici sayfayi kapatir
+          Then  kullanici sayfayi kapatir
 
 
 
