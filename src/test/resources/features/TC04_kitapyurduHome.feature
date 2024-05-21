@@ -1,3 +1,4 @@
+@smoke @regression
 Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
 
   Background:

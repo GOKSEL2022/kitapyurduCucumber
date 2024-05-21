@@ -1,3 +1,4 @@
+@regression
 Feature: ilgi_gorenler
   Background: kayitli_olarak_sayfaya_girer
     Given kullanici kitapyurdu_url ye gider

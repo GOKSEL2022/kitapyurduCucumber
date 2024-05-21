@@ -1,4 +1,4 @@
-@TC02
+@TC02 @smoke @regression
 Feature: uye_olma_senaryolari
   Background:
     Given kullanici kitapyurdu_url ye gider

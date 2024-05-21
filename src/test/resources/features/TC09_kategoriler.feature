@@ -1,4 +1,4 @@
-@kategoriler
+@kategoriler @regression
 Feature: kategoriler_test
   Background: kayitli_olarak_sayfaya_girer
     Given kullanici kitapyurdu_url ye gider

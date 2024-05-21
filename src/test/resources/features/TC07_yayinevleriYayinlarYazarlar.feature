@@ -1,3 +1,4 @@
+@regression
 Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
   Background: kayitli_olarak_sayfaya_girer
     Given kullanici kitapyurdu_url ye gider
