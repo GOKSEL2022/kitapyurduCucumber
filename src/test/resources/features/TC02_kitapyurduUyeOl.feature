@@ -5,7 +5,6 @@ Feature: uye_olma_senaryolari
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici uye ol linkine tiklar
 
-
   Scenario:kullanici_sayfaya_deger_girmeden_uye_olmayi_dener
     And   kullanici uye ol butonuna tiklar
     When  kullanici doldurulmasi gerekli alanlarin valid degerlerini gorur
@@ -64,7 +63,6 @@ Feature: uye_olma_senaryolari
           | acvb     | xyz                            | eposta@gmail.com | 123456789 | 123456789     |
           | away     | abccdefgghiijklmnooprsstuuvyz  | a1b2c3@gmail.com | 123456789 | 123456789     |
           | acbnm    | abccdefgghiijklmnooprsstuuvyzx | aeiu@gmaail.com  | 123456789 | 123456789     |
-
 
   @invalid_soyad
       Scenario Outline:kullanici_soyad_alanina_invalid_degerler_girer
@@ -178,7 +176,6 @@ Feature: uye_olma_senaryolari
               And   kullanici uye ol butonuna tiklar
               When  kullanici e_posta adresi ile daha once kayit yapilmis mesajini gorur
               Then  kullanici sayfayi kapatir
-
 
 
 
