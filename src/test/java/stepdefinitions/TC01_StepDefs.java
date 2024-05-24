@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import pages.AllPages;
 import pages.IndexPage;
 import pages.KitapPage;
 import pages.HomePage;
@@ -15,7 +16,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import static utilities.ReusableMethods.clickByJS;
+
 public class TC01_StepDefs {
+    AllPages allPages=new AllPages();
     KitapPage kitapPage=new KitapPage();
     HomePage homePage =new HomePage();
     IndexPage indexPage=new IndexPage();
@@ -33,57 +37,57 @@ public class TC01_StepDefs {
     }
     @When("kullanici anasayfanin acildigini dogrular")
     public void kullaniciAnasayfaninAcildiginiDogrular() {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("kitapyurdu"));
+        assert Driver.getDriver().getCurrentUrl().contains("kitapyurdu");
     }
 
     @And("kullanici arama cubugunda safahat aratir")
     public void kullaniciAramaCubugundaSafahatAratir() {
-        homePage.searchTextBoxHome.sendKeys("safahat", Keys.ENTER);
+        allPages.homePage().searchTextBoxHome.sendKeys("safahat", Keys.ENTER);
     }
 
     @And("kullanici arama sonuclarinda safahat oldugunu dogrular")
     public void kullaniciAramaSonuclarindaSafahatOldugunuDogrular() {
-        Assert.assertTrue(indexPage.safahatImgIndex.isDisplayed());
+        assert allPages.indexPage().safahatImgIndex.isDisplayed();
     }
     @And("kullanici safahat kitabina tiklar")
     public void kullaniciSafahatKitabinaTiklar() {
-        indexPage.safahatImgIndex.click();
+        allPages.indexPage().safahatImgIndex.click();
     }
     @And("kullanici safahat ile ilgili aciklama yazisini gorur")
     public void kullaniciSafahatIleIlgiliAciklamaYazisiniGorur() {
-        Assert.assertTrue(indexPage.descriptionSafahatKitap.isDisplayed());
+        assert allPages.indexPage().descriptionSafahatKitap.isDisplayed();
     }
     @And("kullanici sepete ekle butonuna tiklar")
     public void kullaniciSepeteEkleButonunaTiklar() {
-        kitapPage.sepeteEkleButonKitap.click();
+        allPages.kitapPage().sepeteEkleButonKitap.click();
     }
     @And("kullanici urunun sepete eklendiginin belirten alerti gorur")
     public void kullaniciUrununSepeteEklendigininBelirtenAlertiGorur() {
-        Assert.assertTrue(kitapPage.sepetinizdeAlertKitap.isDisplayed());
+        assert allPages.kitapPage().sepetinizdeAlertKitap.isDisplayed();
     }
     @And("kullanici sepetim butonuna tiklar")
     public void kullaniciSepetimButonunaTiklar() {
-        kitapPage.sepetimButonKitap.click();
+        allPages.kitapPage().sepetimButonKitap.click();
     }
     @And("kullanici satin al butonuna tiklar")
     public void kullaniciSatinAlButonunaTiklar() {
-        ReusableMethods.clickByJS(kitapPage.satinAlButonKitap);
+        clickByJS(allPages.kitapPage().satinAlButonKitap);
     }
     @And("kullanici uye olmadan devam et butonuna tiklar")
     public void kullaniciUyeOlmadanDevamEtButonunaTiklar() {
-        indexPage.uyeOlmadanDevamEtButonIndex.click();
+        allPages.indexPage().uyeOlmadanDevamEtButonIndex.click();
     }
     @And("kullanici adrese teslim et checkboxin secili oldugunu gorur")
     public void kullaniciAdreseTeslimEtCheckboxinSeciliOldugunuGorur() {
-        Assert.assertTrue(indexPage.adreseTeslimEtRadioButonIndex.isSelected());
+        assert allPages.indexPage().adreseTeslimEtRadioButonIndex.isSelected();
     }
     @And("kullanici adres ekle butonuna tiklar")
     public void kullaniciAdresEkleButonunaTiklar() {
-        indexPage.adresEkleTextBoxIndex.click();
+        allPages.indexPage().adresEkleTextBoxIndex.click();
     }
     @And("kullanici adiniz girer")
     public void kullaniciAdinizGirer() {
-        indexPage.adinizTextBoxIndex.sendKeys(faker.name().firstName(),
+        allPages.indexPage().adinizTextBoxIndex.sendKeys(faker.name().firstName(),
                 Keys.TAB,faker.name().lastName(),
                 Keys.TAB,faker.internet().emailAddress(),
                 Keys.TAB,faker.company().name(),
@@ -108,30 +112,30 @@ public class TC01_StepDefs {
     }
     @And("kullanici ulke olarak Türkiye secer")
     public void kullaniciUlkeOlarakTürkiyeSecer() {
-        ReusableMethods.clickByJS(indexPage.ulkeDropDown1Index);
-        indexPage.ulkeDropDown2Index.sendKeys("Türkiye");
-        actions.doubleClick(indexPage.ulkeDropDown3Index).perform();
+        clickByJS(allPages.indexPage().ulkeDropDown1Index);
+        allPages.indexPage().ulkeDropDown2Index.sendKeys("Türkiye");
+        actions.doubleClick(allPages.indexPage().ulkeDropDown3Index).perform();
     }
     @And("kullanici sehir olarak Samsun secer")
     public void kullaniciSehirOlarakSamsunSecer() throws InterruptedException {
-        ReusableMethods.clickByJS(indexPage.sehirDropDown1Index);
-        indexPage.sehirDropDown2Index.sendKeys("Samsun");
+        clickByJS(allPages.indexPage().sehirDropDown1Index);
+        allPages.indexPage().sehirDropDown2Index.sendKeys("Samsun");
         Thread.sleep(1000);
-        ReusableMethods.clickByJS(indexPage.sehirDropDown3Index);
+        clickByJS(allPages.indexPage().sehirDropDown3Index);
     }
     @And("kullanici ilce olarak Carsamba secer")
     public void kullaniciIlceOlarakCarsambaSecer() throws InterruptedException {
-        ReusableMethods.clickByJS(indexPage.ilceDropDown1Index);
-        indexPage.ilceDropDown2Index.sendKeys("ÇARŞAMBA");
+        clickByJS(allPages.indexPage().ilceDropDown1Index);
+        allPages.indexPage().ilceDropDown2Index.sendKeys("ÇARŞAMBA");
         Thread.sleep(1000);
-        ReusableMethods.clickByJS(indexPage.ilceDropDown3Index);
+        clickByJS(allPages.indexPage().ilceDropDown3Index);
     }
     @And("kullanici mahalle olarak Sarıcalı Mah secer")
     public void kullaniciMahalleOlarakSarıcalıMahSecer() throws InterruptedException {
-        ReusableMethods.clickByJS(indexPage.mahalleDropDown1Index);
-        indexPage.mahalleDropDown2Index.sendKeys("SARICALI MAH");
+        clickByJS(allPages.indexPage().mahalleDropDown1Index);
+        allPages.indexPage().mahalleDropDown2Index.sendKeys("SARICALI MAH");
         Thread.sleep(1000);
-        ReusableMethods.clickByJS(indexPage.mahalleDropDown3Index);
+        clickByJS(allPages.indexPage().mahalleDropDown3Index);
     }
     @And("kullanici adres girer")
     public void kullaniciAdresGirer() {
@@ -150,15 +154,15 @@ public class TC01_StepDefs {
     }
     @And("kullanici devam et butonuna tiklar")
     public void kullaniciDevamEtButonunaTiklar() {
-        ReusableMethods.clickByJS(indexPage.devamEtButonSeciliAdresIndex);
+        clickByJS(allPages.indexPage().devamEtButonSeciliAdresIndex);
     }
     @And("kullanici fatura adresinin olusturuldugunu gorur")
     public void kullaniciFaturaAdresininOlusturuldugunuGorur() {
-        Assert.assertTrue(indexPage.textAdresBilgilerimIndex.isDisplayed());
+        assert allPages.indexPage().textAdresBilgilerimIndex.isDisplayed();
     }
     @And("kullanici kart ile odeme sayfasini gorur")
     public void kullaniciKartIleOdemeSayfasiniGorur() {
-        Assert.assertTrue(indexPage.textKartNumarasiIndex.isDisplayed());
+        assert allPages.indexPage().textKartNumarasiIndex.isDisplayed();
     }
     @Then("kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
