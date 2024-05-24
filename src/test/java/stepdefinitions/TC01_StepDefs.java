@@ -1,28 +1,14 @@
 package stepdefinitions;
-
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.Assert;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
-import pages.IndexPage;
-import pages.KitapPage;
-import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
 import static utilities.ReusableMethods.clickByJS;
-
 public class TC01_StepDefs {
     AllPages allPages=new AllPages();
-    KitapPage kitapPage=new KitapPage();
-    HomePage homePage =new HomePage();
-    IndexPage indexPage=new IndexPage();
     Faker faker=new Faker();
     Actions actions=new Actions(Driver.getDriver());
     int postaKodu1 = Faker.instance().number().numberBetween(100, 999);
