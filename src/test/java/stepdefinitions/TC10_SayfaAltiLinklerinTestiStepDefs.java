@@ -21,7 +21,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici video yardim linke tiklar")
     public void kullaniciVideoYardimLinkeTiklar() {
-        clickByJS(homePage.videoYardimLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().videoYardimLinkSayfaAltiHome);
     }
 
     @And("kullanici video sayfasinin acildigini dogrular")
@@ -31,17 +31,17 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici havale_EFTBilgileri linke tiklar")
     public void kullaniciHavale_EFTBilgileriLinkeTiklar() {
-        clickByJS(homePage.havaleEFTBilgileriLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().havaleEFTBilgileriLinkSayfaAltiHome);
     }
 
     @And("kullanici havale_EFTBilgilerinin goruntulendigini dogrular")
     public void kullaniciHavale_EFTBilgilerininGoruntulendiginiDogrular() {
-        assert yardim_videoPage.bankaHesapBilgilerimizTextTitleYardimVideo.isDisplayed();
+        assert allPages.yardim_videoPage().bankaHesapBilgilerimizTextTitleYardimVideo.isDisplayed();
     }
 
     @And("kullanici musteri hizmetleri linke tiklar")
     public void kullaniciMusteriHizmetleriLinkeTiklar() {
-        clickByJS(homePage.musteriHizmetleriLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().musteriHizmetleriLinkSayfaAltiHome);
     }
     @And("kullanici musteri hizmetleri sayfasinin acildigini dogrular")
     public void kullaniciMusteriHizmetleriSayfasininAcildiginiDogrular() {
@@ -50,7 +50,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici platin uyelik linke tiklar")
     public void kullaniciPlatinUyelikLinkeTiklar() {
-        clickByJS(homePage.platinUyelikLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().platinUyelikLinkSayfaAltiHome);
     }
 
     @And("kullanici platin uyelik sayfasinin acildigini dogrular")
@@ -60,7 +60,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici gumus uyelik linke tiklar")
     public void kullaniciGumusUyelikLinkeTiklar() {
-        clickByJS(homePage.gumusUyelikLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().gumusUyelikLinkSayfaAltiHome);
     }
 
     @And("kullanici gumus uyelik sayfasinin acildigini dogrular")
@@ -70,7 +70,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici teslim noktalari linke tiklar")
     public void kullaniciTeslimNoktalariLinkeTiklar() {
-        clickByJS(homePage.teslimNoktalariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().teslimNoktalariLinkSayfaAltiHome);
     }
 
     @And("kullanici teslim noktalari sayfasinin acildigini dogrular")
@@ -80,7 +80,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici hemen al linke tiklar")
     public void kullaniciHemenAlLinkeTiklar() {
-        clickByJS(homePage.hemenAlLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().hemenAlLinkSayfaAltiHome);
     }
 
     @And("kullanici hemen al sayfasinin acildigini dogrular")
@@ -95,11 +95,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici kabul et ve devam et butona tiklar")
     public void kullaniciKabulEtVeDevamEtButonaTiklar() {
-        clickByJS(yardim_videoPage.kabulEtVeKapatButonYardimVideo);
+        clickByJS(allPages.yardim_videoPage().kabulEtVeKapatButonYardimVideo);
     }
     @When("kullanici cok satan kitaplar linke tiklar")
     public void kullanici_cok_satan_kitaplar_linke_tiklar() {
-        clickByJS(homePage.cokSatanKitaplarLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().cokSatanKitaplarLinkSayfaAltiHome);
     }
     @When("kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular")
     public void kullanici_cok_satan_kitaplar_sayfasina_yonlendirildigini_dogrular() {
@@ -108,7 +108,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici yeni cikan kitaplar linke tiklar")
     public void kullanici_yeni_cikan_kitaplar_linke_tiklar() {
-        clickByJS(homePage.yeniSatanKitaplarLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().yeniSatanKitaplarLinkSayfaAltiHome);
 
     }
     @When("kullanici yeni cikan kitaplar sayfasinin acildigini dogrular")
@@ -118,15 +118,15 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici kargo odeyen avantajli urunler linke tiklar")
     public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar(){
-        clickByJS(homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome);
     }
     @When("kullanici kargo odeyen avantajli urunler sayfasinin acildigini dogrular")
     public void kullanici_kargo_odeyen_avantajli_urunler_sayfasinin_acildigini_dogrular() {
-        assert homePage.kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
+        assert allPages.homePage().kargoOdeyenAvantajliUrunlerLinkSayfaAltiHome.getText().contains("Kargo Ödeyen Avantajlı Ürünler");
     }
     @When("kullanici kampanyalar linke tiklar")
     public void kullanici_kampanyalar_linke_tiklar() {
-        clickByJS(homePage.kampanyalarLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kampanyalarLinkSayfaAltiHome);
     }
     @When("kullanici kampanyalar sayfasinin acildigini dogrular")
     public void kullanici_kampanyalar_sayfasinin_acildigini_dogrular() {
@@ -134,7 +134,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici ayin yazarlari linke tiklar")
     public void kullanici_ayin_yazarlari_linke_tiklar() {
-        clickByJS(homePage.ayinYazarlariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().ayinYazarlariLinkSayfaAltiHome);
     }
     @When("kullanici ayin yazarlari sayfasinin acildigini dogrular")
     public void kullanici_ayin_yazarlari_sayfasinin_acildigini_dogrular() {
@@ -142,7 +142,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici ayin yayinevleri linke tiklar")
     public void kullanici_ayin_yayinevleri_linke_tiklar() {
-        clickByJS(homePage.ayinYayinevleriLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().ayinYayinevleriLinkSayfaAltiHome);
     }
     @When("kullanici ayin yayinevleri sayfasinin acildigini dogrular")
     public void kullanici_ayin_yayinevleri_sayfasinin_acildigini_dogrular() {
@@ -150,11 +150,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici puan katalogu linke tiklar")
     public void kullanici_puan_katalogu_linke_tiklar() {
-        clickByJS(homePage.puanKataloguLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().puanKataloguLinkSayfaAltiHome);
     }
     @When("kullanici eDergi linke tiklar")
     public void kullanici_e_dergi_linke_tiklar() {
-        clickByJS(homePage.eDergiLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().eDergiLinkSayfaAltiHome);
     }
     @When("kullanici eDergi sayfasinin acildigini dogrular")
     public void kullanici_e_dergi_sayfasinin_acildigini_dogrular() {
@@ -162,19 +162,19 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @When("kullanici ne okusam linke tiklar")
     public void kullanici_ne_okusam_linke_tiklar() {
-        clickByJS(homePage.neOkusamLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().neOkusamLinkSayfaAltiHome);
     }
     @When("kullanici kelepir kitaplar linke tiklar")
     public void kullanici_kelepir_kitaplar_linke_tiklar() {
-        clickByJS(homePage.kelepirKitaplarLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kelepirKitaplarLinkSayfaAltiHome);
     }
     @When("kullanici kelepir kitaplar sayfasinin acildigini dogrular")
     public void kullanici_kelepir_kitaplar_sayfasinin_acildigini_dogrular() {
-        assert indexPage.kelepirTextTitleIndex.isDisplayed();
+        assert allPages.indexPage().kelepirTextTitleIndex.isDisplayed();
     }
     @When("kullanici Kitap Hediye Kartlari linke tiklar")
     public void kullanici_kitap_hediye_kartlari_linke_tiklar() {
-        clickByJS(homePage.kitapHediyeKartlariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kitapHediyeKartlariLinkSayfaAltiHome);
     }
     @When("kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular")
     public void kullanici_kitap_hediye_kartlarir_sayfasinin_acildigini_dogrular() {
