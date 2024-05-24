@@ -9,6 +9,14 @@ public class AllPages {
     private AyinYayinevleriPage ayinYayinevleriPage;
     private CocukKitaplariPage cocukKitaplariPage;
     private KitapPage kitapPage;
+    private Yardim_VideoPage yardim_videoPage;
+
+    public Yardim_VideoPage yardim_videoPage() {
+        if (yardim_videoPage == null) {
+            yardim_videoPage = new Yardim_VideoPage();
+        }
+        return yardim_videoPage;
+    }
 
     public KitapPage kitapPage() {
         if (kitapPage == null) {
