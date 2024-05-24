@@ -8,7 +8,14 @@ public class AllPages {
     private IndexPage indexPage;
     private AyinYayinevleriPage ayinYayinevleriPage;
     private CocukKitaplariPage cocukKitaplariPage;
+    private KitapPage kitapPage;
 
+    public KitapPage kitapPage() {
+        if (kitapPage == null) {
+            kitapPage = new KitapPage();
+        }
+        return kitapPage;
+    }
     public CocukKitaplariPage cocukKitaplariPage() {
         if (cocukKitaplariPage == null) {
             cocukKitaplariPage = new CocukKitaplariPage();

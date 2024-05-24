@@ -8,18 +8,21 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.AllPages;
 import utilities.ReusableMethods;
+
+import static utilities.ReusableMethods.clickByJS;
+
 public class TC02_UyeOlStepDefs {
     AllPages allPages=new AllPages();
     Faker faker = new Faker();
 
     @And("kullanici uye ol linkine tiklar")
     public void kullaniciUyeOlLinkineTiklar() {
-        ReusableMethods.clickByJS(allPages.homePage().uyeOlLinkHome);
+        clickByJS(allPages.homePage().uyeOlLinkHome);
     }
 
     @And("kullanici uye ol butonuna tiklar")
     public void kullaniciUyeOlButonunaTiklar() {
-        ReusableMethods.clickByJS(allPages.indexPage().uyeOlButonIndex);
+        clickByJS(allPages.indexPage().uyeOlButonIndex);
     }
 
     @When("kullanici doldurulmasi gerekli alanlarin valid degerlerini gorur")
@@ -145,6 +148,6 @@ public class TC02_UyeOlStepDefs {
 
     @When("kullanici e_posta adresi ile daha once kayit yapilmis mesajini gorur")
     public void kullaniciE_postaAdresiIleDahaOnceKayitYapilmisMesajiniGorur() {
-        Assert.assertTrue(allPages.indexPage().ePostaAdresiIleDahaOnceKayitOlunmusturAlertIndex.isDisplayed());
+        assert allPages.indexPage().ePostaAdresiIleDahaOnceKayitOlunmusturAlertIndex.isDisplayed();
     }
 }
