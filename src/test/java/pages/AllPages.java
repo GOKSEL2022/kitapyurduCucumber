@@ -10,6 +10,15 @@ public class AllPages {
     private CocukKitaplariPage cocukKitaplariPage;
     private KitapPage kitapPage;
     private Yardim_VideoPage yardim_videoPage;
+    private IletisimPage iletisimPage;
+
+    public IletisimPage iletisimPage() {
+        if (iletisimPage == null) {
+            iletisimPage = new IletisimPage();
+        }
+        return iletisimPage;
+    }
+
 
     public Yardim_VideoPage yardim_videoPage() {
         if (yardim_videoPage == null) {
