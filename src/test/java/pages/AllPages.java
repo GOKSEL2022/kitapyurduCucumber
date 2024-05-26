@@ -11,7 +11,74 @@ public class AllPages {
     private KitapPage kitapPage;
     private Yardim_VideoPage yardim_videoPage;
     private IletisimPage iletisimPage;
+    private HaftalikPage haftalikPage;
+    private KategoriPage kategoriPage;
+    private NeOkusamPage neOkusamPage;
+    private SinavKitaplariPage sinavKitaplariPage;
+    private YayincilarPage yayincilarPage;
+    private YazarlarPage yazarlarPage;
+    private KampanyalarPage kampanyalarPage;
+    private PuanKataloguPage puanKataloguPage;
 
+    public HomePage homePage() {
+        if (homePage == null) {
+            homePage = new HomePage();
+        }
+        return homePage;
+    }
+    public PuanKataloguPage puanKataloguPage() {
+        if (puanKataloguPage == null) {
+            puanKataloguPage = new PuanKataloguPage();
+        }
+        return puanKataloguPage;
+    }
+
+    public KampanyalarPage kampanyalarPage() {
+        if (kampanyalarPage == null) {
+            kampanyalarPage = new KampanyalarPage();
+        }
+        return kampanyalarPage;
+    }
+
+    public YazarlarPage yazarlarPage() {
+        if (yazarlarPage == null) {
+            yazarlarPage = new YazarlarPage();
+        }
+        return yazarlarPage;
+    }
+
+
+    public YayincilarPage yayincilarPage() {
+        if (yayincilarPage == null) {
+            yayincilarPage = new YayincilarPage();
+        }
+        return yayincilarPage;
+    }
+
+    public SinavKitaplariPage sinavKitaplariPage() {
+        if (sinavKitaplariPage == null) {
+            sinavKitaplariPage = new SinavKitaplariPage();
+        }
+        return sinavKitaplariPage;
+    }
+    public NeOkusamPage neOkusamPage() {
+        if (neOkusamPage == null) {
+            neOkusamPage = new NeOkusamPage();
+        }
+        return neOkusamPage;
+    }
+    public KategoriPage kategoriPage() {
+        if (kategoriPage == null) {
+            kategoriPage = new KategoriPage();
+        }
+        return kategoriPage;
+    }
+    public HaftalikPage haftalikPage() {
+        if (haftalikPage == null) {
+            haftalikPage = new HaftalikPage();
+        }
+        return haftalikPage;
+    }
     public IletisimPage iletisimPage() {
         if (iletisimPage == null) {
             iletisimPage = new IletisimPage();
@@ -47,12 +114,6 @@ public class AllPages {
         return ayinYayinevleriPage;
     }
 
-    public HomePage homePage() {
-        if (homePage == null) {
-            homePage = new HomePage();
-        }
-        return homePage;
-    }
     public IndexPage indexPage() {
         if (indexPage == null) {
             indexPage = new IndexPage();
