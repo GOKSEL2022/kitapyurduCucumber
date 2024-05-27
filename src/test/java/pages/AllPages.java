@@ -19,6 +19,14 @@ public class AllPages {
     private YazarlarPage yazarlarPage;
     private KampanyalarPage kampanyalarPage;
     private PuanKataloguPage puanKataloguPage;
+    private DergiPage dergiPage;
+
+    public DergiPage dergiPage() {
+        if (dergiPage == null) {
+            dergiPage = new DergiPage();
+        }
+        return dergiPage;
+    }
 
     public HomePage homePage() {
         if (homePage == null) {

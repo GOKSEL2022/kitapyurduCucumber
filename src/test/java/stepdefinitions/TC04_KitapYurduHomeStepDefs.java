@@ -134,8 +134,7 @@ public class TC04_KitapYurduHomeStepDefs {
     }
     @And("kullanici seciniz kismindan oneriyi secer")
     public void kullaniciSecinizKismindanOneriyiSecer() {
-        Select select=new Select(allPages.homePage().onerimVarSecinizDropDownHome);
-        select.selectByVisibleText("Öneri");
+        new Select(allPages.homePage().onerimVarSecinizDropDownHome).selectByVisibleText("Öneri");
     }
     @And("kullanici gorusunuz alanina {string} girer")
     public void kullaniciGorusunuzAlaninaGirer(String string) {
@@ -159,8 +158,7 @@ public class TC04_KitapYurduHomeStepDefs {
     }
     @And("kullanici seciniz dropdownindan oneri secer")
     public void kullaniciSecinizDropdownindanOneriSecer() {
-        Select select=new Select(allPages.iletisimPage().secinizDropDownIletisim);
-        select.selectByVisibleText("Öneri");
+        new Select(allPages.iletisimPage().secinizDropDownIletisim).selectByVisibleText("Öneri");
     }
     @And("kullanici adiniz alanina {string} girer")
     public void kullaniciAdinizAlaninaGirer(String string) {
