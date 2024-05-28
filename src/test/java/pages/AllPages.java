@@ -20,14 +20,37 @@ public class AllPages {
     private KampanyalarPage kampanyalarPage;
     private PuanKataloguPage puanKataloguPage;
     private DergiPage dergiPage;
+    private YayineviPage yayineviPage;
+    private OnayliYorumPage onayliYorumPage;
+    private YeniCikanKitaplarPage yeniCikanKitaplarPage;
 
+    public YeniCikanKitaplarPage yeniCikanKitaplarPage() {
+        if (yeniCikanKitaplarPage == null) {
+            yeniCikanKitaplarPage = new YeniCikanKitaplarPage();
+        }
+        return yeniCikanKitaplarPage;
+    }
+
+    public OnayliYorumPage onayliYorumPage() {
+        if (onayliYorumPage == null) {
+            onayliYorumPage = new OnayliYorumPage();
+        }
+        return onayliYorumPage;
+    }
+
+
+    public YayineviPage yayineviPage() {
+        if (yayineviPage == null) {
+            yayineviPage = new YayineviPage();
+        }
+        return yayineviPage;
+    }
     public DergiPage dergiPage() {
         if (dergiPage == null) {
             dergiPage = new DergiPage();
         }
         return dergiPage;
     }
-
     public HomePage homePage() {
         if (homePage == null) {
             homePage = new HomePage();
@@ -40,7 +63,6 @@ public class AllPages {
         }
         return puanKataloguPage;
     }
-
     public KampanyalarPage kampanyalarPage() {
         if (kampanyalarPage == null) {
             kampanyalarPage = new KampanyalarPage();
@@ -128,8 +150,5 @@ public class AllPages {
         }
         return indexPage;
     }
-
-
-
 
 }

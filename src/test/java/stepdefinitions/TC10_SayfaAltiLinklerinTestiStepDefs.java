@@ -6,15 +6,10 @@ import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
-    HomePage homePage=new HomePage();
-    IndexPage indexPage=new IndexPage();
-    Yardim_VideoPage yardim_videoPage=new Yardim_VideoPage();
-    YeniCikanKitaplarPage yeniCikanKitaplarPage=new YeniCikanKitaplarPage();
     @And("kullanici yardim ve islem rehberi linke tiklar")
     public void kullaniciYardimVeIslemRehberiLinkeTiklar() {
-        clickByJS(homePage.yardimVeIslemRehberiLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().yardimVeIslemRehberiLinkSayfaAltiHome);
     }
-
     @And("kullanici yardim sayfasina yönlendirildigini dogrular")
     public void kullaniciYardimSayfasinaYönlendirildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("yardim");
@@ -23,22 +18,18 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciVideoYardimLinkeTiklar() {
         clickByJS(allPages.homePage().videoYardimLinkSayfaAltiHome);
     }
-
     @And("kullanici video sayfasinin acildigini dogrular")
     public void kullaniciVideoSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("yardim/video");
     }
-
     @And("kullanici havale_EFTBilgileri linke tiklar")
     public void kullaniciHavale_EFTBilgileriLinkeTiklar() {
         clickByJS(allPages.homePage().havaleEFTBilgileriLinkSayfaAltiHome);
     }
-
     @And("kullanici havale_EFTBilgilerinin goruntulendigini dogrular")
     public void kullaniciHavale_EFTBilgilerininGoruntulendiginiDogrular() {
         assert allPages.yardim_videoPage().bankaHesapBilgilerimizTextTitleYardimVideo.isDisplayed();
     }
-
     @And("kullanici musteri hizmetleri linke tiklar")
     public void kullaniciMusteriHizmetleriLinkeTiklar() {
         clickByJS(allPages.homePage().musteriHizmetleriLinkSayfaAltiHome);
@@ -47,52 +38,42 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciMusteriHizmetleriSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("iletisim");
     }
-
     @And("kullanici platin uyelik linke tiklar")
     public void kullaniciPlatinUyelikLinkeTiklar() {
         clickByJS(allPages.homePage().platinUyelikLinkSayfaAltiHome);
     }
-
     @And("kullanici platin uyelik sayfasinin acildigini dogrular")
     public void kullaniciPlatinUyelikSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("platin-uyelik");
     }
-
     @And("kullanici gumus uyelik linke tiklar")
     public void kullaniciGumusUyelikLinkeTiklar() {
         clickByJS(allPages.homePage().gumusUyelikLinkSayfaAltiHome);
     }
-
     @And("kullanici gumus uyelik sayfasinin acildigini dogrular")
     public void kullaniciGumusUyelikSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("gumus-uyelik");
     }
-
     @And("kullanici teslim noktalari linke tiklar")
     public void kullaniciTeslimNoktalariLinkeTiklar() {
         clickByJS(allPages.homePage().teslimNoktalariLinkSayfaAltiHome);
     }
-
     @And("kullanici teslim noktalari sayfasinin acildigini dogrular")
     public void kullaniciTeslimNoktalariSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("teslim-noktalari");
     }
-
     @And("kullanici hemen al linke tiklar")
     public void kullaniciHemenAlLinkeTiklar() {
         clickByJS(allPages.homePage().hemenAlLinkSayfaAltiHome);
     }
-
     @And("kullanici hemen al sayfasinin acildigini dogrular")
     public void kullaniciHemenAlSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("hemen-al");
     }
-
     @And("kullanici sayfayi yeniler")
     public void kullaniciSayfayiYeniler() {
         Driver.getDriver().navigate().refresh();
     }
-
     @And("kullanici kabul et ve devam et butona tiklar")
     public void kullaniciKabulEtVeDevamEtButonaTiklar() {
         clickByJS(allPages.yardim_videoPage().kabulEtVeKapatButonYardimVideo);
@@ -104,17 +85,14 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @When("kullanici cok satan kitaplar sayfasina yonlendirildigini dogrular")
     public void kullanici_cok_satan_kitaplar_sayfasina_yonlendirildigini_dogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("cok-satan-kitaplar");
-
     }
     @When("kullanici yeni cikan kitaplar linke tiklar")
     public void kullanici_yeni_cikan_kitaplar_linke_tiklar() {
         clickByJS(allPages.homePage().yeniSatanKitaplarLinkSayfaAltiHome);
-
     }
     @When("kullanici yeni cikan kitaplar sayfasinin acildigini dogrular")
     public void kullanici_yeni_cikan_kitaplar_sayfasinin_acildigini_dogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("yeni-cikan-kitaplar");
-
     }
     @When("kullanici kargo odeyen avantajli urunler linke tiklar")
     public void kullanici_kargo_odeyen_avantajli_urunler_linke_tiklar(){
@@ -179,101 +157,78 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @When("kullanici Kitap Hediye Kartlarir sayfasinin acildigini dogrular")
     public void kullanici_kitap_hediye_kartlarir_sayfasinin_acildigini_dogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("kategori/cesitli-kitap-hediye-karti");
-
     }
-
     @And("kullanici sinav kitaplari linke tiklar")
     public void kullaniciSinavKitaplariLinkeTiklar() {
-        clickByJS(homePage.sinavKitaplariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().sinavKitaplariLinkSayfaAltiHome);
     }
-
     @And("kullanici cocuk kitaplari linke tiklar")
     public void kullaniciCocukKitaplariLinkeTiklar() {
-        clickByJS(homePage.cocukKitaplariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().cocukKitaplariLinkSayfaAltiHome);
     }
-
     @And("kullanici cep boy kitaplar linke tiklar")
     public void kullaniciCepBoyKitaplarLinkeTiklar() {
-        clickByJS(homePage.cepBoyKitaplariLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().cepBoyKitaplariLinkSayfaAltiHome);
     }
-
     @And("kullanici cep boy kitaplar sayfasinin acildigini dogrular")
     public void kullaniciCepBoyKitaplarSayfasininAcildiginiDogrular() {
-        assert indexPage.cepBoyLitaplardaTekFiyatTextTitleIndex.isDisplayed();
+        assert allPages.indexPage().cepBoyLitaplardaTekFiyatTextTitleIndex.isDisplayed();
     }
-
     @And("kullanici ingilizce kitaplar linke tiklar")
     public void kullaniciIngilizceKitaplarLinkeTiklar() {
         clickByJS(allPages.homePage().ingilizceKitaplarLinkSayfaAltiHome);
     }
-
     @And("kullanici ingilizce kitaplar sayfasinin acildigini dogrular")
     public void kullaniciIngilizceKitaplarSayfasininAcildiginiDogrular() {
         assert allPages.indexPage().ingilizceKitaplarArtikCepYakmiyorTextIndex.isDisplayed();
     }
-
     @And("kullanici bookinzi kultur_sanat urunleri linke tiklar")
     public void kullaniciBookinziKultur_sanatUrunleriLinkeTiklar() {
         clickByJS(allPages.homePage().bookinziKulturSanatUrunleriLinkSayfaAltiHome);
     }
-
     @And("kullanici bookinzi kultur_sanat urunleri sayfasinin acildigini dogrular")
     public void kullaniciBookinziKultur_sanatUrunleriSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getPageSource().contains("bookinzi");
     }
-
     @And("kullanici oyundan daha fazlasi linke tiklar")
     public void kullaniciOyundanDahaFazlasiLinkeTiklar() {
     }
-
     @And("kullanici oyundan daha fazlasi sayfasinin acildigini dogrular")
     public void kullaniciOyundanDahaFazlasiSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici montessori oyuncaklari linke tiklar")
     public void kullaniciMontessoriOyuncaklariLinkeTiklar() {
     }
-
     @And("kullanici montessori oyuncaklari sayfasinin acildigini dogrular")
     public void kullaniciMontessoriOyuncaklariSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici king of puzzle urunleri linke tiklar")
     public void kullaniciKingOfPuzzleUrunleriLinkeTiklar() {
     }
-
     @And("kullanici king of puzzle urunleri sayfasinin acildigini dogrular")
     public void kullaniciKingOfPuzzleUrunleriSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici akil defteri linke tiklar")
     public void kullaniciAkilDefteriLinkeTiklar() {
     }
-
     @And("kullanici akil defteri sayfasinin acildigini dogrular")
     public void kullaniciAkilDefteriSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici kitapyurdu sesli kitaplar linke tiklar")
     public void kullaniciKitapyurduSesliKitaplarLinkeTiklar() {
     }
-
     @And("kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduSesliKitaplarSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici kitapyurdu eKitap linke tiklar")
     public void kullaniciKitapyurduEKitapLinkeTiklar() {
     }
-
     @And("kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduEKitapSayfasininAcildiginiDogrular() {
     }
-
     @And("kullanici kutuphanem uygulamasi linke tiklar")
     public void kullaniciKutuphanemUygulamasiLinkeTiklar() {
     }
-
     @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
     }

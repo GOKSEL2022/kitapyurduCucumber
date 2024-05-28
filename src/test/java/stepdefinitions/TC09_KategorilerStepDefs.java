@@ -1,131 +1,125 @@
 package stepdefinitions;
-
 import io.cucumber.java.en.*;
-import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 import pages.*;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
+import static utilities.ReusableMethods.clickByJS;
+import static utilities.ReusableMethods.scrollIntoViewJS;
 public class TC09_KategorilerStepDefs {
-    HomePage homePage=new HomePage();
-    IndexPage indexPage=new IndexPage();
-    KategoriPage kategoriPage=new KategoriPage();
-    OnayliYorumPage onayliYorumPage=new OnayliYorumPage();
-    Actions actions=new Actions(Driver.getDriver());
-    SoftAssert softAssert=new SoftAssert();
+    AllPages allPages=new AllPages();
+    Actions actions=new Actions(Driver.getDriver());  SoftAssert softAssert=new SoftAssert();
     @Given("kullanici kategoriler basligina gelir")
     public void kullaniciKategorilerBasliginaGelir() {
-        ReusableMethods.scrollIntoViewJS(homePage.kategorilerTextHome);
+        scrollIntoViewJS(allPages.homePage().kategorilerTextHome);
     }
     @And("kullanici kategoriler tumunu goster linkine tiklar")
     public void kullaniciKategorilerTumunuGosterLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.tumunuGosterLinkKategorilerHome);
+        clickByJS(allPages.homePage().tumunuGosterLinkKategorilerHome);
     }
 
     @And("kullanici acilan sayfada tum kategorileri goruntuler")
     public void kullaniciAcilanSayfadaTumKategorileriGoruntuler() {
-        assert indexPage.tumKategorilerLinkKitapKategorileriIndex.isDisplayed();
+        assert allPages.indexPage().tumKategorilerLinkKitapKategorileriIndex.isDisplayed();
     }
 
     @And("kullanici tum kategoriler icinden edebiyata tiklar")
     public void kullaniciTumKategorilerIcindenEdebiyataTiklar() {
-        ReusableMethods.clickByJS(indexPage.edebiyatSembolKitapKategorileriIndex);
+        clickByJS(allPages.indexPage().edebiyatSembolKitapKategorileriIndex);
     }
 
     @And("kullanici acilan sayfada edebiyat urunleri oldugunu dogrular")
     public void kullaniciAcilanSayfadaEdebiyatUrunleriOldugunuDogrular() {
-        assert kategoriPage.tumKitaplarEdebiyatTextKategori.isDisplayed();
+        assert allPages.kategoriPage().tumKitaplarEdebiyatTextKategori.isDisplayed();
     }
 
     @And("kullanici alt kategorilerden belgesel romana tiklar")
     public void kullaniciAltKategorilerdenBelgeselRomanaTiklar() {
-        ReusableMethods.clickByJS(kategoriPage.belgeselRomanLinkEdebiyatAltKategorilerKategoriler);
+        clickByJS(allPages.kategoriPage().belgeselRomanLinkEdebiyatAltKategorilerKategoriler);
     }
 
     @And("kullanici acilan sayfada belgesel roman basligini goruntuler")
     public void kullaniciAcilanSayfadaBelgeselRomanBasliginiGoruntuler() {
-        assert kategoriPage.belgeselRomanTextKategori.isDisplayed();
+        assert allPages.kategoriPage().belgeselRomanTextKategori.isDisplayed();
     }
 
     @And("kullanici listeyi daralt menuden Ayse Kulin i  secer")
     public void kullaniciListeyiDaraltMenudenAyseKulinISecer() {
-        ReusableMethods.scrollIntoViewJS(kategoriPage.ayseKulinLinkKategori);
-        ReusableMethods.clickByJS(kategoriPage.ayseKulinLinkKategori);
+        scrollIntoViewJS(allPages.kategoriPage().ayseKulinLinkKategori);
+        clickByJS(allPages.kategoriPage().ayseKulinLinkKategori);
     }
 
     @And("kullanici acilan sayfada Ayse Kulin in romanlarini goruntuler")
     public void kullaniciAcilanSayfadaAyseKulinInRomanlariniGoruntuler() {
-        assert indexPage.turkanRomaniAyseKulinIndex.isDisplayed();
+        assert allPages.indexPage().turkanRomaniAyseKulinIndex.isDisplayed();
     }
 
     @And("kullanici sayfadaki urunleri sepete ekler")
     public void kullaniciSayfadakiUrunleriSepeteEkler() {
-        actions.moveToElement(indexPage.turkanRomaniAyseKulinIndex).perform();
-        ReusableMethods.clickByJS(indexPage.sepeteEkleTurkanRomaniAyseKulinIndex);
+        actions.moveToElement(allPages.indexPage().turkanRomaniAyseKulinIndex).perform();
+        clickByJS(allPages.indexPage().sepeteEkleTurkanRomaniAyseKulinIndex);
     }
 
 
     @When("kullanici onayli yorumlar linkine tiklar")
     public void kullaniciOnayliYorumlarLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.onayliYorumlarLinkHome);
+        clickByJS(allPages.homePage().onayliYorumlarLinkHome);
     }
 
     @And("kullanici onayli yorumlarla ilgili secenekleri goruntuler")
     public void kullaniciOnayliYorumlarlaIlgiliSecenekleriGoruntuler() {
-        softAssert.assertTrue(onayliYorumPage.onayliYorumBulunanKitaplarLinkOnayliYorumlar.isDisplayed());
-        softAssert.assertTrue(onayliYorumPage.onayliYorumlariInceleyinLinkOnayliYorumlar.isDisplayed());
-        softAssert.assertTrue(onayliYorumPage.onayliYorumlarIleYenidenKesfedinLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertTrue(allPages.onayliYorumPage().onayliYorumBulunanKitaplarLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertTrue(allPages.onayliYorumPage().onayliYorumlariInceleyinLinkOnayliYorumlar.isDisplayed());
+        softAssert.assertTrue(allPages.onayliYorumPage().onayliYorumlarIleYenidenKesfedinLinkOnayliYorumlar.isDisplayed());
         softAssert.assertAll();
     }
 
     @And("kullanici onayli yorumlari inceleyin secenegine tiklar")
     public void kullaniciOnayliYorumlariInceleyinSecenegineTiklar() {
-        ReusableMethods.clickByJS(onayliYorumPage.onayliYorumlariInceleyinLinkOnayliYorumlar);
+        clickByJS(allPages.onayliYorumPage().onayliYorumlariInceleyinLinkOnayliYorumlar);
     }
 
     @And("kullanici onayli yorumlar sayfasinin acildigini dogrular")
     public void kullaniciOnayliYorumlarSayfasininAcildiginiDogrular() {
-        assert indexPage.onayliYorumlarTextIndex.isDisplayed();
+        assert allPages.indexPage().onayliYorumlarTextIndex.isDisplayed();
     }
 
     @And("kullanici sirala dropdownindan en begenilenleri secer")
     public void kullaniciSiralaDropdownindanEnBegenilenleriSecer() {
-        new Select(indexPage.onayliYorumlarDropDownIndex).selectByVisibleText("En Beğenilenler");
+        new Select(allPages.indexPage().onayliYorumlarDropDownIndex).selectByVisibleText("En Beğenilenler");
     }
 
     @And("kullanici en begenilen yorum ile en yeni yorumun ayni olmadigini dogrular")
     public void kullaniciEnBegenilenYorumIleEnYeniYorumunAyniOlmadiginiDogrular() {
-        Assert.assertFalse(indexPage.enBegenilenOnayliYorumTextIndex.getText().contains("Milletinin Adı Sanı Yok Olmasın Diye Yazan Mirza Haydar"));
+        assert allPages.indexPage().enBegenilenOnayliYorumTextIndex.getText().contains("Milletinin Adı Sanı Yok Olmasın Diye Yazan Mirza Haydar");
 
     }
     @And("kullanici yorumun yaninda ilgili kitabi gorur")
     public void kullaniciYorumunYanindaIlgiliKitabiGorur() {
-        assert indexPage.atomikAliskanliklarKitabiOnayliYorumlarIndex.isDisplayed();
+        assert allPages.indexPage().atomikAliskanliklarKitabiOnayliYorumlarIndex.isDisplayed();
     }
 
     @And("kullanici yorumlarin altinda bulunan evet sembolunun aktif oldugunu dogrular")
     public void kullaniciYorumlarinAltindaBulunanEvetSembolununAktifOldugunuDogrular() {
-        assert indexPage.evetLinkiBuYorumaKatiliyorMusunuzIndex.isDisplayed();
-        ReusableMethods.clickByJS(indexPage.evetLinkiBuYorumaKatiliyorMusunuzIndex);
+        assert allPages.indexPage().evetLinkiBuYorumaKatiliyorMusunuzIndex.isDisplayed();
+        clickByJS(allPages.indexPage().evetLinkiBuYorumaKatiliyorMusunuzIndex);
     }
 
     @And("kullanici evet sembolunden sonra hayir sembolune tikladiginda bu yorumu daha once oyladiniz uyarisini gorur")
     public void kullaniciEvetSembolundenSonraHayirSemboluneTikladigindaBuYorumuDahaOnceOyladinizUyarisiniGorur() {
-        ReusableMethods.clickByJS(indexPage.hayirLinkiBuYorumaKatiliyorMusunuzIndex);
-        assert indexPage.buYorumuDahaOnceOyladinizAlertIndex.isDisplayed();
+        clickByJS(allPages.indexPage().hayirLinkiBuYorumaKatiliyorMusunuzIndex);
+        assert allPages.indexPage().buYorumuDahaOnceOyladinizAlertIndex.isDisplayed();
     }
 
     @And("kullanici bu yorumu yanitla linke tiklar")
     public void kullaniciBuYorumuYanitlaLinkeTiklar() {
-        ReusableMethods.clickByJS(indexPage.buYorumuYanitlaLinkiOnayliYorumlarIndex);
+        clickByJS(allPages.indexPage().buYorumuYanitlaLinkiOnayliYorumlarIndex);
     }
 
     @When("kullanici yanitlama iznine sahip degilsiniz uyarisini gorur")
     public void kullaniciYanitlamaIznineSahipDegilsinizUyarisiniGorur() {
-        assert indexPage.yanitlamaIznineSahipDegilsinizAlertIndex.isDisplayed();
+        assert allPages.indexPage().yanitlamaIznineSahipDegilsinizAlertIndex.isDisplayed();
     }
 }
 
