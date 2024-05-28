@@ -1,187 +1,144 @@
 package stepdefinitions;
-
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
-import org.junit.Assert;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.*;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
+import static utilities.ReusableMethods.*;
 public class TC07_YayinevleriYayinlariYazarlarStepDefs {
-    HomePage homePage=new HomePage();
-    YayineviPage yayineviPage=new YayineviPage();
-    KitapPage kitapPage=new KitapPage();
-    AyinYayinevleriPage ayinYayinevleriPage=new AyinYayinevleriPage();
-    IndexPage indexPage=new IndexPage();
+    AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
 
     @Given("kullanici haftanin yayinevi basligina gelir")
     public void kullaniciHaftaninYayineviBasliginaGelir() {
-        actions.moveToElement(homePage.haftaninYayineviTextHome).perform();
-
+        actions.moveToElement(allPages.homePage().haftaninYayineviTextHome).perform();
     }
     @When("kullanici secilen yayinevini goruntuler")
     public void kullaniciSecilenYayineviniGoruntuler() {
-        Assert.assertTrue(homePage.nefesYayinlariHaftaninYayineviTextHome.isDisplayed());
+        assert allPages.homePage().nefesYayinlariHaftaninYayineviTextHome.isDisplayed();
     }
-
     @And("kullanici yapilan indirim miktarini goruntuler")
     public void kullaniciYapilanIndirimMiktariniGoruntuler() {
-        Assert.assertTrue(homePage.indirimMiktariNefesYayinlariTextHome.getText().contains("45"));
+        assert allPages.homePage().indirimMiktariNefesYayinlariTextHome.getText().contains("45");
     }
-
     @And("kullanici tumunu goster linkine tiklar")
     public void kullaniciTumunuGosterLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.tumunuGosterLinkHome);
+        clickByJS(allPages.homePage().tumunuGosterLinkHome);
     }
-
     @And("kullanici acilan sayfada haftanin yayinevinin adini goruntuler")
     public void kullaniciAcilanSayfadaHaftaninYayinevininAdiniGoruntuler() {
-        Assert.assertTrue(yayineviPage.tumunuGosterSecilenYayineviNefesYayinlariTextYayinevi.getText().contains("NEFES YAYINLARI"));
+        assert allPages.yayineviPage().tumunuGosterSecilenYayineviNefesYayinlariTextYayinevi.getText().contains("NEFES YAYINLARI");
     }
-
     @And("kullanici cok satanlar icindeki ilk urune tiklar")
     public void kullaniciCokSatanlarIcindekiIlkUruneTiklar() {
-        yayineviPage.nefesYayinlariIlkUrunYayinevi.click();
+        allPages.yayineviPage().nefesYayinlariIlkUrunYayinevi.click();
     }
-
     @When("kullanici acilan urunun ayni yayinevine ait oldugunu dogrular")
     public void kullaniciAcilanUrununAyniYayinevineAitOldugunuDogrular() {
-        Assert.assertTrue(kitapPage.secilenIlkUrunYayineviNefesYayinlariTextKitap.getText().contains("NEFES"));
+        assert allPages.kitapPage().secilenIlkUrunYayineviNefesYayinlariTextKitap.getText().contains("NEFES");
     }
-
     @Given("kullanici ayin yayinevleri basligina gelir")
     public void kullaniciAyinYayinevleriBasliginaGelir() {
-        ReusableMethods.scrollIntoViewJS(homePage.ayinYayinevleriTextHome);
+        scrollIntoViewJS(allPages.homePage().ayinYayinevleriTextHome);
     }
-
     @When("kullanici ayin yayinevi basligi altinda yayinevlerinin adlarini gorur")
     public void kullaniciAyinYayineviBasligiAltindaYayinevlerininAdlariniGorur() {
-        Assert.assertTrue(homePage.ayinYayinlariYayineviAdlariTextHome.isDisplayed());
+        assert allPages.homePage().ayinYayinlariYayineviAdlariTextHome.isDisplayed();
     }
-
     @And("kullanici ayin_yayinevleri tumunu goster linkine tiklar")
     public void kullaniciAyin_yayinevleriTumunuGosterLinkineTiklar() {
-        ReusableMethods.clickByJS(homePage.tumunuGosterAyinYayinevleriLinkHome);
+        clickByJS(allPages.homePage().tumunuGosterAyinYayinevleriLinkHome);
     }
-
     @And("kullanici ayin_yayinevleri_tumunu_goster acilan sayfada ayin yayinevleri textini goruntuler")
     public void kullaniciAyin_yayinevleri_tumunu_gosterAcilanSayfadaAyinYayinevleriTextiniGoruntuler() {
-        assert ayinYayinevleriPage.ayinYayinevleriEylulAyinYayinevleri.isDisplayed();
+        assert allPages.ayinYayinevleriPage().ayinYayinevleriEylulAyinYayinevleri.isDisplayed();
     }
-
     @And("kullanici bir yayinevine tiklar")
     public void kullaniciBirYayinevineTiklar() {
-        ReusableMethods.clickByJS(ayinYayinevleriPage.pinhanKitapTextAyinYayinevleri);
+        clickByJS(allPages.ayinYayinevleriPage().pinhanKitapTextAyinYayinevleri);
     }
-
     @And("kullanici tikladigi yayinevinin adini acilan sayfada goruntuler")
     public void kullaniciTikladigiYayinevininAdiniAcilanSayfadaGoruntuler() {
-        assert indexPage.pinhanKitapTextIndex.isDisplayed();
+        assert allPages.indexPage().pinhanKitapTextIndex.isDisplayed();
     }
-
     @And("kullanici secilen yayinevi sayfasindaki ilk urune tiklar")
     public void kullaniciSecilenYayineviSayfasindakiIlkUruneTiklar() {
-        ReusableMethods.clickByJS(indexPage.ayinYayinevleriIlkKitapCadılarEbelerVeHemsirelerKadinSifacilarinTarihiIndex);
+        clickByJS(allPages.indexPage().ayinYayinevleriIlkKitapCadılarEbelerVeHemsirelerKadinSifacilarinTarihiIndex);
     }
-
     @When("kullanici urun adinin yaninda secilen yayinevinin adini gorur")
     public void kullaniciUrunAdininYanindaSecilenYayinevininAdiniGorur() {
-        Assert.assertTrue(kitapPage.pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap.isDisplayed());
+        assert allPages.kitapPage().pinhanYayincilikTextAyinYayinevleriSecilenUrunKitap.isDisplayed();
     }
-
     @Given("kullanici ayin yazarlari basligina gelir")
     public void kullaniciAyinYazarlariBasliginaGelir() {
-        ReusableMethods.hover(homePage.ayinYazarlariTitleTextHome);
+       hover(allPages.homePage().ayinYazarlariTitleTextHome);
     }
-
     @And("kullanici ilk yazara tiklar")
     public void kullaniciIlkYazaraTiklar() {
-        ReusableMethods.clickByJS(homePage.ayinYazarlariTitleTextIlkYazarHome);
+        clickByJS(allPages.homePage().ayinYazarlariTitleTextIlkYazarHome);
     }
-
     @And("kullanici acilan sayfada ayni yazarin adini gorur")
     public void kullaniciAcilanSayfadaAyniYazarinAdiniGorur() {
-        Assert.assertTrue(indexPage.carlGustavJungTextIndex.isDisplayed());
+        assert allPages.indexPage().carlGustavJungTextIndex.isDisplayed();
     }
-
     @And("kullanici yazarin ozgecmisini goruntuler")
     public void kullaniciYazarinOzgecmisiniGoruntuler() {
-        Assert.assertTrue(indexPage.carlGustavJungOzgecmisTextIndex .isDisplayed());
+        assert allPages.indexPage().carlGustavJungOzgecmisTextIndex.isDisplayed();
     }
-
-
     @And("kullanici ozgecmis altinda bulunan takip et linkine tiklar")
     public void kullaniciOzgecmisAltindaBulunanTakipEtLinkineTiklar() {
-        ReusableMethods.clickByJS(indexPage.carlGustavJungTakipEtLinkIndex);
+        clickByJS(allPages.indexPage().carlGustavJungTakipEtLinkIndex);
     }
-
     @And("kullanici yazarin takip listesine alindigini gosteren alerti goruntuler")
     public void kullaniciYazarinTakipListesineAlindiginiGosterenAlertiGoruntuler() {
-        Assert.assertTrue(indexPage.carlGustavJungTakipListenizeEklendiAlertIndex.isDisplayed());
+        assert allPages.indexPage().carlGustavJungTakipListenizeEklendiAlertIndex.isDisplayed();
     }
-
     @And("kullanici yazarin ilk kitabina tiklar")
     public void kullaniciYazarinIlkKitabinaTiklar() {
-        ReusableMethods.clickByJS(indexPage.carlGustavJungIlkUrunIndex);
+        clickByJS(allPages.indexPage().carlGustavJungIlkUrunIndex);
     }
-
     @And("kullanici secilen kitabin yaninda yazarin adini goruntuler")
     public void kullaniciSecilenKitabinYanindaYazarinAdiniGoruntuler() {
-        assert kitapPage.yazarAdiTextIlkUrunKitap.isDisplayed();
+        assert allPages.kitapPage().yazarAdiTextIlkUrunKitap.isDisplayed();
     }
-
     @And("kullanici kitapla ilgili aciklama yazisini gorur")
     public void kullaniciKitaplaIlgiliAciklamaYazisiniGorur() {
-        assert kitapPage.ayinYazarlariIlkUrunDescriptionKitap.isDisplayed();
+        assert allPages.kitapPage().ayinYazarlariIlkUrunDescriptionKitap.isDisplayed();
     }
-
     @And("kullanici ic sayfalara goz at linkine tiklar")
     public void kullaniciIcSayfalaraGozAtLinkineTiklar() {
-        ReusableMethods.clickByJS(kitapPage.icSayfalaraGozAtLinkKitap);
+        clickByJS(allPages.kitapPage().icSayfalaraGozAtLinkKitap);
     }
-
     @And("kullanici acilan sayfada ileri tusuna tiklar")
     public void kullaniciAcilanSayfadaIleriTusunaTiklar() {
-        ReusableMethods.clickByJS(kitapPage.ileriYonTusuAyinYazarlariIlkUrunKitap);
+        clickByJS(allPages.kitapPage().ileriYonTusuAyinYazarlariIlkUrunKitap);
     }
-
     @And("kullanici acilan kitabin icerigini goruntuler")
     public void kullaniciAcilanKitabinIceriginiGoruntuler() {
-        Assert.assertTrue(kitapPage.sayfaIcerigiAyinYazarlariIlkUrunKitap.isDisplayed());
+        assert allPages.kitapPage().sayfaIcerigiAyinYazarlariIlkUrunKitap.isDisplayed();
     }
-
     @And("kullanici kitap icerigini kapatir")
     public void kullaniciKitapIceriginiKapatir() {
-        ReusableMethods.clickByJS(kitapPage.sayfaIceriginiKapatAyinYazarlariIlkUrunKitap);
+        clickByJS(allPages.kitapPage().sayfaIceriginiKapatAyinYazarlariIlkUrunKitap);
     }
-
     @And("kullanici yorumlar linkine tiklar")
     public void kullaniciYorumlarLinkineTiklar() {
-        ReusableMethods.clickByJS(kitapPage.yorumlarLinkAyinYazarlariIlkUrunKitap);
+        clickByJS(allPages.kitapPage().yorumlarLinkAyinYazarlariIlkUrunKitap);
     }
-
     @And("kullanici yapilan yorumlari goruntuler")
     public void kullaniciYapilanYorumlariGoruntuler() {
-        Assert.assertTrue(kitapPage.yapilanYorumlarTextAyinYazarlariIlkUrunKitap.isDisplayed());
+        assert allPages.kitapPage().yapilanYorumlarTextAyinYazarlariIlkUrunKitap.isDisplayed();
     }
-
     @And("kullanici urun hakkinda yorum yazar")
     public void kullaniciUrunHakkindaYorumYazar() {
-        kitapPage.yorumYazTextBoxAyinYazarlariIlkUrunKitap.sendKeys(Faker.instance().lorem().paragraph());
+        allPages.kitapPage().yorumYazTextBoxAyinYazarlariIlkUrunKitap.sendKeys(Faker.instance().lorem().paragraph());
     }
-
     @And("kullanici yorumlar_gonder butonuna tiklar")
     public void kullaniciYorumlar_gonderButonunaTiklar() {
-        ReusableMethods.clickByJS(kitapPage.gonderButonYorumYazTextBoxAyinYazarlariIlkUrunKitap);
+        clickByJS(allPages.kitapPage().gonderButonYorumYazTextBoxAyinYazarlariIlkUrunKitap);
     }
-
     @When("kullanici en az bir siparisi bulunan epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler")
     public void kullaniciEnAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertiniGoruntuler() {
-        Assert.assertTrue(kitapPage.enAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertKitap.getText().contains("Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir"));
-    //Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir.
+        assert allPages.kitapPage().enAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertKitap.getText().contains("Kitapyurdu'nda en az bir siparişi bulunan e-posta adresi doğrulanmış üyeler yorum yapabilmektedir");
     }
 }
