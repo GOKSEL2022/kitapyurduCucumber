@@ -1,0 +1,1 @@
+Bu proje Selenyum-java kullanilarak Cucumber framework özelinde Page Object Model yapisina uygun olarak https://www.kitapyurdu.com web sayfasinin serbest sekilde automation testlerinden ibarettir. Raporlama olarak cucucmber report,spark report ve extent report kullanilmistir.
