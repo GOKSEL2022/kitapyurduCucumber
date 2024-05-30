@@ -7,7 +7,7 @@ Feature: kayitli_kullanici_girisi
     And   kullanici giris yap linkine tiklar
     And   kullanici giris yap butonuna tiklar
     When  kullanici e-posta adresiniz ya da sifreniz yanlıs uyarisini gorur
-    Then  kullanici sayfayi kapatir
+    #Then  kullanici sayfayi kapatir
 
 
   Scenario: kullanici_kayitli_bilgilerle_giris_yapar
@@ -36,7 +36,7 @@ Feature: kayitli_kullanici_girisi
       |                        | 123456789a. |
       | yekparebirangmail.com  | 123456789a. |
 
-    #_BUG : Giris yap alaninda e-posta girerken büyük-kücük karakter veya ç-c,ş-s,ı-i gibi bir harf ayrımı gözetilmiyor.
+    #_BUG : Giris yap alaninda e-posta girerken büyük-kücük karakter veya ç-c,ş-s,ı-i,o-ö,g-ğ,u-ü gibi bir harf ayrımı gözetilmiyor.
   Scenario Outline: giris_yaparken_karakter_ve_kucuk_buyuk_harf_ayrimi yapilmamasi
   Given kullanici kitapyurdu_url ye gider
   When  kullanici anasayfanin acildigini dogrular
@@ -52,7 +52,18 @@ Feature: kayitli_kullanici_girisi
       | e-posta | sifre |
       | YekpareBirAn@gmail.com | 123456789a. |
       | YEKPAREBİRAN@GMAİL.COM | 123456789a. |
-      | yekparebıran@gmail.com | 123456789a. |
+      | YEKPAREBıRAN@ğMAıL.çöm | 123456789a. |
+      | yekparebıran@gmail.çom | 123456789a. |
+      | yekparebıran@Gmail.com | 123456789a. |
+      | yekparebıran@GmaIl.com | 123456789a. |
+      | yekparebıran@Gmaıl.com | 123456789a. |
+      | yekparebiran@Gmaıl.com | 123456789a. |
+      | gokselceliktestengineer@gmail.com | 123456789a. |
+      | gökşelçeliktestengineer@gmail.com | 123456789a. |
+      | ğökşelçeliktestenğineer@gmail.com | 123456789a. |
+      | ğökşelçeliktestenğineer@ğmail.çom | 123456789a. |
+      | GOkŞelÇelIktestenĞIneer@ĞmaIl.çöm | 123456789a. |
+
 
     Scenario Outline: invalid_sifre
       Given kullanici kitapyurdu_url ye gider
