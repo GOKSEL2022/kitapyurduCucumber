@@ -4,6 +4,8 @@ import io.cucumber.java.en.When;
 import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
+import static utilities.ReusableMethods.waitFor;
+
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
     @And("kullanici yardim ve islem rehberi linke tiklar")
@@ -192,28 +194,39 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici oyundan daha fazlasi linke tiklar")
     public void kullaniciOyundanDahaFazlasiLinkeTiklar() {
+        clickByJS(allPages.homePage().oyundanDahaFazlasiLinkSayfaAltiHome);
     }
     @And("kullanici oyundan daha fazlasi sayfasinin acildigini dogrular")
     public void kullaniciOyundanDahaFazlasiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("hobi-oyuncak");
     }
     @And("kullanici montessori oyuncaklari linke tiklar")
     public void kullaniciMontessoriOyuncaklariLinkeTiklar() {
+        clickByJS(allPages.homePage().montessoriOyuncaklariLinkSayfaAltiHome);
     }
     @And("kullanici montessori oyuncaklari sayfasinin acildigini dogrular")
     public void kullaniciMontessoriOyuncaklariSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("montessori-oyuncaklari");
     }
     @And("kullanici king of puzzle urunleri linke tiklar")
     public void kullaniciKingOfPuzzleUrunleriLinkeTiklar() {
+        clickByJS(allPages.homePage().kingOfPuzzleUrunleriLinkSayfaAltiHome);
     }
     @And("kullanici king of puzzle urunleri sayfasinin acildigini dogrular")
     public void kullaniciKingOfPuzzleUrunleriSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kingofpuzzle");
     }
     @And("kullanici akil defteri linke tiklar")
     public void kullaniciAkilDefteriLinkeTiklar() {
+        clickByJS(allPages.homePage().kabuleEtVeKapatAlertHome);
+        waitFor(2);
+        clickByJS(allPages.homePage().akilDefteriLinkSayfaAltiHome);
     }
     @And("kullanici akil defteri sayfasinin acildigini dogrular")
     public void kullaniciAkilDefteriSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("akil-defteri");
     }
+    /*
     @And("kullanici kitapyurdu sesli kitaplar linke tiklar")
     public void kullaniciKitapyurduSesliKitaplarLinkeTiklar() {
     }
@@ -232,4 +245,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
     }
+
+     */
 }

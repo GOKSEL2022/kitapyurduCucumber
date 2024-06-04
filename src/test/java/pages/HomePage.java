@@ -321,6 +321,21 @@ public class HomePage {
     @FindBy(partialLinkText = "okinzi Kültür-Sanat Ürünleri")
     public WebElement bookinziKulturSanatUrunleriLinkSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='hobi-oyuncak'])[2]")
+    public WebElement oyundanDahaFazlasiLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='kategori/hobi-ve-oyuncak-montessori-oyuncaklari/1728.html'])[2]")
+    public WebElement montessoriOyuncaklariLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='kingofpuzzle'])[2]")
+    public WebElement kingOfPuzzleUrunleriLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='yayinevi/akil-defteri/7526.html']")
+    public WebElement akilDefteriLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@id='cookiescript_accept']")
+    public WebElement kabuleEtVeKapatAlertHome;
+
 
 
 
