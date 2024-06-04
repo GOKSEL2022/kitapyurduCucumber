@@ -1,4 +1,4 @@
-@smoke  @regression
+@smoke  @regression  @tc10
 Feature: sayfa_altinda_yer_alan_linklerin_testi
   Background:
     Given kullanici kitapyurdu_url ye gider
@@ -92,29 +92,29 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici bookinzi kultur_sanat urunleri linke tiklar
          And kullanici bookinzi kultur_sanat urunleri sayfasinin acildigini dogrular
          And kullanici anasayfanin en altina gelir
-         #And kullanici oyundan daha fazlasi linke tiklar
-         #And kullanici oyundan daha fazlasi sayfasinin acildigini dogrular
-         #And kullanici anasayfanin en altina gelir
-         #And kullanici montessori oyuncaklari linke tiklar
-         #And kullanici montessori oyuncaklari sayfasinin acildigini dogrular
-         #And kullanici king of puzzle urunleri linke tiklar
-         #And kullanici king of puzzle urunleri sayfasinin acildigini dogrular
-         #And kullanici anasayfanin en altina gelir
-         #And kullanici akil defteri linke tiklar
-         #And kullanici akil defteri sayfasinin acildigini dogrular
+         And kullanici oyundan daha fazlasi linke tiklar
+         And kullanici oyundan daha fazlasi sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici montessori oyuncaklari linke tiklar
+         And kullanici montessori oyuncaklari sayfasinin acildigini dogrular
+         And kullanici king of puzzle urunleri linke tiklar
+         And kullanici king of puzzle urunleri sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici akil defteri linke tiklar
+         And kullanici akil defteri sayfasinin acildigini dogrular
          And kullanici sayfayi kapatir
 
-       @kitapyurdu_platformlari
-    Scenario:   kitapyurdu_platformlari_linkleri_test_edilir
-         And kullanici kitapyurdu sesli kitaplar linke tiklar
-         And kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular
-         And kullanici anasayfanin en altina gelir
-         And kullanici kitapyurdu eKitap linke tiklar
-         And kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular
-         And kullanici anasayfanin en altina gelir
-         And kullanici kutuphanem uygulamasi linke tiklar
-         And kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular
-         And kullanici anasayfanin en altina gelir
+      # @kitapyurdu_platformlari
+    #Scenario:   kitapyurdu_platformlari_linkleri_test_edilir
+         #And kullanici kitapyurdu sesli kitaplar linke tiklar
+         #And kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular
+         #And kullanici anasayfanin en altina gelir
+         #And kullanici kitapyurdu eKitap linke tiklar
+         #And kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular
+         #And kullanici anasayfanin en altina gelir
+         #And kullanici kutuphanem uygulamasi linke tiklar
+         #And kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular
+         #And kullanici anasayfanin en altina gelir
 
 
 

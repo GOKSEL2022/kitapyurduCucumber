@@ -8,12 +8,15 @@ import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
+import static utilities.ReusableMethods.scrollIntoViewJS;
+
 public class TC04_KitapYurduHomeStepDefs {
     int sayi=Faker.instance().number().numberBetween(100,999);
     Actions actions=new Actions(Driver.getDriver());    AllPages allPages=new AllPages();
     @And("kullanici anasayfanin en altina gelir")
     public void kullaniciAnasayfaninEnAltinaGelir() {
-        allPages.homePage().enAltaInYonButonHome.click();
+        scrollIntoViewJS(allPages.homePage().sinavKitaplariLinkSayfaAltiHome);
+        //allPages.homePage().enAltaInYonButonHome.click();
     }
     @And("kullanici anasayfanin en üst kismina gider")
     public void kullaniciAnasayfaninEnÜstKisminaGider() {
