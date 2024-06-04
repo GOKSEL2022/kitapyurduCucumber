@@ -104,17 +104,35 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici akil defteri sayfasinin acildigini dogrular
          And kullanici sayfayi kapatir
 
-      # @kitapyurdu_platformlari
-    #Scenario:   kitapyurdu_platformlari_linkleri_test_edilir
-         #And kullanici kitapyurdu sesli kitaplar linke tiklar
-         #And kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular
-         #And kullanici anasayfanin en altina gelir
-         #And kullanici kitapyurdu eKitap linke tiklar
-         #And kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular
-         #And kullanici anasayfanin en altina gelir
-         #And kullanici kutuphanem uygulamasi linke tiklar
-         #And kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular
-         #And kullanici anasayfanin en altina gelir
+       @kitapyurdu_platformlari
+    Scenario:   kitapyurdu_platformlari_linkleri_test_edilir
+         And kullanici kitapyurdu sesli kitaplar linke tiklar
+         And kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici kitapyurdu eKitap linke tiklar
+         And kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici kutuphanem uygulamasi linke tiklar
+         And kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici kitapyurdu chrome eklentileri linke tiklar
+         And kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici onaylı yorumlar linke tiklar
+         And kullanici onaylı yorumlar sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici KDY platformu linke tiklar
+         And kullanici KDY platformu sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici KDD platformu linke tiklar
+         And kullanici KDD platformu sayfasinin acildigini dogrular
+         And kullanici anasayfanin en altina gelir
+         And kullanici Kitapdergisi.com linke tiklar
+         And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
+         And kullanici sayfayi kapatir
+
+
+
 
 
 

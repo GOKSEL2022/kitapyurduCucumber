@@ -226,7 +226,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciAkilDefteriSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("akil-defteri");
     }
-    /*
     @And("kullanici kitapyurdu sesli kitaplar linke tiklar")
     public void kullaniciKitapyurduSesliKitaplarLinkeTiklar() {
     }
@@ -245,6 +244,4 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
     }
-
-     */
 }
