@@ -244,4 +244,44 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici kitapyurdu chrome eklentileri linke tiklar")
+    public void kullaniciKitapyurduChromeEklentileriLinkeTiklar() {
+    }
+
+    @And("kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular")
+    public void kullaniciKitapyurduChromeEklentileriSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici onaylı yorumlar linke tiklar")
+    public void kullaniciOnaylıYorumlarLinkeTiklar() {
+    }
+
+    @And("kullanici onaylı yorumlar sayfasinin acildigini dogrular")
+    public void kullaniciOnaylıYorumlarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici KDY platformu linke tiklar")
+    public void kullaniciKDYPlatformuLinkeTiklar() {
+    }
+
+    @And("kullanici KDY platformu sayfasinin acildigini dogrular")
+    public void kullaniciKDYPlatformuSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici KDD platformu linke tiklar")
+    public void kullaniciKDDPlatformuLinkeTiklar() {
+    }
+
+    @And("kullanici KDD platformu sayfasinin acildigini dogrular")
+    public void kullaniciKDDPlatformuSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici Kitapdergisi.com linke tiklar")
+    public void kullaniciKitapdergisiComLinkeTiklar() {
+    }
+
+    @And("kullanici Kitapdergisi.com sayfasinin acildigini dogrular")
+    public void kullaniciKitapdergisiComSayfasininAcildiginiDogrular() {
+    }
 }
