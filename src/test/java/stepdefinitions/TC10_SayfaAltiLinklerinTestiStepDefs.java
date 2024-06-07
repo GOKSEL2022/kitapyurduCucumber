@@ -236,9 +236,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici kitapyurdu eKitap linke tiklar")
     public void kullaniciKitapyurduEKitapLinkeTiklar() {
+        //clickByJS(allPages.homePage().kitapyurduEkitapLinkSayfaAltiHome);
     }
     @And("kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduEKitapSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("e-kitap");
     }
     @And("kullanici kutuphanem uygulamasi linke tiklar")
     public void kullaniciKutuphanemUygulamasiLinkeTiklar() {
