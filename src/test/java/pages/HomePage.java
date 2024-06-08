@@ -336,6 +336,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='cookiescript_accept']")
     public WebElement kabuleEtVeKapatAlertHome;
 
+    @FindBy(xpath = "//*[@href='sesli-kitap']")
+    public WebElement kitapyurduSesliKitaplarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "(//*[@href='e-kitap'])[2]")
+    public WebElement kitapyurduEkitapLinkSayfaAltiHome;
+
 
 
 
