@@ -228,7 +228,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici kitapyurdu sesli kitaplar linke tiklar")
     public void kullaniciKitapyurduSesliKitaplarLinkeTiklar() {
-        //clickByJS(allPages.homePage().kitapyurduSesliKitaplarLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kitapyurduSesliKitaplarLinkSayfaAltiHome);
     }
     @And("kullanici kitapyurdu sesli kitaplar sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduSesliKitaplarSayfasininAcildiginiDogrular() {
@@ -236,7 +236,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici kitapyurdu eKitap linke tiklar")
     public void kullaniciKitapyurduEKitapLinkeTiklar() {
-        //clickByJS(allPages.homePage().kitapyurduEkitapLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kitapyurduEkitapLinkSayfaAltiHome);
     }
     @And("kullanici kitapyurdu eKitap  sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduEKitapSayfasininAcildiginiDogrular() {
