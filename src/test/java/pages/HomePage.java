@@ -342,6 +342,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='e-kitap'])[2]")
     public WebElement kitapyurduEkitapLinkSayfaAltiHome;
 
+    @FindBy(xpath = "(//*[@href='kutuphanem'])[2]")
+    public WebElement kutuphanemUygulamasiLinkSayfaAltiHome;
+
 
 
 
