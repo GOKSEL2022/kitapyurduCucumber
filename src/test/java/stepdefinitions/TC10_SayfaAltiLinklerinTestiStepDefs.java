@@ -244,9 +244,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici kutuphanem uygulamasi linke tiklar")
     public void kullaniciKutuphanemUygulamasiLinkeTiklar() {
+        clickByJS(allPages.homePage().kutuphanemUygulamasiLinkSayfaAltiHome);
     }
     @And("kullanici kutuphanem uygulamasi sayfasinin acildigini dogrular")
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kutuphanem");
     }
 
     @And("kullanici kitapyurdu chrome eklentileri linke tiklar")
