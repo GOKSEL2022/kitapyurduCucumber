@@ -253,18 +253,22 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici kitapyurdu chrome eklentileri linke tiklar")
     public void kullaniciKitapyurduChromeEklentileriLinkeTiklar() {
+        //clickByJS(allPages.homePage().kitapyurduChromeEklentileriLinkSayfaAltiHome);
     }
 
     @And("kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduChromeEklentileriSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("eklentiler");
     }
 
     @And("kullanici onaylı yorumlar linke tiklar")
     public void kullaniciOnaylıYorumlarLinkeTiklar() {
+        //clickByJS(allPages.homePage().onayliYorumlarLinkSayfaAltiHome);
     }
 
     @And("kullanici onaylı yorumlar sayfasinin acildigini dogrular")
     public void kullaniciOnaylıYorumlarSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("onayli-yorum");
     }
 
     @And("kullanici KDY platformu linke tiklar")
