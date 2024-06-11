@@ -273,10 +273,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici KDY platformu linke tiklar")
     public void kullaniciKDYPlatformuLinkeTiklar() {
+        //clickByJS(allPages.homePage().KDYPlatformuLinkSayfaAltiHome);
     }
 
     @And("kullanici KDY platformu sayfasinin acildigini dogrular")
     public void kullaniciKDYPlatformuSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kdy");
     }
 
     @And("kullanici KDD platformu linke tiklar")
