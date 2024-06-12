@@ -253,7 +253,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici kitapyurdu chrome eklentileri linke tiklar")
     public void kullaniciKitapyurduChromeEklentileriLinkeTiklar() {
-        //clickByJS(allPages.homePage().kitapyurduChromeEklentileriLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kitapyurduChromeEklentileriLinkSayfaAltiHome);
     }
 
     @And("kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular")
@@ -261,19 +261,14 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
         assert Driver.getDriver().getCurrentUrl().contains("eklentiler");
     }
 
-    @And("kullanici onaylı yorumlar linke tiklar")
-    public void kullaniciOnaylıYorumlarLinkeTiklar() {
-        //clickByJS(allPages.homePage().onayliYorumlarLinkSayfaAltiHome);
-    }
-
-    @And("kullanici onaylı yorumlar sayfasinin acildigini dogrular")
-    public void kullaniciOnaylıYorumlarSayfasininAcildiginiDogrular() {
-        assert Driver.getDriver().getCurrentUrl().contains("onayli-yorum");
+    @And("kullanici onayli yorumlar linke tiklar")
+    public void kullaniciOnayliYorumlarLinkeTiklar() {
+        clickByJS(allPages.homePage().onayliYorumlarLinkSayfaAltiHome);
     }
 
     @And("kullanici KDY platformu linke tiklar")
     public void kullaniciKDYPlatformuLinkeTiklar() {
-        //clickByJS(allPages.homePage().KDYPlatformuLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kdyPlatformuLinkSayfaAltiHome);
     }
 
     @And("kullanici KDY platformu sayfasinin acildigini dogrular")
