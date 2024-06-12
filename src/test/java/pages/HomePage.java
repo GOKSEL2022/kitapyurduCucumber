@@ -345,6 +345,15 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='kutuphanem'])[2]")
     public WebElement kutuphanemUygulamasiLinkSayfaAltiHome;
 
+    @FindBy(xpath = "//*[@href='eklentiler']")
+    public WebElement kitapyurduChromeEklentileriLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='onayli-yorum']")
+    public WebElement onayliYorumlarLinkSayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='https://kdy.kitapyurdu.com/']")
+    public WebElement kdyPlatformuLinkSayfaAltiHome;
+
 
 
 

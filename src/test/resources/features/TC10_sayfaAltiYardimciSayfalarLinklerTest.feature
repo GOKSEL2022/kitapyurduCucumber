@@ -118,8 +118,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici kitapyurdu chrome eklentileri linke tiklar
          And kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular
          And kullanici anasayfanin en altina gelir
-         And kullanici onaylı yorumlar linke tiklar
-         And kullanici onaylı yorumlar sayfasinin acildigini dogrular
+         And kullanici onayli yorumlar linke tiklar
+         And kullanici onayli yorumlar sayfasinin acildigini dogrular
          And kullanici anasayfanin en altina gelir
          And kullanici KDY platformu linke tiklar
          And kullanici KDY platformu sayfasinin acildigini dogrular
