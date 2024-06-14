@@ -278,10 +278,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici KDD platformu linke tiklar")
     public void kullaniciKDDPlatformuLinkeTiklar() {
+        //clickByJS(allPages.homePage().KDDPlatformuLinkSayfaAltiHome);
     }
 
     @And("kullanici KDD platformu sayfasinin acildigini dogrular")
     public void kullaniciKDDPlatformuSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kdd");
     }
 
     @And("kullanici Kitapdergisi.com linke tiklar")
