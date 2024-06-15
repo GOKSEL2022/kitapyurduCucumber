@@ -339,11 +339,13 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='sesli-kitap']")
     public WebElement kitapyurduSesliKitaplarLinkSayfaAltiHome;
 
-    @FindBy(xpath = "(//*[@href='e-kitap'])[2]")
+    @FindBy(xpath = "(//*[.='Kitapyurdu E-Kitap'])[2]")
     public WebElement kitapyurduEkitapLinkSayfaAltiHome;
+    //(//*[@href='e-kitap'])[2]
 
-    @FindBy(xpath = "(//*[@href='kutuphanem'])[2]")
+    @FindBy(xpath = "(//*[.='Kütüphanem Uygulaması'])[2]")
     public WebElement kutuphanemUygulamasiLinkSayfaAltiHome;
+    //(//*[@href='kutuphanem'])[2]
 
     @FindBy(xpath = "//*[@href='eklentiler']")
     public WebElement kitapyurduChromeEklentileriLinkSayfaAltiHome;
