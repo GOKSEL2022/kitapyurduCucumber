@@ -278,7 +278,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici KDD platformu linke tiklar")
     public void kullaniciKDDPlatformuLinkeTiklar() {
-        //clickByJS(allPages.homePage().KDDPlatformuLinkSayfaAltiHome);
+        clickByJS(allPages.homePage().kddPlatformuLinkSayfaAltiHome);
     }
 
     @And("kullanici KDD platformu sayfasinin acildigini dogrular")
