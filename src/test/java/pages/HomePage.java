@@ -354,6 +354,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://kdy.kitapyurdu.com/']")
     public WebElement kdyPlatformuLinkSayfaAltiHome;
 
+    @FindBy(linkText = "https://kdd.kitapyurdu.com/")
+    public WebElement kddPlatformuLinkSayfaAltiHome;
+
+    @FindBy(linkText = "https://kitapdergisi.com/")
+    public WebElement kitapDergisiComLinkSayfaAltiHome;
+
 
 
 
