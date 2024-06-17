@@ -3,8 +3,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pages.*;
 import utilities.Driver;
-import static utilities.ReusableMethods.clickByJS;
-import static utilities.ReusableMethods.waitFor;
+import utilities.ReusableMethods;
+
+import static utilities.ReusableMethods.*;
 
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
@@ -266,6 +267,10 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
         clickByJS(allPages.homePage().onayliYorumlarLinkSayfaAltiHome);
     }
 
+    @And("kullanici onayli yorumlar sayfasinin acildigini goruntuler")
+    public void kullaniciOnayliYorumlarSayfasininAcildiginiGoruntuler() {
+        assert Driver.getDriver().getCurrentUrl().contains("onayli-yorum");
+    }
     @And("kullanici KDY platformu linke tiklar")
     public void kullaniciKDYPlatformuLinkeTiklar() {
         clickByJS(allPages.homePage().kdyPlatformuLinkSayfaAltiHome);
@@ -273,24 +278,31 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici KDY platformu sayfasinin acildigini dogrular")
     public void kullaniciKDYPlatformuSayfasininAcildiginiDogrular() {
+        switchToWindow(1);
         assert Driver.getDriver().getCurrentUrl().contains("kdy");
     }
 
     @And("kullanici KDD platformu linke tiklar")
     public void kullaniciKDDPlatformuLinkeTiklar() {
+        switchToWindow(0);
         clickByJS(allPages.homePage().kddPlatformuLinkSayfaAltiHome);
     }
 
     @And("kullanici KDD platformu sayfasinin acildigini dogrular")
     public void kullaniciKDDPlatformuSayfasininAcildiginiDogrular() {
+        switchToWindow(1);
         assert Driver.getDriver().getCurrentUrl().contains("kdd");
     }
 
     @And("kullanici Kitapdergisi.com linke tiklar")
     public void kullaniciKitapdergisiComLinkeTiklar() {
+        switchToWindow(0);
+        clickByJS(allPages.homePage().kitapDergisiComLinkSayfaAltiHome);
     }
 
     @And("kullanici Kitapdergisi.com sayfasinin acildigini dogrular")
     public void kullaniciKitapdergisiComSayfasininAcildiginiDogrular() {
     }
+
+
 }
