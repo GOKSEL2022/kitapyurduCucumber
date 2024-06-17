@@ -129,8 +129,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici KDD platformu sayfasinin acildigini dogrular
          And kullanici anasayfanin en altina gelir
          And kullanici Kitapdergisi.com linke tiklar
-        #  And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
-        #  And kullanici sayfayi kapatir
+         And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
+         And kullanici sayfayi kapatir
 
 
 
