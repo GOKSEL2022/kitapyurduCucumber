@@ -132,6 +132,10 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
          And kullanici sayfayi kapatir
 
+         Scenario: kdy_platformu_link_testi
+           Given kullanici KDY platformu linke tiklar
+           When  kullanici KDY platformu sayfasinin acildigini dogrular
+
 
 
 
