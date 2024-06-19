@@ -1,12 +1,9 @@
 package stepdefinitions;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import pages.*;
+import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
 import static utilities.ReusableMethods.*;
-
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
     @And("kullanici yardim ve islem rehberi linke tiklar")
@@ -251,22 +248,18 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciKutuphanemUygulamasiSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("kutuphanem");
     }
-
     @And("kullanici kitapyurdu chrome eklentileri linke tiklar")
     public void kullaniciKitapyurduChromeEklentileriLinkeTiklar() {
         clickByJS(allPages.homePage().kitapyurduChromeEklentileriLinkSayfaAltiHome);
     }
-
     @And("kullanici kitapyurdu chrome eklentileri sayfasinin acildigini dogrular")
     public void kullaniciKitapyurduChromeEklentileriSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("eklentiler");
     }
-
     @And("kullanici onayli yorumlar linke tiklar")
     public void kullaniciOnayliYorumlarLinkeTiklar() {
         clickByJS(allPages.homePage().onayliYorumlarLinkSayfaAltiHome);
     }
-
     @And("kullanici onayli yorumlar sayfasinin acildigini goruntuler")
     public void kullaniciOnayliYorumlarSayfasininAcildiginiGoruntuler() {
         assert Driver.getDriver().getCurrentUrl().contains("onayli-yorum");
@@ -275,34 +268,27 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciKDYPlatformuLinkeTiklar() {
         clickByJS(allPages.homePage().kdyPlatformuLinkSayfaAltiHome);
     }
-
     @And("kullanici KDY platformu sayfasinin acildigini dogrular")
     public void kullaniciKDYPlatformuSayfasininAcildiginiDogrular() {
         switchToWindow(1);
         assert Driver.getDriver().getCurrentUrl().contains("kdy");
     }
-
     @And("kullanici KDD platformu linke tiklar")
     public void kullaniciKDDPlatformuLinkeTiklar() {
-        switchToWindow(0);
         clickByJS(allPages.homePage().kddPlatformuLinkSayfaAltiHome);
     }
-
     @And("kullanici KDD platformu sayfasinin acildigini dogrular")
     public void kullaniciKDDPlatformuSayfasininAcildiginiDogrular() {
         switchToWindow(1);
         assert Driver.getDriver().getCurrentUrl().contains("kdd");
     }
-
     @And("kullanici Kitapdergisi.com linke tiklar")
     public void kullaniciKitapdergisiComLinkeTiklar() {
-        switchToWindow(0);
         clickByJS(allPages.homePage().kitapDergisiComLinkSayfaAltiHome);
     }
-
     @And("kullanici Kitapdergisi.com sayfasinin acildigini dogrular")
     public void kullaniciKitapdergisiComSayfasininAcildiginiDogrular() {
+        switchToWindow(1);
+        assert Driver.getDriver().getCurrentUrl().contains("kitapdergisi");
     }
-
-
 }

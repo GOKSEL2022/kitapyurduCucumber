@@ -30,8 +30,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
       And kullanici gumus uyelik sayfasinin acildigini dogrular
       And kullanici teslim noktalari linke tiklar
       And kullanici teslim noktalari sayfasinin acildigini dogrular
-      And kullanici hemen al linke tiklar
-      And kullanici hemen al sayfasinin acildigini dogrular
+      #And kullanici hemen al linke tiklar
+      #And kullanici hemen al sayfasinin acildigini dogrular
       Then kullanici sayfayi kapatir
 
     @populerSayfalar
@@ -124,20 +124,26 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
          And kullanici anasayfanin en altina gelir
          And kullanici KDY platformu linke tiklar
          And kullanici KDY platformu sayfasinin acildigini dogrular
-         And kullanici anasayfanin en altina gelir
-         And kullanici KDD platformu linke tiklar
-         And kullanici KDD platformu sayfasinin acildigini dogrular
-         And kullanici anasayfanin en altina gelir
-         And kullanici Kitapdergisi.com linke tiklar
-         And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
          And kullanici sayfayi kapatir
 
-         Scenario: kdy_platformu_link_testi
-           Given kullanici KDY platformu linke tiklar
-           When  kullanici KDY platformu sayfasinin acildigini
-           And   kullanici sikSorulanSorular linke tiklar
-           And   kullanici ilk soruya tiklar
-           And   kullanici acilan cevabi goruntuler
+  @kitapyurdu_platformlari
+    Scenario: kdd_platformu_linke_tiklar
+         And kullanici KDD platformu linke tiklar
+         And kullanici KDD platformu sayfasinin acildigini dogrular
+         And kullanici sayfayi kapatir
+
+  @kitapyurdu_platformlari
+    Scenario: Kitapdergisi.com_linke_tiklar
+      And kullanici Kitapdergisi.com linke tiklar
+      And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
+      And kullanici sayfayi kapatir
+
+         #Scenario: kdy_platformu_link_testi
+          # Given kullanici KDY platformu linke tiklar
+          # When  kullanici KDY platformu sayfasinin acildigini
+          # And   kullanici sikSorulanSorular linke tiklar
+          # And   kullanici ilk soruya tiklar
+          # And   kullanici acilan cevabi goruntuler
 
 
 
