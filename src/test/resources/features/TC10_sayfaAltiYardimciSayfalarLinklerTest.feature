@@ -134,7 +134,10 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
 
          Scenario: kdy_platformu_link_testi
            Given kullanici KDY platformu linke tiklar
-           When  kullanici KDY platformu sayfasinin acildigini dogrular
+           When  kullanici KDY platformu sayfasinin acildigini
+           And   kullanici sikSorulanSorular linke tiklar
+           And   kullanici ilk soruya tiklar
+           And   kullanici acilan cevabi goruntuler
 
 
 
