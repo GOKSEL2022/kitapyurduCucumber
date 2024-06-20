@@ -291,4 +291,20 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
         switchToWindow(1);
         assert Driver.getDriver().getCurrentUrl().contains("kitapdergisi");
     }
+
+    @When("kullanici KDY platformu sayfasinin acildigini")
+    public void kullaniciKDYPlatformuSayfasininAcildigini() {
+    }
+
+    @And("kullanici sikSorulanSorular linke tiklar")
+    public void kullaniciSikSorulanSorularLinkeTiklar() {
+    }
+
+    @And("kullanici ilk soruya tiklar")
+    public void kullaniciIlkSoruyaTiklar() {
+    }
+
+    @And("kullanici acilan cevabi goruntuler")
+    public void kullaniciAcilanCevabiGoruntuler() {
+    }
 }
