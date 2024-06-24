@@ -297,7 +297,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
     @And("kullanici ilk soruya tiklar")
     public void kullaniciIlkSoruyaTiklar() {
-       // clickByJS(allPages.kdyPage().ilkSoruLinkKdy);
+        clickByJS(allPages.kdyPage().ilkSoruSikSorulanSorularLinkKDY);
     }
 
     @And("kullanici acilan cevabi goruntuler")
