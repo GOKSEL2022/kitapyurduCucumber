@@ -302,5 +302,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici acilan cevabi goruntuler")
     public void kullaniciAcilanCevabiGoruntuler() {
+        assert allPages.kdyPage().ilkCevapSikSorulanSorularLinkKDY.isDisplayed();
     }
 }
