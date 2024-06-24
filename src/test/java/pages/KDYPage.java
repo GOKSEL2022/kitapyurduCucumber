@@ -11,4 +11,7 @@ public class KDYPage {
     }
     @FindBy(xpath = "//*[@href='/FAQ']")
     public WebElement sikSorulanSorularLinkKDY;
+
+    @FindBy(xpath = "//*[@href='#Kitap_208']")
+    public WebElement ilkSoruSikSorulanSorularLinkKDY;
 }
