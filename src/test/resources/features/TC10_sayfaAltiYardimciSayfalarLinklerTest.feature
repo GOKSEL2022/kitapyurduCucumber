@@ -144,6 +144,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
      And   kullanici sikSorulanSorular linke tiklar
      And   kullanici ilk soruya tiklar
      And   kullanici acilan cevabi goruntuler
+     And   kullanici sikSorulanSorular arama alaninda punto aratir
+     And   kullanici gosterilen sonuclarin punto ile ilgili oldugunu dogrular
 
 
 
