@@ -304,4 +304,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciAcilanCevabiGoruntuler() {
         assert allPages.kdyPage().ilkCevapSikSorulanSorularLinkKDY.isDisplayed();
     }
+
+    @And("kullanici sikSorulanSorular arama alaninda punto aratir")
+    public void kullaniciSikSorulanSorularAramaAlanindaPuntoAratir() {
+    }
+
+    @And("kullanici gosterilen sonuclarin punto ile ilgili oldugunu dogrular")
+    public void kullaniciGosterilenSonuclarinPuntoIleIlgiliOldugunuDogrular() {
+    }
 }
