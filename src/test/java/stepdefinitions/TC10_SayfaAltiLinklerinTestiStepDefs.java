@@ -1,5 +1,6 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Keys;
 import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -307,6 +308,7 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici sikSorulanSorular arama alaninda punto aratir")
     public void kullaniciSikSorulanSorularAramaAlanindaPuntoAratir() {
+        allPages.kdyPage().aramaTextboxKdy.sendKeys("punto", Keys.ENTER);
     }
 
     @And("kullanici gosterilen sonuclarin punto ile ilgili oldugunu dogrular")

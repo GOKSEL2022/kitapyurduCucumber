@@ -17,4 +17,7 @@ public class KDYPage {
 
     @FindBy(xpath = "//*[@class='inner font-italic show']")
         public WebElement ilkCevapSikSorulanSorularLinkKDY;
+
+    @FindBy(xpath = "(//*[@id='text'])[1]")
+    public WebElement aramaTextboxKdy;
 }
