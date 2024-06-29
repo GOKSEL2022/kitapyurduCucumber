@@ -146,6 +146,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
      And   kullanici acilan cevabi goruntuler
      And   kullanici sikSorulanSorular arama alaninda punto aratir
      And   kullanici gosterilen sonuclarin punto ile ilgili oldugunu dogrular
+     And   kullanici arama alanini temizler ve arama alaninda telif aratir
+     And   kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular
 
 
 
