@@ -20,4 +20,7 @@ public class KDYPage {
 
     @FindBy(xpath = "(//*[@id='text'])[1]")
     public WebElement aramaTextboxKdy;
+
+    @FindBy(xpath = "//*[.=' Punto hangi büyüklükte olmalıdır?']")
+    public WebElement puntoIcerenTextAramaAlaniKdy;
 }
