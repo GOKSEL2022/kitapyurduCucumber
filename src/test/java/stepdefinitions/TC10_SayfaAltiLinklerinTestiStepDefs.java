@@ -313,5 +313,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici gosterilen sonuclarin punto ile ilgili oldugunu dogrular")
     public void kullaniciGosterilenSonuclarinPuntoIleIlgiliOldugunuDogrular() {
+        assert allPages.kdyPage().puntoIcerenTextAramaAlaniKdy.getText().contains("punto");
     }
 }
