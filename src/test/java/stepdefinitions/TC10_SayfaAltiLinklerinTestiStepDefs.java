@@ -315,4 +315,12 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciGosterilenSonuclarinPuntoIleIlgiliOldugunuDogrular() {
         assert allPages.kdyPage().puntoIcerenTextAramaAlaniKdy.getText().contains("punto");
     }
+
+    @And("kullanici arama alanini temizler ve arama alaninda telif aratir")
+    public void kullaniciAramaAlaniniTemizlerVeAramaAlanindaTelifAratir() {
+    }
+
+    @And("kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular")
+    public void kullaniciGosterilenSonuclarinTelifIleIlgiliOldugunuDogrular() {
+    }
 }
