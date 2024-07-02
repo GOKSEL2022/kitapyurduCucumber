@@ -318,6 +318,8 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici arama alanini temizler ve arama alaninda telif aratir")
     public void kullaniciAramaAlaniniTemizlerVeAramaAlanindaTelifAratir() {
+        allPages.kdyPage().aramaTextboxKdy.clear();
+        allPages.kdyPage().aramaTextboxKdy.sendKeys("telif", Keys.ENTER);
     }
 
     @And("kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular")
