@@ -324,5 +324,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular")
     public void kullaniciGosterilenSonuclarinTelifIleIlgiliOldugunuDogrular() {
+        assert Driver.getDriver().getPageSource().contains("telif");
     }
 }
