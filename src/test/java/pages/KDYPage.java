@@ -23,4 +23,7 @@ public class KDYPage {
 
     @FindBy(xpath = "//*[.=' Punto hangi büyüklükte olmalıdır?']")
     public WebElement puntoIcerenTextAramaAlaniKdy;
+
+    @FindBy(xpath = "//*[@id='dataTable']")
+    public WebElement telifAramaSonucuIcerenTextAramaAlaniKdy;
 }
