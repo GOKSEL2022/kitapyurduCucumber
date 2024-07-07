@@ -326,4 +326,32 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciGosterilenSonuclarinTelifIleIlgiliOldugunuDogrular() {
         assert allPages.kdyPage().telifAramaSonucuIcerenTextAramaAlaniKdy.getText().contains("telif");
     }
+
+    @And("kullanici sikSorulanSorular sayfasinda baski butonuna tiklar")
+    public void kullaniciSikSorulanSorularSayfasindaBaskiButonunaTiklar() {
+    }
+
+    @And("kullanici gosterilen sonuclarin baski ile ilgili oldugunu dogrular")
+    public void kullaniciGosterilenSonuclarinBaskiIleIlgiliOldugunuDogrular() {
+    }
+
+    @And("kullanici sikSorulanSorular sayfasinda kitap butonuna tiklar")
+    public void kullaniciSikSorulanSorularSayfasindaKitapButonunaTiklar() {
+    }
+
+    @And("kullanici gosterilen sonuclarin kitap ile ilgili oldugunu dogrular")
+    public void kullaniciGosterilenSonuclarinKitapIleIlgiliOldugunuDogrular() {
+    }
+
+    @And("kullanici sikSorulanSorular sayfasinda basvuru butonuna tiklar")
+    public void kullaniciSikSorulanSorularSayfasindaBasvuruButonunaTiklar() {
+    }
+
+    @And("kullanici gosterilen sonuclarin basvuru ile ilgili oldugunu dogrular")
+    public void kullaniciGosterilenSonuclarinBasvuruIleIlgiliOldugunuDogrular() {
+    }
+
+    @And("kullanici sikSorulanSorular sayfasinda telif butonuna tiklar")
+    public void kullaniciSikSorulanSorularSayfasindaTelifButonunaTiklar() {
+    }
 }
