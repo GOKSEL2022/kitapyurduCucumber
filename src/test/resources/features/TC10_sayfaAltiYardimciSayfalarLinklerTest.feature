@@ -161,6 +161,11 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
       Scenario: kdd_platformu_link_testi
         Given kullanici KDD platformu linke tiklar
         When  kullanici KDD platformu sayfasinin acildigini dogrular
+        And   kullanici kdd platform sayfasinda iletisim linke tiklar
+        And   kullanici KDD platformunda iletisim sayfasinin acildigini dogrular
+        And   kullanici e-posta adresiniz,konu ve mesajiniz alanlarini doldurur
+        And   kullanici kdd platform sayfasinda devam et butona tiklar
+
 
 
 
