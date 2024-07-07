@@ -158,6 +158,10 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
      And   kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular
      And   kullanici sayfayi kapatir
 
+      Scenario: kdd_platformu_link_testi
+        Given kullanici KDD platformu linke tiklar
+        When  kullanici KDD platformu sayfasinin acildigini dogrular
+
 
 
 
