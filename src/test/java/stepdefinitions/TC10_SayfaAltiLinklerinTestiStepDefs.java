@@ -354,4 +354,20 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici sikSorulanSorular sayfasinda telif butonuna tiklar")
     public void kullaniciSikSorulanSorularSayfasindaTelifButonunaTiklar() {
     }
+
+    @And("kullanici kdd platform sayfasinda iletisim linke tiklar")
+    public void kullaniciKddPlatformSayfasindaIletisimLinkeTiklar() {
+    }
+
+    @And("kullanici KDD platformunda iletisim sayfasinin acildigini dogrular")
+    public void kullaniciKDDPlatformundaIletisimSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici e-posta adresiniz,konu ve mesajiniz alanlarini doldurur")
+    public void kullaniciEPostaAdresinizKonuVeMesajinizAlanlariniDoldurur() {
+    }
+
+    @And("kullanici kdd platform sayfasinda devam et butona tiklar")
+    public void kullaniciKddPlatformSayfasindaDevamEtButonaTiklar() {
+    }
 }
