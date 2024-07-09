@@ -26,4 +26,16 @@ public class KDYPage {
 
     @FindBy(xpath = "//*[@id='dataTable']")
     public WebElement telifAramaSonucuIcerenTextAramaAlaniKdy;
+
+    @FindBy(xpath = "(//*[.='Baskı'])[1]")
+    public WebElement baskiButonSikcaSorulanSorularKdy;
+
+    @FindBy(xpath = "(//*[.='Kitap'])[1]")
+    public WebElement kitapButonSikcaSorulanSorularKdy;
+
+    @FindBy(xpath = "(//*[.='Başvuru'])[1]")
+    public WebElement basvuruButonSikcaSorulanSorularKdy;
+
+    @FindBy(xpath = "(//*[.='Telif'])[1]")
+    public WebElement telifButonSikcaSorulanSorularKdy;
 }
