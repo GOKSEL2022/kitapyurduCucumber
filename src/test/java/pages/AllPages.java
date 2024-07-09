@@ -24,6 +24,13 @@ public class AllPages {
     private OnayliYorumPage onayliYorumPage;
     private YeniCikanKitaplarPage yeniCikanKitaplarPage;
     private KDYPage kdyPage;
+    private KDDPage kddPage;
+    public KDDPage kddPage() {
+        if (kddPage == null) {
+            kddPage = new KDDPage();
+        }
+        return kddPage;
+    }
 
     public KDYPage kdyPage() {
         if (kdyPage == null) {
