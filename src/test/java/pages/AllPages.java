@@ -1,7 +1,5 @@
 package pages;
-
 public class AllPages {
-
     public AllPages() {
     }
     private HomePage homePage;
@@ -52,7 +50,6 @@ public class AllPages {
         }
         return onayliYorumPage;
     }
-
 
     public YayineviPage yayineviPage() {
         if (yayineviPage == null) {

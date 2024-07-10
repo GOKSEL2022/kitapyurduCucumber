@@ -329,10 +329,13 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici sikSorulanSorular sayfasinda baski butonuna tiklar")
     public void kullaniciSikSorulanSorularSayfasindaBaskiButonunaTiklar() {
+        clickByJS(allPages.kdyPage().baskiButonSikcaSorulanSorularKdy);
     }
 
     @And("kullanici gosterilen sonuclarin baski ile ilgili oldugunu dogrular")
     public void kullaniciGosterilenSonuclarinBaskiIleIlgiliOldugunuDogrular() {
+        scrollBottomJS();
+
     }
 
     @And("kullanici sikSorulanSorular sayfasinda kitap butonuna tiklar")
