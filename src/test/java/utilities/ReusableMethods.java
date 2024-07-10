@@ -239,6 +239,17 @@ public class ReusableMethods {
         List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(list.get(windowNumber));
     }
+
+    //BU METHOD ILE SAYFANIN EN ALTINA İNERİZ
+    public static void scrollBottomJS() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight");
+    }
+    //    BU METHOD ILE SAYFANIN EN USTUNE CIKABILIRIZ
+    public static void scrollTopJS() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight");
+    }
     }
 
 

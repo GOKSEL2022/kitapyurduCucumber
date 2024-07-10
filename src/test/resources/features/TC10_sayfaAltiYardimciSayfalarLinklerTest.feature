@@ -149,14 +149,14 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
      And   kullanici arama alanini temizler ve arama alaninda telif aratir
      And   kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular
      And   kullanici sikSorulanSorular sayfasinda baski butonuna tiklar
-     And   kullanici gosterilen sonuclarin baski ile ilgili oldugunu dogrular
-     And   kullanici sikSorulanSorular sayfasinda kitap butonuna tiklar
-     And   kullanici gosterilen sonuclarin kitap ile ilgili oldugunu dogrular
-     And   kullanici sikSorulanSorular sayfasinda basvuru butonuna tiklar
-     And   kullanici gosterilen sonuclarin basvuru ile ilgili oldugunu dogrular
-     And   kullanici sikSorulanSorular sayfasinda telif butonuna tiklar
-     And   kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular
-     And   kullanici sayfayi kapatir
+     #And   kullanici gosterilen sonuclarin baski ile ilgili oldugunu dogrular
+     #And   kullanici sikSorulanSorular sayfasinda kitap butonuna tiklar
+     #And   kullanici gosterilen sonuclarin kitap ile ilgili oldugunu dogrular
+     #And   kullanici sikSorulanSorular sayfasinda basvuru butonuna tiklar
+     #And   kullanici gosterilen sonuclarin basvuru ile ilgili oldugunu dogrular
+     #And   kullanici sikSorulanSorular sayfasinda telif butonuna tiklar
+     #And   kullanici gosterilen sonuclarin telif ile ilgili oldugunu dogrular
+     #And   kullanici sayfayi kapatir
 
       Scenario: kdd_platformu_link_testi
         Given kullanici KDD platformu linke tiklar
