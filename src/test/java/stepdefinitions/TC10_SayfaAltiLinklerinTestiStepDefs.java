@@ -1,12 +1,15 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.asserts.SoftAssert;
 import pages.*;
-import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
+    SoftAssert softAssert=new SoftAssert();
+    Actions actions=new Actions(Driver.getDriver());
     @And("kullanici yardim ve islem rehberi linke tiklar")
     public void kullaniciYardimVeIslemRehberiLinkeTiklar() {
         clickByJS(allPages.homePage().yardimVeIslemRehberiLinkSayfaAltiHome);
@@ -326,36 +329,13 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciGosterilenSonuclarinTelifIleIlgiliOldugunuDogrular() {
         assert allPages.kdyPage().telifAramaSonucuIcerenTextAramaAlaniKdy.getText().contains("telif");
     }
-
-    @And("kullanici sikSorulanSorular sayfasinda baski butonuna tiklar")
-    public void kullaniciSikSorulanSorularSayfasindaBaskiButonunaTiklar() {
-        clickByJS(allPages.kdyPage().baskiButonSikcaSorulanSorularKdy);
-    }
-
-    @And("kullanici gosterilen sonuclarin baski ile ilgili oldugunu dogrular")
-    public void kullaniciGosterilenSonuclarinBaskiIleIlgiliOldugunuDogrular() {
-        scrollBottomJS();
-
-    }
-
-    @And("kullanici sikSorulanSorular sayfasinda kitap butonuna tiklar")
-    public void kullaniciSikSorulanSorularSayfasindaKitapButonunaTiklar() {
-    }
-
-    @And("kullanici gosterilen sonuclarin kitap ile ilgili oldugunu dogrular")
-    public void kullaniciGosterilenSonuclarinKitapIleIlgiliOldugunuDogrular() {
-    }
-
-    @And("kullanici sikSorulanSorular sayfasinda basvuru butonuna tiklar")
-    public void kullaniciSikSorulanSorularSayfasindaBasvuruButonunaTiklar() {
-    }
-
-    @And("kullanici gosterilen sonuclarin basvuru ile ilgili oldugunu dogrular")
-    public void kullaniciGosterilenSonuclarinBasvuruIleIlgiliOldugunuDogrular() {
-    }
-
-    @And("kullanici sikSorulanSorular sayfasinda telif butonuna tiklar")
-    public void kullaniciSikSorulanSorularSayfasindaTelifButonunaTiklar() {
+    @And("kullanici sikSorulanSorular sayfasinda baski kitap basvuru ve telif butonlarin tiklanabilir oldugunu dogrular")
+    public void kullaniciSikSorulanSorularSayfasindaBaskiKitapBasvuruVeTelifButonlarinTiklanabilirOldugunuDogrular() {
+        softAssert.assertTrue(allPages.kdyPage().baskiButonSikcaSorulanSorularKdy.isEnabled());
+        softAssert.assertTrue(allPages.kdyPage().kitapButonSikcaSorulanSorularKdy.isEnabled());
+        softAssert.assertTrue(allPages.kdyPage().basvuruButonSikcaSorulanSorularKdy.isEnabled());
+        softAssert.assertTrue(allPages.kdyPage().telifButonSikcaSorulanSorularKdy.isEnabled());
+        softAssert.assertAll();
     }
 
     @And("kullanici kdd platform sayfasinda iletisim linke tiklar")
@@ -373,4 +353,6 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     @And("kullanici kdd platform sayfasinda devam et butona tiklar")
     public void kullaniciKddPlatformSayfasindaDevamEtButonaTiklar() {
     }
+
+
 }
