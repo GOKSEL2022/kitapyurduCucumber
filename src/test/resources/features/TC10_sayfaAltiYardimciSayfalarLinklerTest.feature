@@ -138,6 +138,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
       And kullanici Kitapdergisi.com sayfasinin acildigini dogrular
       And kullanici sayfayi kapatir
 
+    @kdy_platformu
     Scenario: kdy_platformu_link_testi
      Given kullanici KDY platformu linke tiklar
      And   kullanici KDY platformu sayfasinin acildigini dogrular
@@ -151,6 +152,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
      And   kullanici sikSorulanSorular sayfasinda baski kitap basvuru ve telif butonlarin tiklanabilir oldugunu dogrular
      And   kullanici sayfayi kapatir
 
+      @kdd_platformu
       Scenario: kdd_platformu_link_testi
         Given kullanici KDD platformu linke tiklar
         When  kullanici KDD platformu sayfasinin acildigini dogrular
@@ -158,6 +160,9 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And   kullanici KDD platformunda iletisim sayfasinin acildigini dogrular
         And   kullanici e-posta adresiniz,konu ve mesajiniz alanlarini doldurur
         And   kullanici kdd platform sayfasinda devam et butona tiklar
+        And   kullanici Mesajiniz iletildi Geri bildiminiz için tesekkurler uyarisini gorur
+        And   kullanici uyari sayfasinda devam et butona tiklar
+
 
 
 
