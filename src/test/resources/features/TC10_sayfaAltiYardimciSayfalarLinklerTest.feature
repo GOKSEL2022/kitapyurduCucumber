@@ -160,7 +160,7 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And   kullanici KDD platformunda iletisim sayfasinin acildigini dogrular
         And   kullanici e-posta adresiniz,konu ve mesajiniz alanlarini doldurur
         And   kullanici kdd platform sayfasinda devam et butona tiklar
-        And   kullanici Mesajiniz iletildi Geri bildiminiz için tesekkurler uyarisini gorur
+        And   kullanici Mesajiniz iletildi Geri bildiminiz icin tesekkurler uyarisini gorur
         And   kullanici uyari sayfasinda devam et butona tiklar
 
 
