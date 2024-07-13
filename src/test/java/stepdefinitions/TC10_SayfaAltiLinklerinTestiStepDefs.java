@@ -355,4 +355,11 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     }
 
 
+    @And("kullanici Mesajiniz iletildi Geri bildiminiz icin tesekkurler uyarisini gorur")
+    public void kullaniciMesajinizIletildiGeriBildiminizIcinTesekkurlerUyarisiniGorur() {
+    }
+
+    @And("kullanici uyari sayfasinda devam et butona tiklar")
+    public void kullaniciUyariSayfasindaDevamEtButonaTiklar() {
+    }
 }
