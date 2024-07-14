@@ -13,4 +13,7 @@ public class KDDPage {
     @FindBy(id = "who")
     public WebElement ePostaAdresinizTextboxKDD;
 
+    @FindBy(xpath = "//*[@href='/Contact/']")
+    public WebElement iletisimLinkKDD;
+
 }

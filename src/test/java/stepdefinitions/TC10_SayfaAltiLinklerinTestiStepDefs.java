@@ -1,9 +1,11 @@
 package stepdefinitions;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 import pages.*;
+import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
 public class TC10_SayfaAltiLinklerinTestiStepDefs {
@@ -340,14 +342,17 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici kdd platform sayfasinda iletisim linke tiklar")
     public void kullaniciKddPlatformSayfasindaIletisimLinkeTiklar() {
+        clickByJS(allPages.kddPage().iletisimLinkKDD);
     }
-
     @And("kullanici KDD platformunda iletisim sayfasinin acildigini dogrular")
     public void kullaniciKDDPlatformundaIletisimSayfasininAcildiginiDogrular() {
+        assert allPages.kddPage().ePostaAdresinizTextboxKDD.isDisplayed();
     }
 
     @And("kullanici e-posta adresiniz,konu ve mesajiniz alanlarini doldurur")
     public void kullaniciEPostaAdresinizKonuVeMesajinizAlanlariniDoldurur() {
+        allPages.kddPage().ePostaAdresinizTextboxKDD.sendKeys(ConfigReader.getProperty("gecerli_eposta"),
+                Keys.TAB,ConfigReader.getProperty("kdd_konu"),Keys.TAB,ConfigReader.getProperty("kdd_mesaj"));
     }
 
     @And("kullanici kdd platform sayfasinda devam et butona tiklar")
