@@ -357,14 +357,17 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
 
     @And("kullanici kdd platform sayfasinda devam et butona tiklar")
     public void kullaniciKddPlatformSayfasindaDevamEtButonaTiklar() {
+        clickByJS(allPages.kddPage().devamEtButonIletisimKDD);
     }
 
 
     @And("kullanici Mesajiniz iletildi Geri bildiminiz icin tesekkurler uyarisini gorur")
     public void kullaniciMesajinizIletildiGeriBildiminizIcinTesekkurlerUyarisiniGorur() {
+        assert allPages.kddPage().mesajinizIletildiGeriBildiriminizIcinTesekkurlerTextIletisimKDD.isDisplayed();
     }
 
     @And("kullanici uyari sayfasinda devam et butona tiklar")
     public void kullaniciUyariSayfasindaDevamEtButonaTiklar() {
+        clickByJS(allPages.kddPage().devamEtButonIletisimKDD);
     }
 }
