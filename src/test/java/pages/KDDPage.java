@@ -16,4 +16,10 @@ public class KDDPage {
     @FindBy(xpath = "//*[@href='/Contact/']")
     public WebElement iletisimLinkKDD;
 
+    @FindBy(xpath = "//*[@class='green']")
+    public WebElement devamEtButonIletisimKDD;
+
+    @FindBy(xpath = "//*[.=' Mesajınız iletildi. Geri bildiminiz için teşekkürler...']")
+    public WebElement mesajinizIletildiGeriBildiriminizIcinTesekkurlerTextIletisimKDD;
+
 }
