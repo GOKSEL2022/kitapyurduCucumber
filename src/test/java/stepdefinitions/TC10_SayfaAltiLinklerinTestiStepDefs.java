@@ -370,4 +370,9 @@ public class TC10_SayfaAltiLinklerinTestiStepDefs {
     public void kullaniciUyariSayfasindaDevamEtButonaTiklar() {
         clickByJS(allPages.kddPage().devamEtButonIletisimKDD);
     }
+
+    @And("kullanici iletisim link sayfasina dondugunu dogrular")
+    public void kullaniciIletisimLinkSayfasinaDondugunuDogrular() {
+        assert allPages.kddPage().iletisimLinkKDD.isDisplayed();
+    }
 }

@@ -162,6 +162,8 @@ Feature: sayfa_altinda_yer_alan_linklerin_testi
         And   kullanici kdd platform sayfasinda devam et butona tiklar
         And   kullanici Mesajiniz iletildi Geri bildiminiz icin tesekkurler uyarisini gorur
         And   kullanici uyari sayfasinda devam et butona tiklar
+        And   kullanici iletisim link sayfasina dondugunu dogrular
+        And   kullanici sayfayi kapatir
 
 
 
