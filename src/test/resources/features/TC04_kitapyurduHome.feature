@@ -170,7 +170,14 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        And   kullanici sectigi urunu alisveris listesinde goruntuler
        And   kullanici bir onceki sayfaya doner
        When  kullanici eklemis oldugu urunun tekrar listeye eklenebilecegini dogrular
-      # Then  kullanici sayfayi kapatir
+       Then  kullanici sayfayi kapatir
+
+       @e_kitap
+       Scenario: e_kitap_alan_testi
+         Given kullanici kitap yurdu e_kitap basligini goruntuler
+         When  kullanici kitap yurdu e_kitap linke tiklar
+         And   kullanici e_kitap sayfasina yonlendirildigini dogrular
+         And
 
 
 
