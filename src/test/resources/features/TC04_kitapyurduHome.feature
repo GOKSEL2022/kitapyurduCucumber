@@ -172,12 +172,15 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
        When  kullanici eklemis oldugu urunun tekrar listeye eklenebilecegini dogrular
        Then  kullanici sayfayi kapatir
 
-       @e_kitap
-       Scenario: e_kitap_alan_testi
-         Given kullanici kitap yurdu e_kitap basligini goruntuler
-         When  kullanici kitap yurdu e_kitap linke tiklar
-         And   kullanici e_kitap sayfasina yonlendirildigini dogrular
-         And
+       @dil_alani
+       Scenario: e_kitap_diller_test
+         Given kullanici dil dropdownindan English secer
+         When  kullanici anasayfada dilin ingilizce oldugunu dogrular
+         And   kullanici dil dropdownindan Deutsch secer
+         And   kullanici anasayfada dilin Almanca oldugunu dogrular
+         And   kullanici dil dropdownindan Turkce secer
+         And   kullanici anasayfada dilin Turkce oldugunu dogrular
+         Then  kullanici sayfayi kapatir
 
 
 
