@@ -187,4 +187,28 @@ public class TC04_KitapYurduHomeStepDefs {
     public void kullaniciDogrulamaKoduYanlisUyarisiniGorur() {
         assert allPages.iletisimPage().dogrulamKoduYanlisHataMesajiIletisim.isDisplayed();
     }
+
+    @Given("kullanici dil dropdownindan English secer")
+    public void kullaniciDilDropdownindanEnglishSecer() {
+    }
+
+    @When("kullanici anasayfada dilin ingilizce oldugunu dogrular")
+    public void kullaniciAnasayfadaDilinIngilizceOldugunuDogrular() {
+    }
+
+    @And("kullanici dil dropdownindan Deutsch secer")
+    public void kullaniciDilDropdownindanDeutschSecer() {
+    }
+
+    @And("kullanici anasayfada dilin Almanca oldugunu dogrular")
+    public void kullaniciAnasayfadaDilinAlmancaOldugunuDogrular() {
+    }
+
+    @And("kullanici dil dropdownindan Turkce secer")
+    public void kullaniciDilDropdownindanTurkceSecer() {
+    }
+
+    @And("kullanici anasayfada dilin Turkce oldugunu dogrular")
+    public void kullaniciAnasayfadaDilinTurkceOldugunuDogrular() {
+    }
 }
