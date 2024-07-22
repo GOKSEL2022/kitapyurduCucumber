@@ -187,13 +187,13 @@ public class TC04_KitapYurduHomeStepDefs {
     public void kullaniciDogrulamaKoduYanlisUyarisiniGorur() {
         assert allPages.iletisimPage().dogrulamKoduYanlisHataMesajiIletisim.isDisplayed();
     }
-
     @Given("kullanici dil dropdownindan English secer")
     public void kullaniciDilDropdownindanEnglishSecer() {
+        clickByJS(allPages.homePage().englishDilSecenegiHome);
     }
-
     @When("kullanici anasayfada dilin ingilizce oldugunu dogrular")
     public void kullaniciAnasayfadaDilinIngilizceOldugunuDogrular() {
+        assert allPages.homePage().tumKategorilerLinkHome.getText().contains("All Categories");
     }
 
     @And("kullanici dil dropdownindan Deutsch secer")
