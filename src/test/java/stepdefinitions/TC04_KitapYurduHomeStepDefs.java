@@ -189,6 +189,7 @@ public class TC04_KitapYurduHomeStepDefs {
     }
     @Given("kullanici dil dropdownindan English secer")
     public void kullaniciDilDropdownindanEnglishSecer() {
+        actions.moveToElement(allPages.homePage().turkceDilSecenegiHome).perform();
         clickByJS(allPages.homePage().englishDilSecenegiHome);
     }
     @When("kullanici anasayfada dilin ingilizce oldugunu dogrular")
@@ -206,9 +207,12 @@ public class TC04_KitapYurduHomeStepDefs {
 
     @And("kullanici dil dropdownindan Turkce secer")
     public void kullaniciDilDropdownindanTurkceSecer() {
+        actions.moveToElement(allPages.homePage().englishDilSecenegiHome).perform();
+        clickByJS(allPages.homePage().turkceDilSecenegiHome);
     }
 
     @And("kullanici anasayfada dilin Turkce oldugunu dogrular")
     public void kullaniciAnasayfadaDilinTurkceOldugunuDogrular() {
+        assert allPages.homePage().tumKategorilerLinkHome.getText().equals("Tüm Kategoriler");
     }
 }
