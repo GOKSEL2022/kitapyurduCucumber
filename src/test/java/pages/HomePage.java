@@ -156,6 +156,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[.='English'])[2]")
     public WebElement englishDilSecenegiHome;
 
+    @FindBy(xpath = "//*[.='Deutsch']")
+    public WebElement almancaDilSecenegiHome;
+
     @FindBy(xpath = "//*[.='TL']")
     public WebElement tlSecenegiHome;
 

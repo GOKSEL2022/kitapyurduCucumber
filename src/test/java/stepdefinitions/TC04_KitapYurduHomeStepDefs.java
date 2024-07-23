@@ -199,10 +199,13 @@ public class TC04_KitapYurduHomeStepDefs {
 
     @And("kullanici dil dropdownindan Deutsch secer")
     public void kullaniciDilDropdownindanDeutschSecer() {
+        actions.moveToElement(allPages.homePage().turkceDilSecenegiHome).perform();
+        clickByJS(allPages.homePage().almancaDilSecenegiHome);
     }
 
     @And("kullanici anasayfada dilin Almanca oldugunu dogrular")
     public void kullaniciAnasayfadaDilinAlmancaOldugunuDogrular() {
+        assert allPages.homePage().tumKategorilerLinkHome.getText().contains("Alle Kategorien");
     }
 
     @And("kullanici dil dropdownindan Turkce secer")
