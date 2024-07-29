@@ -8,4 +8,9 @@ Feature: listelerim_dropdown_testi
     And   kullanici sifre alanina kayitli sifresini girer
     And   kullanici beni hatirla checkboxi tiklar
     And   kullanici giris yap butonuna tiklar
+    And   kullanici listelerim dropdown uzerine gelir
+    And   kullanici acilan menuden favorilerimi secer
+    And   kullanici favorilerime ekli urunleri gorur
+    And   kullanici secilen urunleri favori listesinden siler
+
     
