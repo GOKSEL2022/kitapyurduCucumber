@@ -365,9 +365,6 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://kitapdergisi.com/']")
     public WebElement kitapDergisiComLinkSayfaAltiHome;
 
-    @FindBy(xpath = "//*[@class='menu top my-list']")
-    public WebElement listelerimDropdownHome;
-
 
 
 
