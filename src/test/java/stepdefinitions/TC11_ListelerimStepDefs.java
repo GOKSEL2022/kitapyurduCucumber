@@ -19,4 +19,12 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciAcilanMenudenFavorilerimiSecer() {
         clickByJS(allPages.homePage().favorilerimSecenegiListelerimLinkHome);
     }
+
+    @And("kullanici favorilerime ekli urunleri gorur")
+    public void kullaniciFavorilerimeEkliUrunleriGorur() {
+    }
+
+    @And("kullanici secilen urunleri favori listesinden siler")
+    public void kullaniciSecilenUrunleriFavoriListesindenSiler() {
+    }
 }
