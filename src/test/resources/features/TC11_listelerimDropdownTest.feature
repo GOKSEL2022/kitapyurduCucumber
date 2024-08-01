@@ -1,8 +1,12 @@
 Feature: listelerim_dropdown_testi
-  Scenario: Listelerim menu testi
+
+  Background:
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici listelerim dropdown uzerine gelir
+
+  @favorilerim
+  Scenario: favorileri_testi
     And   kullanici acilan menuden favorilerimi secer
     And   kullanici e-posta alanina kayitli e-posta girer
     And   kullanici sifre alanina kayitli sifresini girer
@@ -12,5 +16,6 @@ Feature: listelerim_dropdown_testi
     And   kullanici acilan menuden favorilerimi secer
     And   kullanici favorilerime ekli urunleri gorur
     And   kullanici secilen urunleri favori listesinden siler
+    And   kullanici sayfayi kapatir
 
     
