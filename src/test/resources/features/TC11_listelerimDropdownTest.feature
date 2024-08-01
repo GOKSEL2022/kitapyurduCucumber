@@ -1,5 +1,4 @@
 Feature: listelerim_dropdown_testi
-
   Background:
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular
@@ -17,5 +16,8 @@ Feature: listelerim_dropdown_testi
     And   kullanici favorilerime ekli urunleri gorur
     And   kullanici secilen urunleri favori listesinden siler
     And   kullanici sayfayi kapatir
+
+    Scenario: alisveris_listem_test
+      And kullanici acilan menuden alisveris listemi secer
 
     
