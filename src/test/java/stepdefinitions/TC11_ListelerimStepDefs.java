@@ -27,4 +27,8 @@ public class TC11_ListelerimStepDefs {
     @And("kullanici secilen urunleri favori listesinden siler")
     public void kullaniciSecilenUrunleriFavoriListesindenSiler() {
     }
+
+    @And("kullanici acilan menuden alisveris listemi secer")
+    public void kullaniciAcilanMenudenAlisverisListemiSecer() {
+    }
 }
