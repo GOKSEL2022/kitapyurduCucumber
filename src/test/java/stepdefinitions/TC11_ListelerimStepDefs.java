@@ -18,7 +18,7 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici listelerim dropdown uzerine gelir")
     public void kullaniciListelerimDropdownUzerineGelir() {
-        scrollTopJS();
+        scrollIntoViewJS(allPages.homePage().listelerimLinkHome);
         actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
     }
 
