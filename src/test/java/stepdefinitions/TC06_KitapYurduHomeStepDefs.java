@@ -187,7 +187,8 @@ public class TC06_KitapYurduHomeStepDefs {
     }
     @Given("kullanici kitapYurdu_com textine tiklar")
     public void kullaniciKitapYurdu_comTextineTiklar() {
-        clickByJS(allPages.homePage().kitapYurduComTextHome);
+        allPages.homePage().kitapYurduComTextHome.click();
+        //clickByJS(allPages.homePage().kitapYurduComTextHome);
     }
     @Given("kullanici kelepir ara textBoxina gelir")
     public void kullaniciKelepirAraTextBoxinaGelir() {

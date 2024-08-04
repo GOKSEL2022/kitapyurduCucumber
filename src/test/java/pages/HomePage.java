@@ -69,7 +69,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='bottom-item'])[2]")
     public WebElement iletisimLinkHome;
 
-    @FindBy(xpath = "(//*[@href='https://www.kitapyurdu.com/'])[3]")
+    @FindBy(xpath = "//*[@class='logo-text']")
     public WebElement kitapYurduComTextHome;
 
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[1]")
