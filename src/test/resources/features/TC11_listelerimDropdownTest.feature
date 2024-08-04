@@ -19,7 +19,7 @@ Feature: listelerim_dropdown_testi
     And   kullanici acilan menuden favorilerimi secer
     And   kullanici favorilerime ekli urunleri gorur
     And   kullanici secilen urunleri favori listesinden siler
-    #And   kullanici favorilere ekledigi urunun favori listesinden silindigini dogrular
+    And   kullanici favorilere ekledigi urunun favori listesinden silindigini dogrular
     #And   kullanici sayfayi kapatir
 
     #Scenario: alisveris_listem_test
