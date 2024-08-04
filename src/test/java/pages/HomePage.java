@@ -365,6 +365,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://kitapdergisi.com/']")
     public WebElement kitapDergisiComLinkSayfaAltiHome;
 
+    @FindBy(xpath = "//*[@onclick='addToFavorites(682156);']")
+    public WebElement naneyiYedikLokantasiFavorilerimeEkleButonHome;
+
 
 
 

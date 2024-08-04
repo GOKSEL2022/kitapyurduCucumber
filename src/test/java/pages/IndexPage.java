@@ -369,6 +369,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=product/best_sellers&sort=purchased&order=DESC&list_id=1460']")
     public WebElement ingilizceKitaplarArtikCepYakmiyorTextIndex;
 
+    @FindBy(xpath = "href=\"https://www.kitapyurdu.com/kitap/naneyi-yedik-lokantasi/682156.html\"")
+    public WebElement naneyiYedikLokantasiFavorilerimeEkliUrunIndex;
+
 
 
 
