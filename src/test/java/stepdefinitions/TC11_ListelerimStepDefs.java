@@ -37,11 +37,13 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici favorilere ekledigi urunun favori listesinden silindigini dogrular")
     public void kullaniciFavorilereEkledigiUrununFavoriListesindenSilindiginiDogrular() {
-    }
-    /*
-    @And("kullanici acilan menuden alisveris listemi secer")
-    public void kullaniciAcilanMenudenAlisverisListemiSecer() {
+        assert allPages.indexPage().favorilerimdenSilNaneyiYedikLokantasiIndex.isDisplayed();
     }
 
-     */
+    @And("kullanici acilan menuden alisveris listemi secer")
+    public void kullaniciAcilanMenudenAlisverisListemiSecer() {
+        actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
+        clickByJS(allPages.homePage().alisverisListemSecenegiListelerimDropdownHome);
+    }
+
 }

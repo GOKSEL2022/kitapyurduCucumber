@@ -368,6 +368,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@onclick='addToFavorites(682156);']")
     public WebElement naneyiYedikLokantasiFavorilerimeEkleButonHome;
 
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/wishlist']")
+    public WebElement alisverisListemSecenegiListelerimDropdownHome;
+
 
 
 
