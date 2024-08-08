@@ -46,4 +46,7 @@ public class TC11_ListelerimStepDefs {
         clickByJS(allPages.homePage().alisverisListemSecenegiListelerimDropdownHome);
     }
 
+    @And("kullanici alisveris listem sayfasinda ekli urunleri goruntuler")
+    public void kullaniciAlisverisListemSayfasindaEkliUrunleriGoruntuler() {
+    }
 }
