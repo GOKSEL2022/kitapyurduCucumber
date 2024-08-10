@@ -30,5 +30,8 @@ Feature: listelerim_dropdown_testi
       And   kullanici giris yap butonuna tiklar
       And   kullanici sayfaya kayitli hesap ile girdigini dogrular
       And   kullanici alisveris listem sayfasinda ekli urunleri goruntuler
+      And   kullanici alisveris listem sayfasindaki ekli urunleri siler
+      And   kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular
+      And   kullanici sayfayi kapatir
 
     
