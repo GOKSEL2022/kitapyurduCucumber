@@ -49,4 +49,12 @@ public class TC11_ListelerimStepDefs {
     @And("kullanici alisveris listem sayfasinda ekli urunleri goruntuler")
     public void kullaniciAlisverisListemSayfasindaEkliUrunleriGoruntuler() {
     }
+
+    @And("kullanici alisveris listem sayfasindaki ekli urunleri siler")
+    public void kullaniciAlisverisListemSayfasindakiEkliUrunleriSiler() {
+    }
+
+    @And("kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular")
+    public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
+    }
 }
