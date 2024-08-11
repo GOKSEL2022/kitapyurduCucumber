@@ -23,7 +23,7 @@ Feature: listelerim_dropdown_testi
     And   kullanici sayfayi kapatir
 
     Scenario: alisveris_listem_test
-      And kullanici acilan menuden alisveris listemi secer
+      And   kullanici acilan menuden alisveris listemi secer
       And   kullanici e-posta alanina kayitli e-posta girer
       And   kullanici sifre alanina kayitli sifresini girer
       And   kullanici beni hatirla checkboxi tiklar
@@ -33,5 +33,8 @@ Feature: listelerim_dropdown_testi
       And   kullanici alisveris listem sayfasindaki ekli urunleri siler
       And   kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular
       And   kullanici sayfayi kapatir
+
+      Scenario: alisveris_listem_test
+        And kullanici acilan menuden okuma listelerimi secer
 
     
