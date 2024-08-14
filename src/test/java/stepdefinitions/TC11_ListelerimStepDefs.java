@@ -46,6 +46,12 @@ public class TC11_ListelerimStepDefs {
         clickByJS(allPages.homePage().alisverisListemSecenegiListelerimDropdownHome);
     }
 
+    @And("kullanici acilan menuden okuma listelerimi secer")
+    public void kullaniciAcilanMenudenOkumaListelerimiSecer() {
+        actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
+        clickByJS(allPages.homePage().okumaListemSecenegiListelerimDropdownHome);
+    }
+
     @And("kullanici alisveris listem sayfasinda ekli urunleri goruntuler")
     public void kullaniciAlisverisListemSayfasindaEkliUrunleriGoruntuler() {
     }
@@ -58,7 +64,5 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
     }
 
-    @And("kullanici acilan menuden okuma listelerimi secer")
-    public void kullaniciAcilanMenudenOkumaListelerimiSecer() {
-    }
+
 }

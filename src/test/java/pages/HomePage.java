@@ -371,6 +371,10 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/wishlist']")
     public WebElement alisverisListemSecenegiListelerimDropdownHome;
 
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/readlist']")
+    public WebElement okumaListemSecenegiListelerimDropdownHome;
+
+
 
 
 
