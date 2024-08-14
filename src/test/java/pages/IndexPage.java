@@ -372,7 +372,7 @@ public class IndexPage {
     @FindBy(xpath = "href=\"https://www.kitapyurdu.com/kitap/naneyi-yedik-lokantasi/682156.html\"")
     public WebElement naneyiYedikLokantasiFavorilerimeEkliUrunIndex;
 
-    @FindBy(xpath = "//*[@data-title='Favorilerimden Sil']")
+    @FindBy(xpath = "//*[@class='fa fa-heart-o']")
     public WebElement favorilerimdenSilNaneyiYedikLokantasiIndex;
 
     @FindBy(xpath = "//*[.='Seçili etiketler için ürün bulunamadı!']")
