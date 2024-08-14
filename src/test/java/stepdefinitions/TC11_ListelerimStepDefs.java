@@ -13,7 +13,7 @@ public class TC11_ListelerimStepDefs {
 
     @And("kullanici naneyi yedik lokantasi adli eseri favorileme ekler")
     public void kullaniciNaneyiYedikLokantasiAdliEseriFavorilemeEkler() {
-        scrollIntoViewJS(allPages.homePage().naneyiYedikLokantasiFavorilerimeEkleButonHome);
+        scrollIntoViewJS(allPages.homePage().naneyiYedikLokantasiHome);
         clickWithTimeOut(allPages.homePage().naneyiYedikLokantasiFavorilerimeEkleButonHome,3);
     }
     @And("kullanici listelerim dropdown uzerine gelir")
@@ -24,6 +24,7 @@ public class TC11_ListelerimStepDefs {
 
     @And("kullanici acilan menuden favorilerimi secer")
     public void kullaniciAcilanMenudenFavorilerimiSecer() {
+        actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
         clickByJS(allPages.homePage().favorilerimSecenegiListelerimLinkHome);
     }
     @And("kullanici favorilerime ekli urunleri gorur")

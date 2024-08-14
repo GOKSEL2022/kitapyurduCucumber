@@ -69,7 +69,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='bottom-item'])[2]")
     public WebElement iletisimLinkHome;
 
-    @FindBy(xpath = "//*[@class='logo-text']")
+    @FindBy(xpath = "//*[@title='kitapla buluşmanın en kolay yolu!']")
     public WebElement kitapYurduComTextHome;
 
     @FindBy(xpath = "(//*[@class='mn-strong common-sprite'])[1]")
@@ -367,6 +367,9 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@onclick='addToFavorites(682156);']")
     public WebElement naneyiYedikLokantasiFavorilerimeEkleButonHome;
+
+    @FindBy(xpath = "//*[@id='product-682156']")
+    public WebElement naneyiYedikLokantasiHome;
 
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/wishlist']")
     public WebElement alisverisListemSecenegiListelerimDropdownHome;
