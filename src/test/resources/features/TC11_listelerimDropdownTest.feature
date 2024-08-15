@@ -36,5 +36,10 @@ Feature: listelerim_dropdown_testi
 
       Scenario: alisveris_listem_test
         And kullanici acilan menuden okuma listelerimi secer
+        And   kullanici e-posta alanina kayitli e-posta girer
+        And   kullanici sifre alanina kayitli sifresini girer
+        And   kullanici beni hatirla checkboxi tiklar
+        And   kullanici giris yap butonuna tiklar
+        And   kullanici sayfaya kayitli hesap ile girdigini dogrular
 
     
