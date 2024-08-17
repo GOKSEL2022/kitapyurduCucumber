@@ -365,7 +365,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://kitapdergisi.com/']")
     public WebElement kitapDergisiComLinkSayfaAltiHome;
 
-    @FindBy(xpath = "//*[@onclick='addToFavorites(682156);']")
+    @FindBy(xpath = "(//*[@class='fa fa-heart red'])[1]")
     public WebElement naneyiYedikLokantasiFavorilerimeEkleButonHome;
 
     @FindBy(xpath = "//*[@id='product-682156']")
@@ -376,6 +376,9 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=account/readlist']")
     public WebElement okumaListemSecenegiListelerimDropdownHome;
+
+    @FindBy(xpath = "(//*[@class='box-content product-grid-wr'])[3]")
+    public WebElement cokSatanlarNaneyiYedikLokantasiHome;
 
 
 
