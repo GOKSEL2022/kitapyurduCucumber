@@ -29,17 +29,11 @@ Feature: listelerim_dropdown_testi
       And   kullanici beni hatirla checkboxi tiklar
       And   kullanici giris yap butonuna tiklar
       And   kullanici sayfaya kayitli hesap ile girdigini dogrular
+      And   kullanici kabul et ve devam et butona tiklar
+      And   kullanici kitapYurdu_com textine tiklar
       And   kullanici alisveris listem sayfasinda ekli urunleri goruntuler
       And   kullanici alisveris listem sayfasindaki ekli urunleri siler
       And   kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular
       And   kullanici sayfayi kapatir
-
-      Scenario: alisveris_listem_test
-        And kullanici acilan menuden okuma listelerimi secer
-        And   kullanici e-posta alanina kayitli e-posta girer
-        And   kullanici sifre alanina kayitli sifresini girer
-        And   kullanici beni hatirla checkboxi tiklar
-        And   kullanici giris yap butonuna tiklar
-        And   kullanici sayfaya kayitli hesap ile girdigini dogrular
 
     
