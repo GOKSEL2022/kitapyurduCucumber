@@ -4,7 +4,7 @@ Feature: listelerim_dropdown_testi
     When  kullanici anasayfanin acildigini dogrular
 
   @favorilerim
-  Scenario: favorileri_testi
+  Scenario: favorilerim_testi
     And   kullanici acilan menuden favorilerimi secer
     And   kullanici e-posta alanina kayitli e-posta girer
     And   kullanici sifre alanina kayitli sifresini girer
@@ -35,5 +35,7 @@ Feature: listelerim_dropdown_testi
       And   kullanici alisveris listem sayfasindaki ekli urunleri siler
       And   kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular
       And   kullanici sayfayi kapatir
+
+      Scenario: okuma_listelerim_test
 
     
