@@ -37,5 +37,13 @@ Feature: listelerim_dropdown_testi
       And   kullanici sayfayi kapatir
 
       Scenario: okuma_listelerim_test
+        And   kullanici acilan menuden okuma listelerimi secer
+        And   kullanici e-posta alanina kayitli e-posta girer
+        And   kullanici sifre alanina kayitli sifresini girer
+        And   kullanici beni hatirla checkboxi tiklar
+        And   kullanici giris yap butonuna tiklar
+        And   kullanici alisveris listem sayfasinda ekli urunleri goruntuler
+        And   kullanici alisveris listem sayfasindaki ekli urunleri siler
+
 
     
