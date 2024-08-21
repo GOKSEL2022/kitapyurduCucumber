@@ -1,3 +1,4 @@
+@listelerim_dropdown  @smoke  @regression
 Feature: listelerim_dropdown_testi
   Background:
     Given kullanici kitapyurdu_url ye gider
@@ -36,14 +37,16 @@ Feature: listelerim_dropdown_testi
       And   kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular
       And   kullanici sayfayi kapatir
 
+      @okuma_listelerim
       Scenario: okuma_listelerim_test
         And   kullanici acilan menuden okuma listelerimi secer
         And   kullanici e-posta alanina kayitli e-posta girer
         And   kullanici sifre alanina kayitli sifresini girer
         And   kullanici beni hatirla checkboxi tiklar
         And   kullanici giris yap butonuna tiklar
-        And   kullanici alisveris listem sayfasinda ekli urunleri goruntuler
-        And   kullanici alisveris listem sayfasindaki ekli urunleri siler
+        And   kullanici okuma listelerim sayfasinda ekli urunleri goruntuler
+        And   kullanici okuma listelerim sayfasindaki ekli urunleri siler
+        And   kullanici okuma listelerim ekledigi urunun alisveris listesinden silindigini dogrular
 
 
     

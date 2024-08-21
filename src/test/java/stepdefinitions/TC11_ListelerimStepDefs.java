@@ -54,12 +54,13 @@ public class TC11_ListelerimStepDefs {
 
     @And("kullanici alisveris listem sayfasinda ekli urunleri goruntuler")
     public void kullaniciAlisverisListemSayfasindaEkliUrunleriGoruntuler() {
+        assert allPages.indexPage().kavgamOkumaListelerimSeciliUrunIndex.isDisplayed();
     }
 
     @And("kullanici alisveris listem sayfasindaki ekli urunleri siler")
     public void kullaniciAlisverisListemSayfasindakiEkliUrunleriSiler() {
+        clickByJS(allPages.indexPage().kaldirOkumaListelerimSeciliUrunIndex);
     }
-
     @And("kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular")
     public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
     }

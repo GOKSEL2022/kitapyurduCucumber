@@ -378,6 +378,15 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='Seçili etiketler için ürün bulunamadı!']")
     public WebElement seciliEtiketlerIcinUrunBulunamadiTextNaneyiYedikLokantasiIndex;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11486993/wi:50/wh:true']")
+    public WebElement kavgamOkumaListelerimSeciliUrunIndex;
+
+    @FindBy(xpath = "//i[@title='Kaldır']")
+    public WebElement kaldirOkumaListelerimSeciliUrunIndex;
+
+    @FindBy(xpath = "//*[.='Okuyacağım listenizde kitap bulunmamaktadır. ']")
+    public WebElement okumaListelerimdeKitapBulunmamaktadirTextIndex;
+
 
 
 
