@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt"
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  // spark report plugini
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "@target/failed_scenarios.txt",//.txt dosya path
