@@ -63,6 +63,8 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular")
     public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
+
+        assert allPages.indexPage().okumaListelerimdeKitapBulunmamaktadirTextIndex.isDisplayed();
     }
 
 
