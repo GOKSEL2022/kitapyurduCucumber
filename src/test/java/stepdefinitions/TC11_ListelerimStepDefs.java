@@ -66,4 +66,15 @@ public class TC11_ListelerimStepDefs {
     }
 
 
+    @And("kullanici okuma listelerim sayfasinda ekli urunleri goruntuler")
+    public void kullaniciOkumaListelerimSayfasindaEkliUrunleriGoruntuler() {
+    }
+
+    @And("kullanici okuma listelerim sayfasindaki ekli urunleri siler")
+    public void kullaniciOkumaListelerimSayfasindakiEkliUrunleriSiler() {
+    }
+
+    @And("kullanici okuma listelerim ekledigi urunun alisveris listesinden silindigini dogrular")
+    public void kullaniciOkumaListelerimEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
+    }
 }
