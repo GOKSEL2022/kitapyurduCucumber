@@ -47,6 +47,16 @@ Feature: listelerim_dropdown_testi
         And   kullanici okuma listelerim sayfasinda ekli urunleri goruntuler
         And   kullanici okuma listelerim sayfasindaki ekli urunleri siler
         And   kullanici okuma listelerim ekledigi urunun alisveris listesinden silindigini dogrular
+        And   kullanici kitapYurdu_com textine tiklar
+        And   kullanici kavgam kitabina tiklar
+        And   kullanici okuyacagim linke tiklar
+        And   kullanici Kavgam urunu Okuyacagim listenize eklendi alerti goruntuler
+        And   kullanici okuyorum linke tiklar
+        And   kullanici Kavgam urunu Okuyorum listenize eklendi alerti goruntuler
+        And   kullanici okudum linke tiklar
+        And   kullanici Kavgam urunu Okudum listenize eklendi alerti goruntuler
+        And   kullanici sayfayi kapatir
+
 
 
     
