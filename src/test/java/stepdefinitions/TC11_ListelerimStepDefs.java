@@ -79,4 +79,32 @@ public class TC11_ListelerimStepDefs {
     @And("kullanici okuma listelerim ekledigi urunun alisveris listesinden silindigini dogrular")
     public void kullaniciOkumaListelerimEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
     }
+
+    @And("kullanici kavgam kitabina tiklar")
+    public void kullaniciKavgamKitabinaTiklar() {
+    }
+
+    @And("kullanici okuyacagim linke tiklar")
+    public void kullaniciOkuyacagimLinkeTiklar() {
+    }
+
+    @And("kullanici Kavgam urunu Okuyacagim listenize eklendi alerti goruntuler")
+    public void kullaniciKavgamUrunuOkuyacagimListenizeEklendiAlertiGoruntuler() {
+    }
+
+    @And("kullanici okuyorum linke tiklar")
+    public void kullaniciOkuyorumLinkeTiklar() {
+    }
+
+    @And("kullanici Kavgam urunu Okuyorum listenize eklendi alerti goruntuler")
+    public void kullaniciKavgamUrunuOkuyorumListenizeEklendiAlertiGoruntuler() {
+    }
+
+    @And("kullanici okudum linke tiklar")
+    public void kullaniciOkudumLinkeTiklar() {
+    }
+
+    @And("kullanici Kavgam urunu Okudum listenize eklendi alerti goruntuler")
+    public void kullaniciKavgamUrunuOkudumListenizeEklendiAlertiGoruntuler() {
+    }
 }
