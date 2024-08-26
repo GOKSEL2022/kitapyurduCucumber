@@ -63,13 +63,12 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici alisveris listeme ekledigi urunun alisveris listesinden silindigini dogrular")
     public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
-
         assert allPages.indexPage().okumaListelerimdeKitapBulunmamaktadirTextIndex.isDisplayed();
     }
 
-
     @And("kullanici okuma listelerim sayfasinda ekli urunleri goruntuler")
     public void kullaniciOkumaListelerimSayfasindaEkliUrunleriGoruntuler() {
+
     }
 
     @And("kullanici okuma listelerim sayfasindaki ekli urunleri siler")
@@ -78,10 +77,12 @@ public class TC11_ListelerimStepDefs {
 
     @And("kullanici okuma listelerim ekledigi urunun alisveris listesinden silindigini dogrular")
     public void kullaniciOkumaListelerimEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
+        assert allPages.indexPage().okumaListelerimdeKitapBulunmamaktadirTextIndex.isDisplayed();
     }
 
     @And("kullanici kavgam kitabina tiklar")
     public void kullaniciKavgamKitabinaTiklar() {
+        clickByJS(allPages.homePage().denizGucuDevletleriHome);
     }
 
     @And("kullanici okuyacagim linke tiklar")

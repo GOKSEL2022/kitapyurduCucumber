@@ -380,6 +380,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='box-content product-grid-wr'])[3]")
     public WebElement cokSatanlarNaneyiYedikLokantasiHome;
 
+    @FindBy(xpath = "//*[@id='product-685019']")
+    public WebElement denizGucuDevletleriHome;
+
 
 
 
