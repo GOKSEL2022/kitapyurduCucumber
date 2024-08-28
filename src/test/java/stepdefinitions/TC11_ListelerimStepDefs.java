@@ -84,13 +84,13 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciKavgamKitabinaTiklar() {
         clickByJS(allPages.homePage().denizGucuDevletleriHome);
     }
-
     @And("kullanici okuyacagim linke tiklar")
     public void kullaniciOkuyacagimLinkeTiklar() {
+        clickByJS(allPages.kitapPage().okuyacagimLinkKitap);
     }
-
     @And("kullanici Kavgam urunu Okuyacagim listenize eklendi alerti goruntuler")
     public void kullaniciKavgamUrunuOkuyacagimListenizeEklendiAlertiGoruntuler() {
+        assert allPages.kitapPage().okuyacagimListenizeEklendiAlertKitap.isDisplayed();
     }
 
     @And("kullanici okuyorum linke tiklar")

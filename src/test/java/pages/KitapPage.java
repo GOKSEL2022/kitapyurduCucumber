@@ -83,6 +83,9 @@ public class KitapPage {
     @FindBy(xpath = "(//*[@class='readlist-text'])[3]")
     public WebElement okudumLinkKitap;
 
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/index.php?route=product/product&product_id=685019']")
+    public WebElement okuyacagimListenizeEklendiAlertKitap;
+
 
 
 
