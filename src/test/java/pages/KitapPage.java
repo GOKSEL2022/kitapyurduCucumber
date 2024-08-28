@@ -74,6 +74,16 @@ public class KitapPage {
     @FindBy(xpath = "//*[@class='warning']")
     public WebElement enAzBirSiparisiBulunanEpostasiDogrulanmisUyelerYorumYapabilirAlertKitap;
 
+    @FindBy(xpath = "(//*[@class='readlist-text'])[1]")
+    public WebElement okuyacagimLinkKitap;
+
+    @FindBy(xpath = "(//*[@class='readlist-text'])[2]")
+    public WebElement okuyorumLinkKitap;
+
+    @FindBy(xpath = "(//*[@class='readlist-text'])[3]")
+    public WebElement okudumLinkKitap;
+
+
 
 
 }
