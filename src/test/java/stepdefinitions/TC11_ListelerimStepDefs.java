@@ -99,13 +99,14 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici Kavgam urunu Okuyorum listenize eklendi alerti goruntuler")
     public void kullaniciKavgamUrunuOkuyorumListenizeEklendiAlertiGoruntuler() {
+        assert allPages.kitapPage().okuyorumListenizeEklendiAlertKitap.isDisplayed();
     }
     @And("kullanici okudum linke tiklar")
     public void kullaniciOkudumLinkeTiklar() {
         clickByJS(allPages.kitapPage().okudumLinkKitap);
     }
-
     @And("kullanici Kavgam urunu Okudum listenize eklendi alerti goruntuler")
     public void kullaniciKavgamUrunuOkudumListenizeEklendiAlertiGoruntuler() {
+        assert allPages.kitapPage().okudumListenizeEklendiAlertKitap.isDisplayed();
     }
 }
