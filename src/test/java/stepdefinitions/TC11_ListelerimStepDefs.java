@@ -1,8 +1,12 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilities.Driver;
+
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 import static utilities.ReusableMethods.*;
 public class TC11_ListelerimStepDefs {
     AllPages allPages=new AllPages();
@@ -39,24 +43,20 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciFavorilereEkledigiUrununFavoriListesindenSilindiginiDogrular() {
         assert allPages.indexPage().favorilerimdenSilNaneyiYedikLokantasiIndex.isDisplayed();
     }
-
     @And("kullanici acilan menuden alisveris listemi secer")
     public void kullaniciAcilanMenudenAlisverisListemiSecer() {
         actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
         clickByJS(allPages.homePage().alisverisListemSecenegiListelerimDropdownHome);
     }
-
     @And("kullanici acilan menuden okuma listelerimi secer")
     public void kullaniciAcilanMenudenOkumaListelerimiSecer() {
         actions.moveToElement(allPages.homePage().listelerimLinkHome).perform();
         clickByJS(allPages.homePage().okumaListemSecenegiListelerimDropdownHome);
     }
-
     @And("kullanici alisveris listem sayfasinda ekli urunleri goruntuler")
     public void kullaniciAlisverisListemSayfasindaEkliUrunleriGoruntuler() {
         assert allPages.indexPage().kavgamOkumaListelerimSeciliUrunIndex.isDisplayed();
     }
-
     @And("kullanici alisveris listem sayfasindaki ekli urunleri siler")
     public void kullaniciAlisverisListemSayfasindakiEkliUrunleriSiler() {
         clickByJS(allPages.indexPage().kaldirOkumaListelerimSeciliUrunIndex);
@@ -65,12 +65,9 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciAlisverisListemeEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
         assert allPages.indexPage().okumaListelerimdeKitapBulunmamaktadirTextIndex.isDisplayed();
     }
-
     @And("kullanici okuma listelerim sayfasinda ekli urunleri goruntuler")
     public void kullaniciOkumaListelerimSayfasindaEkliUrunleriGoruntuler() {
-
     }
-
     @And("kullanici okuma listelerim sayfasindaki ekli urunleri siler")
     public void kullaniciOkumaListelerimSayfasindakiEkliUrunleriSiler() {
     }
@@ -79,9 +76,15 @@ public class TC11_ListelerimStepDefs {
     public void kullaniciOkumaListelerimEkledigiUrununAlisverisListesindenSilindiginiDogrular() {
         assert allPages.indexPage().okumaListelerimdeKitapBulunmamaktadirTextIndex.isDisplayed();
     }
-
     @And("kullanici kavgam kitabina tiklar")
     public void kullaniciKavgamKitabinaTiklar() {
+        /*
+        WebElement anasayfadaEklenenKitap=Driver.getDriver().findElement(with(By.tagName("anasayfadaEklenenKitap"))
+                        .below(allPages.homePage().haftaninYayineviTextHome)
+                        .above(allPages.homePage().gelecekHaftaninYayineviTextHome));
+        clickByJS(allPages.homePage().anasayfadaEklenenKitap);
+         */
+        scrollIntoViewJS(allPages.homePage().haftaninYayineviTextHome);
         clickByJS(allPages.homePage().denizGucuDevletleriHome);
     }
     @And("kullanici okuyacagim linke tiklar")
@@ -108,5 +111,6 @@ public class TC11_ListelerimStepDefs {
     @And("kullanici Kavgam urunu Okudum listenize eklendi alerti goruntuler")
     public void kullaniciKavgamUrunuOkudumListenizeEklendiAlertiGoruntuler() {
         assert allPages.kitapPage().okudumListenizeEklendiAlertKitap.isDisplayed();
+
     }
 }
