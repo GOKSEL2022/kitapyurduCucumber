@@ -8,6 +8,8 @@ import utilities.Driver;
 import java.util.List;
 
 public class HomePage {
+    public WebElement anasayfadaEklenenKitap;
+
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -194,6 +196,9 @@ public class HomePage {
 
     @FindBy(xpath = "//*[.='Haftanın Yayınevi']")
     public WebElement haftaninYayineviTextHome;
+
+    @FindBy(xpath = "//*[.='Gelecek Haftanın Yayınevi']")
+    public WebElement gelecekHaftaninYayineviTextHome;
 
     @FindBy(xpath = "//*[text()='NEFES YAYINLARI']")
     public WebElement nefesYayinlariHaftaninYayineviTextHome;
