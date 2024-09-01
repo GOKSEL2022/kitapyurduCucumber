@@ -67,6 +67,7 @@ public class TC11_ListelerimStepDefs {
     }
     @And("kullanici okuma listelerim sayfasinda ekli urunleri goruntuler")
     public void kullaniciOkumaListelerimSayfasindaEkliUrunleriGoruntuler() {
+        assert allPages.indexPage().naneyiYedikLokantasiFavorilerimeEkliUrunIndex.isDisplayed();
     }
     @And("kullanici okuma listelerim sayfasindaki ekli urunleri siler")
     public void kullaniciOkumaListelerimSayfasindakiEkliUrunleriSiler() {
