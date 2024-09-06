@@ -250,7 +250,20 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollTo(0,-document.body.scrollHeight");
     }
+    public static void clickWithJS(WebElement element) {
+
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
+    //      Girmis oldugum text'i elemente yazdirir
+//    Bu method sendKeys() method'una bir alternatiftir.
+//    sendKeys() oncelikli tercihimizdri.
+    public void typeWithJS(WebElement element, String text) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].setAttribute('value','" + text + "');", element);
+    }
+
+}
 
 
 
