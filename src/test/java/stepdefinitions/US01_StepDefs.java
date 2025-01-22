@@ -7,7 +7,7 @@ import pages.AllPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
-public class US01__StepDefs {
+public class US01_StepDefs {
     AllPages allPages=new AllPages();
     Faker faker=new Faker();
     Actions actions=new Actions(Driver.getDriver());
