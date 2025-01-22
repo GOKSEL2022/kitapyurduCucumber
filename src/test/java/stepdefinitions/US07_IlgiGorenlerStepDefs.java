@@ -4,7 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
-public class TC08_IlgiGorenlerStepDefs {
+public class US07_IlgiGorenlerStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici ilgi gorenler basligina gelir")

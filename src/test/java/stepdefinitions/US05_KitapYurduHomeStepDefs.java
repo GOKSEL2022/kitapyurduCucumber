@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.AllPages;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
-public class TC06_KitapYurduHomeStepDefs {
+public class US05_KitapYurduHomeStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
     int kartNo = Faker.instance().number().numberBetween(1000, 9999);

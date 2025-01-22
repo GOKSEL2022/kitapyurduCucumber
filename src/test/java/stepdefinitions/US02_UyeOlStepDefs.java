@@ -3,7 +3,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import pages.AllPages;
 import static utilities.ReusableMethods.clickByJS;
-public class TC02_UyeOlStepDefs {
+public class US02_UyeOlStepDefs {
     AllPages allPages=new AllPages();    Faker faker = new Faker();
     @And("kullanici uye ol linkine tiklar")
     public void kullaniciUyeOlLinkineTiklar() {

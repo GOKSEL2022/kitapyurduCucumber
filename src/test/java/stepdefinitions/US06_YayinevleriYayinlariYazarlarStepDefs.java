@@ -5,7 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
-public class TC07_YayinevleriYayinlariYazarlarStepDefs {
+public class US06_YayinevleriYayinlariYazarlarStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
 
