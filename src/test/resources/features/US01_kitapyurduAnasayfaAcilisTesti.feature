@@ -1,20 +1,15 @@
 @TC01  @smoke @regression
 Feature: anasayfa_acilisi
-  @anasayfa
-  Scenario: anasayfa_acilisi
+  Background:
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular
-    Then  kullanici sayfayi kapatir
 
     Scenario:arama_kutusunda_kitap_aratir
-      Given kullanici kitapyurdu_url ye gider
       When  kullanici arama cubugunda safahat aratir
       Then  kullanici arama sonuclarinda safahat oldugunu dogrular
       Then  kullanici sayfayi kapatir
 
   Scenario: kitapyurdu_sayfasinda_uye_olmadan_alisveris_yapar
-    Given kullanici kitapyurdu_url ye gider
-    When  kullanici anasayfanin acildigini dogrular
     And   kullanici arama cubugunda safahat aratir
     And   kullanici arama sonuclarinda safahat oldugunu dogrular
     And   kullanici safahat kitabina tiklar

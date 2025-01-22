@@ -6,7 +6,7 @@ import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 import static utilities.ReusableMethods.scrollIntoViewJS;
 
-public class TC05_KitapYurduHome02StepDefs {
+public class US04_02_KitapYurduHome02StepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
 

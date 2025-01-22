@@ -10,7 +10,7 @@ import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 import static utilities.ReusableMethods.scrollIntoViewJS;
 
-public class TC04_KitapYurduHomeStepDefs {
+public class US04__01_KitapYurduHomeStepDefs {
     int sayi=Faker.instance().number().numberBetween(100,999);
     Actions actions=new Actions(Driver.getDriver());    AllPages allPages=new AllPages();
     @And("kullanici anasayfanin en altina gelir")

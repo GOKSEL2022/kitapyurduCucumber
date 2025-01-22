@@ -1,14 +1,11 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilities.Driver;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
 import static utilities.ReusableMethods.*;
-public class TC11_ListelerimStepDefs {
+public class US10_ListelerimStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
 

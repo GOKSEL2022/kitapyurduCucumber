@@ -1,5 +1,4 @@
 package stepdefinitions;
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,7 +7,7 @@ import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
-public class TC10_SayfaAltiLinklerinTestiStepDefs {
+public class US09_SayfaAltiLinklerinTestiStepDefs {
     AllPages allPages=new AllPages();
     SoftAssert softAssert=new SoftAssert();
     Actions actions=new Actions(Driver.getDriver());

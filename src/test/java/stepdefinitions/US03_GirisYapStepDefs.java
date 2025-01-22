@@ -6,7 +6,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 
-public class TC03_GirisYapStepDefs {
+public class US03_GirisYapStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici giris yap linkine tiklar")

@@ -7,7 +7,7 @@ import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
 import static utilities.ReusableMethods.scrollIntoViewJS;
-public class TC09_KategorilerStepDefs {
+public class US08_KategorilerStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());  SoftAssert softAssert=new SoftAssert();
     @Given("kullanici kategoriler basligina gelir")
