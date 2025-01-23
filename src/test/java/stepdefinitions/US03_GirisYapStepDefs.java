@@ -1,5 +1,6 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilities.ConfigReader;
@@ -60,5 +61,20 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici sifre alanina invalid bir {string} girer")
     public void kullaniciSifreAlaninaInvalidBirGirer(String string) {
+    }
+
+    @And("kullanici e-posta alanina bosluk birakarak kayitli e-posta girer")
+    public void kullaniciEPostaAlaninaBoslukBirakarakKayitliEPostaGirer() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(Keys.SPACE,Keys.SPACE,ConfigReader.getProperty("gecerli_eposta"));
+
+    }
+
+    @And("kullanici sifre alanina bosluk birakarak kayitli sifresini girer")
+    public void kullaniciSifreAlaninaBoslukBirakarakKayitliSifresiniGirer() {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(Keys.SPACE,Keys.SPACE,ConfigReader.getProperty("gecerli_sifre"));
+    }
+
+    @When("EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler")
+    public void epostaAdresiYaDaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertiGoruntuler() {
     }
 }
