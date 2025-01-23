@@ -1,16 +1,17 @@
-@smoke  @regression
+@smoke  @regression  @US03
 Feature: kayitli_kullanici_girisi
   Background:
     Given kullanici kitapyurdu_url ye gider
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici giris yap linkine tiklar
 
+  @US03_TC01
   Scenario:giris_yap_alani_bos_birakarak_deneme
     And   kullanici giris yap butonuna tiklar
     When  kullanici e-posta adresiniz ya da sifreniz yanlıs uyarisini gorur
     Then  kullanici sayfayi kapatir
 
-
+  @US03_TC02
   Scenario: kullanici_kayitli_bilgilerle_giris_yapar
     And   kullanici e-posta alanina kayitli e-posta girer
     And   kullanici sifre alanina kayitli sifresini girer
@@ -19,6 +20,7 @@ Feature: kayitli_kullanici_girisi
     When  kullanici sayfaya giris yaptıgını dogrular
     Then  kullanici sayfayi kapatir
 
+  @US03_TC03
   Scenario Outline:invalid_e-posta
     And   kullanici e-posta alanina invalid "<e-posta>" girer
     And   kullanici sifre alanina kayitli sifresini "<sifre>" girer
@@ -31,7 +33,8 @@ Feature: kayitli_kullanici_girisi
       |                        | 123456789a. |
       | yekparebirangmail.com  | 123456789a. |
 
-    #_BUG : Giris yap alaninda e-posta girerken büyük-kücük karakter veya ç-c,ş-s,ı-i,o-ö,g-ğ,u-ü gibi bir harf ayrımı gözetilmiyor.
+
+  @US03_TC04 #_BUG : Giris yap alaninda e-posta girerken büyük-kücük karakter veya ç-c,ş-s,ı-i,o-ö,g-ğ,u-ü gibi bir harf ayrımı gözetilmiyor.
   Scenario Outline: giris_yaparken_karakter_ve_kucuk_buyuk_harf_ayrimi yapilmamasi
   And   kullanici e-posta alanina kucuk-buyuk harf ve i harfini ı yaparak "<e-posta>" girer
   And   kullanici sifre alanina kayitli sifresini "<sifre>" girer
@@ -56,7 +59,7 @@ Feature: kayitli_kullanici_girisi
       | ğökşelçeliktestenğineer@ğmail.çom | 123456789a. |
       | GOkŞelÇelIktestenĞIneer@ĞmaIl.çöm | 123456789a. |
 
-
+  @US03_TC05
     Scenario Outline: invalid_sifre
       And   kullanici e-posta "<e-posta>" girer
       And   kullanici sifre alanina invalid bir "<sifre>" girer
@@ -70,6 +73,7 @@ Feature: kayitli_kullanici_girisi
         | yekparebiran@gmail.com | 123456789A. |
         | yekparebiran@gmail.com | 123456789a, |
 
+  @US03_TC06
       Scenario: checkbox_tiklanmadan_giris
         And   kullanici e-posta "yekparebiran@gmail.com" girer
         And   kullanici sifre alanina kayitli sifresini "123456789a." girer
@@ -77,6 +81,7 @@ Feature: kayitli_kullanici_girisi
         Then  kullanici sayfaya giris yaptıgını dogrular
         Then  kullanici sayfayi kapatir
 
+  @US03_TC07
   Scenario: eposta ve sifre alanlari oncesi bosluk birakma testi
     And   kullanici e-posta alanina bosluk birakarak kayitli e-posta girer
     And   kullanici sifre alanina bosluk birakarak kayitli sifresini girer

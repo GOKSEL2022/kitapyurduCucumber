@@ -56,8 +56,7 @@ Feature: yayinevleri_yayinlari_ve_yazarlari_inceler
         When  kullanici en az bir siparisi bulunan epostasi dogrulanmis uyeler yorum yapabilir alertini goruntuler
         Then  kullanici sayfayi kapatir
 
-        Scenario:
-          Given
+
 
 
 
