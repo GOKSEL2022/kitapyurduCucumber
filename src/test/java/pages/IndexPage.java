@@ -387,6 +387,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[.='Okuyacağım listenizde kitap bulunmamaktadır. ']")
     public WebElement okumaListelerimdeKitapBulunmamaktadirTextIndex;
 
+    @FindBy(xpath = "(//div[normalize-space()='E-Posta Adresi ya da şifreniz yanlış. Şifrenizi girerken büyük küçük harf ayrımına dikkat ediniz.'])[2]")
+    public WebElement ePostaAdresiYadaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertIndex;
+
+
+
+
 
 
 
