@@ -88,6 +88,10 @@ Feature: kayitli_kullanici_girisi
     And   kullanici beni hatirla checkboxi tiklar
     And   kullanici giris yap butonuna tiklar
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
+    And   kullanici e-posta alanini temzileyip kayitli e-postadan sonra bosluk birakarak giris yapar
+    And   kullanici sifre alanini temzileyip kayitli sifreden sonra bosluk birakarak giris yapar
+    And   kullanici giris yap butonuna tiklar
+    When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
     Then  kullanici sayfayi kapatir
 
 

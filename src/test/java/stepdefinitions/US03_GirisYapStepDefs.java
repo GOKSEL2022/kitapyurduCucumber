@@ -76,5 +76,20 @@ public class US03_GirisYapStepDefs {
 
     @When("EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler")
     public void epostaAdresiYaDaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertiGoruntuler() {
+        assert allPages.indexPage().ePostaAdresiYadaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertIndex.isDisplayed();
+    }
+
+    @And("kullanici e-posta alanini temzileyip kayitli e-postadan sonra bosluk birakarak giris yapar")
+    public void kullaniciEPostaAlaniniTemzileyipKayitliEPostadanSonraBoslukBirakarakGirisYapar() throws InterruptedException {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.clear();
+        Thread.sleep(3000);
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    }
+
+    @And("kullanici sifre alanini temzileyip kayitli sifreden sonra bosluk birakarak giris yapar")
+    public void kullaniciSifreAlaniniTemzileyipKayitliSifredenSonraBoslukBirakarakGirisYapar() throws InterruptedException {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.clear();
+        Thread.sleep(3000);
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
     }
 }
