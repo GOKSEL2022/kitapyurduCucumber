@@ -82,14 +82,23 @@ Feature: kayitli_kullanici_girisi
         Then  kullanici sayfayi kapatir
 
   @US03_TC07
-  Scenario: eposta ve sifre alanlari oncesi bosluk birakma testi
+  Scenario: eposta ve sifre alanlari oncesi ve sonrasi icin bosluk ve sayilarla alan testi
     And   kullanici e-posta alanina bosluk birakarak kayitli e-posta girer
     And   kullanici sifre alanina bosluk birakarak kayitli sifresini girer
     And   kullanici beni hatirla checkboxi tiklar
     And   kullanici giris yap butonuna tiklar
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
-    And   kullanici e-posta alanini temzileyip kayitli e-postadan sonra bosluk birakarak giris yapar
-    And   kullanici sifre alanini temzileyip kayitli sifreden sonra bosluk birakarak giris yapar
+    And   kullanici e-posta alanini temizler
+    And   kullanici kayitli e-postadan sonra bosluk birakarak giris yapar
+    And   kullanici sifre alanini temizler
+    And   kullanici kayitli sifreden sonra bosluk birakarak giris yapar
+    And   kullanici giris yap butonuna tiklar
+    When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
+    And   kullanici e-posta alanini temizler
+    And   kullanici e-posta alanina sayilar ile birlikte kayitli e-posta girer
+    And   kullanici sifre alanini temizler
+    And   kullanici sifre alanina sayilar ile birlikte  kayitli sifresini girer
+    And   kullanici beni hatirla checkboxi tiklar
     And   kullanici giris yap butonuna tiklar
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
     Then  kullanici sayfayi kapatir
