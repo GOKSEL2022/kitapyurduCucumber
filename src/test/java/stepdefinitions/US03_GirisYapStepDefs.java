@@ -79,17 +79,33 @@ public class US03_GirisYapStepDefs {
         assert allPages.indexPage().ePostaAdresiYadaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertIndex.isDisplayed();
     }
 
-    @And("kullanici e-posta alanini temzileyip kayitli e-postadan sonra bosluk birakarak giris yapar")
-    public void kullaniciEPostaAlaniniTemzileyipKayitliEPostadanSonraBoslukBirakarakGirisYapar() throws InterruptedException {
-        allPages.indexPage().textBoxSifreHosgeldinizIndex.clear();
-        Thread.sleep(3000);
-        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    @And("kullanici e-posta alanini temizler")
+    public void kullaniciEPostaAlaniniTemizler() throws InterruptedException {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.clear();
+        Thread.sleep(2000);
+
     }
 
-    @And("kullanici sifre alanini temzileyip kayitli sifreden sonra bosluk birakarak giris yapar")
-    public void kullaniciSifreAlaniniTemzileyipKayitliSifredenSonraBoslukBirakarakGirisYapar() throws InterruptedException {
+    @And("kullanici kayitli e-postadan sonra bosluk birakarak giris yapar")
+    public void kullaniciKayitliEPostadanSonraBoslukBirakarakGirisYapar() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    }
+    @And("kullanici sifre alanini temizler")
+    public void kullaniciSifreAlaniniTemizler() throws InterruptedException {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.clear();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+    }
+
+    @And("kullanici kayitli sifreden sonra bosluk birakarak giris yapar")
+    public void kullaniciKayitliSifredenSonraBoslukBirakarakGirisYapar() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    }
+
+    @And("kullanici e-posta alanina sayilar ile birlikte kayitli e-posta girer")
+    public void kullaniciEPostaAlaninaSayilarIleBirlikteKayitliEPostaGirer() {
+    }
+
+    @And("kullanici sifre alanina sayilar ile birlikte  kayitli sifresini girer")
+    public void kullaniciSifreAlaninaSayilarIleBirlikteKayitliSifresiniGirer() {
     }
 }
