@@ -1,4 +1,5 @@
 package stepdefinitions;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +11,8 @@ import static utilities.ReusableMethods.clickByJS;
 public class US03_GirisYapStepDefs {
     AllPages allPages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
+    String symbol="++--//^^%*!..$#{[]}&";
+    int randomNumber = Faker.instance().number().numberBetween(1000, 9999);
     @And("kullanici giris yap linkine tiklar")
     public void kullaniciGirisYapLinkineTiklar() {
         allPages.homePage().girisYapLinkHome.click();
@@ -103,9 +106,11 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici e-posta alanina sayilar ile birlikte kayitli e-posta girer")
     public void kullaniciEPostaAlaninaSayilarIleBirlikteKayitliEPostaGirer() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(randomNumber+ConfigReader.getProperty("gecerli_eposta"));
     }
 
     @And("kullanici sifre alanina sayilar ile birlikte  kayitli sifresini girer")
     public void kullaniciSifreAlaninaSayilarIleBirlikteKayitliSifresiniGirer() {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(randomNumber+ConfigReader.getProperty("gecerli_sifre"));
     }
 }
