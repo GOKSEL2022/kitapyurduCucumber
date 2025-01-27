@@ -101,6 +101,24 @@ Feature: kayitli_kullanici_girisi
     And   kullanici beni hatirla checkboxi tiklar
     And   kullanici giris yap butonuna tiklar
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
+    And   kullanici e-posta alanini temizler
+    And   kullanici kayitli e-postadan sonra sayi ile giris yapar
+    And   kullanici sifre alanini temizler
+    And   kullanici kayitli sifreden sonra sayi ile giris yapar
+    And   kullanici giris yap butonuna tiklar
+    And   kullanici e-posta alanini temizler
+    And   kullanici e-posta alanina sembol ile birlikte kayitli e-posta girer
+    And   kullanici sifre alanini temizler
+    And   kullanici sifre alanina sembol ile birlikte  kayitli sifresini girer
+    And   kullanici beni hatirla checkboxi tiklar
+    And   kullanici giris yap butonuna tiklar
+    When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
+    And   kullanici e-posta alanini temizler
+    And   kullanici kayitli e-postadan sonra sembol ile giris yapar
+    And   kullanici sifre alanini temizler
+    And   kullanici kayitli sifreden sonra sembol ile giris yapar
+    And   kullanici giris yap butonuna tiklar
+    When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
     Then  kullanici sayfayi kapatir
 
 
