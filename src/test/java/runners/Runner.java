@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "./src/test/resources/features",//features folder path
         glue = {"stepdefinitions"},   //stepdefinitions path
-        tags = "@tc10",
+        tags = "@US03",
         dryRun = false
 )
 public class Runner {

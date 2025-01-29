@@ -116,10 +116,12 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici kayitli e-postadan sonra sayi ile giris yapar")
     public void kullaniciKayitliEPostadanSonraSayiIleGirisYapar() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta")+randomNumber);
     }
 
     @And("kullanici kayitli sifreden sonra sayi ile giris yapar")
     public void kullaniciKayitliSifredenSonraSayiIleGirisYapar() {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre")+randomNumber);
     }
 
     @And("kullanici e-posta alanina sembol ile birlikte kayitli e-posta girer")
