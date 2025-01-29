@@ -113,4 +113,28 @@ public class US03_GirisYapStepDefs {
     public void kullaniciSifreAlaninaSayilarIleBirlikteKayitliSifresiniGirer() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(randomNumber+ConfigReader.getProperty("gecerli_sifre"));
     }
+
+    @And("kullanici kayitli e-postadan sonra sayi ile giris yapar")
+    public void kullaniciKayitliEPostadanSonraSayiIleGirisYapar() {
+    }
+
+    @And("kullanici kayitli sifreden sonra sayi ile giris yapar")
+    public void kullaniciKayitliSifredenSonraSayiIleGirisYapar() {
+    }
+
+    @And("kullanici e-posta alanina sembol ile birlikte kayitli e-posta girer")
+    public void kullaniciEPostaAlaninaSembolIleBirlikteKayitliEPostaGirer() {
+    }
+
+    @And("kullanici sifre alanina sembol ile birlikte  kayitli sifresini girer")
+    public void kullaniciSifreAlaninaSembolIleBirlikteKayitliSifresiniGirer() {
+    }
+
+    @And("kullanici kayitli e-postadan sonra sembol ile giris yapar")
+    public void kullaniciKayitliEPostadanSonraSembolIleGirisYapar() {
+    }
+
+    @And("kullanici kayitli sifreden sonra sembol ile giris yapar")
+    public void kullaniciKayitliSifredenSonraSembolIleGirisYapar() {
+    }
 }
