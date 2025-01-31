@@ -390,6 +390,8 @@ public class IndexPage {
     @FindBy(xpath = "(//div[normalize-space()='E-Posta Adresi ya da şifreniz yanlış. Şifrenizi girerken büyük küçük harf ayrımına dikkat ediniz.'])[2]")
     public WebElement ePostaAdresiYadaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertIndex;
 
+    @FindBy(xpath = "//*[@id='cookiescript_accept']")
+    public WebElement cookiesKabulEtVeKapatGirisYapIndex;
 
 
 
