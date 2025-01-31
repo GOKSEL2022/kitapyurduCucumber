@@ -19,7 +19,7 @@ public class US03_GirisYapStepDefs {
         if (allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex.isDisplayed()){
             clickByJS(allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex);
             allPages.homePage().girisYapLinkHome.click();
-        }else if (allPages.homePage().girisYapLinkHome.isDisplayed())
+        }else if (allPages.homePage().girisYapLinkHome.isEnabled())
             allPages.homePage().girisYapLinkHome.click();
     }
     @And("kullanici e-posta alanina kayitli e-posta girer")
