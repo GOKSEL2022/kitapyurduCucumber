@@ -13,8 +13,10 @@ public class US03_GirisYapStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     String symbol="++--//^^%*!..$#{[]}&";
     int randomNumber = Faker.instance().number().numberBetween(1000, 9999);
+
     @And("kullanici giris yap linkine tiklar")
     public void kullaniciGirisYapLinkineTiklar() {
+        Driver.getDriver().manage().deleteAllCookies();
         allPages.homePage().girisYapLinkHome.click();
         if (allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex.isDisplayed()){
             clickByJS(allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex);
