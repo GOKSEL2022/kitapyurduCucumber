@@ -7,6 +7,7 @@ import pages.AllPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 import static utilities.ReusableMethods.clickByJS;
+import static utilities.ReusableMethods.clickWithTimeOut;
 
 public class US03_GirisYapStepDefs {
     AllPages allPages=new AllPages();
@@ -19,10 +20,10 @@ public class US03_GirisYapStepDefs {
         Driver.getDriver().manage().deleteAllCookies();
         allPages.homePage().girisYapLinkHome.click();
         if (allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex.isDisplayed()){
-            clickByJS(allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex);
-            allPages.homePage().girisYapLinkHome.click();
+            clickWithTimeOut(allPages.indexPage().cookiesKabulEtVeKapatGirisYapIndex,3);
+            clickWithTimeOut(allPages.homePage().girisYapLinkHome,3);
         }else if (allPages.homePage().girisYapLinkHome.isEnabled())
-            allPages.homePage().girisYapLinkHome.click();
+            clickWithTimeOut(allPages.homePage().girisYapLinkHome,3);
     }
     @And("kullanici e-posta alanina kayitli e-posta girer")
     public void kullaniciEPostaAlaninaKayitliEPostaGirer() {
