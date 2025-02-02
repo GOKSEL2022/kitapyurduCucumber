@@ -121,4 +121,13 @@ Feature: kayitli_kullanici_girisi
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
     Then  kullanici sayfayi kapatir
 
+  @US03_TC07
+  Scenario: Sifremi Unuttum alaninin yonlendirme dogrulamasi testi
+    And kullanici sifremi unuttum linke tiklar
+    And kullanici sifre yenileme sayfasina yonlendirildigini dogrular
+    And kullanici eposta alanini bos birakarak yenileme baglantisi gonder butona tiklar
+    And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
+    And kullanici sayfayi kapatir
+
+
 
