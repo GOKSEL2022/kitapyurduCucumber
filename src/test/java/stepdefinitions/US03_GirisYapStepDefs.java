@@ -134,17 +134,21 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici e-posta alanina sembol ile birlikte kayitli e-posta girer")
     public void kullaniciEPostaAlaninaSembolIleBirlikteKayitliEPostaGirer() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta")+symbol);
     }
 
     @And("kullanici sifre alanina sembol ile birlikte  kayitli sifresini girer")
     public void kullaniciSifreAlaninaSembolIleBirlikteKayitliSifresiniGirer() {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre")+symbol);
     }
 
     @And("kullanici kayitli e-postadan sonra sembol ile giris yapar")
     public void kullaniciKayitliEPostadanSonraSembolIleGirisYapar() {
+        allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(symbol+ConfigReader.getProperty("gecerli_eposta"));
     }
 
     @And("kullanici kayitli sifreden sonra sembol ile giris yapar")
     public void kullaniciKayitliSifredenSonraSembolIleGirisYapar() {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(symbol+ConfigReader.getProperty("gecerli_sifre"));
     }
 }
