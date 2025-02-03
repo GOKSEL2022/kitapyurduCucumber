@@ -121,7 +121,7 @@ Feature: kayitli_kullanici_girisi
     When  EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler
     Then  kullanici sayfayi kapatir
 
-  @US03_TC07
+  @US03_TC08
   Scenario: Sifremi Unuttum alaninin yonlendirme dogrulamasi testi
     And kullanici sifremi unuttum linke tiklar
     And kullanici sifre yenileme sayfasina yonlendirildigini dogrular
