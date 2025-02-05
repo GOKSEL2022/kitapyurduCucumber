@@ -393,6 +393,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='cookiescript_accept']")
     public WebElement cookiesKabulEtVeKapatGirisYapIndex;
 
+    @FindBy(xpath = "//a[.='Şifremi Unuttum']")
+    public WebElement sifremiUnuttumLinkGirisYapIndex;
+
 
 
 
