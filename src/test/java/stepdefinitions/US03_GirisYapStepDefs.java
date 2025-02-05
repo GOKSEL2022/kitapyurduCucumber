@@ -151,4 +151,13 @@ public class US03_GirisYapStepDefs {
     public void kullaniciKayitliSifredenSonraSembolIleGirisYapar() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(symbol+ConfigReader.getProperty("gecerli_sifre"));
     }
+
+    @And("kullanici sifremi unuttum linke tiklar")
+    public void kullaniciSifremiUnuttumLinkeTiklar() {
+        clickByJS(allPages.indexPage().sifremiUnuttumLinkGirisYapIndex);
+    }
+
+    @And("kullanici sifre yenileme sayfasina yonlendirildigini dogrular")
+    public void kullaniciSifreYenilemeSayfasinaYonlendirildiginiDogrular() {
+    }
 }
