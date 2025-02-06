@@ -159,5 +159,10 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici sifre yenileme sayfasina yonlendirildigini dogrular")
     public void kullaniciSifreYenilemeSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().sifremiUnuttumAlaniIndex.isDisplayed();
+    }
+
+    @And("kullanici eposta alanini bos birakarak yenileme baglantisi gonder butona tiklar")
+    public void kullaniciEpostaAlaniniBosBirakarakYenilemeBaglantisiGonderButonaTiklar() {
     }
 }

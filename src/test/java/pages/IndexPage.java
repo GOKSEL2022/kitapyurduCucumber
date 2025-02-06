@@ -396,6 +396,9 @@ public class IndexPage {
     @FindBy(xpath = "//a[.='Şifremi Unuttum']")
     public WebElement sifremiUnuttumLinkGirisYapIndex;
 
+    @FindBy(xpath = "//*[@id='email-forgotten']")
+    public WebElement sifremiUnuttumAlaniIndex;
+
 
 
 
