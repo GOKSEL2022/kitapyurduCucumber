@@ -399,6 +399,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='email-forgotten']")
     public WebElement sifremiUnuttumAlaniIndex;
 
+    @FindBy(xpath = "//*[text()='Yenileme Bağlantısı Gönder']")
+    public WebElement yenilemeBaglantisiGonderButonSifremiUnuttumAlaniIndex;
+
 
 
 

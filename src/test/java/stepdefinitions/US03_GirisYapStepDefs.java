@@ -164,5 +164,6 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici eposta alanini bos birakarak yenileme baglantisi gonder butona tiklar")
     public void kullaniciEpostaAlaniniBosBirakarakYenilemeBaglantisiGonderButonaTiklar() {
+        clickByJS(allPages.indexPage().yenilemeBaglantisiGonderButonSifremiUnuttumAlaniIndex);
     }
 }
