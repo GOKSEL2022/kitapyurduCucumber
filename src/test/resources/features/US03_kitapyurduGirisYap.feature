@@ -127,7 +127,11 @@ Feature: kayitli_kullanici_girisi
     And kullanici sifre yenileme sayfasina yonlendirildigini dogrular
     And kullanici eposta alanini bos birakarak yenileme baglantisi gonder butona tiklar
     And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
+    And kullanici eposta alanina invalid bir mail girer ve yenileme baglantisi gonder butona tiklar
+    And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
     And kullanici sayfayi kapatir
+
+
 
 
 
