@@ -402,6 +402,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[text()='Yenileme Bağlantısı Gönder']")
     public WebElement yenilemeBaglantisiGonderButonSifremiUnuttumAlaniIndex;
 
+    @FindBy(xpath = "//*[text()='E-Posta adresi bulunamadı. Lütfen tekrar deneyiniz!']")
+    public WebElement ePostaAdresiBulunamadiLutfenTekrarDeneyinizAlertSifremiUnuttumAlaniIndex;
+
 
 
 

@@ -166,4 +166,8 @@ public class US03_GirisYapStepDefs {
     public void kullaniciEpostaAlaniniBosBirakarakYenilemeBaglantisiGonderButonaTiklar() {
         clickByJS(allPages.indexPage().yenilemeBaglantisiGonderButonSifremiUnuttumAlaniIndex);
     }
+
+    @And("kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler")
+    public void kullaniciEpostaAdresiBulunamadiLutfenTekrarDeneyinizAlertiGoruntuler() {
+    }
 }
