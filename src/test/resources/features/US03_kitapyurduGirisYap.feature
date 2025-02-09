@@ -129,6 +129,8 @@ Feature: kayitli_kullanici_girisi
     And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
     And kullanici eposta alanina invalid bir mail girer ve yenileme baglantisi gonder butona tiklar
     And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
+    And kullanici eposta alanina valid bir mail girer ve yenileme baglantisi gonder butona tiklar
+    And kullanici sifre degistirme baglantisi mailinize basariyla gönderildi Lutfen epostanizi kontrol ediniz alerti goruntuler
     And kullanici sayfayi kapatir
 
 
