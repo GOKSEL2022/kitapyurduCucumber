@@ -405,6 +405,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[text()='E-Posta adresi bulunamadı. Lütfen tekrar deneyiniz!']")
     public WebElement ePostaAdresiBulunamadiLutfenTekrarDeneyinizAlertSifremiUnuttumAlaniIndex;
 
+    @FindBy(xpath = "//*[@id='forgotten-email']")
+    public WebElement epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex;
+
 
 
 

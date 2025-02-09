@@ -170,4 +170,10 @@ public class US03_GirisYapStepDefs {
     @And("kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler")
     public void kullaniciEpostaAdresiBulunamadiLutfenTekrarDeneyinizAlertiGoruntuler() {
     }
+
+    @And("kullanici eposta alanina invalid bir mail girer ve yenileme baglantisi gonder butona tiklar")
+    public void kullaniciEpostaAlaninaInvalidBirMailGirerVeYenilemeBaglantisiGonderButonaTiklar() {
+        allPages.indexPage().epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex.sendKeys(Faker.instance().internet().emailAddress(),Keys.TAB,Keys.ENTER);
+
+    }
 }
