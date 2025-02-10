@@ -72,31 +72,25 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici sifre alanina invalid bir {string} girer")
     public void kullaniciSifreAlaninaInvalidBirGirer(String string) {
+        allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(Faker.instance().internet().emailAddress());
     }
-
     @And("kullanici e-posta alanina bosluk birakarak kayitli e-posta girer")
     public void kullaniciEPostaAlaninaBoslukBirakarakKayitliEPostaGirer() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(Keys.SPACE,Keys.SPACE,ConfigReader.getProperty("gecerli_eposta"));
-
     }
-
     @And("kullanici sifre alanina bosluk birakarak kayitli sifresini girer")
     public void kullaniciSifreAlaninaBoslukBirakarakKayitliSifresiniGirer() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(Keys.SPACE,Keys.SPACE,ConfigReader.getProperty("gecerli_sifre"));
     }
-
     @When("EPosta Adresi ya da sifreniz yanlis Sifrenizi girerken buyuk kucuk harf ayrimina dikkat ediniz alerti goruntuler")
     public void epostaAdresiYaDaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertiGoruntuler() {
         assert allPages.indexPage().ePostaAdresiYadaSifrenizYanlisSifreniziGirerkenBuyukKucukHarfAyriminaDikkatEdinizAlertIndex.isDisplayed();
     }
-
     @And("kullanici e-posta alanini temizler")
     public void kullaniciEPostaAlaniniTemizler() throws InterruptedException {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.clear();
         Thread.sleep(2000);
-
     }
-
     @And("kullanici kayitli e-postadan sonra bosluk birakarak giris yapar")
     public void kullaniciKayitliEPostadanSonraBoslukBirakarakGirisYapar() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
@@ -106,71 +100,58 @@ public class US03_GirisYapStepDefs {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.clear();
         Thread.sleep(2000);
     }
-
     @And("kullanici kayitli sifreden sonra bosluk birakarak giris yapar")
     public void kullaniciKayitliSifredenSonraBoslukBirakarakGirisYapar() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre"),Keys.SPACE,Keys.SPACE,Keys.SPACE);
     }
-
     @And("kullanici e-posta alanina sayilar ile birlikte kayitli e-posta girer")
     public void kullaniciEPostaAlaninaSayilarIleBirlikteKayitliEPostaGirer() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(randomNumber+ConfigReader.getProperty("gecerli_eposta"));
     }
-
     @And("kullanici sifre alanina sayilar ile birlikte  kayitli sifresini girer")
     public void kullaniciSifreAlaninaSayilarIleBirlikteKayitliSifresiniGirer() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(randomNumber+ConfigReader.getProperty("gecerli_sifre"));
     }
-
     @And("kullanici kayitli e-postadan sonra sayi ile giris yapar")
     public void kullaniciKayitliEPostadanSonraSayiIleGirisYapar() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta")+randomNumber);
     }
-
     @And("kullanici kayitli sifreden sonra sayi ile giris yapar")
     public void kullaniciKayitliSifredenSonraSayiIleGirisYapar() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre")+randomNumber);
     }
-
     @And("kullanici e-posta alanina sembol ile birlikte kayitli e-posta girer")
     public void kullaniciEPostaAlaninaSembolIleBirlikteKayitliEPostaGirer() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta")+symbol);
     }
-
     @And("kullanici sifre alanina sembol ile birlikte  kayitli sifresini girer")
     public void kullaniciSifreAlaninaSembolIleBirlikteKayitliSifresiniGirer() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(ConfigReader.getProperty("gecerli_sifre")+symbol);
     }
-
     @And("kullanici kayitli e-postadan sonra sembol ile giris yapar")
     public void kullaniciKayitliEPostadanSonraSembolIleGirisYapar() {
         allPages.indexPage().textBoxEpostaHosgeldinizIndex.sendKeys(symbol+ConfigReader.getProperty("gecerli_eposta"));
     }
-
     @And("kullanici kayitli sifreden sonra sembol ile giris yapar")
     public void kullaniciKayitliSifredenSonraSembolIleGirisYapar() {
         allPages.indexPage().textBoxSifreHosgeldinizIndex.sendKeys(symbol+ConfigReader.getProperty("gecerli_sifre"));
     }
-
     @And("kullanici sifremi unuttum linke tiklar")
     public void kullaniciSifremiUnuttumLinkeTiklar() {
         clickByJS(allPages.indexPage().sifremiUnuttumLinkGirisYapIndex);
     }
-
     @And("kullanici sifre yenileme sayfasina yonlendirildigini dogrular")
     public void kullaniciSifreYenilemeSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().sifremiUnuttumAlaniIndex.isDisplayed();
     }
-
     @And("kullanici eposta alanini bos birakarak yenileme baglantisi gonder butona tiklar")
     public void kullaniciEpostaAlaniniBosBirakarakYenilemeBaglantisiGonderButonaTiklar() {
         clickByJS(allPages.indexPage().yenilemeBaglantisiGonderButonSifremiUnuttumAlaniIndex);
     }
-
     @And("kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler")
     public void kullaniciEpostaAdresiBulunamadiLutfenTekrarDeneyinizAlertiGoruntuler() {
+        assert allPages.indexPage().ePostaAdresiBulunamadiLutfenTekrarDeneyinizAlertSifremiUnuttumAlaniIndex.isDisplayed();
     }
-
     @And("kullanici eposta alanina invalid bir mail girer ve yenileme baglantisi gonder butona tiklar")
     public void kullaniciEpostaAlaninaInvalidBirMailGirerVeYenilemeBaglantisiGonderButonaTiklar() {
         allPages.indexPage().epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex.sendKeys(Faker.instance().internet().emailAddress(),Keys.TAB,Keys.ENTER);
