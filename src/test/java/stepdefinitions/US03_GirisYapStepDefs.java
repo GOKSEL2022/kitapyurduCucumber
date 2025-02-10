@@ -155,6 +155,12 @@ public class US03_GirisYapStepDefs {
     @And("kullanici eposta alanina invalid bir mail girer ve yenileme baglantisi gonder butona tiklar")
     public void kullaniciEpostaAlaninaInvalidBirMailGirerVeYenilemeBaglantisiGonderButonaTiklar() {
         allPages.indexPage().epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex.sendKeys(Faker.instance().internet().emailAddress(),Keys.TAB,Keys.ENTER);
-
+    }
+    @And("kullanici eposta alanina valid bir mail girer ve yenileme baglantisi gonder butona tiklar")
+    public void kullaniciEpostaAlaninaValidBirMailGirerVeYenilemeBaglantisiGonderButonaTiklar() {
+        allPages.indexPage().epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex.sendKeys(ConfigReader.getProperty("gecerli_eposta"),Keys.TAB,Keys.ENTER);
+    }
+    @And("kullanici sifre degistirme baglantisi mailinize basariyla gönderildi Lutfen epostanizi kontrol ediniz alerti goruntuler")
+    public void kullaniciSifreDegistirmeBaglantisiMailinizeBasariylaGönderildiLutfenEpostaniziKontrolEdinizAlertiGoruntuler() {
     }
 }
