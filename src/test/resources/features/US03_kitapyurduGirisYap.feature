@@ -131,6 +131,10 @@ Feature: kayitli_kullanici_girisi
     And kullanici Eposta adresi bulunamadi Lutfen tekrar deneyiniz alerti goruntuler
     And kullanici eposta alanina valid bir mail girer ve yenileme baglantisi gonder butona tiklar
     And kullanici sifre degistirme baglantisi mailinize basariyla gönderildi Lutfen epostanizi kontrol ediniz alerti goruntuler
+    And kullanici giris yap linkine tiklar
+    And kullanici sifremi unuttum linke tiklar
+    And kullanici sifremi unuttum alanina valid maili tekrar girer
+    And kullanici Az once bir sifre sifirlama talebinde bulundunuz Yeni bir talep olusturabilmeniz icin bir sure beklemeniz gerekmektedir Lutfen eposta kutunuzu kontrol edin alerti goruntuler
     And kullanici sayfayi kapatir
 
 

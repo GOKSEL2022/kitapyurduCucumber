@@ -408,6 +408,10 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='forgotten-email']")
     public WebElement epostaAdresinizTextboxSifreYenilemeBaglantisiGonderIndex;
 
+    @FindBy(xpath = "//*[@id='forgotten-email']")
+    public WebElement sifreDegistirmeBaglantisiAdresineBasariylaGonderildiLutfenEpostaniziKontrolEdinizAlertIndex;
+
+
 
 
 
