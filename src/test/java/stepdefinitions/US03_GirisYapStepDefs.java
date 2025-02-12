@@ -162,5 +162,6 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici sifre degistirme baglantisi mailinize basariyla gönderildi Lutfen epostanizi kontrol ediniz alerti goruntuler")
     public void kullaniciSifreDegistirmeBaglantisiMailinizeBasariylaGönderildiLutfenEpostaniziKontrolEdinizAlertiGoruntuler() {
+        allPages.indexPage().sifreDegistirmeBaglantisiAdresineBasariylaGonderildiLutfenEpostaniziKontrolEdinizAlertIndex.isDisplayed();
     }
 }

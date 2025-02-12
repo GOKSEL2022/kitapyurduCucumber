@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.Driver;
+
+import static org.testng.AssertJUnit.assertTrue;
 import static utilities.ReusableMethods.clickByJS;
 import static utilities.ReusableMethods.scrollIntoViewJS;
 
@@ -48,7 +50,7 @@ public class US04_KitapYurduHomeStepDefs {
     }
     @And("kullanici anasayfada birden fazla resim oldugunu dogrular")
     public void kullaniciAnasayfadaOnBesAdetKaydiriciOldugunuDogrular() {
-       Assert.assertTrue(allPages.homePage().anasayfaKaydiriciResimlerHome.size()>1);
+       assertTrue(allPages.homePage().anasayfaKaydiriciResimlerHome.size()>1);
     }
     @Given("kullanici anasayfadaki ilk urune tiklar")
     public void kullaniciAnasayfadakiIlkUruneTiklar() {
