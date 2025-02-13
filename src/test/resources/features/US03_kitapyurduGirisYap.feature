@@ -134,7 +134,7 @@ Feature: kayitli_kullanici_girisi
     And kullanici giris yap linkine tiklar
     And kullanici sifremi unuttum linke tiklar
     And kullanici sifremi unuttum alanina valid maili tekrar girer
-    And kullanici Az once bir sifre sifirlama talebinde bulundunuz Yeni bir talep olusturabilmeniz icin bir sure beklemeniz gerekmektedir Lutfen eposta kutunuzu kontrol edin alerti goruntuler
+    And kullanici az once bir sifre sifirlama talebinde bulundunuz Yeni bir talep olusturabilmeniz icin bir sure beklemeniz gerekmektedir Lutfen eposta kutunuzu kontrol edin alerti goruntuler
     And kullanici sayfayi kapatir
 
 
