@@ -164,4 +164,12 @@ public class US03_GirisYapStepDefs {
     public void kullaniciSifreDegistirmeBaglantisiMailinizeBasariylaGönderildiLutfenEpostaniziKontrolEdinizAlertiGoruntuler() {
         allPages.indexPage().sifreDegistirmeBaglantisiAdresineBasariylaGonderildiLutfenEpostaniziKontrolEdinizAlertIndex.isDisplayed();
     }
+
+    @And("kullanici sifremi unuttum alanina valid maili tekrar girer")
+    public void kullaniciSifremiUnuttumAlaninaValidMailiTekrarGirer() {
+    }
+
+    @And("kullanici az once bir sifre sifirlama talebinde bulundunuz Yeni bir talep olusturabilmeniz icin bir sure beklemeniz gerekmektedir Lutfen eposta kutunuzu kontrol edin alerti goruntuler")
+    public void kullaniciAzOnceBirSifreSifirlamaTalebindeBulundunuzYeniBirTalepOlusturabilmenizIcinBirSureBeklemenizGerekmektedirLutfenEpostaKutunuzuKontrolEdinAlertiGoruntuler() {
+    }
 }
