@@ -411,6 +411,8 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='forgotten-email']")
     public WebElement sifreDegistirmeBaglantisiAdresineBasariylaGonderildiLutfenEpostaniziKontrolEdinizAlertIndex;
 
+    @FindBy(xpath = "//*[@class='warning']")
+    public WebElement azOnceBirSifreSifirlamaTalebindeBulundunuzYeniBirTalepOlusturabilmenizIcinBirSureBeklemenizGerekmektedirAlertIndex;
 
 
 
