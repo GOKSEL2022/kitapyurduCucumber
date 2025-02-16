@@ -137,6 +137,12 @@ Feature: kayitli_kullanici_girisi
     And kullanici az once bir sifre sifirlama talebinde bulundunuz Yeni bir talep olusturabilmeniz icin bir sure beklemeniz gerekmektedir Lutfen eposta kutunuzu kontrol edin alerti goruntuler
     And kullanici sayfayi kapatir
 
+  @US03_TC09
+  Scenario:   Ucretli uye ol alaninin yonlendirme dogrulamasi testi
+    And kullanici ucretsiz uye ol butona tiklar
+    And kullanici hesap olustur sayfasina yonlendirildigini dogrular
+    And kullanici sayfayi kapatir
+
 
 
 
