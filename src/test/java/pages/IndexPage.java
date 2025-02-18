@@ -414,6 +414,8 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='warning']")
     public WebElement azOnceBirSifreSifirlamaTalebindeBulundunuzYeniBirTalepOlusturabilmenizIcinBirSureBeklemenizGerekmektedirAlertIndex;
 
+    @FindBy(xpath = "//*[normalize-space()='Ücretsiz Üye Ol']               ")
+    public WebElement ucretsizUyeOlButonIndex;
 
 
 
