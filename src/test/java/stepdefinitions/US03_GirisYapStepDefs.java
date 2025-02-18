@@ -172,12 +172,12 @@ public class US03_GirisYapStepDefs {
     public void kullaniciAzOnceBirSifreSifirlamaTalebindeBulundunuzYeniBirTalepOlusturabilmenizIcinBirSureBeklemenizGerekmektedirLutfenEpostaKutunuzuKontrolEdinAlertiGoruntuler() {
         assert allPages.indexPage().azOnceBirSifreSifirlamaTalebindeBulundunuzYeniBirTalepOlusturabilmenizIcinBirSureBeklemenizGerekmektedirAlertIndex.isDisplayed();
     }
-
     @And("kullanici ucretsiz uye ol butona tiklar")
     public void kullaniciUcretsizUyeOlButonaTiklar() {
+        clickByJS(allPages.indexPage().ucretsizUyeOlButonIndex);
     }
-
     @And("kullanici hesap olustur sayfasina yonlendirildigini dogrular")
     public void kullaniciHesapOlusturSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("account/register");
     }
 }
