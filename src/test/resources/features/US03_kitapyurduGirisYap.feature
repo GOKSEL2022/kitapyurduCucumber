@@ -143,6 +143,28 @@ Feature: kayitli_kullanici_girisi
     And kullanici hesap olustur sayfasina yonlendirildigini dogrular
     And kullanici sayfayi kapatir
 
+  @US03_TC10
+  Scenario:  sosyal medya ikonlarinin yonlendirme dogrulamasi testi
+    And kullanici en alta in butona tiklar
+    And kullanici sayfanin en alta indigini dogrular
+    And kullanici sosyal medya ikonlarinin goruntulendigini dogrular
+    And kullanici instagram ikona tiklar
+    And kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici x ikona tiklar
+    And kullanici kitap yurdu x sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici facebook ikona tiklar
+    And kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici youtube ikona tiklar
+    And kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici whatsapp ikona tiklar
+    And kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular
+    And kullanici sayfayi kapatir
+
+
 
 
 
