@@ -186,12 +186,15 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici sayfanin en alta indigini dogrular")
     public void kullaniciSayfaninEnAltaIndiginiDogrular() {
+        assert allPages.homePage().iletisimLinkHome.isDisplayed();
     }
     @And("kullanici sosyal medya ikonlarinin goruntulendigini dogrular")
     public void kullaniciSosyalMedyaIkonlarininGoruntulendiginiDogrular() {
+        assert allPages.indexPage().sosyalMedyaTitleIndex.isDisplayed();
     }
     @And("kullanici instagram ikona tiklar")
     public void kullaniciInstagramIkonaTiklar() {
+        clickByJS(allPages.indexPage().instagramIkonIndex);
     }
     @And("kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduInstagramSayfasinaYonlendirildiginiDogrular() {
