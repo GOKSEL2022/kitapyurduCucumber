@@ -417,6 +417,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[normalize-space()='Ücretsiz Üye Ol']               ")
     public WebElement ucretsizUyeOlButonIndex;
 
+    @FindBy(xpath = "//*[@data-title='En Alta İn']")
+    public WebElement enAltaInButonIndex;
+
+    @FindBy(xpath = "//*[@id='bottom-button']")
+    public WebElement enUsteCikButonIndex;
+
 
 
 

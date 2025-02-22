@@ -180,55 +180,43 @@ public class US03_GirisYapStepDefs {
     public void kullaniciHesapOlusturSayfasinaYonlendirildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("account/register");
     }
-
     @And("kullanici en alta in butona tiklar")
     public void kullaniciEnAltaInButonaTiklar() {
+        clickByJS(allPages.indexPage().enAltaInButonIndex);
     }
-
     @And("kullanici sayfanin en alta indigini dogrular")
     public void kullaniciSayfaninEnAltaIndiginiDogrular() {
     }
-
     @And("kullanici sosyal medya ikonlarinin goruntulendigini dogrular")
     public void kullaniciSosyalMedyaIkonlarininGoruntulendiginiDogrular() {
     }
-
     @And("kullanici instagram ikona tiklar")
     public void kullaniciInstagramIkonaTiklar() {
     }
-
     @And("kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduInstagramSayfasinaYonlendirildiginiDogrular() {
     }
-
     @And("kullanici x ikona tiklar")
     public void kullaniciXIkonaTiklar() {
     }
-
     @And("kullanici kitap yurdu x sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduXSayfasinaYonlendirildiginiDogrular() {
     }
-
     @And("kullanici facebook ikona tiklar")
     public void kullaniciFacebookIkonaTiklar() {
     }
-
     @And("kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduFacebookSayfasinaYonlendirildiginiDogrular() {
     }
-
     @And("kullanici youtube ikona tiklar")
     public void kullaniciYoutubeIkonaTiklar() {
     }
-
     @And("kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduYoutubeSayfasinaYonlendirildiginiDogrular() {
     }
-
     @And("kullanici whatsapp ikona tiklar")
     public void kullaniciWhatsappIkonaTiklar() {
     }
-
     @And("kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduWhatsappSayfasinaYonlendirildiginiDogrular() {
     }
