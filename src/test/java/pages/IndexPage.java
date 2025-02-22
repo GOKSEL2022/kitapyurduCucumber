@@ -423,6 +423,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='bottom-button']")
     public WebElement enUsteCikButonIndex;
 
+    @FindBy(xpath = "//h3[.='Sosyal Medya:']")
+    public WebElement sosyalMedyaTitleIndex;
+
+    @FindBy(xpath = "//*[@title='Instagram']")
+    public WebElement instagramIkonIndex;
+
 
 
 
