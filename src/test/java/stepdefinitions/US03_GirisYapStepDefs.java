@@ -198,6 +198,7 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduInstagramSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("https://www.instagram.com/kitapyurducom/");
     }
     @And("kullanici x ikona tiklar")
     public void kullaniciXIkonaTiklar() {
