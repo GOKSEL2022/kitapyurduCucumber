@@ -202,9 +202,11 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici x ikona tiklar")
     public void kullaniciXIkonaTiklar() {
+        clickByJS(allPages.indexPage().XtwitterIkonIndex);
     }
     @And("kullanici kitap yurdu x sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduXSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("x.com/kitapyurducom");
     }
     @And("kullanici facebook ikona tiklar")
     public void kullaniciFacebookIkonaTiklar() {
