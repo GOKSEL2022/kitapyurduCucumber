@@ -429,6 +429,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@title='Instagram']")
     public WebElement instagramIkonIndex;
 
+    @FindBy(xpath = "//*[@title='X (Twitter)']")
+    public WebElement XtwitterIkonIndex;
+
 
 
 
