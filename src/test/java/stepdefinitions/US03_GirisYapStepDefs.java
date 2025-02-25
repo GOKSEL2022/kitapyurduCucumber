@@ -210,6 +210,7 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici facebook ikona tiklar")
     public void kullaniciFacebookIkonaTiklar() {
+        clickByJS(allPages.indexPage().facebookIkonIndex);
     }
     @And("kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduFacebookSayfasinaYonlendirildiginiDogrular() {
