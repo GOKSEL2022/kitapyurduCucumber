@@ -432,6 +432,15 @@ public class IndexPage {
     @FindBy(xpath = "//*[@title='X (Twitter)']")
     public WebElement XtwitterIkonIndex;
 
+    @FindBy(xpath = "//a[@href='https://www.facebook.com/kitapyurducom']")
+    public WebElement facebookIkonIndex;
+
+    @FindBy(xpath = "//*[@class='footer-sprite youtube-icon']")
+    public WebElement youtubeIkonIndex;
+
+    @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/wa']")
+    public WebElement whatsappIkonIndex;
+
 
 
 
