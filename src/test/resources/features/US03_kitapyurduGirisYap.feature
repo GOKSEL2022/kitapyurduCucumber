@@ -151,12 +151,12 @@ Feature: kayitli_kullanici_girisi
     And kullanici instagram ikona tiklar
     And kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular
     And kullanici bir onceki sayfaya doner
-    #And kullanici x ikona tiklar
-    #And kullanici kitap yurdu x sayfasina yonlendirildigini dogrular
-    #And kullanici bir onceki sayfaya doner
-    #And kullanici facebook ikona tiklar
-    #And kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular
-    #And kullanici bir onceki sayfaya doner
+    And kullanici x ikona tiklar
+    And kullanici kitap yurdu x sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici facebook ikona tiklar
+    And kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
     #And kullanici youtube ikona tiklar
     #And kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular
     #And kullanici bir onceki sayfaya doner
