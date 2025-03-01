@@ -441,6 +441,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@href='https://www.kitapyurdu.com/wa']")
     public WebElement whatsappIkonIndex;
 
+    @FindBy(xpath = "//*[@id='main_block']")
+    public WebElement whatsappHesabiTitleKitapYurduIndex;
+
 
 
 
