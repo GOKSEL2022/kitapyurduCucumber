@@ -222,9 +222,11 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduYoutubeSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("youtube.com/kitapyurdu");
     }
     @And("kullanici whatsapp ikona tiklar")
     public void kullaniciWhatsappIkonaTiklar() {
+        clickByJS(allPages.indexPage().whatsappIkonIndex);
     }
     @And("kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduWhatsappSayfasinaYonlendirildiginiDogrular() {
