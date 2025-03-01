@@ -230,5 +230,6 @@ public class US03_GirisYapStepDefs {
     }
     @And("kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduWhatsappSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().whatsappHesabiTitleKitapYurduIndex.isDisplayed();
     }
 }
