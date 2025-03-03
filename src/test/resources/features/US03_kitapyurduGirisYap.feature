@@ -157,11 +157,11 @@ Feature: kayitli_kullanici_girisi
     And kullanici facebook ikona tiklar
     And kullanici kitap yurdu facebook sayfasina yonlendirildigini dogrular
     And kullanici bir onceki sayfaya doner
-    #And kullanici youtube ikona tiklar
-    #And kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular
-    #And kullanici bir onceki sayfaya doner
-    #And kullanici whatsapp ikona tiklar
-    #And kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular
+    And kullanici youtube ikona tiklar
+    And kullanici kitap yurdu youtube sayfasina yonlendirildigini dogrular
+    And kullanici bir onceki sayfaya doner
+    And kullanici whatsapp ikona tiklar
+    And kullanici kitap yurdu whatsapp sayfasina yonlendirildigini dogrular
     And kullanici sayfayi kapatir
 
 
