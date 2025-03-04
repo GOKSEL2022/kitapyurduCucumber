@@ -150,6 +150,8 @@ Feature: kayitli_kullanici_girisi
     And kullanici sosyal medya ikonlarinin goruntulendigini dogrular
     And kullanici instagram ikona tiklar
     And kullanici kitap yurdu instagram sayfasina yonlendirildigini dogrular
+    And kullanici kaydol butona tiklar
+    And kullanici kitap yurdu instagram giris sayfasina yonlendirildigini dogrular
     And kullanici bir onceki sayfaya doner
     And kullanici x ikona tiklar
     And kullanici kitap yurdu x sayfasina yonlendirildigini dogrular
