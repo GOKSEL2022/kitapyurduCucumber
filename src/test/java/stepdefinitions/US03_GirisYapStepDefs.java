@@ -232,4 +232,12 @@ public class US03_GirisYapStepDefs {
     public void kullaniciKitapYurduWhatsappSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().whatsappHesabiTitleKitapYurduIndex.isDisplayed();
     }
+
+    @And("kullanici kaydol butona tiklar")
+    public void kullaniciKaydolButonaTiklar() {
+    }
+
+    @And("kullanici kitap yurdu instagram giris sayfasina yonlendirildigini dogrular")
+    public void kullaniciKitapYurduInstagramGirisSayfasinaYonlendirildiginiDogrular() {
+    }
 }
