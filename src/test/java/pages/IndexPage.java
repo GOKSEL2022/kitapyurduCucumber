@@ -444,6 +444,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[@id='main_block']")
     public WebElement whatsappHesabiTitleKitapYurduIndex;
 
+    @FindBy(xpath = "(//*[text()='Kaydol'])[2]")
+    public WebElement kaydolButonInstagramIndex;
+
+    @FindBy(xpath = "//*[@class='_aahz']")
+    public WebElement kayitAlaniInstagramIndex;
+
 
 
 

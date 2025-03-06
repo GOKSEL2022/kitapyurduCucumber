@@ -235,9 +235,11 @@ public class US03_GirisYapStepDefs {
 
     @And("kullanici kaydol butona tiklar")
     public void kullaniciKaydolButonaTiklar() {
+        clickByJS(allPages.indexPage().kaydolButonInstagramIndex);
     }
 
     @And("kullanici kitap yurdu instagram giris sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduInstagramGirisSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().kayitAlaniInstagramIndex.isDisplayed();
     }
 }
