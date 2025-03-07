@@ -232,12 +232,10 @@ public class US03_GirisYapStepDefs {
     public void kullaniciKitapYurduWhatsappSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().whatsappHesabiTitleKitapYurduIndex.isDisplayed();
     }
-
     @And("kullanici kaydol butona tiklar")
     public void kullaniciKaydolButonaTiklar() {
         clickByJS(allPages.indexPage().kaydolButonInstagramIndex);
     }
-
     @And("kullanici kitap yurdu instagram giris sayfasina yonlendirildigini dogrular")
     public void kullaniciKitapYurduInstagramGirisSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().kayitAlaniInstagramIndex.isDisplayed();

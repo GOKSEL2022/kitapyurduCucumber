@@ -182,6 +182,11 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
          And   kullanici anasayfada dilin Turkce oldugunu dogrular
          Then  kullanici sayfayi kapatir
 
+         @2024_en_iyi_kitaplar
+         Scenario: 2024 un en iyi kitaplarini belirlemek icin secim yapabildigini dogrulama testi
+           And kullanici sayfanin ust kisminda yer alan yili en iyi kitaplarini sen belirle basliga tiklar
+           And kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular
+
 
 
 
