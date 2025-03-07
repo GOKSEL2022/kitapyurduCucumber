@@ -434,4 +434,12 @@ public class US04_KitapYurduHomeStepDefs {
         clickByJS(allPages.homePage().alisverisListemeEkleLinkAnasayfaIlkUrunHome);
         assert allPages.homePage().urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
+
+    @And("kullanici sayfanin ust kisminda yer alan yili en iyi kitaplarini sen belirle basliga tiklar")
+    public void kullaniciSayfaninUstKismindaYerAlanYiliEnIyiKitaplariniSenBelirleBasligaTiklar() {
+    }
+
+    @And("kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular")
+    public void kullaniciTurkiyeOkurOdulleriSayfasinaYonlendirildiginiDogrular() {
+    }
 }
