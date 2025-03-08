@@ -198,29 +198,24 @@ public class US04_KitapYurduHomeStepDefs {
     public void kullaniciAnasayfadaDilinIngilizceOldugunuDogrular() {
         assert allPages.homePage().tumKategorilerLinkHome.getText().contains("All Categories");
     }
-
     @And("kullanici dil dropdownindan Deutsch secer")
     public void kullaniciDilDropdownindanDeutschSecer() {
         actions.moveToElement(allPages.homePage().turkceDilSecenegiHome).perform();
         clickByJS(allPages.homePage().almancaDilSecenegiHome);
     }
-
     @And("kullanici anasayfada dilin Almanca oldugunu dogrular")
     public void kullaniciAnasayfadaDilinAlmancaOldugunuDogrular() {
         assert allPages.homePage().tumKategorilerLinkHome.getText().contains("Alle Kategorien");
     }
-
     @And("kullanici dil dropdownindan Turkce secer")
     public void kullaniciDilDropdownindanTurkceSecer() {
         actions.moveToElement(allPages.homePage().englishDilSecenegiHome).perform();
         clickByJS(allPages.homePage().turkceDilSecenegiHome);
     }
-
     @And("kullanici anasayfada dilin Turkce oldugunu dogrular")
     public void kullaniciAnasayfadaDilinTurkceOldugunuDogrular() {
         assert allPages.homePage().tumKategorilerLinkHome.getText().equals("Tüm Kategoriler");
     }
-
     @Given("kullanici cok satan kitaplar basliginin uzerine gelir")
     public void kullaniciCokSatanKitaplarBasligininUzerineGelir() {
         actions.moveToElement(allPages.homePage().cokSatanKitaplarTextHome).perform();
@@ -434,11 +429,10 @@ public class US04_KitapYurduHomeStepDefs {
         clickByJS(allPages.homePage().alisverisListemeEkleLinkAnasayfaIlkUrunHome);
         assert allPages.homePage().urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
-
     @And("kullanici sayfanin ust kisminda yer alan yili en iyi kitaplarini sen belirle basliga tiklar")
     public void kullaniciSayfaninUstKismindaYerAlanYiliEnIyiKitaplariniSenBelirleBasligaTiklar() {
+        clickByJS(allPages.homePage().yilinEnIyiKitaplariBelirleTitleHome);
     }
-
     @And("kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular")
     public void kullaniciTurkiyeOkurOdulleriSayfasinaYonlendirildiginiDogrular() {
     }
