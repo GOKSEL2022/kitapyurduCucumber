@@ -450,6 +450,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='_aahz']")
     public WebElement kayitAlaniInstagramIndex;
 
+    @FindBy(xpath = "//*[@class='hero']")
+    public WebElement turkiyeOkurOdulleriOylamaKategorileriTextIndex;
+
 
 
 

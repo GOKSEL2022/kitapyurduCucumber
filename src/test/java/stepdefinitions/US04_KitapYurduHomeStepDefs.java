@@ -435,5 +435,6 @@ public class US04_KitapYurduHomeStepDefs {
     }
     @And("kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular")
     public void kullaniciTurkiyeOkurOdulleriSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().turkiyeOkurOdulleriOylamaKategorileriTextIndex.isDisplayed();
     }
 }
