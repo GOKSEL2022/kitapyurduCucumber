@@ -437,4 +437,5 @@ public class US04_KitapYurduHomeStepDefs {
     public void kullaniciTurkiyeOkurOdulleriSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().turkiyeOkurOdulleriOylamaKategorileriTextIndex.isDisplayed();
     }
+
 }
