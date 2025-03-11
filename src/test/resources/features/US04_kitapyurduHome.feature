@@ -186,6 +186,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
          Scenario: 2024 un en iyi kitaplarini belirlemek icin secim yapabildigini dogrulama testi
            And kullanici sayfanin ust kisminda yer alan yili en iyi kitaplarini sen belirle basliga tiklar
            And kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular
+           And kullanici sayfayi kapatir
+
+          Scenario: Her hafta bir kitapla ucretsiz deneyin alan testi
 
 
 
