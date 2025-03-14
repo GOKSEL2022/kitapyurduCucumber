@@ -438,8 +438,10 @@ public class US04_KitapYurduHomeStepDefs {
         assert allPages.indexPage().turkiyeOkurOdulleriOylamaKategorileriTextIndex.isDisplayed();
     }
 
-    @And("kullanicianasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar")
-    public void kullanicianasayfadaYerAlanKayanMenudenYilinEnIyiKitaplariSizinOylarinizlaBelirlendiBasligaTiklar() {
+    @And("kullanici anasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar")
+    public void kullaniciAnasayfadaYerAlanKayanMenudenYilinEnIyiKitaplariSizinOylarinizlaBelirlendiBasligaTiklar() {
+
+        clickByJS(allPages.homePage().yilinEnIyiKitaplariBelirleTitleHome);
     }
 
     @And("kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular")

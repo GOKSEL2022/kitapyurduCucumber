@@ -184,7 +184,7 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
 
          @2024_en_iyi_kitaplar
          Scenario: yilin en iyi kitaplari sizin oylarinizla belirlendi alan dogrulama testi
-           And kullanicianasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar
+           And kullanici anasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar
            And kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular
            And kullanici sayfayi kapatir
 
