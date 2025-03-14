@@ -388,7 +388,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='product-685019']")
     public WebElement denizGucuDevletleriHome;
 
-    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:12006994/wh:ac144defd']")
+    @FindBy(xpath = "(//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:12031743/wi:0/wh:e02501d79'])[1]")
     public WebElement yilinEnIyiKitaplariBelirleTitleHome;
 
 
