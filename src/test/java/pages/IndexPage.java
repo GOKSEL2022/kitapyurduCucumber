@@ -453,6 +453,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='hero']")
     public WebElement turkiyeOkurOdulleriOylamaKategorileriTextIndex;
 
+    @FindBy(xpath = "//*[@class='contest-info__title']")
+    public WebElement yilinEnIyiKitaplariSecildiTextIndex;
+
 
 
 
