@@ -446,5 +446,6 @@ public class US04_KitapYurduHomeStepDefs {
 
     @And("kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular")
     public void kullaniciTurkiyeOkurOdulleriSonucSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().yilinEnIyiKitaplariSecildiTextIndex.isDisplayed();
     }
 }
