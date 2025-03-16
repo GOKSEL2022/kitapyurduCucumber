@@ -188,6 +188,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
            And kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular
            And kullanici sayfayi kapatir
 
+           Scenario:
+             And
+
 
 
 
