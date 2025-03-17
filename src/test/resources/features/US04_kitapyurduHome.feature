@@ -186,10 +186,12 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
          Scenario: yilin en iyi kitaplari sizin oylarinizla belirlendi alan dogrulama testi
            And kullanici anasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar
            And kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular
+           And kullanici kazanan kitaplari incele butona tiklar
+           And kullanici kazanan kitaplar sayfasina yonlendirildigini dogrular
+           And kullanici farkli kategorilerde odul alan kitaplarin aldiklari oylari goruntuler
+           And kullanici roman kategorisinde odul alan kitaba tiklar
+           And kullanici acilan sayfada kitapla ilgili Roman Kategorisinde Yilin En İyi Kitabi yazisini gorur
            And kullanici sayfayi kapatir
-
-           Scenario:
-             And
 
 
 

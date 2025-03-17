@@ -429,21 +429,10 @@ public class US04_KitapYurduHomeStepDefs {
         clickByJS(allPages.homePage().alisverisListemeEkleLinkAnasayfaIlkUrunHome);
         assert allPages.homePage().urunAlisverisListenizeEklendiAlertHome.isDisplayed();
     }
-    @And("kullanici sayfanin ust kisminda yer alan yili en iyi kitaplarini sen belirle basliga tiklar")
-    public void kullaniciSayfaninUstKismindaYerAlanYiliEnIyiKitaplariniSenBelirleBasligaTiklar() {
-        clickByJS(allPages.homePage().yilinEnIyiKitaplariBelirleTitleHome);
-    }
-    @And("kullanici Turkiye okur odulleri sayfasina yonlendirildigini dogrular")
-    public void kullaniciTurkiyeOkurOdulleriSayfasinaYonlendirildiginiDogrular() {
-        assert allPages.indexPage().turkiyeOkurOdulleriOylamaKategorileriTextIndex.isDisplayed();
-    }
-
     @And("kullanici anasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar")
     public void kullaniciAnasayfadaYerAlanKayanMenudenYilinEnIyiKitaplariSizinOylarinizlaBelirlendiBasligaTiklar() {
-
         clickByJS(allPages.homePage().yilinEnIyiKitaplariBelirleTitleHome);
     }
-
     @And("kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular")
     public void kullaniciTurkiyeOkurOdulleriSonucSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().yilinEnIyiKitaplariSecildiTextIndex.isDisplayed();
