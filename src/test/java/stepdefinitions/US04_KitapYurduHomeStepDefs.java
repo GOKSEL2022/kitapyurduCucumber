@@ -437,4 +437,16 @@ public class US04_KitapYurduHomeStepDefs {
     public void kullaniciTurkiyeOkurOdulleriSonucSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().yilinEnIyiKitaplariSecildiTextIndex.isDisplayed();
     }
+
+    @And("kullanici farkli kategorilerde odul alan kitaplarin aldiklari oylari goruntuler")
+    public void kullaniciFarkliKategorilerdeOdulAlanKitaplarinAldiklariOylariGoruntuler() {
+    }
+
+    @And("kullanici roman kategorisinde odul alan kitaba tiklar")
+    public void kullaniciRomanKategorisindeOdulAlanKitabaTiklar() {
+    }
+
+    @And("kullanici acilan sayfada kitapla ilgili Roman Kategorisinde Yilin En İyi Kitabi yazisini gorur")
+    public void kullaniciAcilanSayfadaKitaplaIlgiliRomanKategorisindeYilinEnİyiKitabiYazisiniGorur() {
+    }
 }
