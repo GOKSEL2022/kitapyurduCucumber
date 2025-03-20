@@ -244,15 +244,13 @@ public class US05_KitapYurduHomeStepDefs {
             Thread.sleep(1000);
         }
     }
-
     @And("kullanici kazanan kitaplari incele butona tiklar")
     public void kullaniciKazananKitaplariInceleButonaTiklar() {
-        clickByJS(allPages.homePage().kitaplariInceleButonHome);
-        
+        clickByJS(allPages.indexPage().kazananKitaplariInceleButonIndex);
     }
-
     @And("kullanici kazanan kitaplar sayfasina yonlendirildigini dogrular")
     public void kullaniciKazananKitaplarSayfasinaYonlendirildiginiDogrular() {
+        assert allPages.indexPage().kazananKitaplarTextIndex.isDisplayed();
     }
 }
 

@@ -456,6 +456,12 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='contest-info__title']")
     public WebElement yilinEnIyiKitaplariSecildiTextIndex;
 
+    @FindBy(xpath = "//*[text()='Kazanan Kitapları İncele']")
+    public WebElement kazananKitaplariInceleButonIndex;
+
+    @FindBy(xpath = "//*[text()='2024’ün en iyi kitapları Kitapkurtları tarafından seçildi.']")
+    public WebElement kazananKitaplarTextIndex;
+
 
 
 
