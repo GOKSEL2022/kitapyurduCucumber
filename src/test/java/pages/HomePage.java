@@ -391,6 +391,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:12031743/wi:0/wh:e02501d79'])[1]")
     public WebElement yilinEnIyiKitaplariBelirleTitleHome;
 
+    @FindBy(xpath = "//*[@class='js-obs js-obs-ever']")
+    public WebElement kayanEkranHome;
+
 
 
 
