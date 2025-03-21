@@ -431,13 +431,14 @@ public class US04_KitapYurduHomeStepDefs {
     }
     @And("kullanici anasayfada yer alan kayan menuden yilin en iyi kitaplari sizin oylarinizla belirlendi basliga tiklar")
     public void kullaniciAnasayfadaYerAlanKayanMenudenYilinEnIyiKitaplariSizinOylarinizlaBelirlendiBasligaTiklar() {
-        if (allPages.homePage().kayanEkranHome.getText().contains("Kitapyurdu Türkiye Okur Ödülleri 2024 Kazanan Kitaplar Belirlendi"));
-        {
-        clickByJS(allPages.homePage().kayanEkranHome);
-        }else {
-        clickByJS(allPages.homePage().sagYonKaydiriciButonHome);
-        allPages.homePage().kayanEkranHome.getText().contains("Kitapyurdu Türkiye Okur Ödülleri 2024 Kazanan Kitaplar Belirlendi");
+        if (allPages.homePage().kayanEkranHome.getText().contains("Kitapyurdu Türkiye Okur Ödülleri 2024 Kazanan Kitaplar Belirlendi")) {
             clickByJS(allPages.homePage().kayanEkranHome);
+        } else {
+            clickByJS(allPages.homePage().sagYonKaydiriciButonHome);
+
+            if (allPages.homePage().kayanEkranHome.getText().contains("Kitapyurdu Türkiye Okur Ödülleri 2024 Kazanan Kitaplar Belirlendi")) {
+                clickByJS(allPages.homePage().kayanEkranHome);
+            }
         }
     }
     @And("kullanici Turkiye okur odulleri sonuc sayfasina yonlendirildigini dogrular")
