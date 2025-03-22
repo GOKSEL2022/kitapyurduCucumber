@@ -462,6 +462,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[text()='2024’ün en iyi kitapları Kitapkurtları tarafından seçildi.']")
     public WebElement kazananKitaplarTextIndex;
 
+    @FindBy(xpath = "//*[@class='category__count']")
+    public WebElement oySayilariYilinEnIyiKitaplariIndex;
+
 
 
 
