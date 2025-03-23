@@ -451,6 +451,7 @@ public class US04_KitapYurduHomeStepDefs {
     }
     @And("kullanici roman kategorisinde odul alan kitaba tiklar")
     public void kullaniciRomanKategorisindeOdulAlanKitabaTiklar() {
+        clickByJS(allPages.indexPage().romanKategorisiKazananKitaplarIndex);
     }
 
     @And("kullanici acilan sayfada kitapla ilgili Roman Kategorisinde Yilin En İyi Kitabi yazisini gorur")
