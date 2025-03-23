@@ -465,6 +465,9 @@ public class IndexPage {
     @FindBy(xpath = "//*[@class='category__count']")
     public WebElement oySayilariYilinEnIyiKitaplariIndex;
 
+    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11672037/wi:180/wh:688053f7f']")
+    public WebElement romanKategorisiKazananKitaplarIndex;
+
 
 
 
