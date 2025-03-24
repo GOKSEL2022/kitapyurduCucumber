@@ -193,6 +193,9 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
            And kullanici acilan sayfada kitapla ilgili Roman Kategorisinde Yilin En İyi Kitabi yazisini gorur
            And kullanici sayfayi kapatir
 
+           Scenario:
+             Given kullanici anasayfadaki Türkiye Okur Odulleri 2024 Seti basliga tiklar
+
 
 
 
