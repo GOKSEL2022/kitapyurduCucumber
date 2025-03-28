@@ -194,7 +194,7 @@ Feature:kullanici_anasayfadaki_fonksiyonlari_kullanabilir
            And kullanici sayfayi kapatir
 
            Scenario:
-             Given kullanici anasayfadaki Türkiye Okur Odulleri 2024 Seti basliga tiklar
+             Given kullanici anasayfadaki Türkiye Okur Odulleri Seti basliga tiklar
 
 
 

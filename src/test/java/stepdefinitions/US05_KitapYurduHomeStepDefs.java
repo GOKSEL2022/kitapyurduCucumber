@@ -252,6 +252,10 @@ public class US05_KitapYurduHomeStepDefs {
     public void kullaniciKazananKitaplarSayfasinaYonlendirildiginiDogrular() {
         assert allPages.indexPage().kazananKitaplarTextIndex.isDisplayed();
     }
+
+    @Given("kullanici anasayfadaki Türkiye Okur Odulleri Seti basliga tiklar")
+    public void kullaniciAnasayfadakiTürkiyeOkurOdulleriSetiBasligaTiklar() {
+    }
 }
 
 
