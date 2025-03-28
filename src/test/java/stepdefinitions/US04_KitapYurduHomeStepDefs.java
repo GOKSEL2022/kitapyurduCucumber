@@ -458,7 +458,4 @@ public class US04_KitapYurduHomeStepDefs {
     public void kullaniciAcilanSayfadaKitaplaIlgiliRomanKategorisindeYilinEnİyiKitabiYazisiniGorur() {
     }
 
-    @Given("kullanici anasayfadaki Türkiye Okur Odulleri {int} Seti basliga tiklar")
-    public void kullaniciAnasayfadakiTürkiyeOkurOdulleriSetiBasligaTiklar(int arg0) {
-    }
 }
