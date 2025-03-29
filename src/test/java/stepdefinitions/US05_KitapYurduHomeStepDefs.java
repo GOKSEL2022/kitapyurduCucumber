@@ -255,6 +255,7 @@ public class US05_KitapYurduHomeStepDefs {
 
     @Given("kullanici anasayfadaki Türkiye Okur Odulleri Seti basliga tiklar")
     public void kullaniciAnasayfadakiTürkiyeOkurOdulleriSetiBasligaTiklar() {
+        clickByJS(allPages.homePage()).turkiyeOkurOdulleriSetiTextTitleHome;
     }
 }
 
