@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  // spark report plugini
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-        features = "@target/failed_scenarios.txt",//.txt dosya path
+        features = "@target/failed_scenarios.txt",//.txt dosya path  //"@Failed/failedScenarios.txt",
         glue = {"stepdefinitions","hooks"},   //stepdefinitions path
         dryRun = false
 )
